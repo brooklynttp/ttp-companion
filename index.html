@@ -321,6 +321,171 @@
             color: var(--red-light);
         }
         
+        /* TRANSCRIPT SECTION */
+        .section.transcript .section-header {
+            background: linear-gradient(135deg, #5d4e6d 0%, #3d3347 100%);
+            color: var(--cream);
+        }
+        
+        .section.transcript .toggle {
+            color: #c4b8d0;
+        }
+        
+        .transcript-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .transcript-session {
+            margin-bottom: 1.5rem;
+        }
+        
+        .transcript-session-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #5d4e6d;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e8e0f0;
+        }
+        
+        .transcript-segment {
+            margin-bottom: 1rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid #e0d8e8;
+        }
+        
+        .transcript-segment.kk {
+            border-left-color: var(--red);
+            background: linear-gradient(90deg, rgba(201, 74, 74, 0.05) 0%, transparent 100%);
+            padding: 0.5rem 0.75rem;
+            margin-left: -0.75rem;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .transcript-meta {
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 0.25rem;
+        }
+        
+        .transcript-speaker {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .transcript-segment.kk .transcript-speaker {
+            color: var(--red);
+        }
+        
+        .transcript-time {
+            color: #aaa;
+            margin-left: 0.5rem;
+        }
+        
+        .transcript-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        
+        .transcript-prayers {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .transcript-prayers-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #999;
+            font-style: normal;
+            margin-bottom: 0.5rem;
+        }
+        
+        .transcript-prayers-note {
+            font-size: 0.85rem;
+            color: #777;
+        }
+        
+        .transcript-subsection-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+            margin: 1.5rem 0 0.75rem 0;
+            padding: 0.5rem 0.25rem;
+            border-bottom: 1px solid #e0d8e8;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .transcript-subsection-title:hover {
+            background: #f8f6fa;
+        }
+        
+        .transcript-subsection-title .toggle {
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        .transcript-subsection-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .transcript-subsection-content.collapsed {
+            max-height: 0;
+        }
+        
+        .transcript-prayers-wrapper {
+            cursor: pointer;
+        }
+        
+        .transcript-prayers-wrapper:hover .transcript-prayers {
+            background: #f5f0e8;
+        }
+        
+        .transcript-prayers {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .transcript-prayers-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .transcript-prayers-header .toggle {
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        .transcript-loading {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+        }
+        
+        .transcript-unavailable {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+            font-style: italic;
+        }
+        
         /* LOADING STATE */
         .loading {
             text-align: center;
@@ -530,6 +695,165 @@
             return text;
         }
         
+        // Render transcript session
+        function renderTranscriptSession(segments) {
+            return segments.map(seg => {
+                const isKK = seg.speaker === 'Kadam Kyle';
+                return `
+                    <div class="transcript-segment ${isKK ? 'kk' : ''}">
+                        <div class="transcript-meta">
+                            <span class="transcript-speaker">${seg.speaker}</span>
+                            <span class="transcript-time">[${seg.time}]</span>
+                        </div>
+                        <div class="transcript-text">${seg.text.replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Render prayers placeholder
+        function renderPrayersNote(prayers) {
+            if (!prayers) return '';
+            if (prayers.text) {
+                return `
+                    <div class="transcript-prayers-wrapper" onclick="toggleTranscriptSubsection(this)">
+                        <div class="transcript-prayers">
+                            <div class="transcript-prayers-header">
+                                <div class="transcript-prayers-label">Chanted Prayers [${prayers.time}]</div>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="transcript-subsection-content collapsed">
+                                <div class="transcript-prayers-text">${prayers.text.replace(/\n/g, '<br>')}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            return `
+                <div class="transcript-prayers">
+                    <div class="transcript-prayers-label">Chanted Prayers [${prayers.time}]</div>
+                    <div class="transcript-prayers-note">${prayers.note || '[Prayers]'}</div>
+                </div>
+            `;
+        }
+        
+        // Render a collapsible transcript subsection
+        function renderCollapsibleSubsection(title, segments, startCollapsed = true) {
+            if (!segments || segments.length === 0) return '';
+            const collapsedClass = startCollapsed ? 'collapsed' : '';
+            const toggleSymbol = startCollapsed ? '+' : '−';
+            return `
+                <div class="transcript-subsection">
+                    <div class="transcript-subsection-title" onclick="toggleTranscriptSubsection(this)">
+                        <span>${title}</span>
+                        <span class="toggle">${toggleSymbol}</span>
+                    </div>
+                    <div class="transcript-subsection-content ${collapsedClass}">
+                        ${renderTranscriptSession(segments)}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Toggle transcript subsection
+        function toggleTranscriptSubsection(el) {
+            const content = el.querySelector('.transcript-subsection-content') || el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            if (content && content.classList.contains('transcript-subsection-content')) {
+                if (content.classList.contains('collapsed')) {
+                    content.classList.remove('collapsed');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (toggle) toggle.textContent = '−';
+                } else {
+                    content.classList.add('collapsed');
+                    content.style.maxHeight = '0';
+                    if (toggle) toggle.textContent = '+';
+                }
+            }
+        }
+        
+        // Load and render transcript
+        async function loadTranscript(classId, container) {
+            container.innerHTML = '<div class="transcript-loading">Loading transcript...</div>';
+            
+            try {
+                const response = await fetch(`transcript-${classId}.json?v=2`);
+                if (!response.ok) {
+                    container.innerHTML = '<div class="transcript-unavailable">Transcript not yet available for this class.</div>';
+                    return;
+                }
+                
+                const transcript = await response.json();
+                
+                let html = '<div class="transcript-container">';
+                
+                // Session 1
+                html += '<div class="transcript-session">';
+                html += '<div class="transcript-session-title">Session 1</div>';
+                
+                // Chanted prayers (collapsible)
+                html += renderPrayersNote(transcript.session1.chantedPrayers);
+                
+                // Guided meditation (collapsible)
+                html += renderCollapsibleSubsection('Guided Meditation', transcript.session1.guidedMeditation);
+                
+                // Class intro (collapsible)
+                html += renderCollapsibleSubsection('Class Introduction', transcript.session1.classIntro);
+                
+                // Shantideva reading (collapsible)
+                html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                
+                // Post-reading / Class overview (collapsible)
+                html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
+                
+                // Teaching (collapsible)
+                html += renderCollapsibleSubsection('Practice Sharing & Discussion', transcript.session1.teaching);
+                
+                // Main Teaching (collapsible)
+                html += renderCollapsibleSubsection('Session 1 Teaching', transcript.session1.mainTeaching);
+                
+                html += '</div>';
+                
+                // Session 2
+                html += '<div class="transcript-session">';
+                html += '<div class="transcript-session-title">Session 2</div>';
+                
+                // Chanted prayers
+                html += renderPrayersNote(transcript.session2.chantedPrayers);
+                
+                // Teaching (collapsible)
+                html += renderCollapsibleSubsection('Teaching & Discussion', transcript.session2.teaching);
+                
+                html += '</div>';
+                
+                html += '</div>';
+                
+                container.innerHTML = html;
+            } catch (error) {
+                container.innerHTML = '<div class="transcript-unavailable">Transcript not yet available for this class.</div>';
+            }
+        }
+        
+        // Toggle transcript section (special handling for lazy loading)
+        function toggleTranscript(el, classId) {
+            const content = el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.textContent = '−';
+                
+                // Load transcript if not already loaded
+                if (content.dataset.loaded !== 'true') {
+                    loadTranscript(classId, content);
+                    content.dataset.loaded = 'true';
+                }
+            } else {
+                content.classList.add('collapsed');
+                toggle.textContent = '+';
+            }
+        }
+        
         // Render main content
         function renderContent() {
             const cls = classesData.find(c => c.id === currentClassId);
@@ -612,6 +936,17 @@
                         <div class="root-text-content">
                             ${renderRootText(cls.preview?.content)}
                         </div>
+                    </div>
+                </section>
+                
+                <!-- TRANSCRIPT -->
+                <section class="section transcript">
+                    <div class="section-header" onclick="toggleTranscript(this, '${cls.id}')">
+                        <span>📝 Class Transcript</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="section-content collapsed" data-loaded="false">
+                        <div class="transcript-loading">Click to load transcript...</div>
                     </div>
                 </section>
             `;
