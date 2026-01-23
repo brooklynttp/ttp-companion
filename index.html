@@ -428,7 +428,7 @@
         // Load data from JSON file
         async function loadData() {
             try {
-                const response = await fetch('ttp-data.json');
+                const response = await fetch('ttp-data.json?v=2');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
