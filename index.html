@@ -571,9 +571,9 @@
                 <section class="section practice">
                     <div class="section-header" onclick="toggleSection(this)">
                         <span>☸ This Week's Practice</span>
-                        <span class="toggle">−</span>
+                        <span class="toggle">+</span>
                     </div>
-                    <div class="section-content">
+                    <div class="section-content collapsed">
                         ${cls.practice?.title ? `<div class="practice-title">${cls.practice.title}</div>` : ''}
                         ${renderPracticeSteps(cls.practice?.steps)}
                         ${cls.practice?.quote ? `<div class="practice-quote">"${cls.practice.quote}" — KK</div>` : ''}
@@ -584,9 +584,9 @@
                 <section class="section">
                     <div class="section-header" onclick="toggleSection(this)">
                         <span>📖 Kadam Kyle's Commentary</span>
-                        <span class="toggle">−</span>
+                        <span class="toggle">+</span>
                     </div>
-                    <div class="section-content">
+                    <div class="section-content collapsed">
                         ${renderCommentary(cls.commentary)}
                     </div>
                 </section>
