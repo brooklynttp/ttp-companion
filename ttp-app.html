@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTP Companion</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --gold: #b8860b;
+            --gold-light: #d4a84b;
+            --brown: #5d4037;
+            --brown-dark: #3e2723;
+            --cream: #faf8f5;
+            --cream-dark: #f0ebe3;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: var(--cream);
+            color: var(--brown-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+            color: var(--cream);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+        
+        .header-subtitle {
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0.8;
+            margin-top: 0.25rem;
+        }
+        
+        /* CLASS SELECTOR - Horizontal scroll on mobile */
+        .class-selector {
+            background: var(--cream-dark);
+            border-bottom: 1px solid #ddd;
+            padding: 0.75rem 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .class-chips {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 1rem;
+            min-width: max-content;
+        }
+        
+        .class-chip {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        
+        .class-chip:hover {
+            border-color: var(--gold);
+        }
+        
+        .class-chip.active {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+        
+        .class-chip .chip-date {
+            font-weight: bold;
+        }
+        
+        .class-chip .chip-topic {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-left: 0.25rem;
+        }
+        
+        /* MAIN CONTENT */
+        .main {
+            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* CLASS HEADER */
+        .class-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .class-date {
+            font-size: 0.9rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .class-title {
+            font-size: 1.5rem;
+            color: var(--brown-dark);
+            margin-top: 0.25rem;
+        }
+        
+        /* SECTION CARDS */
+        .section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: var(--cream-dark);
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--brown);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-header .toggle {
+            font-size: 1.25rem;
+            color: var(--gold);
+        }
+        
+        .section-content {
+            padding: 1rem;
+        }
+        
+        .section-content.collapsed {
+            display: none;
+        }
+        
+        /* PRACTICE SECTION - Special styling */
+        .section.practice {
+            border: 2px solid var(--gold);
+        }
+        
+        .section.practice .section-header {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: white;
+        }
+        
+        .section.practice .toggle {
+            color: white;
+        }
+        
+        .practice-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--brown-dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .practice-steps {
+            list-style: none;
+        }
+        
+        .practice-steps li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .practice-steps li:last-child {
+            border-bottom: none;
+        }
+        
+        .practice-steps li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.6rem;
+            top: 0.7rem;
+        }
+        
+        .practice-quote {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            padding-left: 1rem;
+            border-left: 2px solid var(--gold-light);
+        }
+        
+        /* COMMENTARY SECTION */
+        .commentary-point {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .commentary-point:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .commentary-point h4 {
+            color: var(--brown);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .commentary-point p {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .commentary-point p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .kk-quote {
+            font-style: italic;
+            color: #555;
+            background: var(--cream);
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .kk-quote::before {
+            content: """;
+            color: var(--gold);
+            font-size: 1.5rem;
+            line-height: 0;
+            vertical-align: -0.3rem;
+            margin-right: 0.25rem;
+        }
+        
+        .kk-quote::after {
+            content: "" — KK";
+            color: var(--gold);
+        }
+        
+        /* ROOT TEXT SECTIONS */
+        .root-text-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .root-text-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--brown-dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .root-text-content {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #444;
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--gold);
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            text-indent: 0;
+        }
+        
+        .root-text-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .root-text-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* PREVIEW SECTION */
+        .section.preview .section-header {
+            background: linear-gradient(135deg, var(--brown) 0%, var(--brown-dark) 100%);
+            color: var(--cream);
+        }
+        
+        .section.preview .toggle {
+            color: var(--gold-light);
+        }
+        
+        /* SEARCH */
+        .search-container {
+            padding: 0.75rem 1rem;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        /* LOADING STATE */
+        .loading {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #888;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--cream-dark);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* ERROR STATE */
+        .error {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #c62828;
+        }
+        
+        .error-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .error p {
+            margin-bottom: 1rem;
+        }
+        
+        .error code {
+            display: block;
+            background: #ffebee;
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-align: left;
+            overflow-x: auto;
+        }
+        
+        /* NO CONTENT */
+        .no-content {
+            color: #888;
+            font-style: italic;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        /* RESPONSIVE - Larger screens */
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .class-chips {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .main {
+                padding: 1.5rem;
+            }
+            
+            .class-title {
+                font-size: 1.75rem;
+            }
+            
+            .root-text-content {
+                max-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Teacher Training Program</h1>
+        <div class="header-subtitle">KMC Brooklyn · Meaningful to Behold</div>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search classes..." id="searchInput">
+    </div>
+    
+    <nav class="class-selector">
+        <div class="class-chips" id="classChips">
+            <!-- Classes will be inserted here -->
+        </div>
+    </nav>
+    
+    <main class="main" id="mainContent">
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>Loading classes...</p>
+        </div>
+    </main>
+
+    <script>
+        let classesData = [];
+        let currentClassId = null;
+        
+        // Load data from JSON file
+        async function loadData() {
+            try {
+                const response = await fetch('ttp-data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                classesData = await response.json();
+                
+                if (classesData.length > 0) {
+                    currentClassId = classesData[classesData.length - 1].id; // Start with most recent
+                    renderChips();
+                    renderContent();
+                } else {
+                    showError('No classes found in data file.');
+                }
+            } catch (error) {
+                showError(`Could not load ttp-data.json. Make sure it's in the same folder as this HTML file.\n\nError: ${error.message}`);
+            }
+        }
+        
+        // Show error message
+        function showError(message) {
+            document.getElementById('mainContent').innerHTML = `
+                <div class="error">
+                    <div class="error-icon">⚠️</div>
+                    <p><strong>Error loading data</strong></p>
+                    <code>${message}</code>
+                </div>
+            `;
+        }
+        
+        // Render class chips
+        function renderChips() {
+            const container = document.getElementById('classChips');
+            container.innerHTML = classesData.map(c => `
+                <button class="class-chip ${c.id === currentClassId ? 'active' : ''}" 
+                        onclick="selectClass('${c.id}')"
+                        data-topic="${c.topic.toLowerCase()}"
+                        data-date="${c.date.toLowerCase()}">
+                    <span class="chip-date">${c.date}</span>
+                    <span class="chip-topic">· ${c.topic}</span>
+                </button>
+            `).join('');
+        }
+        
+        // Select a class
+        function selectClass(id) {
+            currentClassId = id;
+            renderChips();
+            renderContent();
+            // Scroll to top of main content
+            document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Toggle section collapse
+        function toggleSection(el) {
+            const content = el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.textContent = '−';
+            } else {
+                content.classList.add('collapsed');
+                toggle.textContent = '+';
+            }
+        }
+        
+        // Render practice steps
+        function renderPracticeSteps(steps) {
+            if (!steps || steps.length === 0) {
+                return '<p class="no-content">Practice to be added</p>';
+            }
+            return `<ul class="practice-steps">${steps.map(s => `<li>${s}</li>`).join('')}</ul>`;
+        }
+        
+        // Render commentary points
+        function renderCommentary(points) {
+            if (!points || points.length === 0) {
+                return '<p class="no-content">Commentary to be added</p>';
+            }
+            return points.map(point => `
+                <div class="commentary-point">
+                    <h4>${point.title}</h4>
+                    ${point.content.map(p => `<p>${p}</p>`).join('')}
+                    ${point.quote ? `<div class="kk-quote">${point.quote}</div>` : ''}
+                </div>
+            `).join('');
+        }
+        
+        // Render root text content
+        function renderRootText(text) {
+            if (!text) {
+                return '<p class="no-content">Text to be added</p>';
+            }
+            // Handle both string and array formats
+            if (Array.isArray(text)) {
+                return text.map(p => `<p>${p}</p>`).join('');
+            }
+            return text;
+        }
+        
+        // Render main content
+        function renderContent() {
+            const cls = classesData.find(c => c.id === currentClassId);
+            if (!cls) {
+                showError('Class not found');
+                return;
+            }
+            
+            const container = document.getElementById('mainContent');
+            
+            container.innerHTML = `
+                <div class="class-header">
+                    <div class="class-date">${cls.date}, ${cls.year || '2025'}</div>
+                    <h2 class="class-title">${cls.topic}</h2>
+                </div>
+                
+                <!-- PRACTICE -->
+                <section class="section practice">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>☸ This Week's Practice</span>
+                        <span class="toggle">−</span>
+                    </div>
+                    <div class="section-content">
+                        ${cls.practice?.title ? `<div class="practice-title">${cls.practice.title}</div>` : ''}
+                        ${renderPracticeSteps(cls.practice?.steps)}
+                        ${cls.practice?.quote ? `<div class="practice-quote">"${cls.practice.quote}" — KK</div>` : ''}
+                    </div>
+                </section>
+                
+                <!-- COMMENTARY -->
+                <section class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>📖 Kadam Kyle's Commentary</span>
+                        <span class="toggle">−</span>
+                    </div>
+                    <div class="section-content">
+                        ${renderCommentary(cls.commentary)}
+                    </div>
+                </section>
+                
+                <!-- MTB ROOT TEXT -->
+                <section class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>📘 Meaningful to Behold</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="section-content collapsed">
+                        <div class="root-text-label">Section Covered</div>
+                        <div class="root-text-title">${cls.mtb?.title || 'Section title to be added'}</div>
+                        <div class="root-text-content">
+                            ${renderRootText(cls.mtb?.content)}
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- SHANTIDEVA -->
+                <section class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>📜 Guide to the Bodhisattva's Way of Life</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="section-content collapsed">
+                        <div class="root-text-label">Verses Recited</div>
+                        <div class="root-text-title">${cls.shantideva?.title || 'Verses to be added'}</div>
+                        <div class="root-text-content">
+                            ${renderRootText(cls.shantideva?.content)}
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- PREVIEW -->
+                <section class="section preview">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>👁 Next Week's Reading</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="section-content collapsed">
+                        <div class="root-text-label">Preview from MTB</div>
+                        <div class="root-text-title">${cls.preview?.title || 'Preview to be added'}</div>
+                        <div class="root-text-content">
+                            ${renderRootText(cls.preview?.content)}
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const chips = document.querySelectorAll('.class-chip');
+            
+            chips.forEach((chip) => {
+                const topic = chip.dataset.topic;
+                const date = chip.dataset.date;
+                const matches = topic.includes(query) || date.includes(query);
+                chip.style.display = matches || !query ? 'inline-block' : 'none';
+            });
+        });
+        
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
