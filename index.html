@@ -313,34 +313,34 @@
             margin-bottom: 0;
         }
         
-        /* PREVIEW SECTION */
+        /* PREVIEW SECTION - light style like others */
         .section.preview .section-header {
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            color: var(--cream);
+            background: var(--cream-dark);
+            color: var(--red);
         }
         
         .section.preview .toggle {
-            color: var(--red-light);
+            color: var(--red);
         }
         
-        /* TRANSCRIPT SECTION */
+        /* TRANSCRIPT SECTION - light style */
         .section.transcript .section-header {
-            background: linear-gradient(135deg, #5d4e6d 0%, #3d3347 100%);
-            color: var(--cream);
+            background: var(--cream-dark);
+            color: #5d4e6d;
         }
         
         .section.transcript .toggle {
-            color: #c4b8d0;
+            color: #5d4e6d;
         }
         
-        /* RECORDING SECTION */
+        /* RECORDING SECTION - light style */
         .section.recording .section-header {
-            background: linear-gradient(135deg, #4a6741 0%, #2d3f28 100%);
-            color: var(--cream);
+            background: var(--cream-dark);
+            color: #4a6741;
         }
         
         .section.recording .toggle {
-            color: #b8d0b4;
+            color: #4a6741;
         }
         
         .recording-link {
@@ -955,21 +955,6 @@
                     </div>
                 </section>
                 
-                <!-- PREVIEW -->
-                <section class="section preview">
-                    <div class="section-header" onclick="toggleSection(this)">
-                        <span>👁 Next Week's Reading</span>
-                        <span class="toggle">+</span>
-                    </div>
-                    <div class="section-content collapsed">
-                        <div class="root-text-label">Preview from MTB</div>
-                        <div class="root-text-title">${cls.preview?.title || 'Preview to be added'}</div>
-                        <div class="root-text-content">
-                            ${renderRootText(cls.preview?.content)}
-                        </div>
-                    </div>
-                </section>
-                
                 <!-- RECORDING -->
                 <section class="section recording">
                     <div class="section-header" onclick="toggleSection(this)">
@@ -989,6 +974,21 @@
                     </div>
                     <div class="section-content collapsed" data-loaded="false">
                         <div class="transcript-loading">Click to load transcript...</div>
+                    </div>
+                </section>
+                
+                <!-- PREVIEW / NEXT WEEK -->
+                <section class="section preview">
+                    <div class="section-header" onclick="toggleSection(this)">
+                        <span>👁 Next Week's Reading</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="section-content collapsed">
+                        <div class="root-text-label">Preview from MTB</div>
+                        <div class="root-text-title">${cls.preview?.title || 'Preview to be added'}</div>
+                        <div class="root-text-content">
+                            ${renderRootText(cls.preview?.content)}
+                        </div>
                     </div>
                 </section>
             `;
