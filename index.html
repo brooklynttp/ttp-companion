@@ -12,25 +12,25 @@
         }
         
         :root {
-            --gold: #b8860b;
-            --gold-light: #d4a84b;
-            --brown: #5d4037;
-            --brown-dark: #3e2723;
-            --cream: #faf8f5;
-            --cream-dark: #f0ebe3;
+            --red: #c94a4a;
+            --red-dark: #a33a3a;
+            --red-light: #e07070;
+            --cream: #faf5f0;
+            --cream-dark: #f0e8e0;
+            --gold: #d4a84b;
         }
         
         body {
             font-family: Georgia, 'Times New Roman', serif;
             background: var(--cream);
-            color: var(--brown-dark);
+            color: var(--red-dark);
             line-height: 1.6;
             min-height: 100vh;
         }
         
         /* HEADER */
         .header {
-            background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+            background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%);
             color: var(--cream);
             padding: 1rem;
             position: sticky;
@@ -82,13 +82,13 @@
         }
         
         .class-chip:hover {
-            border-color: var(--gold);
+            border-color: var(--red);
         }
         
         .class-chip.active {
-            background: var(--gold);
+            background: var(--red);
             color: white;
-            border-color: var(--gold);
+            border-color: var(--red);
         }
         
         .class-chip .chip-date {
@@ -118,14 +118,14 @@
         
         .class-date {
             font-size: 0.9rem;
-            color: var(--gold);
+            color: var(--red);
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
         
         .class-title {
             font-size: 1.5rem;
-            color: var(--brown-dark);
+            color: var(--red-dark);
             margin-top: 0.25rem;
         }
         
@@ -143,7 +143,7 @@
             padding: 0.75rem 1rem;
             font-size: 0.85rem;
             font-weight: bold;
-            color: var(--brown);
+            color: var(--red);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             border-bottom: 1px solid #eee;
@@ -155,7 +155,7 @@
         
         .section-header .toggle {
             font-size: 1.25rem;
-            color: var(--gold);
+            color: var(--red);
         }
         
         .section-content {
@@ -168,11 +168,11 @@
         
         /* PRACTICE SECTION - Special styling */
         .section.practice {
-            border: 2px solid var(--gold);
+            border: 2px solid var(--red);
         }
         
         .section.practice .section-header {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
             color: white;
         }
         
@@ -183,7 +183,7 @@
         .practice-title {
             font-size: 1.1rem;
             font-weight: bold;
-            color: var(--brown-dark);
+            color: var(--red-dark);
             margin-bottom: 0.75rem;
         }
         
@@ -206,7 +206,7 @@
             content: "◆";
             position: absolute;
             left: 0;
-            color: var(--gold);
+            color: var(--red);
             font-size: 0.6rem;
             top: 0.7rem;
         }
@@ -217,7 +217,7 @@
             color: #666;
             font-style: italic;
             padding-left: 1rem;
-            border-left: 2px solid var(--gold-light);
+            border-left: 2px solid var(--red-light);
         }
         
         /* COMMENTARY SECTION */
@@ -234,7 +234,7 @@
         }
         
         .commentary-point h4 {
-            color: var(--brown);
+            color: var(--red);
             font-size: 1rem;
             margin-bottom: 0.5rem;
         }
@@ -261,7 +261,7 @@
         
         .kk-quote::before {
             content: """;
-            color: var(--gold);
+            color: var(--red);
             font-size: 1.5rem;
             line-height: 0;
             vertical-align: -0.3rem;
@@ -270,7 +270,7 @@
         
         .kk-quote::after {
             content: "" — KK";
-            color: var(--gold);
+            color: var(--red);
         }
         
         /* ROOT TEXT SECTIONS */
@@ -278,14 +278,14 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--gold);
+            color: var(--red);
             margin-bottom: 0.5rem;
         }
         
         .root-text-title {
             font-size: 1rem;
             font-weight: bold;
-            color: var(--brown-dark);
+            color: var(--red-dark);
             margin-bottom: 0.75rem;
         }
         
@@ -296,7 +296,7 @@
             background: var(--cream);
             padding: 1rem;
             border-radius: 4px;
-            border-left: 3px solid var(--gold);
+            border-left: 3px solid var(--red);
             max-height: 400px;
             overflow-y: auto;
             white-space: pre-wrap;
@@ -313,12 +313,12 @@
         
         /* PREVIEW SECTION */
         .section.preview .section-header {
-            background: linear-gradient(135deg, var(--brown) 0%, var(--brown-dark) 100%);
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
             color: var(--cream);
         }
         
         .section.preview .toggle {
-            color: var(--gold-light);
+            color: var(--red-light);
         }
         
         /* LOADING STATE */
@@ -332,7 +332,7 @@
             width: 40px;
             height: 40px;
             border: 3px solid var(--cream-dark);
-            border-top-color: var(--gold);
+            border-top-color: var(--red);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 1rem;
