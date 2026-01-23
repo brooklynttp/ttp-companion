@@ -463,6 +463,9 @@
                     currentClassId = classesData[classesData.length - 1].id; // Start with most recent
                     renderChips();
                     renderContent();
+                    // Scroll the class selector to the right to show the latest class
+                    const selector = document.querySelector('.class-selector');
+                    selector.scrollLeft = selector.scrollWidth;
                 } else {
                     showError('No classes found in data file.');
                 }
