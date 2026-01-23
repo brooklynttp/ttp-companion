@@ -321,27 +321,6 @@
             color: var(--gold-light);
         }
         
-        /* SEARCH */
-        .search-container {
-            padding: 0.75rem 1rem;
-            background: white;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-family: inherit;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-        
         /* LOADING STATE */
         .loading {
             text-align: center;
@@ -428,10 +407,6 @@
         <h1>Teacher Training Program</h1>
         <div class="header-subtitle">KMC Brooklyn · Meaningful to Behold</div>
     </header>
-    
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search classes..." id="searchInput">
-    </div>
     
     <nav class="class-selector">
         <div class="class-chips" id="classChips">
@@ -641,19 +616,6 @@
                 </section>
             `;
         }
-        
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const chips = document.querySelectorAll('.class-chip');
-            
-            chips.forEach((chip) => {
-                const topic = chip.dataset.topic;
-                const date = chip.dataset.date;
-                const matches = topic.includes(query) || date.includes(query);
-                chip.style.display = matches || !query ? 'inline-block' : 'none';
-            });
-        });
         
         // Initialize
         loadData();
