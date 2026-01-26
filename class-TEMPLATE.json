@@ -1,0 +1,50 @@
+{
+  "id": "YYYY-MM-DD",
+  "date": "Mon D",
+  "year": "YYYY",
+  "topic": "Topic Title",
+  "recording": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=share_link",
+  
+  "practice": {
+    "title": "Practice Title",
+    "steps": [
+      "Step 1 description",
+      "Step 2 description",
+      "Step 3 description"
+    ],
+    "quote": "Optional KK quote about the practice"
+  },
+  
+  "commentary": [
+    {
+      "title": "First Teaching Point",
+      "content": [
+        "First paragraph of commentary.",
+        "Second paragraph of commentary."
+      ],
+      "quote": "Optional KK quote"
+    },
+    {
+      "title": "Second Teaching Point",
+      "content": [
+        "Commentary paragraph."
+      ]
+    }
+  ],
+  
+  "mtb": {
+    "startParagraph": 173,
+    "endParagraph": 188
+  },
+  
+  "shantideva": {
+    "chapter": 1,
+    "startVerse": 1,
+    "endVerse": 14
+  },
+  
+  "preview": {
+    "startParagraph": 189,
+    "endParagraph": 195
+  }
+}

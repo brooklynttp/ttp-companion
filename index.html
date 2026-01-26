@@ -223,6 +223,12 @@
         }
         
         /* COMMENTARY SECTION */
+        .commentary-container {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        
         .commentary-point {
             margin-bottom: 1.25rem;
             padding-bottom: 1.25rem;
@@ -237,12 +243,13 @@
         
         .commentary-point h4 {
             color: #333;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
             margin-bottom: 0.5rem;
         }
         
         .commentary-point p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #444;
             margin-bottom: 0.5rem;
         }
@@ -313,6 +320,24 @@
             margin-bottom: 0;
         }
         
+        .root-text-content .mtb-inline-header {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--red-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .root-text-content .mtb-inline-header:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        
         /* PREVIEW SECTION - bold style */
         .section.preview .section-header {
             background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
@@ -346,7 +371,7 @@
         .recording-link {
             display: inline-block;
             padding: 0.75rem 1.25rem;
-            background: linear-gradient(135deg, #4a6741 0%, #3d5636 100%);
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -356,7 +381,7 @@
         
         .recording-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74, 103, 65, 0.3);
+            box-shadow: 0 4px 12px rgba(201, 74, 74, 0.3);
         }
         
         .transcript-container {
@@ -369,14 +394,14 @@
         }
         
         .transcript-session-title {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #5d4e6d;
+            color: var(--red);
             margin-bottom: 0.75rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e8e0f0;
+            border-bottom: 2px solid var(--cream-dark);
         }
         
         .transcript-segment {
@@ -394,14 +419,14 @@
         }
         
         .transcript-meta {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: #888;
             margin-bottom: 0.25rem;
         }
         
         .transcript-speaker {
             font-weight: 600;
-            color: #666;
+            color: #555;
         }
         
         .transcript-segment.kk .transcript-speaker {
@@ -414,8 +439,8 @@
         }
         
         .transcript-text {
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
             color: #444;
         }
         
@@ -429,10 +454,10 @@
         }
         
         .transcript-prayers-label {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #999;
+            color: #888;
             font-style: normal;
             margin-bottom: 0.5rem;
         }
@@ -443,14 +468,14 @@
         }
         
         .transcript-subsection-title {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #888;
+            letter-spacing: 0.08em;
+            color: #555;
             margin: 1.5rem 0 0.75rem 0;
             padding: 0.5rem 0.25rem;
-            border-bottom: 1px solid #e0d8e8;
+            border-bottom: 1px solid var(--cream-dark);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -469,6 +494,11 @@
         .transcript-subsection-content {
             overflow: hidden;
             transition: max-height 0.3s ease;
+        }
+        
+        .transcript-subsection-content:not(.collapsed) {
+            max-height: 600px;
+            overflow-y: auto;
         }
         
         .transcript-subsection-content.collapsed {
@@ -617,15 +647,35 @@
     <script>
         let classesData = [];
         let currentClassId = null;
+        let textsCache = {}; // Cache for MTB and Shantideva texts
         
-        // Load data from JSON file
+        // Load data from manifest and individual class files
         async function loadData() {
             try {
-                const response = await fetch('ttp-data.json?v=6');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                // First, load the manifest to get list of class IDs
+                const manifestResponse = await fetch('classes/manifest.json?v=' + Date.now());
+                if (!manifestResponse.ok) {
+                    throw new Error(`Could not load manifest: ${manifestResponse.status}`);
                 }
-                classesData = await response.json();
+                const manifest = await manifestResponse.json();
+                
+                if (!manifest.classes || manifest.classes.length === 0) {
+                    showError('No classes found in manifest.');
+                    return;
+                }
+                
+                // Load all class files in parallel
+                const classPromises = manifest.classes.map(async (classId) => {
+                    const response = await fetch(`classes/${classId}.json?v=` + Date.now());
+                    if (!response.ok) {
+                        console.warn(`Could not load class ${classId}`);
+                        return null;
+                    }
+                    return response.json();
+                });
+                
+                const loadedClasses = await Promise.all(classPromises);
+                classesData = loadedClasses.filter(c => c !== null);
                 
                 if (classesData.length > 0) {
                     currentClassId = classesData[classesData.length - 1].id; // Start with most recent
@@ -635,11 +685,46 @@
                     const selector = document.querySelector('.class-selector');
                     selector.scrollLeft = selector.scrollWidth;
                 } else {
-                    showError('No classes found in data file.');
+                    showError('No classes could be loaded.');
                 }
             } catch (error) {
-                showError(`Could not load ttp-data.json. Make sure it's in the same folder as this HTML file.\n\nError: ${error.message}`);
+                showError(`Could not load class data.\n\nError: ${error.message}`);
             }
+        }
+        
+        // Load MTB text sections on demand
+        async function loadMTBText() {
+            if (textsCache.mtb) return textsCache.mtb;
+            try {
+                console.log('Fetching MTB text from texts/mtb-sections.json...');
+                const response = await fetch('texts/mtb-sections.json');
+                console.log('MTB fetch response:', response.status, response.ok);
+                if (response.ok) {
+                    textsCache.mtb = await response.json();
+                    console.log('MTB loaded, sections:', Object.keys(textsCache.mtb.sections).length);
+                    return textsCache.mtb;
+                }
+            } catch (e) {
+                console.warn('Could not load MTB text:', e);
+            }
+            return null;
+        }
+        
+        // Load Shantideva text on demand
+        async function loadShantidevaText() {
+            if (textsCache.shantideva) return textsCache.shantideva;
+            try {
+                console.log('Fetching Shantideva text from texts/shantideva.json...');
+                const response = await fetch('texts/shantideva.json');
+                console.log('Shantideva fetch response:', response.status, response.ok);
+                if (response.ok) {
+                    textsCache.shantideva = await response.json();
+                    return textsCache.shantideva;
+                }
+            } catch (e) {
+                console.warn('Could not load Shantideva text:', e);
+            }
+            return null;
         }
         
         // Show error message
@@ -689,6 +774,292 @@
             }
         }
         
+        // Toggle MTB section with lazy loading from references
+        async function toggleMTBSection(el, classId) {
+            const content = el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.textContent = '−';
+                
+                // Load content if not already loaded
+                if (content.dataset.mtbLoaded !== 'true') {
+                    const cls = classesData.find(c => c.id === classId);
+                    const container = document.getElementById(`mtb-content-${classId}`);
+                    
+                    // If content already embedded, mark as loaded
+                    if (cls.mtb?.content) {
+                        content.dataset.mtbLoaded = 'true';
+                        return;
+                    }
+                    
+                    // Load from references
+                    const mtbData = await loadMTBText();
+                    if (!mtbData) {
+                        container.innerHTML = '<p class="no-content">Could not load text</p>';
+                        content.dataset.mtbLoaded = 'true';
+                        return;
+                    }
+                    
+                    let html = '';
+                    let autoTitle = '';
+                    
+                    // Simplest format: just startParagraph and endParagraph
+                    if (cls.mtb?.startParagraph && !cls.mtb?.ranges && !cls.mtb?.sections) {
+                        const start = cls.mtb.startParagraph;
+                        const end = cls.mtb.endParagraph || start;
+                        console.log('Simple paragraph range:', start, 'to', end);
+                        
+                        // Build ordered list of paragraphs with their sections
+                        const paragraphsInRange = [];
+                        for (const [slug, section] of Object.entries(mtbData.sections)) {
+                            for (const p of section.paragraphs) {
+                                if (p.id >= start && p.id <= end) {
+                                    // Check if this is the first paragraph of the section
+                                    const isFirstOfSection = section.paragraphs[0]?.id === p.id;
+                                    paragraphsInRange.push({
+                                        id: p.id,
+                                        text: p.text,
+                                        sectionSlug: slug,
+                                        sectionTitle: section.title,
+                                        isFirstOfSection: isFirstOfSection
+                                    });
+                                }
+                            }
+                        }
+                        
+                        // Sort by paragraph ID to ensure correct order
+                        paragraphsInRange.sort((a, b) => a.id - b.id);
+                        
+                        // Render with section headers when section changes (including first)
+                        let currentSection = null;
+                        for (const p of paragraphsInRange) {
+                            if (p.sectionSlug !== currentSection) {
+                                // New section - add header with (continued) if not starting at first paragraph
+                                const continued = !p.isFirstOfSection ? ' (continued)' : '';
+                                html += `<h4 class="mtb-inline-header">${p.sectionTitle}${continued}</h4>`;
+                                currentSection = p.sectionSlug;
+                            }
+                            html += `<p>${p.text}</p>`;
+                        }
+                        
+                        // Hide the black title element
+                        const titleEl = container.parentElement.querySelector('.root-text-title');
+                        if (titleEl) titleEl.style.display = 'none';
+                    }
+                    // New format: ranges array with section + startParagraph/endParagraph
+                    else if (cls.mtb?.ranges) {
+                        console.log('Processing MTB ranges:', cls.mtb.ranges);
+                        for (const range of cls.mtb.ranges) {
+                            console.log('Looking for section:', range.section);
+                            const section = mtbData.sections[range.section];
+                            if (section) {
+                                console.log('Found section with', section.paragraphs.length, 'paragraphs');
+                                const paragraphs = section.paragraphs;
+                                const start = range.startParagraph || 1;
+                                const end = range.endParagraph || 9999;
+                                console.log('Filtering paragraphs from', start, 'to', end);
+                                for (const p of paragraphs) {
+                                    if (p.id >= start && p.id <= end) {
+                                        html += `<p>${p.text}</p>`;
+                                    }
+                                }
+                            } else {
+                                console.warn('Section not found:', range.section);
+                            }
+                        }
+                    }
+                    // Old reference format: sections array (full sections)
+                    else if (cls.mtb?.sections) {
+                        for (const sectionSlug of cls.mtb.sections) {
+                            const section = mtbData.sections[sectionSlug];
+                            if (section) {
+                                const paragraphs = section.paragraphs;
+                                const start = cls.mtb.startParagraph || 0;
+                                const end = cls.mtb.endParagraph || 9999;
+                                for (const p of paragraphs) {
+                                    if (p.id >= start && p.id <= end) {
+                                        html += `<p>${p.text}</p>`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    container.innerHTML = html || '<p class="no-content">Text not found</p>';
+                    content.dataset.mtbLoaded = 'true';
+                }
+            } else {
+                content.classList.add('collapsed');
+                toggle.textContent = '+';
+            }
+        }
+        
+        // Toggle Shantideva section with lazy loading from references
+        async function toggleShantidevaSection(el, classId) {
+            const content = el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.textContent = '−';
+                
+                // Load content if not already loaded
+                if (content.dataset.shantidevaLoaded !== 'true') {
+                    const cls = classesData.find(c => c.id === classId);
+                    const container = document.getElementById(`shantideva-content-${classId}`);
+                    
+                    // If content already embedded, mark as loaded
+                    if (cls.shantideva?.content) {
+                        content.dataset.shantidevaLoaded = 'true';
+                        return;
+                    }
+                    
+                    // Otherwise load from references
+                    if (cls.shantideva?.chapter) {
+                        const shantidevaData = await loadShantidevaText();
+                        if (shantidevaData) {
+                            const chapter = shantidevaData.chapters[cls.shantideva.chapter.toString()];
+                            if (chapter) {
+                                const start = cls.shantideva.startVerse || 1;
+                                const end = cls.shantideva.endVerse || 999;
+                                
+                                // Add chapter header inline
+                                let html = `<h4 class="mtb-inline-header">Chapter ${cls.shantideva.chapter}, Verses ${start}-${end}</h4>`;
+                                
+                                for (let v = start; v <= end; v++) {
+                                    const verse = chapter.verses[v.toString()];
+                                    if (verse) {
+                                        html += `<p><strong>(${v})</strong> ${verse.replace(/\n/g, '<br>')}</p>`;
+                                    }
+                                }
+                                container.innerHTML = html || '<p class="no-content">Verses not found</p>';
+                                
+                                // Hide the black title
+                                const titleEl = container.parentElement.querySelector('.root-text-title');
+                                if (titleEl) titleEl.style.display = 'none';
+                            }
+                        }
+                    }
+                    content.dataset.shantidevaLoaded = 'true';
+                }
+            } else {
+                content.classList.add('collapsed');
+                toggle.textContent = '+';
+            }
+        }
+        
+        // Toggle Preview section with lazy loading from references
+        async function togglePreviewSection(el, classId) {
+            const content = el.nextElementSibling;
+            const toggle = el.querySelector('.toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.textContent = '−';
+                
+                // Load content if not already loaded
+                if (content.dataset.previewLoaded !== 'true') {
+                    const cls = classesData.find(c => c.id === classId);
+                    const container = document.getElementById(`preview-content-${classId}`);
+                    
+                    // If content already embedded, mark as loaded
+                    if (cls.preview?.content) {
+                        content.dataset.previewLoaded = 'true';
+                        return;
+                    }
+                    
+                    // Load from references
+                    const mtbData = await loadMTBText();
+                    if (!mtbData) {
+                        container.innerHTML = '<p class="no-content">Could not load text</p>';
+                        content.dataset.previewLoaded = 'true';
+                        return;
+                    }
+                    
+                    let html = '';
+                    let autoTitle = '';
+                    
+                    // Simplest format: just startParagraph and endParagraph
+                    if (cls.preview?.startParagraph && !cls.preview?.ranges && !cls.preview?.sections) {
+                        const start = cls.preview.startParagraph;
+                        const end = cls.preview.endParagraph || start;
+                        
+                        // Build ordered list of paragraphs with their sections
+                        const paragraphsInRange = [];
+                        for (const [slug, section] of Object.entries(mtbData.sections)) {
+                            for (const p of section.paragraphs) {
+                                if (p.id >= start && p.id <= end) {
+                                    // Check if this is the first paragraph of the section
+                                    const isFirstOfSection = section.paragraphs[0]?.id === p.id;
+                                    paragraphsInRange.push({
+                                        id: p.id,
+                                        text: p.text,
+                                        sectionSlug: slug,
+                                        sectionTitle: section.title,
+                                        isFirstOfSection: isFirstOfSection
+                                    });
+                                }
+                            }
+                        }
+                        
+                        // Sort by paragraph ID to ensure correct order
+                        paragraphsInRange.sort((a, b) => a.id - b.id);
+                        
+                        // Render with section headers when section changes (including first)
+                        let currentSection = null;
+                        for (const p of paragraphsInRange) {
+                            if (p.sectionSlug !== currentSection) {
+                                // New section - add header with (continued) if not starting at first paragraph
+                                const continued = !p.isFirstOfSection ? ' (continued)' : '';
+                                html += `<h4 class="mtb-inline-header">${p.sectionTitle}${continued}</h4>`;
+                                currentSection = p.sectionSlug;
+                            }
+                            html += `<p>${p.text}</p>`;
+                        }
+                        
+                        // Hide the black title element
+                        const titleEl = container.parentElement.querySelector('.root-text-title');
+                        if (titleEl) titleEl.style.display = 'none';
+                    }
+                    // New format: ranges array with section + startParagraph/endParagraph
+                    else if (cls.preview?.ranges) {
+                        for (const range of cls.preview.ranges) {
+                            const section = mtbData.sections[range.section];
+                            if (section) {
+                                const paragraphs = section.paragraphs;
+                                const start = range.startParagraph || 1;
+                                const end = range.endParagraph || 9999;
+                                for (const p of paragraphs) {
+                                    if (p.id >= start && p.id <= end) {
+                                        html += `<p>${p.text}</p>`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // Old reference format: sections array (full sections)
+                    else if (cls.preview?.sections) {
+                        for (const sectionSlug of cls.preview.sections) {
+                            const section = mtbData.sections[sectionSlug];
+                            if (section) {
+                                for (const p of section.paragraphs) {
+                                    html += `<p>${p.text}</p>`;
+                                }
+                            }
+                        }
+                    }
+                    
+                    container.innerHTML = html || '<p class="no-content">Preview not found</p>';
+                    content.dataset.previewLoaded = 'true';
+                }
+            } else {
+                content.classList.add('collapsed');
+                toggle.textContent = '+';
+            }
+        }
+        
         // Render practice steps
         function renderPracticeSteps(steps) {
             if (!steps || steps.length === 0) {
@@ -702,13 +1073,13 @@
             if (!points || points.length === 0) {
                 return '<p class="no-content">Commentary to be added</p>';
             }
-            return points.map(point => `
+            return `<div class="commentary-container">` + points.map(point => `
                 <div class="commentary-point">
                     <h4>${point.title}</h4>
                     ${point.content.map(p => `<p>${p}</p>`).join('')}
                     ${point.quote ? `<div class="kk-quote">${point.quote}</div>` : ''}
                 </div>
-            `).join('');
+            `).join('') + `</div>`;
         }
         
         // Render root text content
@@ -743,11 +1114,28 @@
         function renderPrayersNote(prayers) {
             if (!prayers) return '';
             if (prayers.text) {
+                // Extract prayer name from text if it starts with a title
+                let prayerLabel = 'Chanted Prayers';
+                const text = prayers.text.trim();
+                
+                // Check if text starts with a prayer title (all caps line)
+                if (text.startsWith('LIBERATING PRAYER')) {
+                    prayerLabel = 'Liberating Prayer';
+                } else {
+                    // Look for first line if it's a title
+                    const firstLine = text.split('\n')[0].trim();
+                    if (firstLine === firstLine.toUpperCase() && firstLine.length < 50) {
+                        prayerLabel = firstLine.split(' ').map(w => 
+                            w.charAt(0) + w.slice(1).toLowerCase()
+                        ).join(' ');
+                    }
+                }
+                
                 return `
                     <div class="transcript-prayers-wrapper" onclick="toggleTranscriptSubsection(this)">
                         <div class="transcript-prayers">
                             <div class="transcript-prayers-header">
-                                <div class="transcript-prayers-label">Chanted Prayers [${prayers.time}]</div>
+                                <div class="transcript-prayers-label">${prayerLabel} [${prayers.time}]</div>
                                 <span class="toggle">+</span>
                             </div>
                             <div class="transcript-subsection-content collapsed">
@@ -805,7 +1193,12 @@
             container.innerHTML = '<div class="transcript-loading">Loading transcript...</div>';
             
             try {
-                const response = await fetch(`transcript-${classId}.json?v=2`);
+                // Try new path structure first, fall back to old
+                let response = await fetch(`transcripts/transcript-${classId}.json?v=` + Date.now());
+                if (!response.ok) {
+                    // Try old path structure for backwards compatibility
+                    response = await fetch(`transcript-${classId}.json?v=` + Date.now());
+                }
                 if (!response.ok) {
                     container.innerHTML = '<div class="transcript-unavailable">Transcript not yet available for this class.</div>';
                     return;
@@ -831,12 +1224,12 @@
                 // Post-meditation transition (if exists - attendance, format explanation)
                 html += renderCollapsibleSubsection('Post-Meditation', transcript.session1.postMeditation);
                 
+                // Shantideva reading (collapsible) - comes before practice reports
+                html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                
                 // Practice reports (collapsible) - check both old and new naming
                 const practiceReportsData = transcript.session1.practiceReports || transcript.session1.teaching;
                 html += renderCollapsibleSubsection('Practice Reports', practiceReportsData);
-                
-                // Shantideva reading (collapsible)
-                html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
                 
                 // Post-reading / Class overview (collapsible)
                 html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
@@ -852,6 +1245,9 @@
                 
                 // Chanted prayers
                 html += renderPrayersNote(transcript.session2.chantedPrayers);
+                
+                // Guided meditation (if present)
+                html += renderCollapsibleSubsection('Guided Meditation', transcript.session2.guidedMeditation);
                 
                 // Teaching (collapsible)
                 html += renderCollapsibleSubsection('Teaching & Discussion', transcript.session2.teaching);
@@ -931,30 +1327,30 @@
                 
                 <!-- MTB ROOT TEXT -->
                 <section class="section">
-                    <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-header" onclick="toggleMTBSection(this, '${cls.id}')">
                         <span>📘 Meaningful to Behold</span>
                         <span class="toggle">+</span>
                     </div>
-                    <div class="section-content collapsed">
+                    <div class="section-content collapsed" data-mtb-loaded="false">
                         <div class="root-text-label">Section Covered</div>
                         <div class="root-text-title">${cls.mtb?.title || 'Section title to be added'}</div>
-                        <div class="root-text-content">
-                            ${renderRootText(cls.mtb?.content)}
+                        <div class="root-text-content" id="mtb-content-${cls.id}">
+                            ${cls.mtb?.content ? renderRootText(cls.mtb.content) : '<p class="loading-text">Loading...</p>'}
                         </div>
                     </div>
                 </section>
                 
                 <!-- SHANTIDEVA -->
                 <section class="section">
-                    <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-header" onclick="toggleShantidevaSection(this, '${cls.id}')">
                         <span>📜 Guide to the Bodhisattva's Way of Life</span>
                         <span class="toggle">+</span>
                     </div>
-                    <div class="section-content collapsed">
+                    <div class="section-content collapsed" data-shantideva-loaded="false">
                         <div class="root-text-label">Verses Recited</div>
                         <div class="root-text-title">${cls.shantideva?.title || 'Verses to be added'}</div>
-                        <div class="root-text-content">
-                            ${renderRootText(cls.shantideva?.content)}
+                        <div class="root-text-content" id="shantideva-content-${cls.id}">
+                            ${cls.shantideva?.content ? renderRootText(cls.shantideva.content) : '<p class="loading-text">Loading...</p>'}
                         </div>
                     </div>
                 </section>
@@ -983,15 +1379,15 @@
                 
                 <!-- PREVIEW / NEXT WEEK -->
                 <section class="section preview">
-                    <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-header" onclick="togglePreviewSection(this, '${cls.id}')">
                         <span>👁 Next Week's Reading</span>
                         <span class="toggle">+</span>
                     </div>
-                    <div class="section-content collapsed">
+                    <div class="section-content collapsed" data-preview-loaded="false">
                         <div class="root-text-label">Preview from MTB</div>
                         <div class="root-text-title">${cls.preview?.title || 'Preview to be added'}</div>
-                        <div class="root-text-content">
-                            ${renderRootText(cls.preview?.content)}
+                        <div class="root-text-content" id="preview-content-${cls.id}">
+                            ${cls.preview?.content ? renderRootText(cls.preview.content) : '<p class="loading-text">Loading...</p>'}
                         </div>
                     </div>
                 </section>
