@@ -819,23 +819,27 @@
                 html += '<div class="transcript-session">';
                 html += '<div class="transcript-session-title">Session 1</div>';
                 
+                // Class intro FIRST (if exists - pre-prayer intro)
+                html += renderCollapsibleSubsection('Class Introduction', transcript.session1.classIntro);
+                
                 // Chanted prayers (collapsible)
                 html += renderPrayersNote(transcript.session1.chantedPrayers);
                 
                 // Guided meditation (collapsible)
                 html += renderCollapsibleSubsection('Guided Meditation', transcript.session1.guidedMeditation);
                 
-                // Class intro (collapsible)
-                html += renderCollapsibleSubsection('Class Introduction', transcript.session1.classIntro);
+                // Post-meditation transition (if exists - attendance, format explanation)
+                html += renderCollapsibleSubsection('Post-Meditation', transcript.session1.postMeditation);
+                
+                // Practice reports (collapsible) - check both old and new naming
+                const practiceReportsData = transcript.session1.practiceReports || transcript.session1.teaching;
+                html += renderCollapsibleSubsection('Practice Reports', practiceReportsData);
                 
                 // Shantideva reading (collapsible)
                 html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
                 
                 // Post-reading / Class overview (collapsible)
                 html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
-                
-                // Teaching (collapsible)
-                html += renderCollapsibleSubsection('Practice Sharing & Discussion', transcript.session1.teaching);
                 
                 // Main Teaching (collapsible)
                 html += renderCollapsibleSubsection('Session 1 Teaching', transcript.session1.mainTeaching);
