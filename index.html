@@ -1114,28 +1114,11 @@
         function renderPrayersNote(prayers) {
             if (!prayers) return '';
             if (prayers.text) {
-                // Extract prayer name from text if it starts with a title
-                let prayerLabel = 'Chanted Prayers';
-                const text = prayers.text.trim();
-                
-                // Check if text starts with a prayer title (all caps line)
-                if (text.startsWith('LIBERATING PRAYER')) {
-                    prayerLabel = 'Liberating Prayer';
-                } else {
-                    // Look for first line if it's a title
-                    const firstLine = text.split('\n')[0].trim();
-                    if (firstLine === firstLine.toUpperCase() && firstLine.length < 50) {
-                        prayerLabel = firstLine.split(' ').map(w => 
-                            w.charAt(0) + w.slice(1).toLowerCase()
-                        ).join(' ');
-                    }
-                }
-                
                 return `
                     <div class="transcript-prayers-wrapper" onclick="toggleTranscriptSubsection(this)">
                         <div class="transcript-prayers">
                             <div class="transcript-prayers-header">
-                                <div class="transcript-prayers-label">${prayerLabel} [${prayers.time}]</div>
+                                <div class="transcript-prayers-label">Chanted Prayers [${prayers.time}]</div>
                                 <span class="toggle">+</span>
                             </div>
                             <div class="transcript-subsection-content collapsed">
