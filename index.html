@@ -1226,12 +1226,12 @@
                 // Shantideva reading (collapsible) - comes before practice reports
                 html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
                 
+                // Post-reading / Class overview (collapsible) - roll call, recap, intro to sharing
+                html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
+                
                 // Practice reports (collapsible) - check both old and new naming
                 const practiceReportsData = transcript.session1.practiceReports || transcript.session1.teaching;
                 html += renderCollapsibleSubsection('Practice Reports', practiceReportsData);
-                
-                // Post-reading / Class overview (collapsible)
-                html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
                 
                 // Main Teaching (collapsible)
                 html += renderCollapsibleSubsection('Session 1 Teaching', transcript.session1.mainTeaching);
