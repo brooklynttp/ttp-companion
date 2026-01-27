@@ -612,6 +612,7 @@
             
             .main {
                 padding: 1.5rem;
+                padding-bottom: 50vh;
             }
             
             .class-title {
@@ -621,6 +622,21 @@
             .root-text-content {
                 max-height: 700px;
                 font-size: 1.05rem;
+            }
+            
+            .transcript-container {
+                max-height: 700px;
+            }
+        }
+        
+        /* Mobile: allow scrolling past last section */
+        @media (max-width: 767px) {
+            .main {
+                padding-bottom: 50vh;
+            }
+            
+            .root-text-content {
+                max-height: 500px;
             }
         }
     </style>
