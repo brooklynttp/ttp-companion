@@ -726,6 +726,29 @@
             return null;
         }
         
+        // Get MTB chapter info for a paragraph number
+        function getMTBChapter(paragraphNum) {
+            const chapters = {
+                1: { name: "The Benefits of Bodhichitta", start: 1, end: 251 },
+                2: { name: "Purification and Accumulation", start: 252, end: 508 },
+                3: { name: "Accepting Bodhichitta", start: 509, end: 547 },
+                4: { name: "Conscientiousness", start: 548, end: 714 },
+                5: { name: "Guarding the Mind with Alertness", start: 715, end: 922 },
+                6: { name: "Patience", start: 923, end: 1080 },
+                7: { name: "Effort", start: 1081, end: 1194 },
+                8: { name: "Concentration", start: 1195, end: 1489 },
+                9: { name: "Wisdom", start: 1490, end: 1922 },
+                10: { name: "Dedication", start: 1923, end: 1985 }
+            };
+            
+            for (const [num, info] of Object.entries(chapters)) {
+                if (paragraphNum >= info.start && paragraphNum <= info.end) {
+                    return { number: parseInt(num), name: info.name };
+                }
+            }
+            return null;
+        }
+        
         // Load Shantideva text on demand
         async function loadShantidevaText() {
             if (textsCache.shantideva) return textsCache.shantideva;
@@ -1331,7 +1354,7 @@
                         <span class="toggle">+</span>
                     </div>
                     <div class="section-content collapsed" data-mtb-loaded="false">
-                        <div class="root-text-label">Section Covered</div>
+                        <div class="root-text-label">${cls.mtb?.startParagraph ? (() => { const ch = getMTBChapter(cls.mtb.startParagraph); return ch ? `Chapter ${ch.number}: ${ch.name}` : 'Section Covered'; })() : 'Section Covered'}</div>
                         <div class="root-text-title">${cls.mtb?.title || 'Section title to be added'}</div>
                         <div class="root-text-content" id="mtb-content-${cls.id}">
                             ${cls.mtb?.content ? renderRootText(cls.mtb.content) : '<p class="loading-text">Loading...</p>'}
@@ -1383,7 +1406,7 @@
                         <span class="toggle">+</span>
                     </div>
                     <div class="section-content collapsed" data-preview-loaded="false">
-                        <div class="root-text-label">Preview from MTB</div>
+                        <div class="root-text-label">${cls.preview?.startParagraph ? (() => { const ch = getMTBChapter(cls.preview.startParagraph); return ch ? `Chapter ${ch.number}: ${ch.name}` : 'Preview from MTB'; })() : 'Preview from MTB'}</div>
                         <div class="root-text-title">${cls.preview?.title || 'Preview to be added'}</div>
                         <div class="root-text-content" id="preview-content-${cls.id}">
                             ${cls.preview?.content ? renderRootText(cls.preview.content) : '<p class="loading-text">Loading...</p>'}
