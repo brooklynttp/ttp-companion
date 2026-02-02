@@ -145,7 +145,9 @@ This is one of the most important sections. It captures what students should be 
 
 #### Where the practice lives in the transcript
 
-The final 10-15 minutes of class. After the paired/small-group discussions end and the whole group reconvenes, KK typically asks something like "what do we want to get up to this week?" or "so what do we want to work on?" Students share their commitments, and KK affirms, refines, or synthesizes. This conversation — the **post-discussion resolution** — is where the group-agreed practice comes from.
+The final 10-15 minutes of class. After the **paired discussion** ends (see Transcription Guide for exclusion rules) and the whole group reconvenes, KK typically asks something like "what do we want to get up to this week?" or "so what do we want to work on?" Students share their commitments, and KK affirms, refines, or synthesizes. This conversation — the **post-discussion resolution** — is where the group-agreed practice comes from.
+
+Note: Sometimes KK has already strongly suggested a practice *during* the teaching (before the paired discussion), and the post-discussion resolution simply confirms it. In that case, draw the practice content from KK's teaching, not just the brief reconvene exchange.
 
 Typical trigger phrases:
 - "what do we want to get up to over the next week?"

@@ -23,7 +23,7 @@ For assembling the weekly class companion page (practices, commentary, root text
 
 ## Project Overview
 
-The TTP (Tharpa Tradition Program) is a Buddhist study group at KMC Brooklyn. The current series, **"Transforming Through Patience,"** runs from November 2025 through January 2026. The teacher is **Kadam Kyle (KK)**.
+The TTP (Tharpa Tradition Program) is a Buddhist study group at KMC Brooklyn. The current series, **"Transforming Through Patience,"** runs from November 2025 onward. The teacher is **Kadam Kyle (KK)**.
 
 The class studies two primary texts:
 
@@ -75,6 +75,7 @@ Key characteristics of the raw format:
 
 - Speaker numbers are **arbitrary and inconsistent across transcripts.** Speaker 1 in one transcript is not the same as Speaker 1 in another. The diarization software assigns numbers fresh each time.
 - Timestamps are in `H:MM:SS` or `M:SS` format.
+- **Timestamps may occasionally be missing.** If a transcript arrives without timestamps, request a re-export with timestamps included. Timestamps are essential for verifying chronological ordering, detecting KK speaker splits, and mapping section boundaries. Processing without them is possible but significantly harder and error-prone.
 - A single real person may be assigned **multiple speaker numbers** within the same transcript. The software sometimes splits one person into two or more speaker IDs, especially if there's a pause or change in audio quality.
 - Chanted prayers (which are spoken in unison by the group) typically get assigned to a single speaker number, but the content is communal.
 - The transcript captures **everything** the microphone picks up — pre-class chatter, break-time socializing, post-class goodbyes, and all sorts of ambient conversation. Much of this needs to be filtered out.
@@ -137,6 +138,11 @@ Chanted prayers are led by one person but recited by the whole group. In the tra
 Students appear in practice-sharing / "data share" segments and occasional questions. Some students appear by name in discussions. The transcript may assign several speaker numbers to students — some of whom are actually the same person split by the software.
 
 For the output, student names are identified where possible (from context — KK sometimes addresses them by name, or they introduce themselves). Where names aren't clear, use "Student" or "Class member."
+
+**Known recurring students** (names may appear across multiple transcripts):
+
+- **Anne** — There are actually two Annes in the group: Anne K and Anne P. Typically only one speaks in a given class, so just "Anne" is fine. If KK says "Anne K" or "Anne P," use the full distinction. Otherwise, default to "Anne."
+- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neil, Esmeralda, James (these may appear in KK's pairing assignments or data shares).
 
 ---
 
@@ -236,6 +242,16 @@ A typical TTP class has **two sessions** separated by a dinner break. This is th
 - **Session Content Swaps:** The teaching and data shares don't always fall in the same session. Sometimes Session 1 is teaching and Session 2 is data shares; sometimes it's reversed. Follow the actual content, not assumptions about order.
 - **Announcements:** KK sometimes makes announcements about upcoming courses or events, usually near the end of Session 1 or beginning of Session 2. These are generally included in the transcript as they're part of the class.
 
+### Paired Discussion (Session 2) — Always Excluded
+
+Session 2 typically includes a **paired discussion** segment where KK assigns students to talk in pairs or small groups. This is **always excluded** from the transcript — it's a structural rule, not a quality judgment. Even if the audio were perfectly clear, this content is private peer discussion, not class teaching.
+
+**Start marker:** KK says something like "let's have a little time for discussion now" and then announces the pairings (e.g., "let's have Anne P and Anne K, Dale and Jose, Ryan and Sumit...").
+
+**End marker:** KK reconvenes the group with something like "what should we practice this week," "what should we break on," or "all right, thanks everyone" followed by the practice-for-the-week discussion.
+
+Everything between these two markers is excluded. The paired discussion is distinct from the **data shares / practice reports** in Session 1, which *are* included — those are students reporting to the whole group, not private side conversations.
+
 ### Key Transition Phrases
 
 These phrases help you identify section boundaries:
@@ -250,7 +266,8 @@ These phrases help you identify section boundaries:
 | "let's dedicate here" / "we can think through the virtues..." | End of a session |
 | "we'll come back at [time]" / "we'll take a break" | Break between sessions |
 | "O Blessed One Shakyamuni Buddha..." (second occurrence) | Session 2 prayers beginning |
-| "what should we work on this week" / "agreed practice" | Practice discussion (usually near end) |
+| "let's have a little time for discussion" / assigns pairs | Paired discussion starting (Session 2 — EXCLUDE everything until reconvene) |
+| "what should we work on this week" / "what should we break on" | Practice-for-the-week discussion (also marks END of paired discussion) |
 | "we can make any personal prayers or dedications" | Final closing — class is over |
 
 ---
@@ -389,7 +406,13 @@ After the final dedication ("we can make any personal prayers or dedications, th
 
 **Everything after the final dedication is excluded.**
 
-### 5. Garbled / Nonsensical Text
+### 5. Paired Discussion (Session 2)
+
+Session 2 includes a paired discussion where students talk in assigned pairs or small groups. This is **always excluded** regardless of audio quality — it's private peer conversation, not teaching content. See [Paired Discussion (Session 2) — Always Excluded](#paired-discussion-session-2--always-excluded) in the Class Structure section above for the exact start/end markers.
+
+Note: This is different from the **data shares / practice reports** in Session 1, where individual students report to the whole group. Data shares are included; paired discussions are not.
+
+### 6. Garbled / Nonsensical Text
 
 The transcription software sometimes produces nonsensical output, especially when:
 
@@ -557,6 +580,7 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 7 | January 4, 2026 | `TTP_010426.txt` |
 | 8 | January 11, 2026 | `TTP_011126.txt` |
 | 9 | January 18, 2026 | `TTP_011826.txt` |
+| 10 | February 1, 2026 | `TTP_020126.txt` |
 
 ---
 
