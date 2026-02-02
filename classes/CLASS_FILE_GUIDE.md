@@ -55,10 +55,12 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 
   "practice": {
     "title": "Do Everything with Love",
+    "agreedSteps": [
+      "Step explicitly agreed at end of class",
+      "Another explicitly agreed step"
+    ],
     "steps": [
-      "Step 1 description",
-      "Step 2 description",
-      "Step 3 description"
+      "Supplementary contemplation from teaching"
     ],
     "quote": "Optional KK quote about the practice"
   },
@@ -102,9 +104,11 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 
 - **`id`** must be `YYYY-MM-DD` format for app sorting and selection logic
 - **`date`** is the short display format (e.g., "Jan 18"), **`year`** is separate
-- **`practice.steps`** is a flat array of strings — each step is one practice instruction
+- **`topic`** should be 1-4 words — it renders on a tab button and long titles overflow
+- **`practice.agreedSteps`** — the practices explicitly agreed at end of class (rendered first, with visual indicator)
+- **`practice.steps`** — supplementary practice instructions from the teaching (rendered after agreedSteps)
 - **`practice.quote`** is optional — only include when KK gives a specific, quotable emphasis
-- **`commentary`** is an array of teaching point objects, each with a `title`, `content` (array of paragraphs), and optional `quote`
+- **`commentary`** is an array of teaching point objects, each with a `title`, `content` (array of paragraphs), and optional `quote`. Written in KK's voice, not third-person about him. No student personal stories.
 - **`mtb`** references paragraphs by global ID range — the app fetches `../texts/mtb-sections.json` and pulls matching paragraphs at display time. Use `../texts/mtb-reference-guide.md` to look up paragraph IDs.
 - **`shantideva`** references verses by chapter and verse range — the app fetches `../texts/shantideva.json` and pulls matching verses. Set to `null` for classes that don't cover specific verses.
 - **`preview`** is the "Next Week's Reading" section — same paragraph-range system as `mtb`. Set to `null` if no preview is needed.
@@ -123,7 +127,7 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 "topic": "Love in Action",
 ```
 
-**Where to find it:** The date comes from the filename (`TTP_011826.txt` = January 18, 2026). `id` is the `YYYY-MM-DD` format. `date` is the short display form ("Jan 18"). `year` is separate. The `topic` is a judgment call — listen to KK's framing of the class and pick the dominant theme in 2-4 words.
+**Where to find it:** The date comes from the filename (`TTP_011826.txt` = January 18, 2026). `id` is the `YYYY-MM-DD` format. `date` is the short display form ("Jan 18"). `year` is separate. The `topic` is a judgment call — listen to KK's framing of the class and pick the dominant theme in **1-4 words**. Keep it short; the topic renders on a tab button and long titles overflow badly. Previous examples: "Equanimity," "Love in Action," "Traveler Practice," "Intention & Karma."
 
 ---
 
@@ -134,9 +138,11 @@ This is one of the most important sections. It captures what students should be 
 ```json
 "practice": {
   "title": "Do Everything with Love",
-  "steps": [
+  "agreedSteps": [
     "Make decisions from a mind of love — stop trying to figure things out from self-grasping.",
-    "Do all actions with love, or don't do them at all",
+    "Do all actions with love, or don't do them at all"
+  ],
+  "steps": [
     "Identify your 'target' — overthinking? Laziness? Anxiety-driven motivation?"
   ],
   "quote": "What would it be like to 100% stop trying to figure out what's going on, and instead put all energy into getting a mind of love going?"
@@ -155,12 +161,16 @@ Typical trigger phrases:
 - "let's see what we can work on for this class"
 - "anything you'd like to declare or swear?"
 
-#### Building the steps array
+#### Building the practice: `agreedSteps` vs. `steps`
 
-`practice.steps` is a flat array of strings. List the most important, group-agreed practices first, followed by supplementary contemplations KK suggested during class. Each step should be a clear, actionable instruction.
+The practice has two arrays of steps, which the app should render with a visual distinction:
+
+- **`agreedSteps`** — The practices the group explicitly chose at the end of class. These are the primary assignment for the week. List these first.
+- **`steps`** — Supplementary contemplations and practice instructions that KK suggested during the teaching. These support the agreed practice but weren't explicitly "voted on" at the end of class.
+
+If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `agreedSteps` from KK's fuller description of that practice during teaching. If there's no clear distinction (e.g., the group agreed to everything KK suggested), put everything in `agreedSteps` and leave `steps` empty.
 
 - **`title`** — A short, evocative name for the practice (2-6 words)
-- **`steps`** — Concrete instructions. Aim for 3-6 steps.
 - **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. Should be a direct quote, not a paraphrase.
 
 ---
@@ -196,11 +206,12 @@ Typical trigger phrases:
 **Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc — not just "we discussed X" but the actual insight.
 
 **Tips:**
+- **Write in KK's voice, not about KK.** The commentary section is labeled "Kadam Kyle's Commentary" in the app, so the content should read as his teaching — not a third-person summary of it. Write "There's a continuum here..." not "KK described a continuum." Write "Most of our compassion issues are actually love issues" not "KK explained that compassion issues are love issues." Imagine you're conveying his teaching to someone who missed class, in the spirit of how he'd say it.
 - Don't just list topics — capture the *insight*. Not "We discussed equanimity" but "Equanimity means abandoning the distinctions of friend, enemy, and stranger."
 - Include KK's distinctive examples and metaphors when they're particularly illuminating.
-- Student shares that contain strong Dharma insights can be their own commentary entry (e.g., "Student Share: The Traveler Mindset with Bodhicitta").
+- **Student shares belong in the transcript, not the commentary.** The commentary captures KK's teaching points. If a student share prompted a notable teaching response from KK, capture the *teaching point* — not the student's personal story. Avoid mentioning students by name in commentary, and never reference personal events like illness, loss, or life circumstances of specific community members.
 - If KK reads from Meaningful to Behold and then gives his own commentary, the content should reflect KK's commentary (the "so what"), not just summarize the text passage.
-- Aim for 4-8 commentary entries per class.
+- Aim for 5-8 commentary entries per class.
 
 ---
 
@@ -327,10 +338,14 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 ### Data Completeness
 
 - [ ] All metadata fields populated (`id`, `date`, `year`, `topic`)
-- [ ] `practice` has `title` and `steps` (array of strings)
+- [ ] `topic` is 1-4 words (fits on a tab button)
+- [ ] `practice` has `title` and at least `agreedSteps` (explicitly agreed at end of class)
+- [ ] `practice.steps` has supplementary practice instructions from teaching (if any)
 - [ ] `practice.quote` included if KK gave a quotable line about the practice
-- [ ] `commentary` array has 4-8 teaching point objects, each with `title` and `content`
-- [ ] Commentary entries capture insights, not just topic labels
+- [ ] `commentary` array has 5-8 teaching point objects, each with `title` and `content`
+- [ ] Commentary is written in KK's voice (not third-person "KK said...")
+- [ ] Commentary captures insights, not just topic labels
+- [ ] No student personal stories or named community members in commentary
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
 - [ ] `preview` paragraph range set for next week's reading, or `null`
