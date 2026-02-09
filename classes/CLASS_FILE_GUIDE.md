@@ -171,7 +171,7 @@ The practice has two arrays of steps, which the app should render with a visual 
 If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `agreedSteps` from KK's fuller description of that practice during teaching. If there's no clear distinction (e.g., the group agreed to everything KK suggested), put everything in `agreedSteps` and leave `steps` empty.
 
 - **`title`** — A short, evocative name for the practice (2-6 words)
-- **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. Should be a direct quote, not a paraphrase.
+- **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), but never put unbracketed text inside quotes if it's not what he actually said. If no single quote captures the practice well, omit it — a fabricated or loosely paraphrased "quote" is worse than none.
 
 ---
 
@@ -201,7 +201,7 @@ If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `
 
 - **`title`** — A short heading that captures the teaching theme
 - **`content`** — Array of paragraphs. Each paragraph should capture a distinct idea or argument.
-- **`quote`** — Optional. A direct KK quote that encapsulates the point.
+- **`quote`** — Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), but every unbracketed word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including.
 
 **Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc — not just "we discussed X" but the actual insight.
 
@@ -342,6 +342,7 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] `practice` has `title` and at least `agreedSteps` (explicitly agreed at end of class)
 - [ ] `practice.steps` has supplementary practice instructions from teaching (if any)
 - [ ] `practice.quote` included if KK gave a quotable line about the practice
+- [ ] All `quote` fields verified against transcript — every unbracketed word matches what KK actually said
 - [ ] `commentary` array has 5-8 teaching point objects, each with `title` and `content`
 - [ ] Commentary is written in KK's voice (not third-person "KK said...")
 - [ ] Commentary captures insights, not just topic labels
@@ -361,4 +362,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: February 2, 2026*
+*Last updated: February 9, 2026*
