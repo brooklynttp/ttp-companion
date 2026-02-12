@@ -160,12 +160,13 @@ A typical TTP class has **two sessions** separated by a dinner break. This is th
 ║                                          ║
 ║  SESSION 1 (approx. 4:30 PM - 5:30 PM)  ║
 ║                                          ║
-║  1. [Optional] Pre-Prayers Introduction  ║
+║  1. classIntro (optional)                ║
 ║     KK may share a brief reading,        ║
-║     thought, or framing before prayers.  ║
+║     thought, framing, or logistics       ║
+║     BEFORE the opening prayers.          ║
 ║     NOT always present.                  ║
 ║                                          ║
-║  2. Opening Prayers (chanted)            ║
+║  2. chantedPrayers                       ║
 ║     - Heart Jewel / Prayers for          ║
 ║       Meditation                         ║
 ║     - Includes refuge, mandala offering, ║
@@ -173,27 +174,48 @@ A typical TTP class has **two sessions** separated by a dinner break. This is th
 ║     - Led by prayer chanter, joined      ║
 ║       by group                           ║
 ║                                          ║
-║  3. Guided Meditation                    ║
+║  3. guidedMeditation                     ║
 ║     KK leads a meditation related to     ║
 ║     the current topic. Ends with:        ║
 ║     "in our own time, we can gradually   ║
 ║      arise from our practice"            ║
 ║                                          ║
-║  4. Session 1 Teaching                   ║
-║     Could be any combination of:         ║
-║     - Text reading & commentary          ║
-║     - Practice sharing / Data shares     ║
-║     - Discussion of the week's practice  ║
-║     - Topical teaching                   ║
-║     The content varies by class.         ║
+║  4. postMeditation                       ║
+║     KK welcomes everyone back,           ║
+║     takes attendance, asks for a         ║
+║     Shantideva reader. Transitional.     ║
 ║                                          ║
-║  5. Session 1 Dedication                 ║
-║     Brief dedication of merit:           ║
-║     "through the virtues we've collected ║
-║      through practicing, meditating,     ║
-║      discussing, may all living beings   ║
-║      find lasting peace of mind,         ║
-║      enlightenment"                      ║
+║  5. shantidevaReading                    ║
+║     Student reads the assigned verses    ║
+║     from Guide to the Bodhisattva's      ║
+║     Way of Life. May include brief       ║
+║     back-and-forth about which verses.   ║
+║                                          ║
+║  6. postReading                          ║
+║     KK thanks the reader, then           ║
+║     transitions into practice sharing.   ║
+║     Sets up the prompt: "anyone have     ║
+║     anything they'd like to share?"      ║
+║                                          ║
+║  7. practiceReports                      ║
+║     Students share practice data from    ║
+║     the week. KK responds to each.       ║
+║     Reported to whole group (not the     ║
+║     same as paired discussion).          ║
+║                                          ║
+║  8. mainTeaching                         ║
+║     KK's primary teaching. Could be:     ║
+║     - Reading from Meaningful to Behold  ║
+║     - Topical teaching                   ║
+║     - Extended commentary                ║
+║                                          ║
+║  9. announcements (optional)             ║
+║     Upcoming courses, events, etc.       ║
+║                                          ║
+║  10. Session 1 Dedication                ║
+║      Brief dedication of merit:          ║
+║      "through the virtues we've          ║
+║       collected..."                      ║
 ║                                          ║
 ╠══════════════════════════════════════════╣
 ║        DINNER BREAK (exclude)            ║
@@ -202,30 +224,30 @@ A typical TTP class has **two sessions** separated by a dinner break. This is th
 ║                                          ║
 ║  SESSION 2 (approx. 6:00 PM - 7:30 PM)  ║
 ║                                          ║
-║  6. Session 2 Opening Prayers            ║
-║     Shorter than Session 1. Usually:     ║
-║     - Prayers for Meditation             ║
-║     - Refuge & bodhisattva vows retaken  ║
-║     Often does NOT include the full      ║
-║     mandala offering or Lamrim prayers   ║
+║  11. Session 2 Opening Prayers           ║
+║      Shorter than Session 1. Usually:    ║
+║      - Prayers for Meditation            ║
+║      - Refuge & bodhisattva vows retaken ║
+║      Often does NOT include the full     ║
+║      mandala offering or Lamrim prayers  ║
 ║                                          ║
-║  7. Brief Meditation                     ║
-║     Shorter meditation connecting to     ║
-║     the vows or topic                    ║
+║  12. Brief Meditation                    ║
+║      Shorter meditation connecting to    ║
+║      the vows or topic                   ║
 ║                                          ║
-║  8. Session 2 Teaching                   ║
-║     Usually the main text study:         ║
-║     - Reading from Meaningful to Behold  ║
-║     - Discussion of Shantideva's verses  ║
-║     - KK's commentary and examples       ║
-║     But could also be data shares or     ║
-║     continued discussion from Session 1  ║
+║  13. Session 2 Teaching                  ║
+║      Usually the main text study:        ║
+║      - Reading from Meaningful to Behold ║
+║      - Discussion of Shantideva's verses ║
+║      - KK's commentary and examples      ║
+║      But could also be data shares or    ║
+║      continued discussion from Session 1 ║
 ║                                          ║
-║  9. Agreed Practice for the Week         ║
-║     KK and group discuss what to         ║
-║     practice between now and next class  ║
+║  14. Agreed Practice for the Week        ║
+║      KK and group discuss what to        ║
+║      practice between now and next class ║
 ║                                          ║
-║  10. Closing Dedication                  ║
+║  15. Closing Dedication                  ║
 ║      Brief dedication, sometimes with    ║
 ║      the "nine-line prayer" or similar   ║
 ║                                          ║
@@ -235,12 +257,49 @@ A typical TTP class has **two sessions** separated by a dinner break. This is th
 ╚══════════════════════════════════════════╝
 ```
 
+### Session 1 Section Keys (JSON)
+
+The transcript JSON uses these keys for Session 1 sections. They appear in order, but not all are present every class:
+
+| Key | Required? | Content | Typical Marker |
+|-----|-----------|---------|----------------|
+| `classIntro` | Optional | KK speaks *before* prayers — welcome, logistics, brief thought. Only present when KK has something to say before "let's begin." | KK talking before prayer chant starts |
+| `chantedPrayers` | Always | Opening prayers (Liberating Prayer, refuge, etc.) | "O Blessed One Shakyamuni Buddha..." |
+| `guidedMeditation` | Always | KK-led meditation | Ends with "gradually arise from our practice" |
+| `postMeditation` | Always | KK welcomes everyone back, takes attendance, asks for a Shantideva reader | "Okay, welcome back" / "so we have [names]..." |
+| `shantidevaReading` | Always | Student reads assigned verses | Verse text from Chapter 1, 2, etc. |
+| `postReading` | Always | KK thanks reader, frames the practice sharing prompt | "Thank you" / "anyone have anything they'd like to share?" |
+| `practiceReports` | Usually | Student practice shares + KK responses. First entry is always a student, not KK. | Students speaking to the group |
+| `mainTeaching` | Usually | KK's primary teaching segment | "Let's take a look at the book" / reading from MTB |
+| `announcements` | Optional | Upcoming courses, events | "Couple quick announcements" |
+| `dedication` | Always | Brief dedication of merit (string, not array) | "Through the virtues we've collected..." |
+
+**The two "intro" moments:** There can be up to two places where KK does introductory/transitional talking before the main content begins:
+
+1. **`classIntro`** — *before* prayers. Brief. Logistics, a reading, or framing for the day. Not every class has this. When absent, the transcript starts with `chantedPrayers`.
+2. **`postMeditation`** — *after* meditation, *before* the Shantideva reading. Always present. This is where KK takes attendance, welcomes online people, and asks for a volunteer reader.
+
+These are distinct sections with different JSON keys. `classIntro` is pre-prayer content; `postMeditation` is post-meditation transition. They should never be conflated.
+
+**`postReading` vs. first `practiceReports` entry:** `postReading` is KK's transitional bridge — thanking the reader, framing the week's practice theme, and inviting shares. The first `practiceReports` entry should be the first *student* speaking, not KK's prompt.
+
+### Session 2 Section Keys (JSON)
+
+Session 2 is simpler and has less variation:
+
+| Key | Content |
+|-----|---------|
+| `chantedPrayers` | Abbreviated opening prayers |
+| `teaching` | Everything from post-prayer through the main teaching, Q&A, and any text study |
+| `conclusion` | Practice-for-the-week discussion + closing dedication |
+
 ### Variations to Watch For
 
-- **Pre-Prayers Introduction:** Sometimes KK begins with a short reading or thought *before* the opening prayers. This is class content and should be included. Not every class has this — check whether KK is speaking substantively before the prayers start. Some transcripts begin directly with prayers.
+- **`classIntro` presence:** Sometimes KK begins with a short reading or thought *before* the opening prayers. This is class content and should be captured as `classIntro`. Not every class has this — check whether KK is speaking substantively before the prayers start. Some transcripts begin directly with `chantedPrayers`.
 - **Single-Session Classes:** Occasionally a class may only have one session. This is the exception. You can tell because there won't be a mid-class dedication, break chatter, or second set of opening prayers.
-- **Session Content Swaps:** The teaching and data shares don't always fall in the same session. Sometimes Session 1 is teaching and Session 2 is data shares; sometimes it's reversed. Follow the actual content, not assumptions about order.
+- **Session Content Swaps:** The teaching and practice reports don't always fall in the same session. Sometimes Session 1 is teaching and Session 2 is data shares; sometimes it's reversed. Follow the actual content, not assumptions about order.
 - **Announcements:** KK sometimes makes announcements about upcoming courses or events, usually near the end of Session 1 or beginning of Session 2. These are generally included in the transcript as they're part of the class.
+- **`postMeditation` with no attendance:** Some weeks KK skips the roll call and goes straight to asking for a reader. The section still exists as the transition from meditation to reading — it's just shorter.
 
 ### Paired Discussion (Session 2) — Always Excluded
 
@@ -258,16 +317,19 @@ These phrases help you identify section boundaries:
 
 | Phrase | Signals |
 |--------|---------|
-| "we're going to begin" / "let's begin" | Class starting (after optional pre-prayers intro) |
-| "O Blessed One Shakyamuni Buddha..." | Opening prayers beginning |
-| "in our own time, we can gradually arise from our practice" | End of meditation |
-| "Welcome back everyone" / "Okay, welcome back" | Post-meditation transition to teaching |
-| "let's take a look at the book" / "let's open to page..." | Text study beginning |
-| "let's dedicate here" / "we can think through the virtues..." | End of a session |
+| "we're going to begin" / "let's begin" | Class starting — `classIntro` ends, `chantedPrayers` about to begin |
+| "O Blessed One Shakyamuni Buddha..." | `chantedPrayers` beginning |
+| "in our own time, we can gradually arise from our practice" | End of `guidedMeditation` |
+| "Okay, welcome back" / "so we have [names]..." / "Does anyone want to be the reader?" | `postMeditation` — transition from meditation to reading |
+| Student begins reading verses: "Guide to the Bodhisattva's Way of Life..." | `shantidevaReading` beginning |
+| "Thank you" (to reader) / "anyone have anything they'd like to share?" | `postReading` — transition from reading to practice sharing |
+| First student speaking their practice experience | `practiceReports` beginning |
+| "let's take a look at the book" / "let's open to page..." / "let's hop into the text" | `mainTeaching` beginning |
+| "let's dedicate here" / "we can think through the virtues..." | End of a session — `dedication` |
 | "we'll come back at [time]" / "we'll take a break" | Break between sessions |
-| "O Blessed One Shakyamuni Buddha..." (second occurrence) | Session 2 prayers beginning |
+| "O Blessed One Shakyamuni Buddha..." (second occurrence) | Session 2 `chantedPrayers` beginning |
 | "let's have a little time for discussion" / assigns pairs | Paired discussion starting (Session 2 — EXCLUDE everything until reconvene) |
-| "what should we work on this week" / "what should we break on" | Practice-for-the-week discussion (also marks END of paired discussion) |
+| "what should we work on this week" / "what should we break on" | Practice-for-the-week discussion — `conclusion` (also marks END of paired discussion) |
 | "we can make any personal prayers or dedications" | Final closing — class is over |
 
 ---
@@ -489,12 +551,15 @@ Before considering a transcript "clean" and ready for class file assembly:
 
 - [ ] Both sessions accounted for (unless confirmed single-session class)
 - [ ] Session 1 and Session 2 boundaries clearly marked
-- [ ] Pre-prayers introduction identified (if present)
-- [ ] Prayers correctly identified and labeled for both sessions
-- [ ] Meditation start/end marked
-- [ ] Teaching segments identified
-- [ ] Data share / practice sharing segments identified
-- [ ] Practice discussion (final 10-15 min) identified
+- [ ] `classIntro` identified (if present — not every class has one)
+- [ ] `chantedPrayers` correctly identified and labeled for both sessions
+- [ ] `guidedMeditation` start/end marked
+- [ ] `postMeditation` identified (KK's attendance/reader-request transition)
+- [ ] `shantidevaReading` contains only the actual verse reading (not KK's transition talk)
+- [ ] `postReading` identified (KK thanks reader, sets up practice sharing)
+- [ ] `practiceReports` starts with first student share, not KK's prompt
+- [ ] `mainTeaching` segments identified
+- [ ] `conclusion` (practice discussion + dedication) identified in Session 2
 
 ### Content Filtering
 
@@ -507,7 +572,9 @@ Before considering a transcript "clean" and ready for class file assembly:
 ### Chronological Ordering
 
 - [ ] Sections appear in the order they occurred — verified against timestamps
-- [ ] "Class Introduction" content correctly placed (check actual timestamps, not section labels)
+- [ ] `classIntro` content correctly placed before prayers (check actual timestamps, not section labels)
+- [ ] `postMeditation` placed between meditation and reading (not lumped into either)
+- [ ] `postReading` placed between reading and practice reports (not lumped into either)
 - [ ] Timestamps increase monotonically within each session
 
 ### Encoding & Terminology
@@ -581,7 +648,8 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 8 | January 11, 2026 | `TTP_011126.txt` |
 | 9 | January 18, 2026 | `TTP_011826.txt` |
 | 10 | February 1, 2026 | `TTP_020126.txt` |
+| 11 | February 8, 2026 | `TTP_020826.txt` |
 
 ---
 
-*Last updated: February 2, 2026*
+*Last updated: February 12, 2026*
