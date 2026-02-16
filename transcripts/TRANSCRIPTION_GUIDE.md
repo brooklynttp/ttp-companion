@@ -142,7 +142,7 @@ For the output, student names are identified where possible (from context — KK
 **Known recurring students** (names may appear across multiple transcripts):
 
 - **Anne** — There are actually two Annes in the group: Anne K and Anne P. Typically only one speaks in a given class, so just "Anne" is fine. If KK says "Anne K" or "Anne P," use the full distinction. Otherwise, default to "Anne."
-- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neil, Esmeralda, James (these may appear in KK's pairing assignments or data shares).
+- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neal, Ben, Grady, Kristin, Mary Ann, David, Jose (these may appear in KK's pairing assignments or data shares).
 
 ---
 
