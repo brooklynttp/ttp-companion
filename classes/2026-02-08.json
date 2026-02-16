@@ -91,5 +91,8 @@
     "endVerse": 25
   },
 
-  "preview": null
+  "preview": {
+    "startParagraph": 198,
+    "endParagraph": 217
+  }
 }
