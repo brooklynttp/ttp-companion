@@ -296,17 +296,11 @@
         }
         
         .kk-quote::before {
-            content: """;
-            color: var(--red);
-            font-size: 1.5rem;
-            line-height: 0;
-            vertical-align: -0.3rem;
-            margin-right: 0.25rem;
+            content: "";
         }
         
         .kk-quote::after {
-            content: "" — KK";
-            color: var(--red);
+            content: "";
         }
         
         /* ROOT TEXT SECTIONS */
@@ -1165,7 +1159,7 @@
                 <div class="commentary-point">
                     <h4>${point.title}</h4>
                     ${point.content.map(p => `<p>${p}</p>`).join('')}
-                    ${point.quote ? `<div class="kk-quote">${point.quote}</div>` : ''}
+                    ${point.quote ? `<div class="kk-quote">"${point.quote}" — KK</div>` : ''}
                 </div>
             `).join('') + `</div>`;
         }
