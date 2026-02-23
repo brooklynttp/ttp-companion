@@ -111,7 +111,7 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 - **`commentary`** is an array of teaching point objects, each with a `title`, `content` (array of paragraphs), and optional `quote`. Written in KK's voice, not third-person about him. No student personal stories.
 - **`mtb`** references paragraphs by global ID range — the app fetches `../texts/mtb-sections.json` and pulls matching paragraphs at display time. Use `../texts/mtb-reference-guide.md` to look up paragraph IDs.
 - **`shantideva`** references verses by chapter and verse range — the app fetches `../texts/shantideva.json` and pulls matching verses. Set to `null` for classes that don't cover specific verses.
-- **`preview`** is the "Next Week's Reading" section — same paragraph-range system as `mtb`. Set to `null` if no preview is needed.
+- **`preview`** is the "Next Week's Reading" section — same paragraph-range system as `mtb`. Always include a preview — infer the next ~1,000–2,000 words of MTB if KK doesn’t explicitly assign reading.
 - **`recording`** is a Google Drive share link. Set to `null` until the recording is uploaded.
 
 ---
@@ -171,7 +171,7 @@ The practice has two arrays of steps, which the app should render with a visual 
 If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `agreedSteps` from KK's fuller description of that practice during teaching. If there's no clear distinction (e.g., the group agreed to everything KK suggested), put everything in `agreedSteps` and leave `steps` empty.
 
 - **`title`** — A short, evocative name for the practice (2-6 words)
-- **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), but never put unbracketed text inside quotes if it's not what he actually said. If no single quote captures the practice well, omit it — a fabricated or loosely paraphrased "quote" is worse than none.
+- **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), and use ellipses (...) to mark any omitted words or sentences — never silently drop content. But every unbracketed, non-ellipsis word must match what he actually said. If no single quote captures the practice well, omit it — a fabricated or loosely paraphrased "quote" is worse than none. The app wraps all quotes with `"..." — KK` automatically — do not embed quote marks or attribution in the JSON value.
 
 ---
 
@@ -201,7 +201,7 @@ If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `
 
 - **`title`** — A short heading that captures the teaching theme
 - **`content`** — Array of paragraphs. Each paragraph should capture a distinct idea or argument.
-- **`quote`** — Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), but every unbracketed word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including.
+- **`quote`** — Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), and ellipses (...) must mark any omitted words or sentences — never silently drop content. Every unbracketed, non-ellipsis word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including. The app wraps all quotes with `"..." — KK` automatically — do not embed quote marks or attribution in the JSON value.
 
 **Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc — not just "we discussed X" but the actual insight.
 
@@ -266,11 +266,13 @@ Set to `null` for classes that don't cover specific Shantideva verses.
 }
 ```
 
-This is the "Next Week's Reading" section in the app — it shows the MTB paragraphs students should read before the next class. Same paragraph-range system as `mtb`.
+This is the "Next Week’s Reading" section in the app — it shows the MTB paragraphs students should read before the next class. Same paragraph-range system as `mtb`.
 
-**Where to find it:** KK sometimes assigns reading toward the end of class. Look for phrases like "for next week, read pages..." or "try to get through the next section." If KK doesn't explicitly assign reading, you can infer it — the next class will likely pick up where the `mtb` range of this class left off.
+**Where to find it:** KK occasionally assigns reading toward the end of class. Look for phrases like "for next week, read pages..." or "try to get through the next section." However, explicit assignment is rare. **Always include a preview** — if KK doesn’t explicitly assign reading, infer it by continuing from where the current class’s `mtb` range ends. The next class will pick up where this one left off, so the preview should cover the next logical chunk of MTB.
 
-Set to `null` if no preview is needed.
+**Target length:** Aim for roughly 1,000–2,000 words of MTB content. Use paragraph word counts to calibrate. Try to end at a natural break point — a section boundary, or before a new story or sub-topic begins.
+
+**Do not set to `null`.** Every class should have a preview so students always have something to read ahead.
 
 ---
 
@@ -342,14 +344,14 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] `practice` has `title` and at least `agreedSteps` (explicitly agreed at end of class)
 - [ ] `practice.steps` has supplementary practice instructions from teaching (if any)
 - [ ] `practice.quote` included if KK gave a quotable line about the practice
-- [ ] All `quote` fields verified against transcript — every unbracketed word matches what KK actually said
+- [ ] All `quote` fields verified against transcript — every unbracketed word matches what KK actually said, and any omitted words/sentences are marked with ellipses (...)
 - [ ] `commentary` array has 5-8 teaching point objects, each with `title` and `content`
 - [ ] Commentary is written in KK's voice (not third-person "KK said...")
 - [ ] Commentary captures insights, not just topic labels
 - [ ] No student personal stories or named community members in commentary
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
-- [ ] `preview` paragraph range set for next week's reading, or `null`
+- [ ] `preview` paragraph range set for next week's reading (~1,000–2,000 words of MTB)
 - [ ] `recording` Google Drive link set, or `null` as placeholder
 
 ### Continuity & Consistency
@@ -362,4 +364,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: February 9, 2026*
+*Last updated: February 16, 2026*

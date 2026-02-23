@@ -193,6 +193,33 @@
             list-style: none;
         }
         
+        .practice-agreed-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--red);
+            margin-bottom: 0.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        .practice-steps.agreed li::before {
+            content: "★";
+            color: var(--red);
+            font-size: 0.55rem;
+            top: 0.75rem;
+        }
+        
+        .practice-supplementary-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #999;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+        }
+        
         .practice-steps li {
             padding: 0.5rem 0;
             padding-left: 1.5rem;
@@ -269,17 +296,11 @@
         }
         
         .kk-quote::before {
-            content: """;
-            color: var(--red);
-            font-size: 1.5rem;
-            line-height: 0;
-            vertical-align: -0.3rem;
-            margin-right: 0.25rem;
+            content: "";
         }
         
         .kk-quote::after {
-            content: "" — KK";
-            color: var(--red);
+            content: "";
         }
         
         /* ROOT TEXT SECTIONS */
@@ -1099,7 +1120,29 @@
             }
         }
         
-        // Render practice steps
+        // Render agreed practice steps (explicitly chosen at end of class)
+        function renderAgreedSteps(steps) {
+            if (!steps || steps.length === 0) return '';
+            return `<div class="practice-agreed-label">Agreed in Class</div>
+                <ul class="practice-steps agreed">${steps.map(s => `<li>${s}</li>`).join('')}</ul>`;
+        }
+        
+        // Render supplementary practice steps (from teaching)
+        function renderSupplementarySteps(steps, agreedSteps) {
+            if (!steps || steps.length === 0) {
+                // If no steps and no agreedSteps either, show placeholder
+                if (!agreedSteps || agreedSteps.length === 0) {
+                    return '<p class="no-content">Practice to be added</p>';
+                }
+                return '';
+            }
+            const label = agreedSteps && agreedSteps.length > 0 
+                ? '<div class="practice-supplementary-label">From the Teaching</div>' 
+                : '';
+            return `${label}<ul class="practice-steps">${steps.map(s => `<li>${s}</li>`).join('')}</ul>`;
+        }
+        
+        // Legacy support
         function renderPracticeSteps(steps) {
             if (!steps || steps.length === 0) {
                 return '<p class="no-content">Practice to be added</p>';
@@ -1116,7 +1159,7 @@
                 <div class="commentary-point">
                     <h4>${point.title}</h4>
                     ${point.content.map(p => `<p>${p}</p>`).join('')}
-                    ${point.quote ? `<div class="kk-quote">${point.quote}</div>` : ''}
+                    ${point.quote ? `<div class="kk-quote">"${point.quote}" — KK</div>` : ''}
                 </div>
             `).join('') + `</div>`;
         }
@@ -1331,7 +1374,8 @@
                     </div>
                     <div class="section-content collapsed">
                         ${cls.practice?.title ? `<div class="practice-title">${cls.practice.title}</div>` : ''}
-                        ${renderPracticeSteps(cls.practice?.steps)}
+                        ${renderAgreedSteps(cls.practice?.agreedSteps)}
+                        ${renderSupplementarySteps(cls.practice?.steps, cls.practice?.agreedSteps)}
                         ${cls.practice?.quote ? `<div class="practice-quote">"${cls.practice.quote}" — KK</div>` : ''}
                     </div>
                 </section>

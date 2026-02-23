@@ -1,6 +1,6 @@
 # TTP Transcription Guide
 
-A comprehensive reference for processing raw speaker-diarized audio transcripts from the Brooklyn Tharpa Tradition Program (TTP) into clean, structured transcript data.
+A comprehensive reference for processing raw speaker-diarized audio transcripts from the Brooklyn Teacher Training Program (TTP) into clean, structured transcript data.
 
 For assembling the weekly class companion page (practices, commentary, root text, recording links, etc.), see the separate **[CLASS_FILE_GUIDE.md](../classes/CLASS_FILE_GUIDE.md)**.
 
@@ -23,7 +23,7 @@ For assembling the weekly class companion page (practices, commentary, root text
 
 ## Project Overview
 
-The TTP (Tharpa Tradition Program) is a Buddhist study group at KMC Brooklyn. The current series, **"Transforming Through Patience,"** runs from November 2025 onward. The teacher is **Kadam Kyle (KK)**.
+The TTP (Teacher Training Program) is a Buddhist study group at KMC Brooklyn. The current series, covering the book **Meaningful to Behold** runs from November 2025 onward. The teacher is **Kadam Kyle (KK)**.
 
 The class studies two primary texts:
 
@@ -142,7 +142,7 @@ For the output, student names are identified where possible (from context — KK
 **Known recurring students** (names may appear across multiple transcripts):
 
 - **Anne** — There are actually two Annes in the group: Anne K and Anne P. Typically only one speaks in a given class, so just "Anne" is fine. If KK says "Anne K" or "Anne P," use the full distinction. Otherwise, default to "Anne."
-- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neil, Esmeralda, James (these may appear in KK's pairing assignments or data shares).
+- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neal, Ben, Byron, Grady, Kristin, Mary Ann, David, Jose (these may appear in KK's pairing assignments or data shares).
 
 ---
 
@@ -292,6 +292,37 @@ Session 2 is simpler and has less variation:
 | `chantedPrayers` | Abbreviated opening prayers |
 | `teaching` | Everything from post-prayer through the main teaching, Q&A, and any text study |
 | `conclusion` | Practice-for-the-week discussion + closing dedication |
+
+### JSON Data Types — Critical for App Rendering
+
+**Every transcript section must use the correct data type or the entire transcript will fail to render.** The app's transcript viewer wraps all rendering in a single `try/catch` — if any section has the wrong type, the whole transcript shows "Transcript not yet available" with no error visible to the user.
+
+**Array of segments** (`[{speaker, time, text}, ...]`) — used by almost everything:
+
+```json
+"guidedMeditation": [
+  {
+    "speaker": "Kadam Kyle",
+    "time": "5:22",
+    "text": "Let's begin our meditation..."
+  }
+]
+```
+
+These keys **must be arrays**: `classIntro`, `guidedMeditation`, `postMeditation`, `shantidevaReading`, `postReading`, `practiceReports`, `mainTeaching`, `teaching`, `conclusion`, `practiceAgreement`, `smallGroupDiscussion`.
+
+Even if a section has only one segment, it must be wrapped in an array: `[{speaker, time, text}]`.
+
+**Object with `time` and `text`** — used only by `chantedPrayers`:
+
+```json
+"chantedPrayers": {
+  "time": "0:00",
+  "text": "O Blessed One, Shakyamuni Buddha..."
+}
+```
+
+**Why this matters:** The app calls `.map()` on each section to render segments. If a section is an object instead of an array, `.map()` throws a TypeError, which is caught silently and results in the "not yet available" message. This is especially easy to get wrong with `shantidevaReading`, which has metadata (reader name, chapter, verse range) that tempts a richer object structure — but the app needs it as a plain segment array.
 
 ### Variations to Watch For
 
@@ -551,6 +582,7 @@ Before considering a transcript "clean" and ready for class file assembly:
 
 - [ ] Both sessions accounted for (unless confirmed single-session class)
 - [ ] Session 1 and Session 2 boundaries clearly marked
+- [ ] **All section values are arrays of `{speaker, time, text}` segments** (except `chantedPrayers` which is an object) — wrong types silently break the entire transcript display
 - [ ] `classIntro` identified (if present — not every class has one)
 - [ ] `chantedPrayers` correctly identified and labeled for both sessions
 - [ ] `guidedMeditation` start/end marked
@@ -629,8 +661,9 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 5. **Replace source texts verbatim** — Swap all prayers and Shantideva verse readings with exact published text from `../texts/prayers-for-meditation.json` and `../texts/shantideva.json`
 6. **Clean encoding** — Fix mangled characters and Dharma term misspellings in KK's commentary and MTB readings
 7. **Verify chronology** — Make sure everything is in timestamp order
-8. **Quality control** — Run through the checklist above
-9. **Hand off to class file assembly** — The clean transcript is now ready for the next stage (see `../classes/CLASS_FILE_GUIDE.md`)
+8. **Validate JSON types** — Confirm all section values are arrays of `{speaker, time, text}` segments (except `chantedPrayers`). Load the JSON in Python and check: `isinstance(data['session1']['shantidevaReading'], list)` for each key. A single mistyped section will silently break the entire transcript display.
+9. **Quality control** — Run through the checklist above
+10. **Hand off to class file assembly** — The clean transcript is now ready for the next stage (see `../classes/CLASS_FILE_GUIDE.md`)
 
 ---
 
@@ -649,7 +682,8 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 9 | January 18, 2026 | `TTP_011826.txt` |
 | 10 | February 1, 2026 | `TTP_020126.txt` |
 | 11 | February 8, 2026 | `TTP_020826.txt` |
+| 12 | February 15, 2026 | `TTP_021526.txt` |
 
 ---
 
-*Last updated: February 12, 2026*
+*Last updated: February 16, 2026*

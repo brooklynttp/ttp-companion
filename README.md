@@ -1,6 +1,6 @@
 # TTP Companion App
 
-A web-based companion site for the Brooklyn KMC Teacher Training Program (TTP), taught by **Kadam Kyle**.
+A web-based companion site for the KMC Brooklyn Teacher Training Program (TTP), taught by **Kadam Kyle**.
 
 Students can review weekly practices, read KK's teaching commentary, access the root texts (Meaningful to Behold and Guide to the Bodhisattva's Way of Life), listen to class recordings, and read full class transcripts.
 
