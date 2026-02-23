@@ -13,11 +13,12 @@ For assembling the weekly class companion page (practices, commentary, root text
 3. [Raw Transcript Format](#raw-transcript-format)
 4. [Speaker Identification](#speaker-identification)
 5. [Class Structure & Two-Session Flow](#class-structure--two-session-flow)
-6. [Prayers](#prayers)
-7. [Jibber-Jabber: What to Exclude](#jibber-jabber-what-to-exclude)
-8. [Special Character & Encoding Cleanup](#special-character--encoding-cleanup)
-9. [Transcript Quality Control Checklist](#transcript-quality-control-checklist)
-10. [Technical Tools & Commands](#technical-tools--commands)
+6. [Transcript JSON Schema](#transcript-json-schema)
+7. [Prayers](#prayers)
+8. [Jibber-Jabber: What to Exclude](#jibber-jabber-what-to-exclude)
+9. [Special Character & Encoding Cleanup](#special-character--encoding-cleanup)
+10. [Transcript Quality Control Checklist](#transcript-quality-control-checklist)
+11. [Technical Tools & Commands](#technical-tools--commands)
 
 ---
 
@@ -365,6 +366,210 @@ These phrases help you identify section boundaries:
 
 ---
 
+
+## Transcript JSON Schema
+
+The output of the transcription process is a JSON file named `transcript-YYYY-MM-DD.json`. This section documents the complete schema so that any session can be built from scratch without needing to reverse-engineer an existing file. (Note: the JSON schema for the *class companion* file — practices, commentary, MTB paragraphs, etc. — is documented separately in `CLASS_FILE_GUIDE.md`. These are two different files.)
+
+### Top-Level Structure
+
+```json
+{
+  "classId": "2026-02-22",
+  "date": "February 22, 2026",
+  "teacher": "Kadam Kyle",
+  "speakerMap": { ... },
+  "session1": { ... },
+  "session2": { ... }
+}
+```
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `classId` | string | ISO date `YYYY-MM-DD` |
+| `date` | string | Human-readable: `"February 22, 2026"` |
+| `teacher` | string | Always `"Kadam Kyle"` for this series |
+| `speakerMap` | object | Maps raw diarization labels to resolved names (see below) |
+| `session1` | object | All Session 1 content |
+| `session2` | object | All Session 2 content |
+
+### speakerMap
+
+Records how raw speaker numbers were resolved to names. The app doesn't use this to render content, but it's essential for debugging and auditing. List every speaker number that appears in the transcript, including KK's splits.
+
+```json
+"speakerMap": {
+  "Speaker 1":  "Kadam Kyle",
+  "Speaker 9":  "Kadam Kyle",
+  "Speaker 13": "Kadam Kyle",
+  "Speaker 2":  "Prayer Chanter",
+  "Speaker 4":  "Anne",
+  "Speaker 5":  "Ben",
+  "Speaker 6":  "Byron",
+  "Speaker 7":  "Kristin",
+  "Speaker 10": "Mary Ann",
+  "Speaker 11": "Fran",
+  "Speaker 12": "David",
+  "Speaker 14": "Adriana",
+  "Speaker 15": "Suzanne",
+  "Speaker 16": "Anne P",
+  "Speaker 17": "Grady",
+  "Speaker 21": "Sumit"
+}
+```
+
+Notes:
+- Speaker numbers are arbitrary and change every class. The example above is from Feb 22, 2026 — use it as a format reference only.
+- If KK is split across multiple numbers (common), list each separately: `"Speaker 1": "Kadam Kyle"` and `"Speaker 9": "Kadam Kyle"`.
+- If the same student is split across two numbers, list both with the same resolved name.
+- Use `"Student"` for anyone who couldn't be identified by name.
+
+### Session 1 Schema
+
+```json
+"session1": {
+  "classIntro":       [ {speaker, time, text}, ... ],  // optional
+  "chantedPrayers":   { "time": "1:52", "text": "..." }, // object, NOT array
+  "guidedMeditation": [ {speaker, time, text}, ... ],
+  "postMeditation":   [ {speaker, time, text}, ... ],
+  "shantidevaReading":[ {speaker, time, text}, ... ],
+  "postReading":      [ {speaker, time, text}, ... ],
+  "practiceReports":  [ {speaker, time, text}, ... ],
+  "mainTeaching":     [ {speaker, time, text}, ... ],
+  "announcements":    [ {speaker, time, text}, ... ],  // optional
+  "dedication":       "Through the virtues we've collected..." // string, NOT array
+}
+```
+
+### Session 2 Schema
+
+```json
+"session2": {
+  "chantedPrayers": { "time": "not captured", "text": "" }, // object, NOT array
+  "teaching":       [ {speaker, time, text}, ... ],
+  "conclusion":     [ {speaker, time, text}, ... ]
+}
+```
+
+If Session 2 prayers were not captured (common), use `"time": "not captured"` and `"text": ""`.
+
+### The Segment Object
+
+Every item inside an array section is a segment object with exactly three fields:
+
+```json
+{
+  "speaker": "Kadam Kyle",
+  "time": "57:18",
+  "text": "Let's take a look at the book..."
+}
+```
+
+| Field | Type | Notes |
+|-------|------|-------|
+| `speaker` | string | Resolved name — never a raw `"Speaker N"` label |
+| `time` | string | Start timestamp in `H:MM:SS` or `M:SS` format as it appears in the raw transcript |
+| `text` | string | Spoken content. Preserve paragraph breaks with `\n\n`. |
+
+### Critical Data Type Rules
+
+- **`chantedPrayers`** (both sessions) is always a plain **object** `{time, text}` — never an array.
+- **All other sections** are always **arrays** of segment objects — even if the section contains only one segment.
+- **`dedication`** (Session 1) is a plain **string** — never an array or object.
+- A single wrong type causes the **entire transcript to fail silently** — the app catches the error but shows nothing, with no visible error message. This is the single most common and most damaging mistake. When in doubt, run `python3 -c "import json; d=json.load(open('file.json')); print(type(d['session1']['shantidevaReading']))"` to verify.
+
+### Full Minimal Example
+
+```json
+{
+  "classId": "2026-02-22",
+  "date": "February 22, 2026",
+  "teacher": "Kadam Kyle",
+  "speakerMap": {
+    "Speaker 1": "Kadam Kyle",
+    "Speaker 9": "Kadam Kyle",
+    "Speaker 2": "Prayer Chanter",
+    "Speaker 4": "Anne",
+    "Speaker 6": "Byron"
+  },
+  "session1": {
+    "chantedPrayers": {
+      "time": "1:52",
+      "text": "LIBERATING PRAYER\n\nO Blessed One, Shakyamuni Buddha..."
+    },
+    "guidedMeditation": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "13:12",
+        "text": "We can get into a comfortable posture..."
+      }
+    ],
+    "postMeditation": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "28:59",
+        "text": "Does anyone want to be our lucky duck reader today?"
+      }
+    ],
+    "shantidevaReading": [
+      {
+        "speaker": "Byron",
+        "time": "30:38",
+        "text": "(26) How can we possibly measure\nThe benefits of this jewel of a mind..."
+      }
+    ],
+    "postReading": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "33:48",
+        "text": "Thank you very much, Byron..."
+      }
+    ],
+    "practiceReports": [
+      {
+        "speaker": "Anne",
+        "time": "35:30",
+        "text": "I took as my aspiration not abandoning all living beings..."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "37:06",
+        "text": "Thanks, Anne! Fantastic..."
+      }
+    ],
+    "mainTeaching": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:11:11",
+        "text": "It has been said that if we were to offer a universe full of jewels..."
+      }
+    ]
+  },
+  "session2": {
+    "chantedPrayers": {
+      "time": "not captured",
+      "text": ""
+    },
+    "teaching": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:32:28",
+        "text": "How can we increase our faith in the power of mental actions?"
+      }
+    ],
+    "conclusion": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:47:36",
+        "text": "Anyone have anything they'd like us to get up to over the weeks ahead?"
+      }
+    ]
+  }
+}
+```
+
+---
+
 ## Prayers
 
 ### Where Prayer Texts Live
@@ -556,6 +761,19 @@ The transcription software often mangles Buddhist/Sanskrit/Tibetan terms. Common
 | "nirvana" | "nirvana" (this is correct) |
 | Various garbled mantras | Cross-reference with prayer texts |
 
+### Common Name Transcription Errors
+
+The transcription software frequently mishears student names, especially ones it has no prior context for. These are confirmed recurring errors across multiple sessions:
+
+| Transcribed As | Correct Name | Notes |
+|----------------|--------------|-------|
+| "Adam" | **Anne** | Phonetically plausible; KK's own address of the same speaker (e.g. "Thanks, Anne") is the authoritative correction |
+| "Joanna" | **Adriana** | Very consistent error. KK sometimes appears to say "Hey Joanna" — that's also Adriana |
+| "Marianne" | **Mary Ann** | Software runs the two syllables together into a single name |
+| "Sumi" / "Sumy" | **Sumit** | The final -t is frequently dropped |
+
+**Rule:** Always verify student names by searching for KK's direct address of that speaker (e.g., "Thanks, Anne," "Yes, Sumit," "Thank you, Adriana"). KK's spoken name is authoritative and overrides anything Turboscribe outputs. A quick `grep "Thanks,\|Yes,\|Thank you," TTP_MMDDYY.txt` will surface most of these.
+
 ### Cleaning Process
 
 When processing transcripts:
@@ -683,7 +901,8 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 10 | February 1, 2026 | `TTP_020126.txt` |
 | 11 | February 8, 2026 | `TTP_020826.txt` |
 | 12 | February 15, 2026 | `TTP_021526.txt` |
+| 13 | February 22, 2026 | `TTP_022226.txt` |
 
 ---
 
-*Last updated: February 16, 2026*
+*Last updated: February 22, 2026*
