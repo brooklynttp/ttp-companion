@@ -3,18 +3,20 @@
   "date": "Mon D",
   "year": "YYYY",
   "topic": "Topic Title",
-  "recording": "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=share_link",
-  
+  "recording": null,
+
   "practice": {
     "title": "Practice Title",
-    "steps": [
-      "Step 1 description",
-      "Step 2 description",
-      "Step 3 description"
+    "agreedSteps": [
+      "Step explicitly agreed at end of class",
+      "Another explicitly agreed step"
     ],
-    "quote": "Optional KK quote about the practice"
+    "steps": [
+      "Supplementary contemplation from teaching"
+    ],
+    "quote": "Optional KK exact quote about the practice"
   },
-  
+
   "commentary": [
     {
       "title": "First Teaching Point",
@@ -22,7 +24,7 @@
         "First paragraph of commentary.",
         "Second paragraph of commentary."
       ],
-      "quote": "Optional KK quote"
+      "quote": "Optional KK exact quote"
     },
     {
       "title": "Second Teaching Point",
@@ -31,20 +33,20 @@
       ]
     }
   ],
-  
+
   "mtb": {
     "startParagraph": 173,
     "endParagraph": 188
   },
-  
+
   "shantideva": {
     "chapter": 1,
     "startVerse": 1,
     "endVerse": 14
   },
-  
+
   "preview": {
     "startParagraph": 189,
-    "endParagraph": 195
+    "endParagraph": 217
   }
 }

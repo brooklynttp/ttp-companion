@@ -360,7 +360,7 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
 - [ ] `preview` paragraph range set for next week's reading, or `null`
-- [ ] `recording` Google Drive link set, or `null` as placeholder
+- [ ] `recording` Google Drive or Turboscribe link set, or `null` if unavailable
 
 ### Continuity & Consistency
 
@@ -372,4 +372,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: February 22, 2026*
+*Last updated: March 15, 2026*
