@@ -294,6 +294,8 @@ Session 2 is simpler and has less variation:
 | `teaching` | Everything from post-prayer through the main teaching, Q&A, and any text study |
 | `conclusion` | Practice-for-the-week discussion + closing dedication |
 
+> ⚠️ **CRITICAL: Only use the key names in these two tables.** The app renders transcript sections by looking up specific hardcoded key names. If you invent a new key name (e.g. `studentSharing`, `textStudy`, `postDiscussion`), the app will silently ignore that content — it won't error, it just won't render. When in doubt, map content to the closest key above. For example: student practice shares → `practiceReports`, post-break text study → `teaching`, post-discussion sharing → `conclusion`, post-meditation announcements/recap → `postReading`.
+
 ### JSON Data Types — Critical for App Rendering
 
 **Every transcript section must use the correct data type or the entire transcript will fail to render.** The app's transcript viewer wraps all rendering in a single `try/catch` — if any section has the wrong type, the whole transcript shows "Transcript not yet available" with no error visible to the user.
@@ -902,9 +904,6 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 11 | February 8, 2026 | `TTP_020826.txt` |
 | 12 | February 15, 2026 | `TTP_021526.txt` |
 | 13 | February 22, 2026 | `TTP_022226.txt` |
-| 14 | March 15, 2026 | `TTP_031526.txt` |
-
-*Note: No classes were held March 1–March 14, 2026 (two-week break plus empowerment weekend).*
 
 ---
 
