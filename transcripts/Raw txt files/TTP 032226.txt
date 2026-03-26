@@ -1,0 +1,2211 @@
+[Speaker 7] (0:16 - 0:20)
+So today I'm going to talk about engineering for business. Oh, ah-ha!
+
+[Speaker 2] (0:21 - 0:33)
+I've been mentioning this in my life. You know, you've heard stuff all about it. Well, I'll teach you in parallel.
+
+I'm not sure I can do that. Well, maybe you should. I don't know.
+
+You know, there's that thing called talking view.
+
+[Speaker 10] (0:33 - 0:50)
+Well, it's not something that you know how to do. Why don't you explain to me what talking view is? I mean, like, what do you mean?
+
+That's the whole thing. I don't know what talking view is. I forgot what I was saying.
+
+I'll look it up. It's really helpful. That's a good idea.
+
+[Speaker 2] (0:52 - 1:02)
+Yes. Infermentary. Not special.
+
+I forget what the plain list is. What plain list did I use there?
+
+[Speaker 5] (1:03 - 1:04)
+Partial or interiorization?
+
+[Speaker 2] (1:05 - 1:14)
+Yeah. What also doesn't work? How about this chair?
+
+Watch the chair. This is nice. That's the one.
+
+[Speaker 6] (1:14 - 1:21)
+Oh, I'm liking this chair. Is it? It is really good.
+
+I believe that's the one you want. Wow, I'm never standing up.
+
+[Speaker 5] (1:22 - 1:28)
+Well, considering he's the only one that's left with samples, I'm pretty sure that's it. Yeah.
+
+[Speaker 6] (1:29 - 1:29)
+Alright.
+
+[Speaker 7] (1:30 - 1:31)
+Alright, we're ready.
+
+[Speaker 2] (1:32 - 1:36)
+Let's do this. Alright, thanks everybody.
+
+[Speaker 8] (2:07 - 2:12)
+Alright.
+
+[Speaker 1] (3:29 - 5:20)
+Thanks. Do you mind closing the window too? Bonjour, everyone.
+
+Bonjour. A little French for afternoon. That's probably enough.
+
+Other than au revoir or something like that. That's good. Good French lesson for everyone.
+
+So, we had a million takeaways last week, which is partially my fault, leading us to, I think we had five meditation break practices. Five different ones. Which is okay.
+
+We were all inspired by different things. But what we'll do in the meditation is we'll just try to focus on one thing. And it'll just be basically, yeah, just connecting to that thought, like I really want to become someone who can make a difference.
+
+Okay. Which is like we were talking a little bit in the class about growing our spiritual power as a Buddha. Okay.
+
+Which is, this is like a bodhisattva mind, bodhicitta mind. So just like really praying for that, wishing for that. I want to be someone who can really make a difference.
+
+That's my heart. So basically it'll just be a meditation on bodhicitta, but we'll kind of zoom in on that facet, that aspect of it.
+
+[Speaker 11] (5:25 - 5:25)
+Okay.
+
+[Speaker 1] (5:25 - 5:56)
+I think that's it for me. I'm uncomfortably warm. Anyone else?
+
+No? Just me? You're cool.
+
+Okay. Yeah. We had the window open.
+
+That was helpful. But then our neighbors don't want to listen to our prayers too much. Okay.
+
+So no one else is suffering. Okay. No, no.
+
+This is my problem. I'm very happy if it's just my problem. Okay.
+
+Cool. Let's begin. Thank you.
+
+Thanks.
+
+[Speaker 3] (6:27 - 18:10)
+You who love all beings without exception are the source of happiness and goodness and you guide us to the liberating path. Your body is a wish-fulfilling jewel. Your speech is supreme purifying nectar.
+
+And your mind is refuge for all living beings. With folded palms I turn to you, supreme unchanging friend. I request from the depths of my heart please give me the light of your wisdom to dispel the darkness of my mind and to heal my mental continuum.
+
+Please nourish me with your goodness that I in time may nourish all beings. With an unceasing banquet of delight through your compassionate intention your blessings and virtuous deeds and my strong wish to rely on you may all suffering quickly cease and all happiness and joy be fulfilled and may holy Dharma flourish forevermore. I and all sentient beings until we achieve enlightenment go for refuge to Buddha, Dharma and Sangha.
+
+I and all sentient beings until we achieve enlightenment go for refuge to Buddha, Dharma and Sangha. I and all sentient beings until we achieve enlightenment go for refuge to Buddha, Dharma and Sangha. Through the virtues I collect by giving and other perfections may I become a Buddha for the benefit of all.
+
+Through the virtues I collect by giving and other perfections may I become a Buddha for the benefit of all. Through the virtues I collect by giving and other perfections may I become a Buddha for the benefit of all. May everyone be happy, may everyone be free from misery, may no one ever be separated from their happiness, may everyone have equanimity, free from hatred and attachment.
+
+In the space before me is the living Buddha Shakyamuni surrounded by all the Buddhas and Bodhisattvas like the full moon surrounded by stars. With my body, speech and mind humbly I prostrate and make offerings both set out and imagined. I confess my wrong deeds from all time and rejoice in the virtues of all.
+
+Please stay until samsara ceases and turn the wheel of Dharma for us. I dedicate all virtues to great enlightenment. The ground sprinkled with perfume and spread with flowers, the great mountain for land, sun and moon, seen as a Buddha land and offered thus, may all beings enjoy such pure lands.
+
+I offer without any sense of loss the objects that give rise to my attachment, hatred and confusion, my friends, enemies and strangers, our bodies and enjoyments. Please accept these and bless me to be released directly from the three poisons. YIDAM GURU RATNAMANDALAKAM NIRYATAYAMI The path begins with strong reliance on my kind teacher, source of all good.
+
+O bless me with this understanding to follow him with great devotion. This human life, with all its freedoms extreme, here I wear so much meaning. O bless me with this understanding all day and night to see this ascent.
+
+My body like a water bubble decays and dies so very quickly. After death come results of karma just like the shadow of a body. With this firm knowledge and remembrance bless me to be extremely cautious, always avoiding harmful actions and gathering abundant virtue.
+
+Samsara's pleasures are deceptive, give no contentment only torment. So please bless me to strive sincerely to gain the bliss of perfect freedom. O bless me so that from this pure thought come my fullness and greatest caution to keep as my essential practice the doctrine's root, the Pratimoksha.
+
+Just like myself, all my kind mothers are drowning in Samsara's ocean. O so that I may soon release them, bless me to train in Bodhicitta. But I cannot become a Buddha by this, alone without three ethics.
+
+So bless me with the strength to practice the Bodhisattva's ordination by pacifying my distractions and analyzing perfect meanings. Bless me to quickly gain the union of special insight and creascence. When I become a pure container through common past, bless me to enter the essence practice of good fortune, the supreme vehicle, the Trayana.
+
+The two attainments both depend on my sacred vows and my commitments. Bless me to understand this clearly and keep them at the cost of my life by constant practice in four sessions away, explained by holy teachers. O bless me to gain both the stages which are the essence of the tantras.
+
+May those who guide me on the good path and my companions all have long lives. Bless me to pacify completely all obstacles, outer and inner. May I always find perfect teachers and take delight in holy Dharma, accomplish all grounds and paths swiftly and gain the state of Arjuna.
+
+From the hearts of all the holy beings, streams of light and nectar flow down, granting blessings and purifying.
+
+[Speaker 1] (18:41 - 49:25)
+Meditation on bodhicitta can, by thinking all living beings are drowning in the vast and deep ocean of samsara, taking rebirth after rebirth in boundless samsara, can think I cannot bear the suffering of these countless mother beings who have to experience various kinds of misery and pain in life after life without end. Through reflecting on this unbearable situation, you can think at present I am unable to be of much help. Only a Buddha has sufficient spiritual power to really make a difference.
+
+Just connect to this thought, I really want to make a difference, and therefore I will become enlightened. If this decision arises in our heart, we can just hold it single-pointedly. I will become enlightened in the benefit of others.
+
+I will develop this spiritual power so I can really make a difference. And if we lose it, then we can just go through the contemplation again. Finally, we can ask ourselves, how will I put this into practice?
+
+What is my plan to really become someone who can make a difference, who can have sufficient spiritual power? Don't just have this be aspirational. What do you think it through?
+
+How can I put this into practice? And then we can, in our own time, gradually arise from our practice. All right, I'll do the reading for today.
+
+From Guide to the Bodhisattva's Way of Life. We're in a new chapter. Very thrilling.
+
+Purifying negativity. It's page 15, or just chapter 2, the first verse. So we'll do...
+
+It's not a very easy cutting-off point. We're going to do 3.18 today, and then we'll see what that looks like. To maintain this precious mind of Bodhicitta, I make excellent offerings to the oceans of good qualities, the Buddhas, the stainless jewel of the holy Dharma, and the assembly of bodhisattvas.
+
+However many flowers and fruits there are, and all the different types of medicine, all the jewels there are in the world, and all the pure, refreshing waters, mountains of jewels, forest groves, quiet and joyful places, heavenly trees adorned with flowers, and trees whose branches hang with delicious fruits. Scents that come from the celestial realms, incense wish-granting trees and jeweled trees, harvests that need no cultivation, and all ornaments that are suitable to be offered. Lakes and pools adorned with lotuses, and the beautiful call of wild geese.
+
+Everything that is unknown, throughout all worlds as extensive as space. Holding these in my mind, I offer them well to the supreme beings, the Buddhas and bodhisattvas. O compassionate ones, holy objects of offering, think of me kindly and accept what I offer.
+
+Lacking merit, I am destitute and have nothing else that I can offer. Therefore, O protectors who think of the welfare of others, please accept these for my sake. Eternally, I will offer all my bodies to the Buddhas and bodhisattvas.
+
+Out of respect, I will become your servant. Please accept me, O supreme heroes. Being completely under your care, I will benefit living beings with no fear of samsara.
+
+I will purify my previous evils, and in future I will commit no more. Within this sweetly scented bathing chamber, with a clear and glistening crystal floor, majestic pillars ablaze with jewels, and canopies of radiant pearls spread aloft, with many jeweled vases filled to the brim, with scented waters that steal the mind, and to the accompaniment of music and song, I offer ablution to the Buddhas and bodhisattvas. I dry their bodies with matchless cloths that are immaculately clean and scented.
+
+Then I offer to the holy beings fragrant garments in magnificent colors. With various excellent raiments, fine and smooth, and a multitude of supreme ornaments, I adorn Arya Samantabhadra, Manjushri, Avarokiteshvara, and all the others. Just like polishing pure refined gold, I anoint the radiant bodies of all the able ones with supreme perfumes whose fragrance pervades every part of the three thousand worlds.
+
+To the able ones, the supreme objects of offering, I offer all the beautiful scented flowers, mandaras, upalas, lotuses, and so forth, and exquisite garlands finely arranged. I offer them vast and fragrant clouds of supreme incense that steal the mind, and I offer delicacies of the gods, together with a variety of food and drink. I also offer jeweled lamps arranged on golden lotuses and on polished grounds sprinkled with scent and scattered with beautiful flower petals.
+
+I offer to those with the nature of compassion a celestial palace resounding with heavenly praise and hung with beautiful pearls and jeweled ornaments whose infinite radiance illuminates space. Eureka! I was very pleased about the almost screaming in here.
+
+Everyone was really loud, except a few people who did nothing. So there were three people who were dead silent, and then they were screaming, which was great. I like the screaming.
+
+I don't like the nothing. But maybe you didn't have the book or something, which is okay. The idea is that we're all doing it together.
+
+Because reciting the condensed meaning puts it on our mind and blesses our mind, and it's really, really important. Hopefully the barker clam is screaming over there. Yeah, get Waelel in there, too.
+
+He can screech it out for us. So it's really important. So we're not just doing it for fun.
+
+We're doing it because it's very, very important. In these verses, as we know, maybe the first eight are in prayers for peace. So when you do prayers for peace, you recite those eight verses.
+
+And then verses ten, thirteen or so, are in the nunya practice. Some of them overtly, and some of them implied. And then the very famous and beloved nunya practice that we do on Buddha's enlightenment day.
+
+So these are very special verses that have been put into actual pujas, because they're so amazing and unique. So we want to recite them. Okay.
+
+Then, let's see. A couple little thingies on my side, and then we'll get some data. Let's see.
+
+Oh, yeah. In our scheduling, we're trying to have these little themes, and the first three months, theoretically, was something on love. I'm not sure it happened everywhere, but it was aspirational.
+
+But this quarter, I think, is our karma quarter, which is perfect, because this section that we're about to start studying in this is on accumulating merit and purifying activity, this section. So it's all about karma. So it's really nice.
+
+And if you do look at our scheduling, I think it does line up pretty well. Ann's doing a course explicitly on karma in a couple weeks. Then I'm doing one on living in the present, but it will be about intentional living and connected to karma.
+
+And then that day, we'll have our Vajradhaka burning offering also on the 18th. Very karma-oriented. And then in May, we're having a day on understanding the lower realms, fear of lower rebirth day.
+
+Very exciting. Good holiday. So that's definitely karma-related.
+
+Beginning of June, we have 35 Confession Buddhas, I think, as a course. So we'll be having that. So there are some good little seeds.
+
+And I know, I think, Sumi and Ryan are both going up to the temple next week for Vajrasattva purification. So we've got good energy going in this direction. So it's nice just to have these little themes in our mind.
+
+And since it's so close to what we're studying here, it's nice to just delight in that. One other thing about scheduling and stuff is that we have a really nice groove now on the events that we do each year. And I think we had talked a few months ago when we really set this up, because it's almost the exact same as last year.
+
+Not the individual course titles and stuff, but the same kind of quantity and flow that we were like, okay, we'll let this fly for a bit and just get comfy. And so we have these community events that we try to do each year. And it's just really nice to not have to go, but just to think they're part of my little spiritual schedule each year.
+
+And they're community events that we've chosen that have a spiritual significance, but are also comfortable for anyone to kind of come by. And our cemetery walk functions in that way very nicely, and it's like a little holiday for us, a little ritual that we have. The empowerment is a lot like that, and our paint night, and our New Year's Eve event.
+
+And so we have the Vajradhaka burning offering, and that's definitely one of those. This is now the fourth year. It's just a beautiful day.
+
+We did chop down our magnolia tree, but last year, as we were doing the practice outside in the backyard, magnolia petals were flowing down on our heads, which is incredible. It happens like this, and they all fall. And it happened to happen while we were doing that practice last year.
+
+We just felt very blessed and special. So it's really part of our seasons here, and it's nice to just connect with those seasons, that flow. And then we started our Walk for World Peace last year, and so that's a little bit part of our flow.
+
+This will be the second time we're doing that. That's on the third Sunday in May, perhaps. 17th May.
+
+And then in June, I think we have our backyard blowout, perhaps. That's our fifth. I think it's our fifth one here.
+
+So these little aspects of our schedule are really nice, and they're really beautiful. We're trying not to do too much and too little. So we're in a pretty good group, I think, in the sense of quantity.
+
+So please do take part in it. Maybe one last thing on this is just if you don't have a job, a volunteer job here, please get a job. That's like what your parents say to you when you're 18.
+
+Get a job. No, not like that. More just like we have a good groove, and we have a good support system here, and we have a lot of lovely volunteers.
+
+But if you don't have a little job of some sort, it doesn't have to be a big thing. It's just really nice to get something, and to join in the fun. Even if you just want to be someone's understudy who has a job.
+
+You can just say, can I be your understudy? And they would happily take you under their wing. You can do their laundry for them and stuff.
+
+Clip their toenails and whatever else they like you to do. But yeah, just join in. That's the point.
+
+It's really nice for us all to be part of it. FP, and TTP, and the GP students. And there's like the infrastructure of the center, the volunteers, people.
+
+That's our infrastructure. It's not physical infrastructure that we really have. It's the human infrastructure.
+
+So it's just really nice to be part of that. Or if you have some idea, you're like, this is what we need a volunteer who does this. And we don't have it, maybe that's what you want to do.
+
+But anyway, the point is, please feel invited and encouraged. Because it's a delight. And as we might know, there's three aspects of our spiritual life.
+
+There's Dharma study, and Dharma practice. And then there's Dharma service. So it's like our job.
+
+Most people here I think have some kind of job here. But it's just nice to think, those three things are in balance together. They all support each other.
+
+And we don't want to be particularly deficient in any category. I don't know why. That was the point of all that.
+
+We have a lovely schedule, I think. I think that's the idea.
+
+[Speaker 11] (49:25 - 49:28)
+Oh, yeah.
+
+[Speaker 1] (49:29 - 49:30)
+Malory's drum next week.
+
+[Speaker 11] (49:31 - 49:39)
+I was going to say, if you want a job around that, please email me. This is Samit. If you want a job around that, please email me.
+
+[Speaker 1] (49:41 - 51:53)
+We'll talk about that a little bit more. It's 4 to 7.30. I'll say more about that later. It is part of the spiritual calendar.
+
+We have an aspiration to one day, do it every month. We're not there yet, right now, but we're moving in that direction. So it's nice to do it, since it landed on a TTP day.
+
+Especially because we just had the Dorje Sugden empowerment. It's a great way, it's basically just a huge way to accumulate tons of merit, purify negativity, and receive blessings. So what a good thing to do, for three and a half hours.
+
+For three and a half hours, sometimes longer, because you take a break, and you've got to stretch your legs, and use the restroom. Yeah, who wouldn't want to get tons of merit for three and a half hours, and purify negativity for three and a half hours? Oh, you're going to be away, right?
+
+So you'll have to stream in for three and a half hours. We'll make sure that your voice is on Zoom, so we can hear you singing through the Zoom, too. Okay, sorry.
+
+Yeah, that's that. Is that what you're both raising a hand for? Then, that's that.
+
+Check. Okay, good. Good for now.
+
+Any data from the last week? We had all sorts of juicy nuggets going on. The cannibals practice, thinking, may I one day give you Dharma.
+
+A little bit about Lam Rim, keeping Jusam Kapha at our heart all day. Thinking, I am making a difference, and I can make a difference, and so on, and other things. Okay, Ann, yes, thanks.
+
+[Speaker 6] (51:54 - 53:56)
+I've never done the Lam Rim thing, where you go every 21 days around the world. I always kind of told myself, well, I'm teaching, so that's how I get my Lam Rim in, because I'm teaching Lam Rim pretty much. That's true, but I just never tried it.
+
+Suddenly, they were like, you should do it. So I did it. I just read a chapter in the meditation handbook, and did a little meditation on that every night before bed.
+
+It took me 15 minutes. Wow! Laughter Wow!
+
+First of all, it just made me feel super solid. I'm doing it right. That was very satisfying and fulfilling for me, just that alone.
+
+But then I found each day, the first day afterward, all of a sudden, I had precious human life with me. Then the second day, I also had precious human life and death with me. Then the third day, I had precious human life, death with me.
+
+They were with me, like people reminding me all day long of all these things, and it didn't feel burdensome. It made everything very light, because I had all these friends reminding me of the correct view of everything, which is much lighter than the and view of everything. I had my usual worry about this or that, and I'm like, what about the hell realm?
+
+I'm like, this is nothing. This is completely nothing. I'll finish with that.
+
+I'm really looking forward to the next seven days of this. This is awesome.
+
+[Speaker 1] (53:57 - 55:35)
+Thanks, Anne. That was delightful. It's a nice point that you're mentioning about that it makes us feel very solid and grounded, but also light, and there's a lightness that comes from that grounding.
+
+Many people's emotional problems just come because they don't actually meditate on the Lam Rim. If they just meditated on the Lam Rim, they wouldn't have those emotional problems. All the heaviness and intensity in people's lives is usually based on one-life thinking.
+
+If you just stop doing that, almost all of it goes away. That's like 99% of all the intensity and angst and worry and blah, blah, blah. Just one-life thinking.
+
+Poof. Make that go away. We have a huge burden lifted, and then we become an actual Buddhist.
+
+I'm not even really a Buddhist until then. Just a nice little role player, and then more and more and more and more, and then universal compassion and love and real renunciation and bodhicitta and emptiness. Wow.
+
+I'm just delighted. It's really nice to hear. Thank you for sharing.
+
+Thank you. Others? Fran, yes.
+
+Thanks.
+
+[Speaker 5] (55:39 - 57:12)
+I also took to heart what you said last week about that pretty much anybody you know that's made real progress spiritually does Heart Jewel and the Lam Rim practice every day. I did Heart Jewel six out of seven days, which for me is tremendous because I've been not really doing much of a seated practice at all. I did also every day add a Lam Rim meditation, and I did the reading in the meditation handbook.
+
+This happened to me before when I've done the Lam Rim with the handbook as opposed to my own interpretation, my own meditation of it. I realized that my object is slightly off, that what the meditation that I'm doing are more the analytic part, and that in the meditation handbook pretty much every meditation, the object is a determination. It's telling us what we need to do, not just how we need to feel or how we have to think, but how to get there.
+
+Today when you asked us to think about our plan and how we're going to achieve the goal of bodhicitta, what came to mind was I don't have to figure that out. Je Tsongkhapa and Geshe-la has laid it all out for me. I really felt happy about this practice this week.
+
+[Speaker 1] (57:13 - 57:48)
+Thanks so much, Frances. It's a really nice insight and a real object of rejoicing, I think. There's a reason the Lam Rim is called The Stages of the Path to Enlightenment.
+
+That's their name, right? That's what Lam Rim means. So it's like, do I want a plan on how to get enlightened?
+
+Hmm, what should be my plan? Probably the first thing I should check out is the thing called The Exact Way to Get Enlightened. That's what the name is.
+
+This is how you get enlightened. That's basically the name of it.
+
+[Speaker 9] (57:48 - 57:50)
+We're like, yeah, it makes sense.
+
+[Speaker 1] (57:51 - 1:01:18)
+So you're right. It's natural that we would move towards that. And then your point about the object of meditation.
+
+Yeah, that's very interesting. If we had more time and if we were feeling a little cheeky today what we would do is we would go through each one and we'd quiz the whole room. What's the object of meditation for this?
+
+What's the object of meditation for that? I feel like we might be in the 20% category of accuracy in the room. As a general move.
+
+Not a criticism. Sometimes it's a little surprising. Even like Precious Human Life, are we really clear?
+
+Often when I hear people teach on Precious Human Life, it's like, woo, my life! That's not the object of meditation. It's not woo.
+
+Or even death. Are we clear on the object of meditation? That's kind of two-ish.
+
+Are we clear on both of them? What they both are and the relationship between them? So anyway, you're right.
+
+Our mind creates models of reality. It's never seen the truth. It's always just creating a model.
+
+All the time. Until we see emptiness directly. It will always be creating a model or an abstraction of what's there.
+
+Then it creates a model or an abstraction based on our own biases and preferences and what we like and all that. It's very easy to do this with the Dharma. To just rely on our memory, our imperfect memory which is modeling what we want to be there or what we imperfectly recall is there.
+
+We're just relating to this very imperfect model. Having something like the New Meditation Handbook and eventually memorizing verbatim important Dharma texts prevents this from happening where we have an imperfect model that we think is like the actual answer. It is really useful to actually have the physical thing there reminding us.
+
+I have a friend who I've known for about 15-20 years, a Dharma practitioner. Every 2-3 years, he'll come up to me and he always goes through these cycles, but then every 2-3 years he'll be like, wow, I'm really excited! I'm doing the Lam Rim again with the handbook!
+
+It's interesting. Every time he's really inspired, that's what he's doing. Then he'll get out of it and get into other things and other little Dharma pursuits.
+
+It's like clockwork. Then he'll come back to the handbook. He's like, I got the handbook with me!
+
+I'll see it in his bag. He's bringing it around with him like a handbook. In his hand.
+
+That's just my agreeing with you, Fran, about that point. Thanks so much. I'm going to stop saying so much.
+
+I'd love to hear from some more people. David, yes?
+
+[Speaker 4] (1:01:21 - 1:01:51)
+That was super helpful. Although it does raise a question for me because in Joyful Path, all the objects like karma is however many pages 70 pages on karma. This idea that the Lam Rim object is a particular determination or two or something.
+
+I thought it was completely multifaceted and you could do a meditation and land on any aspect of the object? Or is it multiple objects? What's the right way to think about that?
+
+[Speaker 1] (1:01:55 - 1:03:59)
+In each meditation there are many component parts and you can meditate on any of those individual component parts. But there's like a compound object of meditation. We could say it's like the main one.
+
+Let's say I was going to make you an eggplant parmesan. Vegan eggplant parmesan. I could learn I could spend a lot of time learning how to make really good bread.
+
+That's one component. Then I could learn how to cut the eggplant just right and salt it just right to get the bitterness out. Then I could learn how to fry it just right and bread it just right.
+
+That's its own component part. I've got bread, I've got the eggplant, I've got the frying and the breading. Then I want to make a really good sauce.
+
+That's its own component part. I want to make a really good fake cheese thing. It's not too plasticky.
+
+From one point of view I could just buy all that random stuff from the store and put it together or I could learn over time how to make each part really well and put it together. With all the Lam Rim meditations the main object is marked in the new meditation handbook on how to understand the mind in the different Lam Rim sections. The main object is very clear.
+
+That's like the eggplant farm. That's the main object. If you study Joyful Path there will be parts that just say this is how you make the bread really, really good.
+
+This is how you make the sauce really, really well. You can make the best sauce like this. We can zoom in on the component parts and do the Lam Rim meditations, but we're never making the sauce for the sauce's sake.
+
+It's part of a whole. We always want to come back to the whole. That's the analogy that I find helpful.
+
+[Speaker 4] (1:04:04 - 1:06:45)
+My data is about really stemming from what you said in the empowerment, one of the commentaries Does What I Do Matter? Particularly just trying to have that thought throughout the day because I think in aggregate, intellectually I'd say yeah it matters but really trying to zoom in moment by moment right now. Do I feel like this moment matters?
+
+Does this moment matter? It's a little challenging actually. I find when I do the six sessions I can get there and I get a little experience of it and it helps a bit and then it just dissipates.
+
+It's humbling to recognize how quickly my mind falls out of that. There was one experience I shared in the chat this lovely Bay Ridge dinner that we had a few nights ago. It was wonderful and it was helpful actually with that idea of what we do matters and helping Sangha and rejoicing the Sangha jewel.
+
+There was one moment during the dinner they brought out the food one by one everyone got their food one at a time and mine was last. I was horrified to discover that I really didn't like that and someone noticed. They're like oh I'm so sorry your food came out last.
+
+I was like no no it's fine but somewhere in my mind it's almost super embarrassing that I had no control over my natural habitual reaction to this scenario and I was like wow this is a real illustration of where my mind is really at a lot of the time. Like a child upset that I got my food last and I don't want attention drawn to that or whatever it was exactly that was annoying about it. Anyway it reminded me of what you said in class last week that I need more spiritual power.
+
+That's another aspect I've been trying to work on just really working on concentration. Somehow I have this faith that if I can learn to concentrate for 30 seconds and then a minute and then 3 minutes and 5 minutes like that power of my mind will sort of serve to bridge those gaps between the successions or the little moments where I can remember because it's too much to set an alarm every 10 minutes. I don't see that being the model for how it works so I'm trying to figure out how to like make it all come together.
+
+I have some faith that over time eventually it will but really trying to have a plan and like the successions are good but I'm not sure how to like beef up the plan more than like just really focusing on concentration and that's kind of my method.
+
+[Speaker 1] (1:06:45 - 1:10:52)
+Yeah thanks so much David. Yeah it's really nice data and these kind of situations are interesting because sometimes we have for example no successions, we have nothing to support our mindfulness and then our mind goes a little wonky in little situations right and in those situations the idea is add more add structures, add scaffolding, support it. But then sometimes we add structures, we add some scaffolding and it still happens that our mind goes a little funny right and often in those situations the answer isn't add more because we already have a good structure we've already put a lot of time into the structure and maybe it's even a little bit of a push to have that structure like it takes a lot of time and energy and it's held together but more might create a little bit of a burden or a little bit of angst or just friction in our mind or tiredness and so in this case it does seem like you have all the right structures right because everything is set up very nicely and in those cases it's like okay then what's my takeaway when my mind goes a little funny what's my actual takeaway? Is it the structures aren't working?
+
+No I don't think so. Is it I have to add more? Nah I don't think so I'm not sure that that's the takeaway right.
+
+So then the takeaway is something else right and for each person the answer might be different right. Sometimes the takeaway is just yep it just takes time to reverse my karma which is a very unglamorous answer but that's actually just often the answer like when we have a really good setup when we're doing everything just right yeah it doesn't mean that our karma is going to instantly be reformatted we're just still going to get weird minds, distracted minds, angry minds, ignorant minds, craving minds this is normal right. So sometimes it's just okay I'll just be patient with myself and keep up my structure.
+
+Sometimes it is that we need to make a slightly different emphasis so it's not like add more it's more just like shift emphasis I don't think that's the case I think it's more the first case in this situation right anyway and then there's other things that we can investigate but I'm just sharing this because like over correcting in our dharma practice can be like a really bad habit that some people can make.
+
+I'm not saying that's what you're doing here I'm just saying for all of us you know we try to create a structure that's based on our karma and our life and what we do but then once it feels pretty good and it takes a little bit of work to set that up then we do try to let that ride a bit and not kind of over correct in either way and give it a little bit of space if we over correct then we end up kind of keep tearing things down that we set up and then we never build the deep habits that are like that can last us decades and decades and decades that are just like fused in our mind right and that's what we really want we want those kind of habits ones that are just fused in our DNA anyway thanks so much and it did seem like the dinner was a beautiful event so thank you very much okay time for maybe one more person Jose yes thanks
+
+[Speaker 9] (1:10:56 - 1:13:04)
+so I think that's a very good segue for my data so the past few months I had to do some changes to my practice changes in my schedule and stuff that many of you already know so I did switch from meditating every morning for a very long time to kind of splitting that through the day and at the beginning that worked very beautifully I was meditating in the subway and the way to work and then the way back it was working pretty well but then eventually kind of like the quality of my meditation started going lower and lower and lower until I got to a point where they completely disappeared and that actually was very surprising because that had not happened for years I had been meditating daily for maybe three years and the bottom was two weeks the week of the empowerment actually that week I didn't meditate at all and realizing that actually happened was quite a big surprise because I definitely had a very good habit of doing that every day so after the empowerment I I completely gave up everything I was obviously thinking about Dharma through the day but I didn't have the formal meditation scene practice that I was doing so well for such a long time so after the empowerment I decided just to completely restart again from zero, forget about the previous structure that didn't really work and I just focused on before leaving my home I'm going to meditate I don't know if it's going to be 5 minutes, 10 or 30 minutes but I'm just going to do it and I did and I've been doing that for the last two weeks and it just comes back so fast and it's amazing how it feels when you are back to it and it's working well and you see how all the different structures that I used to have start coming back pretty easily and that's been such a nice thing to experience the last two weeks
+
+[Speaker 1] (1:13:04 - 1:15:52)
+Yeah, thank you so much Jose. It's lovely to hear you built up that structure. It was a multi-year long structure that you chiseled into your mind, right?
+
+And so then you did switch it up a little bit and then you noticed the gradual but fortunately the karma was in there the kind of grooves were cut into the mind to such a degree that they were still there even after that and you could just hop back in there, get back into the swing of things Yeah, it's really nice. Thank you for sharing Yeah, just briefly on that point about those No, we're not going to do that right now It's too much of a... Maybe just simply.
+
+Yeah, those changes can happen a bit subtly and it's nice to catch them earlier than later and I know I've caught them at the point where things have fully become a catastrophic situation but over time we'll get better at knowing that curve and this is how it goes always. It's a reverse kind of hockey stick so there's like, it looks subtle going down but that subtle is implying actually something that involves a free fall, vertical descent and it's not a normal undulation in the practice There's normal ups and downs and those are just normal. I'm going to be very patient.
+
+That's a little bit like what I was saying in David's point There's normal ones. I'm not trying to read too much into those but there's other ones that we start to notice over time that this is like a pattern. This isn't a normal oscillation, undulation, movement.
+
+This is like a pattern It's going like this and as you said, it's really good to go through it and usually we go through it a few times in our practice. We find ourselves down here usually hurting and then we really eventually build up a skill that prevents that from happening and we learn about the cues. Ah, this isn't a normal movement in my practice.
+
+This is something a little funny going on This is like momentum building in an unhelpful direction. Okay, thanks so much. It was really nice.
+
+Oh, yeah one more hand online. Yes, we didn't hear from any online people so you can be the token online person.
+
+[Speaker 8] (1:15:54 - 1:17:07)
+I will make it really quick. I just wanted to report in that I have been really enjoying doing the you know, may I benefit this person with pure Dharma. Well, a lot actually during work.
+
+I'll have moments that I'm sort of working with someone but we'll be doing something for a period of time and it sort of was a nice natural direction that my mind was drifting frequently which was really nice to tie it in that way and I've also been putting effort into Lam Rim, revisiting the Lam Rim this week with a different object every day and I'm just curious because I have been doing Blitzful Path consistently every day basically since we studied that book but it doesn't have Lam Rim in it and I didn't know if there was a way to sort of build that in or if I should just do as I have been or as Anne did to kind of just read a little bit and do a little meditation on Lam Rim at a different time of day.
+
+[Speaker 1] (1:17:08 - 1:18:03)
+Yeah, great question Kristen. It just depends on your schedule and what will work. If it feels too much of a push to kind of put it in there, then maybe just a little reading and reflection at night is great.
+
+You can just do it in bed even. If it feels like, okay, I want to put it into the practice, then you can just do it after generating Bodhicitta or like what I'll do sometimes is I'll just if I'm on meditation one to six I'll do it with the refuge and then if I'm on seven to 21 I'll do with the Bodhicitta part because it kind of will feed. It will either be feeding the refuge one through renunciation will feed refuge and then seven through 21 will feed the Bodhicitta.
+
+So you can just plug it in there if you'd like.
+
+[Speaker 8] (1:18:04 - 1:18:06)
+Thank you, so helpful.
+
+[Speaker 1] (1:18:07 - 1:18:13)
+Milo, I love the helmet. Do you just live in that thing? That's smart.
+
+Prevent the brain damage from happening.
+
+[Speaker 8] (1:18:14 - 1:18:17)
+I don't know. He's been out biking.
+
+[Speaker 1] (1:18:17 - 1:18:20)
+Oh, okay. I thought it was like an enforced thing in the house.
+
+[Speaker 8] (1:18:20 - 1:18:21)
+No, no, no.
+
+[Speaker 1] (1:18:26 - 1:34:18)
+Well, that's a good look. May we all have helmets to protect our karma. He's giving them a look.
+
+Anyway, that's good. Thanks, everyone. Lovely data.
+
+As always. All right, we are on to Disclosure of Evil. Best name of any chapter in any book.
+
+Again, more evil talk. Bring back evil. That's what I want.
+
+We have to figure out our shirts for the Walk for World Peace. That's what my suggestion is. Bring back quote-unquote evil.
+
+It says a word you use in normal language. Yeah. Bring back evil.
+
+Anyway, Disclosure of Evil, page 59. The first chapter of his guide, Sankhya Deva discusses the benefits of developing the mind of Bodhicitta. In the second chapter, he shows us how we can eliminate obstacles that would normally prevent us from developing this enlightened motive.
+
+Thus the outline of the commentary continues as follows. How to practice the six perfections once Bodhicitta has been developed. This is two parts.
+
+Maintaining Bodhicitta. How to practice the six perfections. Maintaining Bodhicitta.
+
+This section of the outline is two parts, corresponding to the second and third chapters of this commentary. How to destroy obstacles and purify evil. How to accept and hold on to the actual Bodhicitta.
+
+How to destroy obstacles and purify evil. As stated before, the main obstacle to developing Bodhicitta is our accumulation of negative energy or non-virtue. If we want to develop beneficial states of mind, such as Bodhicitta, we have to purify this non-virtue and replace it with virtuous or meritorious energy.
+
+This dual process of accumulating merit and cleansing ourself of non-virtue, or evil, is accomplished by performing the following preliminary practices and confession. The preliminary limbs of practice. The confession of non-virtue.
+
+The preliminary limbs of practice. This is three parts. Offering, prostration, going to refuge.
+
+First preliminary limb. The practice consists of making offerings. Shantideva's discussion of this practice has two parts.
+
+The necessity of making offerings, recognizing the objects of offering. The actual offering. The necessity of making offerings and recognizing the objects of offering.
+
+In the second chapter, Shantideva is personally taking the part of someone who wishes to purify himself of accumulated non-virtue. He realizes the necessity of following the preliminary practices and declares it openly as follows. In order to maintain and complete the precious Bodhicitta, the source of happiness for all universal beings, I will now make offerings to the objects of devotion.
+
+On the Tathagatas, those who have gone to Vatnas, the Buddhas, the jewel of holy Dharma, and those sons of Buddha, the Bodhisattvas, such as youthful Manjugosha, Avalokiteshvara, and others who possess oceans of excellence. The actual offering. Shantideva now begins an exhaustive list of the various types of offering that can be presented to these three sublime objects, Buddha, Dharma, Sangha.
+
+These types of offering are divided into three parts. Unowned offering. Offering our own body.
+
+Mentally transformed offerings. Unowned offering. All the following I offer up to you, whatever flowers there are, those that are most beautiful, fruits, medicinal herbs, numerous jewels, and pure, refreshing waters, mountains of jewels, beautiful forest groves, and quiet and joyful places, heavenly trees with the most beautifully blossoming flowers, and trees whose branches bow down with the weight of good fruit, exquisite scents from celestial realms, incense wish-granting trees and jeweled trees, harvests that need no cultivation, and all ornaments worthy of offering, lakes and pools adorned with magnificent lotuses and resounding with the beautiful sound of wild geese. From the depths of my heart I offer up all these unowned gifts.
+
+From the limitless spheres of space, together with all that is worthy of offering, to the supreme beings, the Buddhas and their sons. Oh, compassionate ones, think kindly of me and accept these offerings of mine. I have little merit and no other gifts of beauty or value to offer.
+
+By your power, oh protectors, you who are concerned with all others, please accept these offerings for my sake. Okay, so we're going to be doing a big well anyway, we have a big mission for the second class, which is going to be looking at well, maybe that's the best way to say this, that's unowned offerings, which just means you're offering things you don't own, which means you don't offer anything. You just go to Prospect Park, you see a beautiful tree, you offer that to Buddha.
+
+Here, you enjoy. You hear some beautiful sound, good, you offer that to Buddha. You see someone driving by, no, it's an owned offering.
+
+You see a sunset, you just offer that to Buddha. So you're just taking unowned things and you're giving that to Buddha. You just do this all day.
+
+All beautiful things. Okay, so then we have a big job in the second class, where we're going to use this as a little bit of a theme as we go through the Disclosure of Evil chapter, which is basically to try to understand our desire and our attachment better. It's nice, we just ended the last chapter getting this excitement for Lam Rim, and as we might know the Three Scopes of the Lam Rim opposes three types of attachment.
+
+So the First Scope of the Lam Rim, Meditations 1-5 oppose attachment to happiness in this life. Just looking for happiness in this life. The Sixth Meditation, Renunciation, opposes attachment to future lives, happiness in future lives.
+
+Or just having happiness in samsara, happiness while grasping at a self. And then the Great Scope, Meditations 7-21 opposes attachment to attaining spiritual realizations for our self, or attaining enlightenment for our self. So there are different types of attachment, different levels of attachment, that are being opposed by all three scopes.
+
+So our Lam Rim practice can help a lot reducing our attachment. So this is one reason it's nice to shift into this focus. Another is that there are multiple requests when we're studying this book to increase renunciation.
+
+But why do we increase renunciation? To oppose attachment, principally. So if we want to increase renunciation, we're also kind of saying, I want to oppose attachment.
+
+So it would be very nice to kind of dive into this as we go through this chapter. A couple of other reasons. Buddha's teachings on how to work with attachment and overcome it are very unique.
+
+And they're really not out there. And many people who even study Buddhism get it very wrong through settling for something that's a bit ascetic or indulgent. Both of which are wrong, completely.
+
+It's because they lack an understanding of emptiness. Which cuts us through either of these extremes. Being indulgent, which is like looking for happiness outside of ourself and objects of attachment.
+
+Or ascetic, which is like abandoning objects of desire externally while still harboring attachment in our heart. But they're both insufficient tools. They both don't work.
+
+And so it's very easy even to study Buddhism deeply and still fall into one of those places. So it would be really nice as a TTP for us to become very skilled at cutting through desires of attachment. Which, from one point of view really involves understanding our desire.
+
+Why do we desire the things that we desire? What does it mean to really desire something for us? What does it mean to do something where we really desire to do it?
+
+Versus what does it mean to do something where we really don't desire to do it? Even if it's somewhat virtuous. Why do we really like the things that we like?
+
+And why do we not like the things that we don't like? There's a core kind of inquiry. And because Kadampa Buddhism is the union of sutra and tantra not just sutra, but the union of sutra and tantra we have to also investigate this from understanding what's the role of our tantric practice in overcoming our attachment.
+
+So we'll have to look at this, and we'll try to do a bit of this today. We won't get into the bottom of it. But because we're in the unforgetting world which means the world of people who can't forget the objects of desire Buddha taught tantra as a way to attain liberation, even for people who have incredible attachment.
+
+So it's a very skillful way on how to transform our attachment. Not landing in some kind of repressed or suppressed place. Not through some ascetic similitude of Buddhism, but through still staying on the spiritual path.
+
+A lot of it actually has to do with learning how to make offerings to the self-generation. We'll look at that in this bit, because it's an offering practice. Okay, the last thing about this, and then we'll pause is when people get high-secret tantra empowerment there are various vows that are given, and one of them is enjoy objects of desire as offerings to the self-generation.
+
+So it's not when you happen to stumble upon things you desire offer them to the self-generation. The vow is actually enjoy objects of desire. Not avoid, but enjoy objects of desire as offerings to the self-generation.
+
+So it's a vow. It's one of the very few things you explicitly vow to do in the high-secret tantra empowerment. I mean, you take other little vows here and there, but it's one of the very explicit ones towards the end.
+
+You promise to do it. So we can think, huh, what does it mean to promise to enjoy objects of desire as offerings to the self-generation? Why do I have to promise to do that?
+
+And we can think, if we have a tantric practice, if we're tantric practitioners what's our relationship to our objects of desire? Is it mostly just avoidance, or is it indulgence? Those are those two extremes you already talked about.
+
+And what's it like to find the middle way there, or use it as an object of offering to the self-generation? Okay, so anyway, we're going to be looking at this in this next session, but maybe in the break we can all think about a little bit, like, what do we desire? What does it mean to really follow a desire for us?
+
+Basically to follow something pleasurable. What does that really mean for us? And what's our relationship to things that are pleasurable for us right now?
+
+Is it healthy? Is it unhealthy? Is it a bit maladaptive and weird?
+
+Is it balanced and sensible? What's our relationship? Okay, so we'll just do a brief dedication here, and then we'll come back in 6.03. Okay, we can think through the virtues we've collected, through practicing, meditating, discussing. May all living beings find lasting peace of mind, enlightenment. We can make any personal prayers or dedications. Okay, thank you.
+
+Thanks, everyone.
+
+[Speaker 11] (1:34:41 - 1:34:51)
+What would you like to do for dinner? Next week? Sunday?
+
+You want me to buy tacos?
+
+[Speaker 2] (1:34:55 - 1:35:01)
+Probably easier for me to set up. Super tough, yeah.
+
+[Speaker 7] (1:35:01 - 1:35:02)
+...
+
+[Speaker 2] (1:35:02 - 1:35:05)
+...
+
+[Speaker 6] (1:35:09 - 1:35:11)
+...
+
+[Speaker 2] (1:35:11 - 1:35:19)
+... ... ...
+
+[Speaker 8] (1:35:19 - 1:35:22)
+... ...
+
+[Speaker 2] (1:35:22 - 1:37:30)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+[Speaker 7] (1:37:30 - 1:37:38)
+... ... ...
+
+...
+
+[Speaker 2] (1:37:38 - 1:37:41)
+...
+
+[Speaker 5] (1:37:48 - 1:38:00)
+... ... ...
+
+... ...
+
+[Speaker 2] (1:38:00 - 1:38:16)
+... ... ...
+
+...
+
+[Speaker 8] (1:38:18 - 1:38:21)
+... ... ...
+
+...
+
+[Speaker 2] (1:38:21 - 1:38:39)
+... ... ...
+
+... ...
+
+[Speaker 5] (1:38:39 - 1:38:42)
+... ...
+
+[Speaker 2] (1:38:46 - 1:38:55)
+... ...
+
+[Speaker 1] (1:38:56 - 1:39:03)
+... ... ...
+
+[Speaker 2] (1:39:12 - 1:39:22)
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 7] (1:39:27 - 1:39:29)
+...
+
+[Speaker 8] (1:39:31 - 1:39:31)
+...
+
+[Speaker 7] (1:39:31 - 1:39:36)
+... ... ...
+
+[Speaker 2] (1:39:36 - 1:39:59)
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 1] (1:40:00 - 1:40:12)
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 2] (1:40:16 - 1:40:18)
+...
+
+[Speaker 7] (1:40:28 - 1:40:34)
+... ... ...
+
+[Speaker 2] (1:40:34 - 1:40:50)
+... ... ...
+
+... ... ...
+
+[Speaker 7] (1:40:50 - 1:40:51)
+...
+
+[Speaker 2] (1:40:51 - 1:42:09)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 7] (1:42:10 - 1:42:19)
+... ... ...
+
+... ...
+
+[Speaker 2] (1:42:26 - 1:43:14)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+[Speaker 10] (1:43:14 - 1:43:23)
+... ... ...
+
+... ...
+
+[Speaker 2] (1:43:27 - 1:44:52)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 8] (1:44:54 - 1:45:04)
+... ...
+
+[Speaker 2] (1:45:04 - 1:45:53)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ...
+
+[Speaker 10] (1:45:59 - 1:46:02)
+...
+
+[Speaker 2] (1:46:02 - 1:46:04)
+...
+
+[Speaker 10] (1:46:06 - 1:46:07)
+...
+
+[Speaker 2] (1:46:07 - 1:46:10)
+... ... ...
+
+[Speaker 10] (1:46:10 - 1:46:12)
+...
+
+[Speaker 2] (1:46:17 - 1:50:01)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ...
+
+[Speaker 8] (1:50:01 - 1:50:01)
+...
+
+[Speaker 2] (1:50:01 - 1:50:44)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 10] (1:50:48 - 1:51:05)
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 2] (1:51:10 - 1:51:53)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 8] (1:51:56 - 1:52:09)
+... ... ...
+
+... ...
+
+[Speaker 2] (1:52:09 - 2:00:56)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ...
+
+[Speaker 8] (2:00:56 - 2:00:58)
+...
+
+[Speaker 2] (2:01:00 - 2:01:23)
+... ... ...
+
+... ... ...
+
+[Speaker 8] (2:01:23 - 2:01:24)
+...
+
+[Speaker 2] (2:01:24 - 2:02:05)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 8] (2:02:05 - 2:02:05)
+...
+
+[Speaker 2] (2:02:05 - 2:02:21)
+... ... ...
+
+[Speaker 7] (2:02:21 - 2:02:25)
+... ... ...
+
+...
+
+[Speaker 2] (2:02:30 - 2:02:31)
+...
+
+[Speaker 8] (2:02:34 - 2:02:35)
+...
+
+[Speaker 2] (2:02:39 - 2:03:18)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+[Speaker 7] (2:03:18 - 2:03:25)
+... ... ...
+
+...
+
+[Speaker 2] (2:03:32 - 2:04:12)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+[Speaker 4] (2:04:14 - 2:04:23)
+... ... ...
+
+...
+
+[Speaker 2] (2:04:23 - 2:04:43)
+... ... ...
+
+... ...
+
+[Speaker 4] (2:04:43 - 2:04:48)
+... ...
+
+[Speaker 2] (2:04:54 - 2:04:59)
+... ...
+
+[Speaker 4] (2:04:59 - 2:05:00)
+...
+
+[Speaker 2] (2:05:00 - 2:05:28)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+...
+
+[Speaker 4] (2:05:30 - 2:05:51)
+... ... ...
+
+... ... ...
+
+... ...
+
+[Speaker 2] (2:05:56 - 2:06:09)
+... ... ...
+
+...
+
+[Speaker 10] (2:06:09 - 2:06:19)
+... ... ...
+
+[Speaker 2] (2:06:19 - 2:06:23)
+...
+
+[Speaker 7] (2:06:23 - 2:06:24)
+...
+
+[Speaker 2] (2:06:24 - 2:07:41)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ...
+
+[Speaker 3] (2:07:41 - 2:11:28)
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+... ... ...
+
+Supreme Unchanging Friend, I request from the depths of my heart, please give me the light of your wisdom to dispel the darkness of my mind, and to heal my mental continuum. Please nourish me with your goodness, that I in time may nourish all beings with an unsqueezing banquet of delight. Through your compassionate intention, your blessings and virtuous deeds, and my strong wish to rely on you, may all suffering quickly cease, and all happiness and joy be fulfilled, and may Holy Dharma flourish forevermore.
+
+[Speaker 1] (2:12:00 - 2:31:08)
+Okay, so now we'll look at this in a bit more detail about desire. So maybe the scope of this class can be just a little bit by way of introduction, and understanding our relationship to desire, both uncontrolled desires, a.k.a. attachment, and just desire in general, which is just wishing for things. That isn't a problem, right?
+
+We have to wish for enlightenment, for example, we have to wish to benefit others. So desire in itself is definitely not a problem by any means. So a kind of broad overview, Desire 101, and then we're going to try to get to look at this point a bit about what does it mean to offer our enjoyments.
+
+Okay, all right, so Desire 101 first. So as we know, aspiration, desire, wish, they're all synonymous. Aspiration, desire, wish, they're synonymous.
+
+There's virtuous desires, and neutral desires, and non-virtuous desires, like wanting to harm someone, a.k.a. malice and anger. There's non-virtuous desire, wishing to become enlightened. Virtuous desire, wishing to benefit others, virtuous desire.
+
+So desire by no means is the enemy. Attachment is the enemy. But pleasure is not the enemy, or pleasurable feelings are not the enemy.
+
+Attachment is. So attachment, as we know, is identifying a contaminated object, viewing it as a source of happiness, and then wishing for it. That's wishing for a contaminated object, viewing it as the source of our happiness.
+
+That's attachment. That's, after ignorance, enemy number one. So I guess it's enemy number two.
+
+After ignorance, it's the most important enemy to destroy. So desire is not the problem. Pleasurable feelings or good feelings, not the problem.
+
+It's just attachment that's the problem. Which is neither of those two things. As we know in sutra, the principal way that we cultivate non-attachment, or renunciation, is that we think about the faults of attachment, we think about the faults of samsara, and then we realize that we need to look for happiness from within, and ultimately realize emptiness, through practicing the three higher trainings.
+
+That's basically what the Four Noble Truths is about. That's quite effective, and in very pure times, people can basically do that alone, and be great, and overcome their attachment, in a very lovely, easy way. Some people can in this world, too, but it's a little bit tricky, because the attachment of the beings in this world is so strong, that it's just tricky.
+
+It takes a lot of time and energy, and that's why people live in monasteries, for example. There's less things to get attached to. So there's just less stuff to get attached to.
+
+You could still get attached to a position, or having the best butter tea, or having the coolest monastery friends, or whatever. But comparatively, it's a little bit less complicated than having a cell phone, with infinite derivations of whatever we want, at our fingertips, all the time. So, of course, we want to practice the pure Sutra of Renunciation, and we do Lam Rim meditation, the first five meditations, plus the Renunciation meditation.
+
+They're all working towards building us that Sutra of Renunciation, and we do need that. And that's really great. In addition, with certain objects of desire, sometimes we create a buffer with them.
+
+And that buffer might look like what people mean by asceticism, but it's not exactly, because the intention is to create space so that we can actually transform our mind. It's a little hard to transform the mind when you're in the compulsion, and you can't separate yourself from it, and there's nothing blocking you. It's just a bit hard to transform the attitude when it's just there, 24-7, in your face.
+
+So in a moment, we're going to be looking at how to transform objects of desire through the tantric teachings. But it's not saying, don't use Sutra of Renunciation. That's a big part of it, and that's actually going to give us the wish to actually transform our attachment, and the right motivation.
+
+Like, I'm doing this to get out of samsara and to help everyone everywhere. And it doesn't mean don't have healthy boundaries around certain things, whether it's something a bit compulsive, or just a little bit unhealthy. It's like a little too much.
+
+It doesn't mean don't do that, but just do it with the right motivation. The right motivation is so that I can transform my mind, I'm doing this. Not, this is my end goal, which is like, I'm pushing things away.
+
+That's my end goal. Is that okay so far? We all know this.
+
+I'm just trying to set up the points. Yeah. Okay.
+
+So if we use those tools, then we can also go a little bit further. And Buddha taught how to transform our enjoyments into the spiritual path and the tantric teachings. And he taught that specifically for people with strong desires attachment, aka the people of this world.
+
+So we're going to get into what this means in a moment. But one thing we want to do is just try to understand our own desire a little bit. You don't have to say it out loud, but just think to yourself, are you really in tune with what you desire right now?
+
+Not like what you're supposed to desire, not what you would tell a potential spouse of what you desire, or, you know, your sangha friends maybe, or your employer. But like in the sort of raw space of your mind. And it's interesting, some people do, and some people don't.
+
+Some people just, if you ask them, what do you really crave? They're like, I'm not actually sure, because I'm so focused on what I'm supposed to do, that they get a little disconnected. And other people are very clear.
+
+Often people who just follow it all day are very clear and don't have this problem. But some people who are spiritually minded can have this problem, because they practice a form of asceticism, which is like having that desire but then not following it so much that that little voice of what we desire is muted. It's still totally as strong as ever.
+
+It's just not as clear. Yeah. It's just still strong.
+
+But it's not quelled, is the point. It's not quelled, but it's just not as obvious. The way you know that is if someone, for example, has rules about what they do and don't do, they relax the rule and then instantly go off the deep end.
+
+It's an interesting sign, right? Like, huh, detachment didn't even cease really, or didn't even reduce much. It was simply held back by the rule.
+
+And that's a sign. The desire is still there very strongly. It's just its expression is suppressed.
+
+But mostly they're not acting on it. For some people that does actually make it go away. But for other people, it just sits there waiting.
+
+So anyway, the point is just very clearly, I just really want to see like, what do I really desire? And we're asking like, yeah, yeah, anyway, what do I really desire? And then second, what does it feel like when I pursue or get what I really desire?
+
+And here we're not talking as much about the dissatisfaction side of things, which eventually sets in, of course. But we're talking about like, the pleasure that our mind feels when we get what we desire. Like sometimes I remember, you know, one of my early like Christmases of my life, getting the presents that I wanted and just this sort of insane euphoria.
+
+Yeah, just like high, you know, incredible mind-boggling pleasure, you know, in the mind. Just getting all these things that I wanted. Sort of like sniffing them, you know, like coaxing them, like hoarding them in my room and jumping from one to the other.
+
+And just thinking, oh, this is an incredible amount of pleasure. It's also detachment, right? But, you know, you can have your own versions.
+
+Or maybe like, a little closer to home, like maybe there's just someone you absolutely love spending time with. Maybe because it's detachment, like a new friend or partner or whatever. Or just whatever, right?
+
+And you get to hang out with them like for a day. And you just like love being with them. And it's like there's a sense of a lot of pleasure in the mind.
+
+I'm doing exactly what I want to be doing. Yeah, maybe it's detachment, whatever. Maybe it's virtues, who knows.
+
+But I'm doing exactly what I want to be doing. Right? That's what we're talking about here.
+
+So what does that feel like? What does it feel like to be doing exactly what we want to be doing? Regardless if it's virtues or not.
+
+Like there's no friction. There's no feeling of I want to be doing something else or I wish this was a little bit different or I'm supposed to be doing So a couple of questions and then we'll kind of zoom in on transforming enjoyments. What's it like to yeah, what's it like to desire something non-virtuous, right, and resist that desire?
+
+What's that like? And we want to be really clear on that. Like what is that feeling like?
+
+Obviously there's a place for that, right? Right? You ever thought I want to do something that's problematic, right?
+
+We should resist that desire but that's not the landing place that we want to end up at. But what does that feel like for us? And then on the flip side what's it like to be doing something virtuous and not wanting to be doing it?
+
+Right? What is that like? Yeah, what's that experience?
+
+So the point of all these questions, right, is just we're trying to understand how this mental factor operates in our mind. Mental factor desire. Both in its virtuous ways like really loving, for example, to do something virtuous and positive and non-virtuous ways wanting to do something potentially harmful or problematic.
+
+And what's it like to be really following that desire? So we're just trying to get the lay of the land here. Well, ultimately, right, we want to be always aligned.
+
+We want to reach a place where our desires are all virtuous, right? But we love to do them as much as we would love to do anything else that we currently really, really love to do and look forward to do. I think that's a place that we would love to get to one day, where it feels the same way.
+
+Okay. So then that's just about understanding our own desire. Okay.
+
+And this practice of transforming enjoyments. So I'll just read a little bit and then we'll unpack it. So Geshe says here, page 182, New Guided Dakini Land, Making Offerings to the Self-Generation.
+
+Jason Kappa gave many explanations showing the importance of making offerings to the self-generation and cited tantras to support his reasoning. In the root tantra of Heruka, Vajradhara says, Making offerings to our self becomes an offering to all Buddhas. Oh, I love that verse.
+
+Making offerings to our self becomes an offering to all Buddhas. This is because when we absorb the wisdom beings, all the Buddhas dissolved into and merged inseparably with our self, generated as Vajrayogini. Moreover, during the practice of bringing death into the path to the truth body, we dissolved all environments and beings, including all Buddhas, into the clear light and identified this clear light as the truth body, which is one with the mind of all Buddhas.
+
+From this clear light, we arose in the form of Vajrayogini. Therefore, the self-generation is the synthesis of all Buddhas. So we make offerings to the self-generation and we are making offerings to all Buddhas.
+
+Making offerings to our self, generated as the deity, is an especially powerful method for accumulating merit. If we maintain the awareness then whatever we enjoy, such as food and drink, becomes an offering to the deity. It is only in secret mantra that we have the opportunity to create merit in this way.
+
+If we fail to make offerings to the self-generation, the power of our tantric practice will diminish. Great tantric scholars and meditators of the past, including the Buddhist Shakyamuni, have stated that tantric practice is characterized by the four complete purities. Complete purity of place, of body, of deeds, that for time, the complete purity of enjoyments is the viewing of every enjoyment as an offering to the self-generation.
+
+If we omit these offerings to the self-generation, our practice will not have the fourth complete purity. So it will not be a qualified tantric practice. Okay, a little bit more.
+
+Raising your hand. Very exciting. We want to reinforce the good behavior.
+
+[Speaker 10] (2:31:13 - 2:31:17)
+What does self-generation mean? And what does deity mean?
+
+[Speaker 1] (2:31:17 - 2:45:37)
+Yeah, yeah, yeah. We're going to get to all that. Yeah, we'll get to that.
+
+Thanks. Okay, a little bit more. Modern Buddhism, Preciousness of Tantra.
+
+Practicing sutra teachings is the basic foundation for practicing tantric teachings. And the practice of tantra is a quick method to fulfill the ultimate goal of sutra teachings. For example, in his sutra teachings, Buddha encourages us to abandon attachment.
+
+In tantra, he encourages us to transform our attachment into the spiritual path. Some people may think this is a contradiction, but it's not, because Buddha's tantric instructions on how to transform attachment to fulfill the aims of sutra teachings. We should take care not to misunderstand the meaning of transforming attachment into the spiritual path.
+
+Attachment itself cannot, underline bold, all caps, cannot be transformed directly into the spiritual path. It is a delusion, an inner poison, and an object to be abandoned in both sutra and tantra. So transforming attachment into the path means that we transform the causes of attachment, our experience of worldly pleasure, into the spiritual path.
+
+There are many methods for doing this that are explained in tantric teachings. Okay, so now we're getting into the nitty-gritty details here. So what we're looking at here is how do we transform experiencing worldly pleasure, which in and of itself is no problem.
+
+It's just pleasure. There's nothing wrong with that. Okay, so there's different levels of doing this.
+
+And they're all related to where happiness is coming from. That's what they're all related to. This is why the Inner Peace chapter of how to transform your life starts off with the consolidation of all Buddhist teachings by saying the Inner Peace is the real source of happiness.
+
+Basically it's found within the mind. So, this is like a whole spectrum. So level one of that spectrum is just simply starting to see that our Inner Peace, our happiness, is within the mind.
+
+That's like the beginning of the spectrum. That's leading us to this practice of transforming enjoyments. It's going to lead there eventually.
+
+Then there's finding pleasure and bliss from our love and compassion. We're still in sutra zone, but it's our compassion and love They just turn into that. It's like learning to find happiness and even bliss from our love and our compassion.
+
+Not from other people, from our love for them. We looked at this today in the Sunday class. It's encapsulated in this little mantra.
+
+Other people can't make me happy, but my love for them can. It's a really nice mantra. Other people can't make me happy, but my love for them can.
+
+That's one of the teachings. We're learning to see again that our happiness is found from within. Maybe to make it a little more elegant, you could say Level 1 on the spectrum is renunciation, which is learning to find happiness from within in general.
+
+That's basically what renunciation is about. Looking within for happiness, not without. Level 2 on the spectrum is learning to find happiness from our love and compassion, Bliss of our love.
+
+The bliss principally comes from recognizing this is coming from within, the good feeling I'm getting. If we still kind of think like the good feeling we get in a friendship is coming from the other person, it's not that blissful because it's exceeding a little bit of attachment, feeling I need that person. It's only when we really see that we're very blissful because we think, wow, my mind is generating the entirety of this feeling.
+
+I don't need anyone or anything for this. This is entirely coming from within. Two more, then we can start to practice offering enjoyments or the pleasure of enjoying any object or desire to Buddha at our heart.
+
+Look at that heart jewel and just walk around all day with Jason Kappa or Buddha at our heart and we just enjoy a coffee, a drink, a snack, a rest, a sunset, whatever, a beautiful song. We experience pleasure and we offer that to Buddha at our heart. Then finally level four is offering it to ourself as the self-generation, as the deity.
+
+What this means is thinking I as a deity and Buddha are synonymous. So thinking I on a Buddha's body and mind. So I'm Kyle, so not Kyle on a Buddha's body and mind but I on a Buddha's body and mind.
+
+Normally we think I on our ordinary body and mind. In self-generation we're not thinking I on, for example, Kyle's body and mind or John's body and mind or Mary's body and mind so because that Buddha in the practice of generating that Buddha we develop the recognition that they're the synthesis of all Buddhas. Then when we enjoy some pleasurable thing and offer it to self-generation we're making an offering to all the Buddhas.
+
+So this is a very, very clever practice. It does, like, a million things in one practice. It's incredibly clever.
+
+Most simply it turns the thing that binds us into samsara as an offering to countless Buddhas. This is a great deal. Right?
+
+You simultaneously subtract the cause of binding ourselves to samsara but you don't just do that. You simultaneously add an offering to all Buddhas. So you get, like, it's a two-for-one deal but it's really like a million-for-one deal.
+
+Cutting the object that binds us to samsara and creating a ton of merit and good fortune. In addition we deepen our self-generation practice. In addition we are actually able to be in modern life and busy life without fear, you know, of increasing our delusions.
+
+So we don't have to, like, have strange rules that we live by that are a bit anti-social or whatever. We can just sort of live as normal on the outside. So it allows us to really be a modern Buddhist and really help people in their life by being able to do this.
+
+And there's many other benefits too. I'm just incredibly happy all the time. Seems good.
+
+Seems like a good idea. Okay, so then we want to talk about how to do this. So, again, this is like a spectrum and you can kind of work on any of those levels and they're all great.
+
+Just simply my inner peace is the real source of my happiness. And just, like, thinking about that a lot. And my happiness completely comes from within, not from without.
+
+Just thinking about that a lot. And then developing love and compassion and a connection to others and just seeing that the love that we have is the cause of our happiness, not other people. And then offering to put out our heart and then offering to the self-generation.
+
+Okay, so then how to do this effectively. Okay, so the first thing is that it has to always be moving towards some kind of understanding of emptiness. So the definition of attachment, right, is we're observing a contaminated object, wishing it, viewing it as a source of happiness and desiring it.
+
+So contaminated object means inherently existent object. Non-empty object. So in this practice, part of what we're doing, right, is we're breaking down the inheritance of things.
+
+Inheritance of our self, of the pleasure that we're looking at or experiencing of the thing that we're relating to. So one way that we start to break down that inheritance and we start to see it as more and more empty is by just seeing that the pleasure that we're experiencing is coming from within. So that breaks down the inheritance.
+
+Why? Because it seems like an inherently pleasurable object. So for example, this is not even like doing the practice fully, but like if every time you had like a little sweet treat, you saw the pleasure I'm experiencing is a hundred percent coming from within.
+
+Just that alone would completely break down the attachment because it would just feel pointless to pursue the sweet treat. To say, oh, this is a hundred percent coming from within. Or any other kind of blissful good feeling that we get.
+
+So like attachment, seeing a contaminated object, but part of that contamination, its inheritance, is that it's inherently a cause of happiness and pleasure. So once we start to see now the pleasure, the good feeling we're getting, is a hundred percent coming from within. Then it really starts to break down that object.
+
+It starts to seem not as much there anymore. Because part of its quality was being a cause of happiness. So we're like destroying that facet of it.
+
+[Speaker 11] (2:45:41 - 2:46:26)
+Sabin? So, obviously Bert talks a lot about like real cause of happiness and changing sufferings and stuff like that. And when I'm hearing pleasure, when I hear pleasure, to me included in that is these changing sufferings, i.e. not real happiness. And maybe I'm just mishearing it or I'm misunderstanding it. But the reason I'm asking is it's like, yes, I'm bought in on real happiness comes from within. But I do feel like I experience pleasure changing suffering types of pleasure from without.
+
+[Speaker 1] (2:46:28 - 2:47:14)
+Yeah. Yeah. Yeah.
+
+No, even from without, it's still coming from within, that pleasure in the mind. So even with changing suffering, it's still coming from within, the pleasure we experience. Yeah, you're right.
+
+The aim of this practice is definitely not to just have lots of changing suffering. So that's definitely the case, yeah. We're not trying to have mind-blowing amounts of changing suffering, a.k.a. worldly pleasure. But part of the problem with changing suffering is that we're associating where the good feeling is coming from to the object.
+
+[Speaker 11] (2:47:17 - 2:47:56)
+So my understanding of changing suffering is that the reason it is pleasurable is that it's relatively better. So for example, like, oh, I had a good bagel versus a bad bagel. And so it's like, again, from my understanding, it's like coming from, it is coming from the bagel because it's like, this was the good bagel.
+
+Do you mean it just in the sense that everything we have, all of our experiences are mental in nature? Is that what you mean if it's coming from within? Because what I, I guess I could get that a little bit, but it does seem like that there is something like the good versus bad bagel or whatever, right?
+
+[Speaker 1] (2:47:56 - 2:49:22)
+Yeah, but that's just a view. That's still coming from within. Like, it's still coming from within.
+
+Good bagel, bad bagel. Yeah, it's still a view. Yeah.
+
+Like, um, let's take being full as an example. Some people hate feeling full. And some people eat three times after they're full.
+
+Right? They don't, it's not enough actually to feel full. They want to feel like really full.
+
+Right? So it's like, where's the changing suffering coming from? It's not coming from the food.
+
+It's coming from some mental thing that's being escaped from. Right? It's like searching from something.
+
+It's coming from a view. It's not like fullness or the food or whatever. It's still coming from some inner place.
+
+Pregnancy is just coming from our karma that's ripening to feel good or bad. As we know from How to Understand the Mind, feeling, and to factor feeling is just how our karma ripens. And feeling only ripens in the mind.
+
+It doesn't come from objects. Yeah, so, yeah. David, you have a hand there?
+
+And then we're going to continue with the text.
+
+[Speaker 4] (2:49:22 - 2:49:41)
+So would you say, just to follow up on Sumit's question, that changing suffering is like a pleasurable feeling plus this view that that's coming from the thing. Like that's what makes it changing suffering. And we can take that pleasurable feeling and use it in some other way to not make it changing suffering.
+
+[Speaker 1] (2:49:42 - 2:53:03)
+Yeah. Yeah, it's like whenever we're experiencing some kind of changing suffering, we're still viewing it as coming from without, from the outside. If we're 100% viewing the pleasure we're having coming from within the mind, we're basically meditating on emptiness.
+
+Which is very pleasurable, but that's not changing suffering. That's like, that's meditating on emptiness as a virtuous object. Yeah.
+
+Right, coming from the mind, merely imputed, empty, are all synonyms. Or we can say, dependent on mind, merely imputed, empty. They're synonyms.
+
+So if you have a pleasurable feeling and you're viewing it as merely imputed, you're saying, this is empty. That is a beautiful, virtuous mind that's leading us out of samsara. There's not even pervasive suffering there.
+
+We've gone even deeper than just solving the changing suffering problem. We're like, we're marching out of here. Yeah, so this point, even though this is not the end of making offerings to the self-generation, just the simple exercise is very useful.
+
+As long as we're doing this to try to understand emptiness to some degree. So we're just taking some kind of pleasurable thing and we're trying to just really see, this is just like merely imputed, this is just coming from mind, just empty. And the more we start to stay with that, yeah, it will break down our attachment, definitely, but it will also be leading us out of samsara.
+
+And then it will eventually be, you know, lead us into this practice of transforming enjoyments. Sometimes when people look at this practice, they say like, just enjoy the good feeling, or something like that. But not with the object.
+
+But that's, that's not exactly right. Right? Because, let's say, let's take the cake we ate in the break, which was delicious.
+
+Right? If you just, if you eat that cake, you get a good feeling, and then you just enjoy that good feeling, but you ignore, you try to drop the object or something like that. If you don't then make some emptiness connection, that's just enjoying a worldly pleasure.
+
+That's just changing suffering. That's not Buddhism. That's not taught anywhere, that's nowhere in the Buddhist teachings.
+
+I was having a good time, yeah, better than having a bad time, I guess, but it's not, that's not the answer. It's only when we then think this is merely imputed, or this is coming from the mind, that's when it becomes a Buddhist teaching. Right?
+
+So we have to very consciously make that recognition. Or else it's just some weird, weird thing that we're doing. Yeah.
+
+We have two hands, we have time for zero hands, so I'm not sure what to do. Let's, we'll try, we'll give it a minute to each hand, and we'll see how we do. Okay, Anne first, yeah.
+
+[Speaker 6] (2:53:05 - 2:53:18)
+Is it correct to say that what is really happening is that karma is ripening, we're experiencing pleasure, and then our ordinary mind generates an experience of something appearing outside of us to sort of like generate or explain that good feeling?
+
+[Speaker 1] (2:53:19 - 2:53:27)
+Yeah, I think that's often what happens, yes. Okay, Ryan. That was great.
+
+You get a whole minute and 40 seconds now, Ryan.
+
+[Speaker 10] (2:53:27 - 2:54:20)
+I'm confused. Before you're jumping into the practice, to the book, you dropped this big topic of desires, attachment, to ponder, and then there's the suture, and then there's the thumb shake, and there's the different things all the way to self-generation. Like, what am I supposed to do this week in particular?
+
+Like, I'm confused from focusing on where is the desires? What am I desiring? Why am I not desiring so much to my practice?
+
+What's the resistance look like if I do go continue with, even if I resist to do the hard jewel, and so on, or an end of self-generation? Like, I'm confused. There's like 10 things you just put in in 15 minutes and like...
+
+[Speaker 1] (2:54:21 - 2:54:23)
+Yeah, okay, done.
+
+[Speaker 10] (2:54:24 - 2:54:24)
+Practical.
+
+[Speaker 1] (2:54:25 - 3:05:38)
+Let's make it practical. Okay, good. We have to be disciplined, you know.
+
+Yeah, a little bit disciplined. Okay. You're just saying, how do I practice this?
+
+That's time for your discussion. You can ask your discussion partner. Okay.
+
+I think it's somewhat clear how to practice it, but if you're not clear, please ask your discussion partner. And hopefully they're clear, and if they're not, then I'm sorry. Okay.
+
+So then, continuing. So this is one thing that we want to do. Related, seeing things as empty.
+
+And this is, I think Adriana was saying this maybe last week or two weeks ago, but part of this practice too is we're just seeing like, the thing that I find pleasurable is a creation of my mind. So I'm just, I'm attracted or interested in a creation of my mind. And this is very similar to the Chittamatra view, that everything is the nature of the mind.
+
+But it's a very, very effective thing to meditate on. Okay. So we just take whatever we're attracted to and whatever we find pleasurable.
+
+And we're just trying to meditate on this idea. I'm attracted to my own mind's creation. Okay.
+
+And that is a very delightful and it's a hilarious thing to meditate on. Wow, I'm really into my own creation. My own little fantasy object.
+
+And we're like, no, they're real. Blah, blah, blah. No, that's, we're still attracted to our mind's creation of whatever we're seeing.
+
+Because other people see a different creation, right? So we're interested in our own creation. Yeah.
+
+So this is very nice to meditate on also. And this is also helping us transform enjoyments. So it's relating to the emptiness of things.
+
+But here we're relating to more that it's empty itself. And the pleasure, where we're kind of relating to the fact that the pleasure is coming from within. And therefore it's empty.
+
+Here we're just saying it's empty because it's created by mind in general. Okay. So then actually offering to the soft generation or to Buddha in your heart.
+
+So you just take something, you enjoy it. If you want to like bless it and do something wonderful first, that's great. You can like recite Om Ah Hum three times and imagine it turns into nectar.
+
+There's lots of other practices that we can learn over time. Maybe we can do some more in this chapter a little bit later. But they often involve imagining amazing goddesses and Buddhas offering whatever it is in a very beautiful form.
+
+Like billions of them. And they're all empty. And they're all offering some beautiful thing to you.
+
+It's a very nice thing to imagine. But anyway, you can just do that or you can just kind of keep it simple. And then you take the pleasure that's being experienced, right?
+
+And then we offer it to either Buddha at our heart or self as a Buddha. Basically we share it. Offering just means that which delights the Buddhas.
+
+So we just delight in that pleasure as an offering. And then once we get some kind of blissful feeling, it could just be some kind of pleasurable feeling. It doesn't have to be much.
+
+Then we move into maintaining emptiness. Just whatever rudimentary understanding we have. Even if it's like real weak.
+
+Even if it's just a space-like vacuity. We just feel I'm meditating with a very blissful feeling on this space-like vacuity. And that's fine.
+
+And you're just thinking about emptiness. And that's the part where the practice really becomes unbelievable because it's the blissful mind that mixes with emptiness the best. And so in Sutra we develop the bodhicitta mind because that's the best Sutra mind that mixes with emptiness.
+
+The loving compassionate mind. But in Tantra it's the blissful mind that mixes best with emptiness. So whenever we get that good feeling, that blissful feeling, even if it's really not much, then we just do a little meditation on emptiness.
+
+Even if it's one second. The more we do this the more we realize ah, every time I meditate on emptiness this is how I want to do it. It's much better.
+
+It's much more profound. And it really starts to take us somewhere deeper. A lot more non-conceptual.
+
+And we just like being there because we're doing it with a blissful mind. And it's just nice to sit around with a blissful mind. It just feels great to sit around with a blissful mind.
+
+So we're not going to be resisting and thinking about other things that we want to be doing instead because we're just feeling very blissful. So it's just very concentrated. So Ryan, you're lucky I can answer your question now because we have two minutes to answer your question.
+
+how can we all personally take this forward? That first bit with those million questions around desire is just one practice. Understand our desire better.
+
+Understand it better. And all those questions are just parts of that. So if that's what you want to focus on today that's great.
+
+That's a lifelong practice to some degree. But those questions are all just facets of that one inquiry. Understand my desire better.
+
+Like, do we really understand our desire for prestige, for example? Or status? Do we really get it from the depths of our heart?
+
+Do we really understand our desire for connection and intimacy and friendship and all these things? Do we really get it from the depths of our heart? So anyway, that's point one.
+
+Understand desire better. Good desires, bad desires, following our desires, resisting our desires, that whole thing. Okay.
+
+Two, we can start working on any of these kind of four points in this trajectory, right? Finding happiness from within in general and just trying to see how that's leading us to these deeper practices of finding happiness from our love, but just making sure we're making the point this is coming from my mind, not from outside. Again, I can't stress that point enough with that bit.
+
+We're not just meditating on love. We're meditating on love, strongly acknowledging the good feeling is coming from within. Yeah.
+
+And then offering to the, offering to Buddha at our heart, offering to self-generation. So again, all those, you can't do all four of those things in a week. Maybe just one, right?
+
+Maybe one practice you want to get into. And then if you're going to get into, especially the latter two, we're just trying to get into some emptiness understandings. We're trying to mix emptiness with this practice or else it doesn't work properly.
+
+It's either by acknowledging the good feeling that's coming from within or just thinking, the thing I find attractive or interesting is just a creation of my mind. I'm attracted to a creation of my mind. I made something and then I got into it.
+
+Basically. To put it simply. Yeah, I created a fantasy and then I got attached to my fantasy.
+
+Oh, interesting. Okay, I made it. So I don't need to let it hold, have it hold over me.
+
+And then I'm taking just little, small pleasures. I remember early on in my practice, I was absolutely wracked with attachment and dissatisfaction. And I was like really confused and rattled.
+
+And I had a little talk with my teacher at the time. He asked me a handful of probing questions and then he just said, Ah, it's fine. Just take little, small pleasures and offer them to the guru at your heart or yourself as a self-generation.
+
+Just like a little cup of tea, he said. And basically that alone solved the problem. And it seemed so dumb.
+
+Like, that's the answer to my angst and my confusion and my unhappiness. And I told him later, he was like, Yeah, I'm really glad. I thought that would help.
+
+That just always stuck with me. These kind of things can seem a little bit like small things but they're really not. It's actually undoing our samsara from the inside through not running away from the things that we find pleasurable, but understanding our psychology with respect to them and then creating boatloads of merit on top.
+
+Okay. That's that. Alright.
+
+So then let's see. Am I making the partners again? Just what I love to do.
+
+That's what I find desirable, making the partners. Let's see. Seven people.
+
+We get a three-person team. Has anyone not been a partner with anyone recently? You guys are partners every week on Tuesday.
+
+Yeah, exactly. Why don't I put all four of you together on purpose? Because Anne and Fran, you guys always chat.
+
+And David and Mimi are always hanging out. Fine. Let's throw you all together.
+
+The old hands together. Okay. So Mimi and David, Fran and Anne, and then Sui, Jose, and Ryan.
+
+Very good.
+
+[Speaker 2] (3:05:55 - 3:06:03)
+First time. First time. Okay.
+
+Yeah, sure. Yeah.
+
+[Speaker 7] (3:06:06 - 3:06:07)
+Oops.
+
+[Speaker 8] (3:06:16 - 3:06:18)
+Substituting my anxiety.
+
+[Speaker 2] (3:06:20 - 3:06:36)
+Because that's the same. It's just this attachment to your negative side. So, it said that there's some sorrow from the inside out.
+
+Well, just like that, you know, there's a lot of negative things.
+
+[Speaker 7] (3:06:36 - 3:06:42)
+Like, oh, I was really anxious for a long time. I love that. Thank you for that.
+
+[Speaker 2] (3:06:43 - 3:06:44)
+And I'm like, okay, fine.
+
+[Speaker 8] (3:06:44 - 3:06:49)
+I really enjoy talking to you guys. I'm actually feeling awful right now.
+
+[Speaker 7] (3:06:49 - 3:06:56)
+my interest is in you guys. It's like a child who's in danger. And I feel like it creates a bunch of characters.
+
+[Speaker 4] (3:06:57 - 3:07:11)
+Because I always have this question, like, okay, what's going through my mind, and I still get attached to it. Like, oh, when I eat this great pizza, a dream, a good feeling arises where I feel like if you're really doing something, you're doing something without a real intention.
+
+[Speaker 2] (3:07:12 - 3:07:24)
+Should I not accept your mind? Should I not dislike that? Okay.
+
+So, I guess it's fair.
+
+[Speaker 8] (3:07:25 - 3:07:28)
+It's everything else. I like the book.
+
+[Speaker 7] (3:07:29 - 3:07:31)
+Okay. Paragraph by paragraph.
+
+[Speaker 2] (3:07:41 - 3:07:46)
+That's it. I can't remember what was in that.
+
+[Speaker 5] (3:07:46 - 3:07:48)
+That's going to make me happy.
+
+[Speaker 2] (3:07:49 - 3:07:52)
+Yeah. I'm not praying.
+
+[Speaker 4] (3:07:57 - 3:07:58)
+That's everything.
+
+[Speaker 7] (3:08:00 - 3:08:05)
+And when it's beautiful in the world, it can't be someone else's thing. That's what it is.
+
+[Speaker 2] (3:08:06 - 3:08:10)
+Like, oh, you see someone driving and he's about to say, like, their car or something, like, absolutely, yeah.
+
+[Speaker 7] (3:08:11 - 3:08:12)
+It's all nature.
+
+[Speaker 2] (3:08:13 - 3:08:16)
+It's really nice. Yeah.
+
+[Speaker 8] (3:08:17 - 3:08:18)
+Yeah, it's about that.
+
+[Speaker 7] (3:08:20 - 3:08:20)
+That's powerful.
+
+[Speaker 2] (3:08:21 - 3:08:28)
+There are people out there that, well, they keep making those memoirs. I don't know why they're doing that.
+
+[Speaker 4] (3:08:28 - 3:08:30)
+I don't think about desire.
+
+[Speaker 2] (3:08:30 - 3:08:41)
+I don't want anything like that. Unusual desire. And that's basically it.
+
+Desire. So, that's all it's about. Correct.
+
+How about you?
+
+[Speaker 8] (3:08:42 - 3:08:42)
+Virtuous.
+
+[Speaker 2] (3:08:43 - 3:08:44)
+Of course. Virtuous.
+
+[Speaker 7] (3:08:45 - 3:08:48)
+Virtuous desire. Virtuous desire. Yeah.
+
+[Speaker 2] (3:08:48 - 3:08:49)
+Virtuous desire.
+
+[Speaker 7] (3:08:49 - 3:08:50)
+Virtuous desire.
+
+[Speaker 4] (3:08:50 - 3:08:50)
+Right.
+
+[Speaker 7] (3:08:51 - 3:08:53)
+Physical things? Like, the things we're careful about.
+
+[Speaker 6] (3:08:53 - 3:08:58)
+Well, everything. Everything. Just, like, completely separate from, like, this is okay.
+
+[Speaker 7] (3:08:58 - 3:08:59)
+Right?
+
+[Speaker 6] (3:08:59 - 3:08:59)
+Just administer myself.
+
+[Speaker 8] (3:08:59 - 3:09:04)
+So, this is just like a stream of consciousness? Yeah. This is what I really want.
+
+This is what I fantasize about.
+
+[Speaker 2] (3:09:04 - 3:09:10)
+My pleasure and self. Okay. And it's just really cool to be able to achieve that without other people.
+
+[Speaker 8] (3:09:11 - 3:09:13)
+Right? Okay.
+
+[Speaker 2] (3:09:14 - 3:09:15)
+When was the last time you did that?
+
+[Speaker 6] (3:09:16 - 3:09:24)
+A long time ago. Yeah. Maybe a couple of years ago.
+
+Yeah. Right. Yeah.
+
+Very helpful. Yeah. And then tell somebody.
+
+Hmm.
+
+[Speaker 2] (3:09:25 - 3:09:26)
+That scares me.
+
+[Speaker 4] (3:09:26 - 3:09:27)
+Oh, it is scary.
+
+[Speaker 2] (3:09:27 - 3:09:30)
+That's really scary. Yeah. But really rather than telling someone.
+
+[Speaker 4] (3:09:31 - 3:09:34)
+Coming from, yeah, contaminated objects. Right.
+
+[Speaker 2] (3:09:34 - 3:09:46)
+And then having to tell somebody on their knees subjects me to that judgment of myself. But this is something that they're going to judge me about.
+
+[Speaker 8] (3:09:46 - 3:09:47)
+That anxiety about me.
+
+[Speaker 2] (3:09:47 - 3:09:55)
+They're going to think that I'm weird or worse or stupid or whatever that connotation is going to be.
+
+[Speaker 4] (3:09:56 - 3:09:57)
+Yeah. You have four.
+
+[Speaker 2] (3:09:57 - 3:09:57)
+That's it.
+
+[Speaker 4] (3:09:58 - 3:10:01)
+That's the kind of renunciation for you in so much time.
+
+[Speaker 2] (3:10:02 - 3:10:03)
+Yeah.
+
+[Speaker 5] (3:10:04 - 3:10:09)
+Yeah. Yeah.
+
+[Speaker 2] (3:10:11 - 3:10:17)
+Yeah. Yeah.
+
+[Speaker 7] (3:10:18 - 3:10:19)
+Yeah.
+
+[Speaker 4] (3:10:19 - 3:10:22)
+Yeah. Yeah.
+
+[Speaker 5] (3:10:24 - 3:10:27)
+Yeah. Yeah. Yeah.
+
+[Speaker 2] (3:10:32 - 3:10:39)
+Yeah. Yeah.
+
+[Speaker 8] (3:10:43 - 3:10:43)
+Yeah.
+
+[Speaker 2] (3:10:45 - 3:10:58)
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah. Yeah.
+
+Yeah. Yeah. Yeah.
+
+Yeah.
+
+[Speaker 7] (3:10:59 - 3:11:00)
+Yeah.
+
+[Speaker 2] (3:11:02 - 3:11:04)
+Yeah.
+
+[Speaker 4] (3:11:07 - 3:11:09)
+Yeah. Yeah.
+
+[Speaker 2] (3:11:10 - 3:11:10)
+Yeah.
+
+[Speaker 4] (3:11:10 - 3:11:31)
+It's a kind of feeling is going to be like for So if it's just offering pleasure to Buddha, I guess it's obviously good, even though it's not Tantra, we're still able to transform pleasure. It is Tantra?
+
+[Speaker 2] (3:11:31 - 3:11:44)
+That is the belief that Tantra is like our first state of being, except that it's really all of us. But you were self-generated?
+
+[Speaker 5] (3:11:45 - 3:11:48)
+Oh, I was self-generated. That's a good question.
+
+[Speaker 8] (3:11:50 - 3:11:51)
+So those are the four.
+
+[Speaker 2] (3:11:52 - 3:11:58)
+Buddha, and then the self-generation. It's both of them. The two last ones are?
+
+Yes.
+
+[Speaker 6] (3:12:00 - 3:12:03)
+So you're asking a question? Yeah.
+
+[Speaker 2] (3:12:04 - 3:12:07)
+Sorry if it's a statement, but I think it's a question. From my memory?
+
+[Speaker 6] (3:12:08 - 3:12:09)
+Because I need you.
+
+[Speaker 2] (3:12:12 - 3:12:14)
+Or tell me I'm wrong. Yeah.
+
+[Speaker 5] (3:12:15 - 3:12:17)
+So say we've got another question.
+
+[Speaker 4] (3:12:17 - 3:12:22)
+Okay, so if I…
+
+[Speaker 5] (3:12:22 - 3:12:24)
+Okay, let's take anything that I knew.
+
+[Speaker 4] (3:12:24 - 3:12:34)
+I think it was just sort of, to my understanding, the question was just what is change and suffering.
+
+[Speaker 2] (3:12:35 - 3:12:40)
+And to me saying that, like you kind of concluded, pleasure will extend with change and suffering.
+
+[Speaker 4] (3:12:41 - 3:12:51)
+But it's not, because if you just look at a thousand things, that pleasure itself is either a problem as being a virtue or not a problem.
+
+[Speaker 8] (3:12:51 - 3:12:52)
+Change and suffering obviously is a problem.
+
+[Speaker 4] (3:12:52 - 3:13:01)
+The change and suffering to me is a combination of pleasure and feeling with misunderstanding what's going on outside of ourselves.
+
+[Speaker 6] (3:13:01 - 3:13:13)
+To myself as a baby, that's what turns pleasure into change and suffering. That's a step in the right direction of understanding that. That's a good question.
+
+[Speaker 2] (3:13:15 - 3:13:24)
+Okay, so that's that. Can we go on? What do you want to practice?
+
+Yeah. That's my question.
+
+[Speaker 5] (3:13:24 - 3:13:27)
+Does that sound right to you? Yes.
+
+[Speaker 2] (3:13:28 - 3:13:31)
+I think that just sounds like so much fun.
+
+[Speaker 5] (3:13:32 - 3:13:34)
+Right. To do it throughout a day.
+
+[Speaker 2] (3:13:35 - 3:13:59)
+The goal is to remember to do it. All these things, the fact that people are doing it, it just sounds fun. Even if I do it twice a day on some things, instead of thinking about doing it with somebody else, sometimes you just want to do it.
+
+I know people think you want to use this, but it really doesn't work that way.
+
+[Speaker 7] (3:13:59 - 3:14:07)
+It doesn't make sense. Some people say, you know what, it's very nice. It's great for yourself.
+
+[Speaker 2] (3:14:08 - 3:14:10)
+It might be beautiful, but it's not.
+
+[Speaker 5] (3:14:11 - 3:14:12)
+It actually makes sense.
+
+[Speaker 2] (3:14:12 - 3:14:36)
+It has to make permission to enjoy it, because I'm now Vajrayini, and I'm offering that to you for enjoyment of it. That enjoyment could be from ABCD, coming from a zillion different things, because it's not something that you're enjoying. It's not something you're enjoying.
+
+[Speaker 4] (3:14:36 - 3:14:41)
+It's not something you're enjoying.
+
+[Speaker 7] (3:14:41 - 3:14:48)
+I often have students wondering, why do they offer it to the deity and the Buddha, who are they?
+
+[Speaker 6] (3:14:48 - 3:14:54)
+I do the six sessions, and I say, I generate 20 different offerings. It's kind of magical.
+
+[Speaker 2] (3:14:54 - 3:15:01)
+What I'm thinking about is maybe it's just to reinforce that aspect of myself.
+
+[Speaker 5] (3:15:01 - 3:15:07)
+100 percent, because the Buddhists don't need our offering. When we do offerings, the Buddhists don't need our offering.
+
+[Speaker 2] (3:15:08 - 3:15:16)
+The Buddhists are delighted that we're offering. So you're having a conversation with someone, and you can imagine that you're generating a Buddhist offering now. They don't need what we're offering.
+
+[Speaker 4] (3:15:16 - 3:15:19)
+No conflict between the appearance of me.
+
+[Speaker 2] (3:15:19 - 3:15:39)
+I think it's very convenient, and how it is very convenient, because I can have a Vajrayini with me where I work out. I can do the six sessions, generate as many offerings. I want to now think more about actually making the offering.
+
+[Speaker 8] (3:15:40 - 3:15:41)
+This is such a generic thing.
+
+[Speaker 2] (3:15:42 - 3:16:00)
+I can think of it. When I was doing that, I was thinking, does it need to look different? Visual?
+
+Just whatever awesome things you can enjoy. It's just like, I'm a CEO. I'm a CEO.
+
+You understand what I'm saying?
+
+[Speaker 5] (3:16:01 - 3:16:07)
+I'm an adult now. I'm getting better at that. I stopped making these before I had them.
+
+[Speaker 2] (3:16:07 - 3:16:30)
+Now I'm just like, I'm a mom. I'm generating a Vajrayini. So that's it.
+
+So I can just say, I really have this desire to whatever. You can come back to me and ask questions. That's the type of issue I'm in right now.
+
+Something like that.
+
+[Speaker 7] (3:16:31 - 3:16:38)
+Oh yeah. For me, it's like, hold on now.
+
+[Speaker 2] (3:16:38 - 3:16:59)
+At least for a few days. But, it's like, several times during the day, I can create that habit. I'd rather do it in the moment because it creates that habit of doing it right.
+
+As opposed to like, otherwise it's hard to see the end. Me.
+
+[Speaker 4] (3:17:00 - 3:17:10)
+I prefer to think of the Buddhas as like, super chill. You know, not like, judgmental or like, oh, you didn't do it quite right.
+
+[Speaker 2] (3:17:10 - 3:17:30)
+I don't understand. It's okay. I like my Buddhas.
+
+It's such a great understanding that I can now say, relax. I know that it's hard sometimes. I'm not so worried if I don't hold the water quite high enough.
+
+[Speaker 7] (3:17:30 - 3:17:33)
+But it's not coming from that religiousness.
+
+[Speaker 2] (3:17:33 - 3:17:44)
+It's not coming from the Anga. It's coming from me. And because of that, I've got my Buddhas so tucked in my heart, right there, that maybe it's easier to slow it down.
+
+[Speaker 1] (3:17:46 - 3:17:46)
+Exactly.
+
+[Speaker 2] (3:17:47 - 3:18:00)
+You know, I've always envisioned making space for that within next to all the other Buddhas who are already in there. Because they're in there forever.
+
+[Speaker 7] (3:18:01 - 3:18:06)
+So, but anyway, or just to all Buddhas.
+
+[Speaker 2] (3:18:06 - 3:18:16)
+You know, a bunch of so many that I've looked at since... Alright, so, I carry a generation.
+
+[Speaker 8] (3:18:16 - 3:18:17)
+I've come a long way.
+
+[Speaker 2] (3:18:17 - 3:18:30)
+Whatever comes next. And I'm going to continue living like I don't have to choose a different path. I don't have to feel that I've reached that goal.
+
+[Speaker 4] (3:18:33 - 3:18:35)
+And so, I'm just going to get higher.
+
+[Speaker 5] (3:18:36 - 3:18:38)
+Do that and walk forward.
+
+[Speaker 7] (3:18:39 - 3:18:43)
+When I come here, I see all kinds of things.
+
+[Speaker 2] (3:18:43 - 3:18:45)
+I self-generate when I come here.
+
+[Speaker 3] (3:18:46 - 3:18:51)
+I'm thinking about backwards. I'm thinking about backwards.
+
+[Speaker 7] (3:18:52 - 3:18:55)
+So, the other one also can be like this way.
+
+[Speaker 2] (3:18:58 - 3:19:02)
+Because we're self-generated. Yeah, that's really good.
+
+[Speaker 7] (3:19:02 - 3:19:06)
+So, we reverse the order of that and we're looking at that.
+
+[Speaker 2] (3:19:07 - 3:19:47)
+So, I feel like I've got a little bit of a... It has a little bit of an intro to this. And then I enjoy that every second of every day.
+
+You know, I'm not in public, right? But, you know, I really enjoy the privacy of your own home. I'm sure you remember how I had such a problem with any of the visualizations of the thousands of pieces of stuff I was trying to do.
+
+It's hard. It's like a totally missed you know, muscle.
+
+[Speaker 7] (3:19:53 - 3:19:56)
+So, what's our medication practice?
+
+[Speaker 2] (3:19:59 - 3:20:00)
+A break, I mean.
+
+[Speaker 7] (3:20:01 - 3:20:01)
+No break.
+
+[Speaker 2] (3:20:02 - 3:20:07)
+Oh, the medication practice. No, the break practice. The medication practice.
+
+[Speaker 4] (3:20:08 - 3:20:11)
+Why? What is that?
+
+[Speaker 8] (3:20:12 - 3:20:15)
+You can try it if you want to or just do it in place.
+
+[Speaker 4] (3:20:20 - 3:20:23)
+Because it's contaminated. It's a contaminated object.
+
+[Speaker 2] (3:20:23 - 3:20:25)
+I don't think of it as a subject.
+
+[Speaker 7] (3:20:26 - 3:20:29)
+Oh, I got it. No, I don't want it. It's so true.
+
+[Speaker 2] (3:20:29 - 3:20:32)
+I don't know, it's like a heartbreaker when you're looking for apartments.
+
+[Speaker 7] (3:20:33 - 3:20:34)
+It's not exclusive to you.
+
+[Speaker 4] (3:20:35 - 3:20:44)
+And then all of a sudden all the problems start to evolve and then it just gets worse and it immediately transforms into something not good.
+
+[Speaker 2] (3:20:45 - 3:20:47)
+I think that I'm going to start small.
+
+[Speaker 5] (3:20:48 - 3:20:51)
+And if it develops more, that's all I am.
+
+[Speaker 2] (3:20:52 - 3:21:01)
+But I think the start is to recognize that things that I desire are around me.
+
+[Speaker 5] (3:21:05 - 3:21:09)
+Things that I desire are around me. I don't want to let those naturally get to me.
+
+[Speaker 4] (3:21:13 - 3:21:14)
+By transforming attachments.
+
+[Speaker 5] (3:21:15 - 3:21:17)
+That's like the key cause.
+
+[Speaker 4] (3:21:17 - 3:21:21)
+Like I said, attachment is the second person that you have to work with.
+
+[Speaker 5] (3:21:26 - 3:21:34)
+Attachments are like buying new clothes. So that's a cluster. That's all inside.
+
+[Speaker 2] (3:21:34 - 3:22:00)
+To all those desires. Desire to not necessarily be a pushover. Teaching us to be a pushover.
+
+I like that idea also. I'm thinking, how can we do this? So we can definitely be spacial.
+
+[Speaker 6] (3:22:00 - 3:22:08)
+Just recognizing that there's a phenomenon in our creation. And then maybe to offer it.
+
+[Speaker 2] (3:22:09 - 3:22:25)
+Right. Recognize the images of it. Is that something about mixing?
+
+I think, yeah. I want to play it out because I think the offering of this can be really great.
+
+[Speaker 7] (3:22:26 - 3:22:29)
+It seems like it's so natural.
+
+[Speaker 2] (3:22:33 - 3:22:40)
+I think maybe the goal would be to recognize our desires and the environment.
+
+[Speaker 7] (3:22:44 - 3:22:51)
+Yeah, it was interesting what you were teaching me about asceticism and living in the world of modern Buddhism.
+
+[Speaker 8] (3:22:52 - 3:22:58)
+You can build a better world if you cut yourself off from all the objects and attachments.
+
+[Speaker 4] (3:22:58 - 3:23:01)
+It's okay to put up a buffer.
+
+[Speaker 2] (3:23:02 - 3:23:05)
+Right, and then we actually have an obligation.
+
+[Speaker 7] (3:23:05 - 3:23:13)
+Asceticism offers a service of a battle in the way of the desire as well.
+
+[Speaker 2] (3:23:15 - 3:23:29)
+That would mean that the world link is up in your hands to say I have that desire as well.
+
+[Speaker 8] (3:23:32 - 3:23:34)
+Especially when you go to a monastery.
+
+[Speaker 2] (3:23:35 - 3:24:10)
+You're like, I want the best Christian. Alright, so what are we going to meditate on? This is so powerful.
+
+I mean, in subsequent practice, you're going to do self-generation by bringing pleasure to yourself.
+
+[Speaker 4] (3:24:11 - 3:24:14)
+I'm going to operate as a guru at my heart.
+
+[Speaker 5] (3:24:21 - 3:24:27)
+Yes, exactly. Exactly. Yeah.
+
+You can do some of the mannerisms.
+
+[Speaker 8] (3:24:30 - 3:24:33)
+Some of the tones from the voices.
+
+[Speaker 2] (3:24:36 - 3:24:44)
+Some of the tones from the voices.
+
+[Speaker 5] (3:24:44 - 3:24:44)
+No.
+
+[Speaker 2] (3:24:47 - 3:24:49)
+Alright, so we're good.
+
+[Speaker 4] (3:24:52 - 3:25:03)
+I love what you said to Anne at the beginning when Anne was talking about the Lam Rim practice and you said that basically all of our problems are solved if we don't have a one-life view.
+
+[Speaker 2] (3:25:04 - 3:25:10)
+It's like basically all your problems happen if you don't have a one-life view. So she brings the Lam Rim into it. We talked about Lam Rim a lot last week.
+
+[Speaker 6] (3:25:11 - 3:25:16)
+Well, I didn't want that one. And she took me and my sister and my little brother.
+
+[Speaker 2] (3:25:16 - 3:25:19)
+And all the things you're anxious about are probably things that disappear when you die.
+
+[Speaker 6] (3:25:20 - 3:25:21)
+Yeah.
+
+[Speaker 2] (3:25:22 - 3:25:24)
+And like this little supper club.
+
+[Speaker 8] (3:25:24 - 3:25:26)
+What are we anxious about now?
+
+[Speaker 2] (3:25:28 - 3:25:34)
+My brother. What are we anxious about? Do you think it's possible to be anxious about future life stuff?
+
+[Speaker 4] (3:25:34 - 3:25:37)
+I guess is that a dormant insight?
+
+[Speaker 2] (3:25:38 - 3:25:44)
+I think it would be like well, I think like Oh, you did go all the way back to the beginning.
+
+[Speaker 7] (3:25:45 - 3:25:53)
+So I don't need to like cling to this or hold on to this. This is my generation. That's amazing so far back.
+
+[Speaker 2] (3:25:54 - 3:26:07)
+But I'm always kind of at a standstill. That's why you were trying to make sense to you because you've heard it before. For us to be sitting here when we've done this before.
+
+[Speaker 8] (3:26:07 - 3:26:09)
+I really think so.
+
+[Speaker 2] (3:26:09 - 3:26:25)
+Because there are people that come in and they're like hawking around. Imagine all the karma it's good. It's like ask the question.
+
+And you can stay in those realms until your karma is fading at all.
+
+[Speaker 4] (3:26:25 - 3:26:36)
+I feel like it's generally you get stuck in spirals like your next rework might not be so bad but you don't have the opportunity to practice Dharma.
+
+[Speaker 2] (3:26:39 - 3:26:41)
+You hear the one about the well.
+
+[Speaker 4] (3:26:42 - 3:26:47)
+Like the bucket in the well. Yeah. It keeps sprawling around.
+
+[Speaker 2] (3:26:47 - 3:26:49)
+And she said something that I hadn't really thought about.
+
+[Speaker 5] (3:26:51 - 3:26:57)
+I know my understanding is you can go to a walk and see all sorts of stuff.
+
+[Speaker 2] (3:26:58 - 3:27:10)
+And it's over time. You learn. It's right around the corner.
+
+She said something that I don't even remember. Our understanding is it's better than how hard it is.
+
+[Speaker 4] (3:27:10 - 3:27:11)
+Of course.
+
+[Speaker 2] (3:27:12 - 3:27:15)
+I never thought about it like that.
+
+[Speaker 7] (3:27:15 - 3:27:22)
+Because you may have a sense to it that all of a sudden it's so easy.
+
+[Speaker 5] (3:27:23 - 3:27:24)
+I don't know.
+
+[Speaker 7] (3:27:24 - 3:27:27)
+It's like an awkward kind of feeling or a downward feeling.
+
+[Speaker 2] (3:27:27 - 3:27:49)
+When you realize that you have the first kind of struggle that's not in the part of understanding that purifies your non-understanding. It seems to me it's just something we need to think about. Sort of like potential births to your mind.
+
+You kind of move towards them.
+
+[Speaker 8] (3:27:50 - 3:27:52)
+So it's a part of the state.
+
+[Speaker 2] (3:27:53 - 3:28:04)
+That just sort of they're really strange things. You're so confused about what they usually understand. But I don't know why my understanding changed.
+
+[Speaker 8] (3:28:06 - 3:28:12)
+Not just that I'm hearing something new. I'm hearing something new because I'm deeply confused.
+
+[Speaker 2] (3:28:14 - 3:28:36)
+I'm very sometimes like a year from now I'll be planning on going to high school or get very scared. I like these four steps. I like the little bit the 12 steps.
+
+[Speaker 5] (3:28:36 - 3:28:36)
+The little bit.
+
+[Speaker 2] (3:28:37 - 3:28:58)
+Like I said what's the plan to achieve this? I don't know. It's all laid out for me.
+
+Why am I trying to really change this? What is your Jedi?
+
+[Speaker 7] (3:28:59 - 3:29:07)
+I don't know. It's like you're all excited. I just generated this plan.
+
+[Speaker 5] (3:29:08 - 3:29:14)
+Guess you can help me buddy. So and sex is so easy.
+
+[Speaker 2] (3:29:14 - 3:29:15)
+These four steps.
+
+[Speaker 5] (3:29:15 - 3:29:18)
+We don't have to do them all. We're trying to go.
+
+[Speaker 2] (3:29:20 - 3:29:24)
+I had such a resistance to getting my Jedi mantra.
+
+[Speaker 6] (3:29:25 - 3:29:29)
+It was just like so complicated.
+
+[Speaker 2] (3:29:29 - 3:30:01)
+I think that's so complicated. It just gets easier. These steps are so much easier.
+
+Once you have that plan that little taste of it. All right. Come one come all.
+
+[Speaker 1] (3:30:17 - 3:30:43)
+Okay. We're out of time but I think it's clear what to do over the break. Do one of those things that we talked about.
+
+Do one of those things. Oops. For our online folk to appear.
+
+[Speaker 5] (3:30:47 - 3:30:47)
+Yeah.
+
+[Speaker 1] (3:30:49 - 3:35:04)
+Exactly. So we have two weeks. Do two of those things.
+
+Or one of those things for two weeks. So Melodious Drum next week. That is our TTP class.
+
+It's not like TTP is off and there happens to be Melodious Drum. It's TTP equals Melodious Drum. And so in the Melodious Drum practice we start with the praise to Manjushri.
+
+Then we do the heart choke practice. Then we self-generate as Haruka. Those are three of the steps.
+
+And then you do the whole practice as Haruka. The rest of it. So Haruka's mandala is a blissful bonanza.
+
+Not other than emptiness. You do the whole practice like that. So it's a three and a half.
+
+Well you do the first few things for 20 minutes or 15 minutes. So it's a three hours and 15 minute meditation as Haruka. That's what you do the whole time.
+
+Very blissful and delightful. You make millions of offerings to Dorje Sugden but you're Haruka the whole time. And all the offerings are incredibly blissful like yellow swans.
+
+And black dogs that roam like bears. And bone palaces. I'd love to offer a blissful bone palace.
+
+It's just all these blissful amazing offerings. Very pleasurable beautiful things like black dogs roaming like bears. It just gets us all excited just thinking about it.
+
+So yeah. And so then part four after you're Haruka is offering to the general Dharma protectors and then part five is offering to Dorje Sugden and doing all the prayers then. So that's all the practices.
+
+Just Haruka for three and a half hours. Amazing. What better way to spend your day?
+
+So let's please enjoy and we can bring in a lot of what we looked at today into that practice. I think that's it for me. Thank you all so much.
+
+Thank you online folk. Milo your helmet's gone. Rest in peace.
+
+Yep. Okay. I'll just guide us with a little dedication here.
+
+We can think through the virtues we've collected through practicing, meditating, discussing. May all living beings find lasting peace of mind. Enlightenment.
+
+We can make any personal prayers or dedications. Okay. Thank you.
+
+Okay. That's it. For those who kind of got some Lam Rim stuff going on, please don't think what we looked at today is outside of that at all.
+
+The whole of the Lam Rim is to take us into our heart. The whole thing is taking us into our heart. And those first two points on that spectrum, leading us to making offerings to the self-generation, are done by the Lam Rim.
+
+It's not outside. It's not separate at all. So please don't think in a chunky way like this, in a kind of bifurcated or siloed way, the Dharma.
+
+Don't think it's like we checked a box. Lam Rim! Woohoo!
+
+Poof! On to this. It's not like that at all.
+
+Lam Rim is like the basket that holds everything. This is just like one of the many jewels in that little Lam Rim basket. Okay.
+
+So please don't think of this in a separate way. Yeah.
+
+[Speaker 11] (3:35:05 - 3:35:09)
+Okay. I think we get that. Thanks so much.
+
+See you later. Thank you.
