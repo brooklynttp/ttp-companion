@@ -210,6 +210,7 @@ If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `
 - Don't just list topics — capture the *insight*. Not "We discussed equanimity" but "Equanimity means abandoning the distinctions of friend, enemy, and stranger."
 - Include KK's distinctive examples and metaphors when they're particularly illuminating.
 - **Student shares belong in the transcript, not the commentary.** The commentary captures KK's teaching points. If a student share prompted a notable teaching response from KK, capture the *teaching point* — not the student's personal story. Avoid mentioning students by name in commentary, and never reference personal events like illness, loss, or life circumstances of specific community members.
+- **Order: prepared teaching first, share responses second.** KK's prepared remarks on the MTB content — the teaching arcs he planned for the class — should occupy the lead commentary slots. Teaching points that arose from KK's responses to student data shares come after. Both are valuable, but the prepared teaching is the backbone of the class and should be what a reader encounters first. A good rule of thumb: if the insight would exist even if no student had spoken, it's prepared teaching. If it was prompted by a specific student's question or share, it's a response.
 - If KK reads from Meaningful to Behold and then gives his own commentary, the content should reflect KK's commentary (the "so what"), not just summarize the text passage.
 - Aim for 5-8 commentary entries per class.
 
@@ -357,6 +358,7 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] Commentary is written in KK's voice (not third-person "KK said...")
 - [ ] Commentary captures insights, not just topic labels
 - [ ] No student personal stories or named community members in commentary
+- [ ] Commentary ordered: prepared MTB-based teaching leads, student-share-prompted insights follow
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
 - [ ] `preview` paragraph range set for next week's reading, or `null`
@@ -372,4 +374,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: March 15, 2026*
+*Last updated: April 22, 2026*
