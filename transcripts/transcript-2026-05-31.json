@@ -23,10 +23,7 @@
       "time": "2:28",
       "note": "Whale captured this as 'Silence.' Prayer text supplied from standard."
     },
-    "guidedMeditation": {
-      "time": "15:21",
-      "note": "Whale captured this as 'Silence.' Meditation topic not recoverable from either transcript."
-    },
+    "guidedMeditation": null,
     "postMeditation": [
       {
         "speaker": "Kadam Kyle",
