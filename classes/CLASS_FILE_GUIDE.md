@@ -1,6 +1,6 @@
 # TTP Class File Assembly Guide
 
-A comprehensive reference for assembling the weekly class companion page for the TTP Companion App — practices, KK commentary, root text references, and recording links.
+A comprehensive reference for assembling the weekly class companion page for the TTP Companion App â€” practices, KK commentary, root text references, and recording links.
 
 This guide assumes you already have a **clean transcript** (see **[TRANSCRIPTION_GUIDE.md](../transcripts/TRANSCRIPTION_GUIDE.md)** for that process). The clean transcript is the primary input; the source texts and previous class entries are the secondary inputs. See **[README.md](../README.md)** for the overall project architecture and directory structure.
 
@@ -37,7 +37,7 @@ The assembly process draws from multiple sources:
 | `../texts/prayers-for-meditation.json` | Authoritative prayer texts (Liberating Prayer, refuge, Lamrim, dedications) |
 | `../texts/mtb-reference-guide.md` | Quick lookup of MTB section slugs and paragraph ID ranges |
 | Previous class entry | Verse progression continuity, formatting conventions |
-| Audio recording host | Google Drive or Turboscribe recording URL |
+| Audio recording host | Google Drive recording URL |
 
 ---
 
@@ -104,15 +104,15 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 
 - **`id`** must be `YYYY-MM-DD` format for app sorting and selection logic
 - **`date`** is the short display format (e.g., "Jan 18"), **`year`** is separate
-- **`topic`** should be 1-4 words — it renders on a tab button and long titles overflow
-- **`practice.agreedSteps`** — the practices explicitly agreed at end of class (rendered first, with visual indicator)
-- **`practice.steps`** — supplementary practice instructions from the teaching (rendered after agreedSteps)
-- **`practice.quote`** is optional — only include when KK gives a specific, quotable emphasis
+- **`topic`** should be 1-4 words â€” it renders on a tab button and long titles overflow
+- **`practice.agreedSteps`** â€” the practices explicitly agreed at end of class (rendered first, with visual indicator)
+- **`practice.steps`** â€” supplementary practice instructions from the teaching (rendered after agreedSteps)
+- **`practice.quote`** is optional â€” only include when KK gives a specific, quotable emphasis
 - **`commentary`** is an array of teaching point objects, each with a `title`, `content` (array of paragraphs), and optional `quote`. Written in KK's voice, not third-person about him. No student personal stories.
-- **`mtb`** references paragraphs by global ID range — the app fetches `../texts/mtb-sections.json` and pulls matching paragraphs at display time. Use `../texts/mtb-reference-guide.md` to look up paragraph IDs.
-- **`shantideva`** references verses by chapter and verse range — the app fetches `../texts/shantideva.json` and pulls matching verses. Set to `null` for classes that don't cover specific verses.
-- **`preview`** is the "Next Week's Reading" section — same paragraph-range system as `mtb`. Always include a preview — infer the next ~1,000–2,000 words of MTB if KK doesn't explicitly assign reading. Set to `null` only if the class is at or near the end of the book.
-- **`recording`** is a Google Drive or Turboscribe share link. Set to `null` only if no recording link of any kind is available.
+- **`mtb`** references paragraphs by global ID range â€” the app fetches `../texts/mtb-sections.json` and pulls matching paragraphs at display time. Use `../texts/mtb-reference-guide.md` to look up paragraph IDs.
+- **`shantideva`** references verses by chapter and verse range â€” the app fetches `../texts/shantideva.json` and pulls matching verses. Set to `null` for classes that don't cover specific verses.
+- **`preview`** is the "Next Week's Reading" section â€” same paragraph-range system as `mtb`. Set to `null` if no preview is needed.
+- **`recording`** is a Google Drive share link. Set to `null` until the recording is uploaded.
 
 ---
 
@@ -127,7 +127,7 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 "topic": "Love in Action",
 ```
 
-**Where to find it:** The date comes from the filename (`TTP_011826.txt` = January 18, 2026). `id` is the `YYYY-MM-DD` format. `date` is the short display form ("Jan 18"). `year` is separate. The `topic` is a judgment call — listen to KK's framing of the class and pick the dominant theme in **1-4 words**. Keep it short; the topic renders on a tab button and long titles overflow badly. Previous examples: "Equanimity," "Love in Action," "Traveler Practice," "Intention & Karma."
+**Where to find it:** The date comes from the filename (`TTP_011826.txt` = January 18, 2026). `id` is the `YYYY-MM-DD` format. `date` is the short display form ("Jan 18"). `year` is separate. The `topic` is a judgment call â€” listen to KK's framing of the class and pick the dominant theme in **1-4 words**. Keep it short; the topic renders on a tab button and long titles overflow badly. Previous examples: "Equanimity," "Love in Action," "Traveler Practice," "Intention & Karma."
 
 ---
 
@@ -139,11 +139,11 @@ This is one of the most important sections. It captures what students should be 
 "practice": {
   "title": "Do Everything with Love",
   "agreedSteps": [
-    "Make decisions from a mind of love — stop trying to figure things out from self-grasping.",
+    "Make decisions from a mind of love â€” stop trying to figure things out from self-grasping.",
     "Do all actions with love, or don't do them at all"
   ],
   "steps": [
-    "Identify your 'target' — overthinking? Laziness? Anxiety-driven motivation?"
+    "Identify your 'target' â€” overthinking? Laziness? Anxiety-driven motivation?"
   ],
   "quote": "What would it be like to 100% stop trying to figure out what's going on, and instead put all energy into getting a mind of love going?"
 }
@@ -151,7 +151,7 @@ This is one of the most important sections. It captures what students should be 
 
 #### Where the practice lives in the transcript
 
-The final 10-15 minutes of class. After the **paired discussion** ends (see Transcription Guide for exclusion rules) and the whole group reconvenes, KK typically asks something like "what do we want to get up to this week?" or "so what do we want to work on?" Students share their commitments, and KK affirms, refines, or synthesizes. This conversation — the **post-discussion resolution** — is where the group-agreed practice comes from.
+The final 10-15 minutes of class. After the **paired discussion** ends (see Transcription Guide for exclusion rules) and the whole group reconvenes, KK typically asks something like "what do we want to get up to this week?" or "so what do we want to work on?" Students share their commitments, and KK affirms, refines, or synthesizes. This conversation â€” the **post-discussion resolution** â€” is where the group-agreed practice comes from.
 
 Note: Sometimes KK has already strongly suggested a practice *during* the teaching (before the paired discussion), and the post-discussion resolution simply confirms it. In that case, draw the practice content from KK's teaching, not just the brief reconvene exchange.
 
@@ -165,13 +165,13 @@ Typical trigger phrases:
 
 The practice has two arrays of steps, which the app should render with a visual distinction:
 
-- **`agreedSteps`** — The practices the group explicitly chose at the end of class. These are the primary assignment for the week. List these first.
-- **`steps`** — Supplementary contemplations and practice instructions that KK suggested during the teaching. These support the agreed practice but weren't explicitly "voted on" at the end of class.
+- **`agreedSteps`** â€” The practices the group explicitly chose at the end of class. These are the primary assignment for the week. List these first.
+- **`steps`** â€” Supplementary contemplations and practice instructions that KK suggested during the teaching. These support the agreed practice but weren't explicitly "voted on" at the end of class.
 
 If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `agreedSteps` from KK's fuller description of that practice during teaching. If there's no clear distinction (e.g., the group agreed to everything KK suggested), put everything in `agreedSteps` and leave `steps` empty.
 
-- **`title`** — A short, evocative name for the practice (2-6 words)
-- **`quote`** — Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), but never put unbracketed text inside quotes if it's not what he actually said. If no single quote captures the practice well, omit it — a fabricated or loosely paraphrased "quote" is worse than none.
+- **`title`** â€” A short, evocative name for the practice (2-6 words)
+- **`quote`** â€” Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), but never put unbracketed text inside quotes if it's not what he actually said. If no single quote captures the practice well, omit it â€” a fabricated or loosely paraphrased "quote" is worse than none.
 
 ---
 
@@ -199,20 +199,39 @@ If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `
 
 `commentary` is an array of teaching point objects, each with:
 
-- **`title`** — A short heading that captures the teaching theme
-- **`content`** — Array of paragraphs. Each paragraph should capture a distinct idea or argument.
-- **`quote`** — Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), but every unbracketed word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including.
+- **`title`** â€” A short heading that captures the teaching theme
+- **`content`** â€” Array of paragraphs. Each paragraph should capture a distinct idea or argument.
+- **`quote`** â€” Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), but every unbracketed word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including.
 
-**Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc — not just "we discussed X" but the actual insight.
+**Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc â€” not just "we discussed X" but the actual insight.
 
 **Tips:**
-- **Write in KK's voice, not about KK.** The commentary section is labeled "Kadam Kyle's Commentary" in the app, so the content should read as his teaching — not a third-person summary of it. Write "There's a continuum here..." not "KK described a continuum." Write "Most of our compassion issues are actually love issues" not "KK explained that compassion issues are love issues." Imagine you're conveying his teaching to someone who missed class, in the spirit of how he'd say it.
-- Don't just list topics — capture the *insight*. Not "We discussed equanimity" but "Equanimity means abandoning the distinctions of friend, enemy, and stranger."
+- **Write in KK's voice, not about KK.** The commentary section is labeled "Kadam Kyle's Commentary" in the app, so the content should read as his teaching â€” not a third-person summary of it. Write "There's a continuum here..." not "KK described a continuum." Write "Most of our compassion issues are actually love issues" not "KK explained that compassion issues are love issues." Imagine you're conveying his teaching to someone who missed class, in the spirit of how he'd say it.
+- Don't just list topics â€” capture the *insight*. Not "We discussed equanimity" but "Equanimity means abandoning the distinctions of friend, enemy, and stranger."
 - Include KK's distinctive examples and metaphors when they're particularly illuminating.
-- **Student shares belong in the transcript, not the commentary.** The commentary captures KK's teaching points. If a student share prompted a notable teaching response from KK, capture the *teaching point* — not the student's personal story. Avoid mentioning students by name in commentary, and never reference personal events like illness, loss, or life circumstances of specific community members.
-- **Order: prepared teaching first, share responses second.** KK's prepared remarks on the MTB content — the teaching arcs he planned for the class — should occupy the lead commentary slots. Teaching points that arose from KK's responses to student data shares come after. Both are valuable, but the prepared teaching is the backbone of the class and should be what a reader encounters first. A good rule of thumb: if the insight would exist even if no student had spoken, it's prepared teaching. If it was prompted by a specific student's question or share, it's a response.
+- **Student shares belong in the transcript, not the commentary.** The commentary captures KK's teaching points. If a student share prompted a notable teaching response from KK, capture the *teaching point* â€” not the student's personal story. Avoid mentioning students by name in commentary, and never reference personal events like illness, loss, or life circumstances of specific community members.
 - If KK reads from Meaningful to Behold and then gives his own commentary, the content should reflect KK's commentary (the "so what"), not just summarize the text passage.
 - Aim for 5-8 commentary entries per class.
+
+### 5. Data Shares
+
+```json
+"dataShares": [
+  "Student A shared about X. KK responded with Y.",
+  "Student B reported on Z practice."
+]
+```
+
+`dataShares` is an array of **summary strings** describing what students shared and how KK responded. These are prose summaries for the class file — not verbatim transcriptions.
+
+**Important:** Do not confuse this with the transcript’s `practiceReports` key. The transcript and class file use different key names for the same concept:
+
+| File | Key | Format |
+|------|-----|--------|
+| Transcript JSON | `practiceReports` | Array of `{speaker, time, text}` entries (near-verbatim) |
+| Class file JSON | `dataShares` | Array of summary strings |
+
+Using `dataShares` in the transcript will break the app’s "PRACTICE REPORTS" rendering. Using `practiceReports` in the class file will add an unrecognized key. Keep them separate.
 
 ---
 
@@ -229,11 +248,11 @@ This tells the app which paragraphs from `../texts/mtb-sections.json` to display
 
 **How to find the paragraph range:**
 1. Listen for KK saying page numbers or section names
-2. Search `../texts/mtb-reference-guide.md` for the section — it lists every section slug and paragraph ID range with preview text
+2. Search `../texts/mtb-reference-guide.md` for the section â€” it lists every section slug and paragraph ID range with preview text
 3. Identify the starting and ending paragraphs covered in class
 4. Check that the progression is continuous from the previous class (no gaps or overlaps)
 
-Set to `null` if the class doesn't cover a specific MTB section (rare — nearly every class covers some MTB content).
+Set to `null` if the class doesn't cover a specific MTB section (rare â€” nearly every class covers some MTB content).
 
 ---
 
@@ -267,16 +286,11 @@ Set to `null` for classes that don't cover specific Shantideva verses.
 }
 ```
 
-This is the "Next Week's Reading" section in the app — it shows the MTB paragraphs students should read before the next class. Same paragraph-range system as `mtb`.
+This is the "Next Week's Reading" section in the app â€” it shows the MTB paragraphs students should read before the next class. Same paragraph-range system as `mtb`.
 
-**Where to find it:** KK rarely assigns specific reading. If he does, look for phrases like "for next week, read pages..." or "try to get through the next section."
+**Where to find it:** KK sometimes assigns reading toward the end of class. Look for phrases like "for next week, read pages..." or "try to get through the next section." If KK doesn't explicitly assign reading, you can infer it â€” the next class will likely pick up where the `mtb` range of this class left off.
 
-**When KK doesn't assign reading (the common case):** Select a natural MTB passage of approximately 1,000–2,000 words starting from where the current class's `mtb` range ended:
-- Sum the word counts of paragraphs starting from `endParagraph + 1` in `../texts/mtb-sections.json`
-- Aim to end at a natural section boundary (end of a sub-topic, section, or chapter)
-- Exclude pure outline/header paragraphs (e.g. "This has two parts:", numbered outline entries) from your word count — count only substantive paragraphs
-
-Set to `null` if no preview is needed (rare).
+Set to `null` if no preview is needed.
 
 ---
 
@@ -286,12 +300,7 @@ Set to `null` if no preview is needed (rare).
 "recording": "https://drive.google.com/file/d/1V_CCJv.../view?usp=share_link"
 ```
 
-Two types of links are used:
-
-- **Google Drive** (`https://drive.google.com/file/d/.../view?usp=share_link`) — the "official" class recording, uploaded after class. Use this when available.
-- **Turboscribe** (`https://turboscribe.ai/transcript/share/...`) — provides both the audio recording and the transcript in one link. Use this as the recording link when the Google Drive link isn't yet available, or if it's the only recording link on file.
-
-Set to `null` only if no recording link of any kind is available yet.
+This is a Google Drive share link to the class recording. Set to `null` until the recording is uploaded and a link is available.
 
 ---
 
@@ -301,8 +310,8 @@ Set to `null` only if no recording link of any kind is available yet.
 
 Meaningful to Behold (MTB) is a chapter-by-chapter, verse-by-verse commentary on the Guide to the Bodhisattva's Way of Life (the Guide). When KK teaches from MTB, the MTB text itself quotes or references specific Shantideva verses. So tracking what was covered means identifying:
 
-1. **Which MTB paragraphs were covered** — the primary reference (paragraph ID range)
-2. **Which Shantideva verses were read or discussed** — the secondary reference (chapter/verse range)
+1. **Which MTB paragraphs were covered** â€” the primary reference (paragraph ID range)
+2. **Which Shantideva verses were read or discussed** â€” the secondary reference (chapter/verse range)
 
 ### How to Identify What Was Covered
 
@@ -310,7 +319,7 @@ Look for these indicators in the teaching segments of the clean transcript:
 
 - **Explicit page references:** KK often says things like "page 29" or "turn to page..." referring to MTB
 - **Verse numbers:** KK or the text will reference verse numbers like "(15)" or "verse 22" from Shantideva
-- **Reading aloud from MTB:** Extended passages of commentary language — these will sound more formal and literary than KK's own commentary
+- **Reading aloud from MTB:** Extended passages of commentary language â€” these will sound more formal and literary than KK's own commentary
 - **Reading aloud from the Guide:** Verse-form text that KK reads, sometimes preceded by "Shantideva says..." or the verse number
 - **Where the previous class left off:** Track the progression. If the last class ended at paragraph 183, this class likely picks up around 184.
 
@@ -334,7 +343,7 @@ grep -n '"15"' ../texts/shantideva.json
 
 The "Transforming Through Patience" series covers:
 
-- **Chapter 1** of the Guide (Benefits of Bodhichitta) — early classes
+- **Chapter 1** of the Guide (Benefits of Bodhichitta) â€” early classes
 - Moving into **equanimity** teachings (based on MTB's discussion of recognizing bodhichitta)
 - Track which specific verses and MTB paragraph ranges each class covers to maintain continuity
 
@@ -353,20 +362,19 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] `practice` has `title` and at least `agreedSteps` (explicitly agreed at end of class)
 - [ ] `practice.steps` has supplementary practice instructions from teaching (if any)
 - [ ] `practice.quote` included if KK gave a quotable line about the practice
-- [ ] All `quote` fields verified against transcript — every unbracketed word matches what KK actually said
+- [ ] All `quote` fields verified against transcript â€” every unbracketed word matches what KK actually said
 - [ ] `commentary` array has 5-8 teaching point objects, each with `title` and `content`
 - [ ] Commentary is written in KK's voice (not third-person "KK said...")
 - [ ] Commentary captures insights, not just topic labels
 - [ ] No student personal stories or named community members in commentary
-- [ ] Commentary ordered: prepared MTB-based teaching leads, student-share-prompted insights follow
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
 - [ ] `preview` paragraph range set for next week's reading, or `null`
-- [ ] `recording` Google Drive or Turboscribe link set, or `null` if unavailable
+- [ ] `recording` Google Drive link set, or `null` as placeholder
 
 ### Continuity & Consistency
 
-- [ ] Root text progression is continuous from the previous class — no gaps or duplications
+- [ ] Root text progression is continuous from the previous class â€” no gaps or duplications
 - [ ] `mtb.startParagraph` of this class follows `mtb.endParagraph` of the previous class
 - [ ] `shantideva.startVerse` of this class follows `shantideva.endVerse` of the previous class
 - [ ] JSON is valid (check with a linter)
@@ -374,4 +382,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: April 22, 2026*
+*Last updated: February 9, 2026*

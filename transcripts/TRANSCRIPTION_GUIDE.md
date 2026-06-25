@@ -1,6 +1,6 @@
 # TTP Transcription Guide
 
-A comprehensive reference for processing raw speaker-diarized audio transcripts from the Brooklyn Teacher Training Program (TTP) into clean, structured transcript data.
+A comprehensive reference for processing raw speaker-diarized audio transcripts from the Brooklyn Tharpa Tradition Program (TTP) into clean, structured transcript data.
 
 For assembling the weekly class companion page (practices, commentary, root text, recording links, etc.), see the separate **[CLASS_FILE_GUIDE.md](../classes/CLASS_FILE_GUIDE.md)**.
 
@@ -13,10 +13,10 @@ For assembling the weekly class companion page (practices, commentary, root text
 3. [Raw Transcript Format](#raw-transcript-format)
 4. [Speaker Identification](#speaker-identification)
 5. [Class Structure & Two-Session Flow](#class-structure--two-session-flow)
-6. [Transcript JSON Schema](#transcript-json-schema)
-7. [Prayers](#prayers)
-8. [Jibber-Jabber: What to Exclude](#jibber-jabber-what-to-exclude)
-9. [Special Character & Encoding Cleanup](#special-character--encoding-cleanup)
+6. [Prayers](#prayers)
+7. [Jibber-Jabber: What to Exclude](#jibber-jabber-what-to-exclude)
+8. [Special Character & Encoding Cleanup](#special-character--encoding-cleanup)
+9. [Transcript JSON Output Structure](#transcript-json-output-structure)
 10. [Transcript Quality Control Checklist](#transcript-quality-control-checklist)
 11. [Technical Tools & Commands](#technical-tools--commands)
 
@@ -24,14 +24,14 @@ For assembling the weekly class companion page (practices, commentary, root text
 
 ## Project Overview
 
-The TTP (Teacher Training Program) is a Buddhist study group at KMC Brooklyn. The current series, covering the book **Meaningful to Behold** runs from November 2025 onward. The teacher is **Kadam Kyle (KK)**.
+The TTP (Tharpa Tradition Program) is a Buddhist study group at KMC Brooklyn. The current series, **"Transforming Through Patience,"** runs from November 2025 onward. The teacher is **Kadam Kyle (KK)**.
 
 The class studies two primary texts:
 
-- **Meaningful to Behold** by Geshe Kelsang Gyatso — the primary commentary being taught
-- **Guide to the Bodhisattva's Way of Life** by Shantideva — the root verse text that Meaningful to Behold comments on
+- **Meaningful to Behold** by Geshe Kelsang Gyatso â€” the primary commentary being taught
+- **Guide to the Bodhisattva's Way of Life** by Shantideva â€” the root verse text that Meaningful to Behold comments on
 
-**This guide covers the first stage of the workflow:** taking a raw speaker-diarized `.txt` file and producing a clean transcript — speakers identified, jibber-jabber removed, encoding fixed, class structure mapped. The output of this stage feeds into the class file assembly process (documented separately in `../classes/CLASS_FILE_GUIDE.md`).
+**This guide covers the first stage of the workflow:** taking a raw speaker-diarized `.txt` file and producing a clean transcript â€” speakers identified, jibber-jabber removed, encoding fixed, class structure mapped. The output of this stage feeds into the class file assembly process (documented separately in `../classes/CLASS_FILE_GUIDE.md`).
 
 ---
 
@@ -45,7 +45,7 @@ The project repo should contain:
 | `../texts/mtb-sections.json` | Geshe Kelsang's commentary, organized by section with numbered paragraphs |
 | `../texts/prayers-for-meditation.json` | Authoritative prayer texts used in TTP classes (Liberating Prayer, refuge, Lamrim prayer, dedications, etc.) |
 | `TTP_MMDDYY.txt` | Raw speaker-diarized transcript files (one per class) |
-| `index.html` | The companion app — loads class files and source texts at runtime |
+| `index.html` | The companion app â€” loads class files and source texts at runtime |
 
 See the project `../README.md` for the full directory structure and how all the files connect.
 
@@ -79,7 +79,7 @@ Key characteristics of the raw format:
 - **Timestamps may occasionally be missing.** If a transcript arrives without timestamps, request a re-export with timestamps included. Timestamps are essential for verifying chronological ordering, detecting KK speaker splits, and mapping section boundaries. Processing without them is possible but significantly harder and error-prone.
 - A single real person may be assigned **multiple speaker numbers** within the same transcript. The software sometimes splits one person into two or more speaker IDs, especially if there's a pause or change in audio quality.
 - Chanted prayers (which are spoken in unison by the group) typically get assigned to a single speaker number, but the content is communal.
-- The transcript captures **everything** the microphone picks up — pre-class chatter, break-time socializing, post-class goodbyes, and all sorts of ambient conversation. Much of this needs to be filtered out.
+- The transcript captures **everything** the microphone picks up â€” pre-class chatter, break-time socializing, post-class goodbyes, and all sorts of ambient conversation. Much of this needs to be filtered out.
 
 ---
 
@@ -90,7 +90,7 @@ Key characteristics of the raw format:
 Kadam Kyle is the primary teacher. Identifying KK's speaker number is the **first and most critical step** for each transcript. KK's segments will be:
 
 - **The longest segments** in the transcript (often 5-15+ minutes of continuous teaching)
-- **The most substantive content** — Dharma teachings, text readings, meditation instructions, class logistics
+- **The most substantive content** â€” Dharma teachings, text readings, meditation instructions, class logistics
 - Present in **both sessions** of the class
 
 **How to identify KK:**
@@ -112,12 +112,12 @@ This is one of the most common issues you'll encounter. The diarization software
 
 **How to detect this:** After your initial speaker count, if you see two or three speaker numbers that all have high segment counts and long durations, and both contain teaching-style content, they're probably both KK. Verify by checking:
 
-1. **Content continuity** — Does Speaker 1 start explaining a concept and then Speaker 5 continues the exact same thought? That's one person.
-2. **Timestamp adjacency** — If Speaker 1 ends at 45:30 and Speaker 5 starts at 45:31 with no natural speaker change, they're the same person.
-3. **Teaching voice vs. reading voice** — KK reading aloud from Meaningful to Behold may get a different number than KK giving his own commentary on what he just read.
-4. **No student-style content** — If both speaker numbers only contain teaching, commentary, and class management language (never questions or practice shares), they're almost certainly both KK.
+1. **Content continuity** â€” Does Speaker 1 start explaining a concept and then Speaker 5 continues the exact same thought? That's one person.
+2. **Timestamp adjacency** â€” If Speaker 1 ends at 45:30 and Speaker 5 starts at 45:31 with no natural speaker change, they're the same person.
+3. **Teaching voice vs. reading voice** â€” KK reading aloud from Meaningful to Behold may get a different number than KK giving his own commentary on what he just read.
+4. **No student-style content** â€” If both speaker numbers only contain teaching, commentary, and class management language (never questions or practice shares), they're almost certainly both KK.
 
-**How to handle it:** When building the transcript, combine all KK speaker numbers into a single speaker attribution. The content should flow as one continuous teaching, ordered by timestamp. Don't create separate sections for "KK as Speaker 1" and "KK as Speaker 5" — merge them into the natural chronological flow of the class.
+**How to handle it:** When building the transcript, combine all KK speaker numbers into a single speaker attribution. The content should flow as one continuous teaching, ordered by timestamp. Don't create separate sections for "KK as Speaker 1" and "KK as Speaker 5" â€” merge them into the natural chronological flow of the class.
 
 ```bash
 # Example: Check if two speakers are both KK by looking at their content
@@ -136,14 +136,16 @@ Chanted prayers are led by one person but recited by the whole group. In the tra
 
 ### Students
 
-Students appear in practice-sharing / "data share" segments and occasional questions. Some students appear by name in discussions. The transcript may assign several speaker numbers to students — some of whom are actually the same person split by the software.
+Students appear in practice-sharing / "data share" segments and occasional questions. Some students appear by name in discussions. The transcript may assign several speaker numbers to students â€” some of whom are actually the same person split by the software.
 
-For the output, student names are identified where possible (from context — KK sometimes addresses them by name, or they introduce themselves). Where names aren't clear, use "Student" or "Class member."
+For the output, student names are identified where possible (from context â€” KK sometimes addresses them by name, or they introduce themselves). Where names aren't clear, use "Student" or "Class member."
 
 **Known recurring students** (names may appear across multiple transcripts):
 
-- **Anne** — There are actually two Annes in the group: Anne K and Anne P. Typically only one speaks in a given class, so just "Anne" is fine. If KK says "Anne K" or "Anne P," use the full distinction. Otherwise, default to "Anne."
-- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neal, Ben, Byron, Grady, Kristin, Mary Ann, David, Jose (these may appear in KK's pairing assignments or data shares).
+- **Anne** â€” There are actually two Annes in the group: Anne K and Anne P. Typically only one speaks in a given class, so just "Anne" is fine. If KK says "Anne K" or "Anne P," use the full distinction. Otherwise, default to "Anne."
+- **Mary Ann** — Correct spelling (not "Marianne"). TurboScribe sometimes renders her name as "Marianne" — always correct to "Mary Ann."
+- **Ben** — A regular student who speaks rarely.
+- Other recurring names include Sumit, Fran, Dale, Mimi, Adriana, Jose, Ryan, Suzanne, Neil, Kristin, Grady, Byron, Alexis, Sharon, Margaret, Maura, Natalie.
 
 ---
 
@@ -154,196 +156,104 @@ For the output, student names are identified where possible (from context — KK
 A typical TTP class has **two sessions** separated by a dinner break. This is the norm, not the exception. Here is the full flow:
 
 ```
-╔══════════════════════════════════════════╗
-║          PRE-CLASS (exclude)             ║
-║  Casual chatter as people arrive         ║
-╠══════════════════════════════════════════╣
-║                                          ║
-║  SESSION 1 (approx. 4:30 PM - 5:30 PM)  ║
-║                                          ║
-║  1. classIntro (optional)                ║
-║     KK may share a brief reading,        ║
-║     thought, framing, or logistics       ║
-║     BEFORE the opening prayers.          ║
-║     NOT always present.                  ║
-║                                          ║
-║  2. chantedPrayers                       ║
-║     - Heart Jewel / Prayers for          ║
-║       Meditation                         ║
-║     - Includes refuge, mandala offering, ║
-║       Lamrim prayers                     ║
-║     - Led by prayer chanter, joined      ║
-║       by group                           ║
-║                                          ║
-║  3. guidedMeditation                     ║
-║     KK leads a meditation related to     ║
-║     the current topic. Ends with:        ║
-║     "in our own time, we can gradually   ║
-║      arise from our practice"            ║
-║                                          ║
-║  4. postMeditation                       ║
-║     KK welcomes everyone back,           ║
-║     takes attendance, asks for a         ║
-║     Shantideva reader. Transitional.     ║
-║                                          ║
-║  5. shantidevaReading                    ║
-║     Student reads the assigned verses    ║
-║     from Guide to the Bodhisattva's      ║
-║     Way of Life. May include brief       ║
-║     back-and-forth about which verses.   ║
-║                                          ║
-║  6. postReading                          ║
-║     KK thanks the reader, then           ║
-║     transitions into practice sharing.   ║
-║     Sets up the prompt: "anyone have     ║
-║     anything they'd like to share?"      ║
-║                                          ║
-║  7. practiceReports                      ║
-║     Students share practice data from    ║
-║     the week. KK responds to each.       ║
-║     Reported to whole group (not the     ║
-║     same as paired discussion).          ║
-║                                          ║
-║  8. mainTeaching                         ║
-║     KK's primary teaching. Could be:     ║
-║     - Reading from Meaningful to Behold  ║
-║     - Topical teaching                   ║
-║     - Extended commentary                ║
-║                                          ║
-║  9. announcements (optional)             ║
-║     Upcoming courses, events, etc.       ║
-║                                          ║
-║  10. Session 1 Dedication                ║
-║      Brief dedication of merit:          ║
-║      "through the virtues we've          ║
-║       collected..."                      ║
-║                                          ║
-╠══════════════════════════════════════════╣
-║        DINNER BREAK (exclude)            ║
-║  ~15-30 min of socializing, chatter      ║
-╠══════════════════════════════════════════╣
-║                                          ║
-║  SESSION 2 (approx. 6:00 PM - 7:30 PM)  ║
-║                                          ║
-║  11. Session 2 Opening Prayers           ║
-║      Shorter than Session 1. Usually:    ║
-║      - Prayers for Meditation            ║
-║      - Refuge & bodhisattva vows retaken ║
-║      Often does NOT include the full     ║
-║      mandala offering or Lamrim prayers  ║
-║                                          ║
-║  12. Brief Meditation                    ║
-║      Shorter meditation connecting to    ║
-║      the vows or topic                   ║
-║                                          ║
-║  13. Session 2 Teaching                  ║
-║      Usually the main text study:        ║
-║      - Reading from Meaningful to Behold ║
-║      - Discussion of Shantideva's verses ║
-║      - KK's commentary and examples      ║
-║      But could also be data shares or    ║
-║      continued discussion from Session 1 ║
-║                                          ║
-║  14. Agreed Practice for the Week        ║
-║      KK and group discuss what to        ║
-║      practice between now and next class ║
-║                                          ║
-║  15. Closing Dedication                  ║
-║      Brief dedication, sometimes with    ║
-║      the "nine-line prayer" or similar   ║
-║                                          ║
-╚══════════════════════════════════════════╝
-║         POST-CLASS (exclude)             ║
-║  Goodbyes, casual chat                   ║
-╚══════════════════════════════════════════╝
+â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘          PRE-CLASS (exclude)             â•‘
+â•‘  Casual chatter as people arrive         â•‘
+â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
+â•‘                                          â•‘
+â•‘  SESSION 1 (approx. 4:30 PM - 5:30 PM)  â•‘
+â•‘                                          â•‘
+â•‘  1. [Optional] Pre-Prayers Introduction  â•‘
+â•‘     KK may share a brief reading,        â•‘
+â•‘     thought, or framing before prayers.  â•‘
+â•‘     NOT always present.                  â•‘
+â•‘                                          â•‘
+â•‘  2. Opening Prayers (chanted)            â•‘
+â•‘     - Heart Jewel / Prayers for          â•‘
+â•‘       Meditation                         â•‘
+â•‘     - Includes refuge, mandala offering, â•‘
+â•‘       Lamrim prayers                     â•‘
+â•‘     - Led by prayer chanter, joined      â•‘
+â•‘       by group                           â•‘
+â•‘                                          â•‘
+â•‘  3. Guided Meditation                    â•‘
+â•‘     KK leads a meditation related to     â•‘
+â•‘     the current topic. Ends with:        â•‘
+â•‘     "in our own time, we can gradually   â•‘
+â•‘      arise from our practice"            â•‘
+â•‘                                          â•‘
+â•‘  4. Session 1 Teaching                   â•‘
+â•‘     Could be any combination of:         â•‘
+â•‘     - Text reading & commentary          â•‘
+â•‘     - Practice sharing / Data shares     â•‘
+â•‘     - Discussion of the week's practice  â•‘
+â•‘     - Topical teaching                   â•‘
+â•‘     The content varies by class.         â•‘
+â•‘                                          â•‘
+â•‘  5. Session 1 Dedication                 â•‘
+â•‘     Brief dedication of merit:           â•‘
+â•‘     "through the virtues we've collected â•‘
+â•‘      through practicing, meditating,     â•‘
+â•‘      discussing, may all living beings   â•‘
+â•‘      find lasting peace of mind,         â•‘
+â•‘      enlightenment"                      â•‘
+â•‘                                          â•‘
+â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
+â•‘        DINNER BREAK (exclude)            â•‘
+â•‘  ~15-30 min of socializing, chatter      â•‘
+â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
+â•‘                                          â•‘
+â•‘  SESSION 2 (approx. 6:00 PM - 7:30 PM)  â•‘
+â•‘                                          â•‘
+â•‘  6. Session 2 Opening Prayers            â•‘
+â•‘     Shorter than Session 1. Usually:     â•‘
+â•‘     - Prayers for Meditation             â•‘
+â•‘     - Refuge & bodhisattva vows retaken  â•‘
+â•‘     Often does NOT include the full      â•‘
+â•‘     mandala offering or Lamrim prayers   â•‘
+â•‘                                          â•‘
+â•‘  7. Brief Meditation                     â•‘
+â•‘     Shorter meditation connecting to     â•‘
+â•‘     the vows or topic                    â•‘
+â•‘                                          â•‘
+â•‘  8. Session 2 Teaching                   â•‘
+â•‘     Usually the main text study:         â•‘
+â•‘     - Reading from Meaningful to Behold  â•‘
+â•‘     - Discussion of Shantideva's verses  â•‘
+â•‘     - KK's commentary and examples       â•‘
+â•‘     But could also be data shares or     â•‘
+â•‘     continued discussion from Session 1  â•‘
+â•‘                                          â•‘
+â•‘  9. Agreed Practice for the Week         â•‘
+â•‘     KK and group discuss what to         â•‘
+â•‘     practice between now and next class  â•‘
+â•‘                                          â•‘
+â•‘  10. Closing Dedication                  â•‘
+â•‘      Brief dedication, sometimes with    â•‘
+â•‘      the "nine-line prayer" or similar   â•‘
+â•‘                                          â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+â•‘         POST-CLASS (exclude)             â•‘
+â•‘  Goodbyes, casual chat                   â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 ```
-
-### Session 1 Section Keys (JSON)
-
-The transcript JSON uses these keys for Session 1 sections. They appear in order, but not all are present every class:
-
-| Key | Required? | Content | Typical Marker |
-|-----|-----------|---------|----------------|
-| `classIntro` | Optional | KK speaks *before* prayers — welcome, logistics, brief thought. Only present when KK has something to say before "let's begin." | KK talking before prayer chant starts |
-| `chantedPrayers` | Always | Opening prayers (Liberating Prayer, refuge, etc.) | "O Blessed One Shakyamuni Buddha..." |
-| `guidedMeditation` | Always | KK-led meditation | Ends with "gradually arise from our practice" |
-| `postMeditation` | Always | KK welcomes everyone back, takes attendance, asks for a Shantideva reader | "Okay, welcome back" / "so we have [names]..." |
-| `shantidevaReading` | Always | Student reads assigned verses | Verse text from Chapter 1, 2, etc. |
-| `postReading` | Always | KK thanks reader, frames the practice sharing prompt | "Thank you" / "anyone have anything they'd like to share?" |
-| `practiceReports` | Usually | Student practice shares + KK responses. First entry is always a student, not KK. | Students speaking to the group |
-| `mainTeaching` | Usually | KK's primary teaching segment | "Let's take a look at the book" / reading from MTB |
-| `announcements` | Optional | Upcoming courses, events | "Couple quick announcements" |
-| `dedication` | Always | Brief dedication of merit (string, not array) | "Through the virtues we've collected..." |
-
-**The two "intro" moments:** There can be up to two places where KK does introductory/transitional talking before the main content begins:
-
-1. **`classIntro`** — *before* prayers. Brief. Logistics, a reading, or framing for the day. Not every class has this. When absent, the transcript starts with `chantedPrayers`.
-2. **`postMeditation`** — *after* meditation, *before* the Shantideva reading. Always present. This is where KK takes attendance, welcomes online people, and asks for a volunteer reader.
-
-These are distinct sections with different JSON keys. `classIntro` is pre-prayer content; `postMeditation` is post-meditation transition. They should never be conflated.
-
-**`postReading` vs. first `practiceReports` entry:** `postReading` is KK's transitional bridge — thanking the reader, framing the week's practice theme, and inviting shares. The first `practiceReports` entry should be the first *student* speaking, not KK's prompt.
-
-### Session 2 Section Keys (JSON)
-
-Session 2 is simpler and has less variation:
-
-| Key | Content |
-|-----|---------|
-| `chantedPrayers` | Abbreviated opening prayers |
-| `teaching` | Everything from post-prayer through the main teaching, Q&A, and any text study |
-| `conclusion` | Practice-for-the-week discussion + closing dedication |
-
-> ⚠️ **CRITICAL: Only use the key names in these two tables.** The app renders transcript sections by looking up specific hardcoded key names. If you invent a new key name (e.g. `studentSharing`, `textStudy`, `postDiscussion`), the app will silently ignore that content — it won't error, it just won't render. When in doubt, map content to the closest key above. For example: student practice shares → `practiceReports`, post-break text study → `teaching`, post-discussion sharing → `conclusion`, post-meditation announcements/recap → `postReading`.
-
-### JSON Data Types — Critical for App Rendering
-
-**Every transcript section must use the correct data type or the entire transcript will fail to render.** The app's transcript viewer wraps all rendering in a single `try/catch` — if any section has the wrong type, the whole transcript shows "Transcript not yet available" with no error visible to the user.
-
-**Array of segments** (`[{speaker, time, text}, ...]`) — used by almost everything:
-
-```json
-"guidedMeditation": [
-  {
-    "speaker": "Kadam Kyle",
-    "time": "5:22",
-    "text": "Let's begin our meditation..."
-  }
-]
-```
-
-These keys **must be arrays**: `classIntro`, `guidedMeditation`, `postMeditation`, `shantidevaReading`, `postReading`, `practiceReports`, `mainTeaching`, `teaching`, `conclusion`, `practiceAgreement`, `smallGroupDiscussion`.
-
-Even if a section has only one segment, it must be wrapped in an array: `[{speaker, time, text}]`.
-
-**Object with `time` and `text`** — used only by `chantedPrayers`:
-
-```json
-"chantedPrayers": {
-  "time": "0:00",
-  "text": "O Blessed One, Shakyamuni Buddha..."
-}
-```
-
-**Why this matters:** The app calls `.map()` on each section to render segments. If a section is an object instead of an array, `.map()` throws a TypeError, which is caught silently and results in the "not yet available" message. This is especially easy to get wrong with `shantidevaReading`, which has metadata (reader name, chapter, verse range) that tempts a richer object structure — but the app needs it as a plain segment array.
 
 ### Variations to Watch For
 
-- **`classIntro` presence:** Sometimes KK begins with a short reading or thought *before* the opening prayers. This is class content and should be captured as `classIntro`. Not every class has this — check whether KK is speaking substantively before the prayers start. Some transcripts begin directly with `chantedPrayers`.
+- **Pre-Prayers Introduction:** Sometimes KK begins with a short reading or thought *before* the opening prayers. This is class content and should be included. Not every class has this â€” check whether KK is speaking substantively before the prayers start. Some transcripts begin directly with prayers.
 - **Single-Session Classes:** Occasionally a class may only have one session. This is the exception. You can tell because there won't be a mid-class dedication, break chatter, or second set of opening prayers.
-- **Session Content Swaps:** The teaching and practice reports don't always fall in the same session. Sometimes Session 1 is teaching and Session 2 is data shares; sometimes it's reversed. Follow the actual content, not assumptions about order.
+- **Session Content Swaps:** The teaching and data shares don't always fall in the same session. Sometimes Session 1 is teaching and Session 2 is data shares; sometimes it's reversed. Follow the actual content, not assumptions about order.
 - **Announcements:** KK sometimes makes announcements about upcoming courses or events, usually near the end of Session 1 or beginning of Session 2. These are generally included in the transcript as they're part of the class.
-- **`postMeditation` with no attendance:** Some weeks KK skips the roll call and goes straight to asking for a reader. The section still exists as the transition from meditation to reading — it's just shorter.
 
-### Paired Discussion (Session 2) — Always Excluded
+### Paired Discussion (Session 2) â€” Always Excluded
 
-Session 2 typically includes a **paired discussion** segment where KK assigns students to talk in pairs or small groups. This is **always excluded** from the transcript — it's a structural rule, not a quality judgment. Even if the audio were perfectly clear, this content is private peer discussion, not class teaching.
+Session 2 typically includes a **paired discussion** segment where KK assigns students to talk in pairs or small groups. This is **always excluded** from the transcript â€” it's a structural rule, not a quality judgment. Even if the audio were perfectly clear, this content is private peer discussion, not class teaching.
 
 **Start marker:** KK says something like "let's have a little time for discussion now" and then announces the pairings (e.g., "let's have Anne P and Anne K, Dale and Jose, Ryan and Sumit...").
 
 **End marker:** KK reconvenes the group with something like "what should we practice this week," "what should we break on," or "all right, thanks everyone" followed by the practice-for-the-week discussion.
 
-Everything between these two markers is excluded. The paired discussion is distinct from the **data shares / practice reports** in Session 1, which *are* included — those are students reporting to the whole group, not private side conversations.
+Everything between these two markers is excluded. The paired discussion is distinct from the **data shares / practice reports** in Session 1, which *are* included â€” those are students reporting to the whole group, not private side conversations.
 
 ### Key Transition Phrases
 
@@ -351,224 +261,17 @@ These phrases help you identify section boundaries:
 
 | Phrase | Signals |
 |--------|---------|
-| "we're going to begin" / "let's begin" | Class starting — `classIntro` ends, `chantedPrayers` about to begin |
-| "O Blessed One Shakyamuni Buddha..." | `chantedPrayers` beginning |
-| "in our own time, we can gradually arise from our practice" | End of `guidedMeditation` |
-| "Okay, welcome back" / "so we have [names]..." / "Does anyone want to be the reader?" | `postMeditation` — transition from meditation to reading |
-| Student begins reading verses: "Guide to the Bodhisattva's Way of Life..." | `shantidevaReading` beginning |
-| "Thank you" (to reader) / "anyone have anything they'd like to share?" | `postReading` — transition from reading to practice sharing |
-| First student speaking their practice experience | `practiceReports` beginning |
-| "let's take a look at the book" / "let's open to page..." / "let's hop into the text" | `mainTeaching` beginning |
-| "let's dedicate here" / "we can think through the virtues..." | End of a session — `dedication` |
+| "we're going to begin" / "let's begin" | Class starting (after optional pre-prayers intro) |
+| "O Blessed One Shakyamuni Buddha..." | Opening prayers beginning |
+| "in our own time, we can gradually arise from our practice" | End of meditation |
+| "Welcome back everyone" / "Okay, welcome back" | Post-meditation transition to teaching |
+| "let's take a look at the book" / "let's open to page..." | Text study beginning |
+| "let's dedicate here" / "we can think through the virtues..." | End of a session |
 | "we'll come back at [time]" / "we'll take a break" | Break between sessions |
-| "O Blessed One Shakyamuni Buddha..." (second occurrence) | Session 2 `chantedPrayers` beginning |
-| "let's have a little time for discussion" / assigns pairs | Paired discussion starting (Session 2 — EXCLUDE everything until reconvene) |
-| "what should we work on this week" / "what should we break on" | Practice-for-the-week discussion — `conclusion` (also marks END of paired discussion) |
-| "we can make any personal prayers or dedications" | Final closing — class is over |
-
----
-
-
-## Transcript JSON Schema
-
-The output of the transcription process is a JSON file named `transcript-YYYY-MM-DD.json`. This section documents the complete schema so that any session can be built from scratch without needing to reverse-engineer an existing file. (Note: the JSON schema for the *class companion* file — practices, commentary, MTB paragraphs, etc. — is documented separately in `CLASS_FILE_GUIDE.md`. These are two different files.)
-
-### Top-Level Structure
-
-```json
-{
-  "classId": "2026-02-22",
-  "date": "February 22, 2026",
-  "teacher": "Kadam Kyle",
-  "speakerMap": { ... },
-  "session1": { ... },
-  "session2": { ... }
-}
-```
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `classId` | string | ISO date `YYYY-MM-DD` |
-| `date` | string | Human-readable: `"February 22, 2026"` |
-| `teacher` | string | Always `"Kadam Kyle"` for this series |
-| `speakerMap` | object | Maps raw diarization labels to resolved names (see below) |
-| `session1` | object | All Session 1 content |
-| `session2` | object | All Session 2 content |
-
-### speakerMap
-
-Records how raw speaker numbers were resolved to names. The app doesn't use this to render content, but it's essential for debugging and auditing. List every speaker number that appears in the transcript, including KK's splits.
-
-```json
-"speakerMap": {
-  "Speaker 1":  "Kadam Kyle",
-  "Speaker 9":  "Kadam Kyle",
-  "Speaker 13": "Kadam Kyle",
-  "Speaker 2":  "Prayer Chanter",
-  "Speaker 4":  "Anne",
-  "Speaker 5":  "Ben",
-  "Speaker 6":  "Byron",
-  "Speaker 7":  "Kristin",
-  "Speaker 10": "Mary Ann",
-  "Speaker 11": "Fran",
-  "Speaker 12": "David",
-  "Speaker 14": "Adriana",
-  "Speaker 15": "Suzanne",
-  "Speaker 16": "Anne P",
-  "Speaker 17": "Grady",
-  "Speaker 21": "Sumit"
-}
-```
-
-Notes:
-- Speaker numbers are arbitrary and change every class. The example above is from Feb 22, 2026 — use it as a format reference only.
-- If KK is split across multiple numbers (common), list each separately: `"Speaker 1": "Kadam Kyle"` and `"Speaker 9": "Kadam Kyle"`.
-- If the same student is split across two numbers, list both with the same resolved name.
-- Use `"Student"` for anyone who couldn't be identified by name.
-
-### Session 1 Schema
-
-```json
-"session1": {
-  "classIntro":       [ {speaker, time, text}, ... ],  // optional
-  "chantedPrayers":   { "time": "1:52", "text": "..." }, // object, NOT array
-  "guidedMeditation": [ {speaker, time, text}, ... ],
-  "postMeditation":   [ {speaker, time, text}, ... ],
-  "shantidevaReading":[ {speaker, time, text}, ... ],
-  "postReading":      [ {speaker, time, text}, ... ],
-  "practiceReports":  [ {speaker, time, text}, ... ],
-  "mainTeaching":     [ {speaker, time, text}, ... ],
-  "announcements":    [ {speaker, time, text}, ... ],  // optional
-  "dedication":       "Through the virtues we've collected..." // string, NOT array
-}
-```
-
-### Session 2 Schema
-
-```json
-"session2": {
-  "chantedPrayers": { "time": "not captured", "text": "" }, // object, NOT array
-  "teaching":       [ {speaker, time, text}, ... ],
-  "conclusion":     [ {speaker, time, text}, ... ]
-}
-```
-
-If Session 2 prayers were not captured (common), use `"time": "not captured"` and `"text": ""`.
-
-### The Segment Object
-
-Every item inside an array section is a segment object with exactly three fields:
-
-```json
-{
-  "speaker": "Kadam Kyle",
-  "time": "57:18",
-  "text": "Let's take a look at the book..."
-}
-```
-
-| Field | Type | Notes |
-|-------|------|-------|
-| `speaker` | string | Resolved name — never a raw `"Speaker N"` label |
-| `time` | string | Start timestamp in `H:MM:SS` or `M:SS` format as it appears in the raw transcript |
-| `text` | string | Spoken content. Preserve paragraph breaks with `\n\n`. |
-
-### Critical Data Type Rules
-
-- **`chantedPrayers`** (both sessions) is always a plain **object** `{time, text}` — never an array.
-- **All other sections** are always **arrays** of segment objects — even if the section contains only one segment.
-- **`dedication`** (Session 1) is a plain **string** — never an array or object.
-- A single wrong type causes the **entire transcript to fail silently** — the app catches the error but shows nothing, with no visible error message. This is the single most common and most damaging mistake. When in doubt, run `python3 -c "import json; d=json.load(open('file.json')); print(type(d['session1']['shantidevaReading']))"` to verify.
-
-### Full Minimal Example
-
-```json
-{
-  "classId": "2026-02-22",
-  "date": "February 22, 2026",
-  "teacher": "Kadam Kyle",
-  "speakerMap": {
-    "Speaker 1": "Kadam Kyle",
-    "Speaker 9": "Kadam Kyle",
-    "Speaker 2": "Prayer Chanter",
-    "Speaker 4": "Anne",
-    "Speaker 6": "Byron"
-  },
-  "session1": {
-    "chantedPrayers": {
-      "time": "1:52",
-      "text": "LIBERATING PRAYER\n\nO Blessed One, Shakyamuni Buddha..."
-    },
-    "guidedMeditation": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "13:12",
-        "text": "We can get into a comfortable posture..."
-      }
-    ],
-    "postMeditation": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "28:59",
-        "text": "Does anyone want to be our lucky duck reader today?"
-      }
-    ],
-    "shantidevaReading": [
-      {
-        "speaker": "Byron",
-        "time": "30:38",
-        "text": "(26) How can we possibly measure\nThe benefits of this jewel of a mind..."
-      }
-    ],
-    "postReading": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "33:48",
-        "text": "Thank you very much, Byron..."
-      }
-    ],
-    "practiceReports": [
-      {
-        "speaker": "Anne",
-        "time": "35:30",
-        "text": "I took as my aspiration not abandoning all living beings..."
-      },
-      {
-        "speaker": "Kadam Kyle",
-        "time": "37:06",
-        "text": "Thanks, Anne! Fantastic..."
-      }
-    ],
-    "mainTeaching": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "1:11:11",
-        "text": "It has been said that if we were to offer a universe full of jewels..."
-      }
-    ]
-  },
-  "session2": {
-    "chantedPrayers": {
-      "time": "not captured",
-      "text": ""
-    },
-    "teaching": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "1:32:28",
-        "text": "How can we increase our faith in the power of mental actions?"
-      }
-    ],
-    "conclusion": [
-      {
-        "speaker": "Kadam Kyle",
-        "time": "2:47:36",
-        "text": "Anyone have anything they'd like us to get up to over the weeks ahead?"
-      }
-    ]
-  }
-}
-```
+| "O Blessed One Shakyamuni Buddha..." (second occurrence) | Session 2 prayers beginning |
+| "let's have a little time for discussion" / assigns pairs | Paired discussion starting (Session 2 â€” EXCLUDE everything until reconvene) |
+| "what should we work on this week" / "what should we break on" | Practice-for-the-week discussion (also marks END of paired discussion) |
+| "we can make any personal prayers or dedications" | Final closing â€” class is over |
 
 ---
 
@@ -576,7 +279,7 @@ Every item inside an array section is a segment object with exactly three fields
 
 ### Where Prayer Texts Live
 
-The authoritative prayer texts are in **`../texts/prayers-for-meditation.json`** — this is the clean, published version of all prayers used in TTP classes. (A human-readable `.txt` version, `../texts/Prayers_for_Meditation.txt`, is also available for reference.)
+The authoritative prayer texts are in **`../texts/prayers-for-meditation.json`** â€” this is the clean, published version of all prayers used in TTP classes. (A human-readable `.txt` version, `../texts/Prayers_for_Meditation.txt`, is also available for reference.)
 
 The raw transcripts also contain the prayers as captured by the audio diarization, but these transcribed versions are **not reliable.** The software's attempt at transcribing chanted group recitation produces garbled words, mishearings, run-together lines, and mangled Dharma terms. The transcribed prayers should **never** be used as-is.
 
@@ -586,40 +289,40 @@ The raw transcripts also contain the prayers as captured by the audio diarizatio
 
 This applies to two categories:
 
-1. **Prayers** — Replace transcribed prayer content with the exact text from `../texts/prayers-for-meditation.json`. The diarization software cannot accurately capture group chanting, so every prayer section should be swapped wholesale with the published version.
+1. **Prayers** â€” Replace transcribed prayer content with the exact text from `../texts/prayers-for-meditation.json`. The diarization software cannot accurately capture group chanting, so every prayer section should be swapped wholesale with the published version.
 
-2. **Shantideva verses** — When KK reads Shantideva verses aloud, replace the transcribed version with the exact text from `../texts/shantideva.json`. Match by verse number (format: `(15)`) and verify the content.
+2. **Shantideva verses** â€” When KK reads Shantideva verses aloud, replace the transcribed version with the exact text from `../texts/shantideva.json`. Match by verse number (format: `(15)`) and verify the content.
 
 **What about Meaningful to Behold?** Leave MTB passages as the transcript has them. KK frequently stops mid-paragraph to insert his own commentary, students ask questions mid-reading, and the boundary between "KK reading the text" and "KK riffing on the text" is often blurry. Attempting verbatim replacement would require surgically splicing published text around these interjections, which isn't worth the effort or risk. Clean up encoding issues and obvious Dharma term misspellings in MTB readings, but don't try to replace them wholesale. (This may be revisited later.)
 
-**Why prayers and Shantideva are different:** Prayers are chanted as complete, uninterrupted blocks — there's a clear start and end with no commentary mixed in. Shantideva verses are similarly discrete units that KK reads as standalone passages. Both have clean boundaries that make wholesale replacement straightforward and reliable.
+**Why prayers and Shantideva are different:** Prayers are chanted as complete, uninterrupted blocks â€” there's a clear start and end with no commentary mixed in. Shantideva verses are similarly discrete units that KK reads as standalone passages. Both have clean boundaries that make wholesale replacement straightforward and reliable.
 
-### Opening Prayers (Session 1) — Full Practice
+### Opening Prayers (Session 1) â€” Full Practice
 
 The Session 1 opening is a longer practice that typically includes all of the following in order:
 
-1. **Prayers for Meditation** — begins with "O Blessed One Shakyamuni Buddha, Precious Treasury of Compassion..."
-2. **Refuge and Bodhichitta** — "I and all sentient beings, until we achieve enlightenment, go for refuge to Buddha, Dharma, and Sangha... Through the virtues I collect by giving and other perfections, may I become a Buddha for the benefit of all" (recited 3x)
-3. **Four Immeasurables** — "May everyone be happy, may everyone be free from misery, may no one ever be separated from their happiness, may everyone have equanimity, free from hatred and attachment"
-4. **Seven-Limb Prayer** — "In the space before me is the living Buddha Shakyamuni, surrounded by all the Buddhas and Bodhisattvas..."
-5. **Mandala Offering** — "The ground sprinkled with perfume and spread with flowers..." (short mandala) followed by a longer mandala offering
-6. **Lamrim Prayer (Je Tsongkhapa's)** — "The path begins with strong reliance on my kind teacher..." through to "...gain the state of Vajradhara"
-7. **Receiving Blessings** — "From the hearts of all the holy beings, streams of light and nectar flow down..."
+1. **Prayers for Meditation** â€” begins with "O Blessed One Shakyamuni Buddha, Precious Treasury of Compassion..."
+2. **Refuge and Bodhichitta** â€” "I and all sentient beings, until we achieve enlightenment, go for refuge to Buddha, Dharma, and Sangha... Through the virtues I collect by giving and other perfections, may I become a Buddha for the benefit of all" (recited 3x)
+3. **Four Immeasurables** â€” "May everyone be happy, may everyone be free from misery, may no one ever be separated from their happiness, may everyone have equanimity, free from hatred and attachment"
+4. **Seven-Limb Prayer** â€” "In the space before me is the living Buddha Shakyamuni, surrounded by all the Buddhas and Bodhisattvas..."
+5. **Mandala Offering** â€” "The ground sprinkled with perfume and spread with flowers..." (short mandala) followed by a longer mandala offering
+6. **Lamrim Prayer (Je Tsongkhapa's)** â€” "The path begins with strong reliance on my kind teacher..." through to "...gain the state of Vajradhara"
+7. **Receiving Blessings** â€” "From the hearts of all the holy beings, streams of light and nectar flow down..."
 
-### Session 2 Opening Prayers — Abbreviated Practice
+### Session 2 Opening Prayers â€” Abbreviated Practice
 
 Session 2 typically uses a shorter version:
 
 1. **Prayers for Meditation** (same as above)
-2. **Retaking Bodhisattva Vows** — "Please listen to what I now say. From this time forth, until I attain enlightenment, I go for refuge to the Three Jewels..."
-3. **Retaking Tantric Vows** — "I go for refuge to the Guru and Three Jewels. Holding Vajra and Bell, I generate as the deity and make offerings..."
+2. **Retaking Bodhisattva Vows** â€” "Please listen to what I now say. From this time forth, until I attain enlightenment, I go for refuge to the Three Jewels..."
+3. **Retaking Tantric Vows** â€” "I go for refuge to the Guru and Three Jewels. Holding Vajra and Bell, I generate as the deity and make offerings..."
 4. Brief meditation connecting to the vows
 
 ### Closing Dedications
 
 Dedications are typically brief and spoken (not chanted). The standard formula is:
 
-> "Through the virtues we've collected through practicing, meditating, discussing — may all living beings find lasting peace of mind, enlightenment."
+> "Through the virtues we've collected through practicing, meditating, discussing â€” may all living beings find lasting peace of mind, enlightenment."
 
 Sometimes followed by "we can make any personal prayers or dedications."
 
@@ -708,7 +411,7 @@ After the final dedication ("we can make any personal prayers or dedications, th
 
 ### 5. Paired Discussion (Session 2)
 
-Session 2 includes a paired discussion where students talk in assigned pairs or small groups. This is **always excluded** regardless of audio quality — it's private peer conversation, not teaching content. See [Paired Discussion (Session 2) — Always Excluded](#paired-discussion-session-2--always-excluded) in the Class Structure section above for the exact start/end markers.
+Session 2 includes a paired discussion where students talk in assigned pairs or small groups. This is **always excluded** regardless of audio quality â€” it's private peer conversation, not teaching content. See [Paired Discussion (Session 2) â€” Always Excluded](#paired-discussion-session-2--always-excluded) in the Class Structure section above for the exact start/end markers.
 
 Note: This is different from the **data shares / practice reports** in Session 1, where individual students report to the whole group. Data shares are included; paired discussions are not.
 
@@ -733,20 +436,20 @@ The raw transcripts and HTML files can contain mangled Unicode characters. These
 
 | What You See | What It Should Be | Notes |
 |---|---|---|
-| `â€™` | `'` (right single quote / apostrophe) | Most common issue |
-| `â€œ` | `"` (left double quote) | |
-| `â€` or `â€\x9D` | `"` (right double quote) | |
-| `â€"` | `—` (em dash) | |
-| `â€"` | `–` (en dash) | |
-| `Ã©` | `é` | Accented characters (e.g., in "Geshe") |
-| `Ã¶` | `ö` | |
-| `Ã¼` | `ü` | |
-| `Â·` | `·` (middle dot) | Used as a separator |
-| `Ã§` | `ç` | |
-| `ðŸ"˜` | 📘 (emoji, book) | Emoji encoding issues |
-| `ðŸ"œ` | 📜 (emoji, scroll) | |
-| `ðŸ™` | 🙏 (emoji, prayer hands) | |
-| `ChÃ¶gyam` | `Chögyam` | Specific to Chögyam Trungpa Rinpoche |
+| `Ã¢â‚¬â„¢` | `'` (right single quote / apostrophe) | Most common issue |
+| `Ã¢â‚¬Å“` | `"` (left double quote) | |
+| `Ã¢â‚¬` or `Ã¢â‚¬\x9D` | `"` (right double quote) | |
+| `Ã¢â‚¬"` | `â€”` (em dash) | |
+| `Ã¢â‚¬"` | `â€“` (en dash) | |
+| `ÃƒÂ©` | `Ã©` | Accented characters (e.g., in "Geshe") |
+| `ÃƒÂ¶` | `Ã¶` | |
+| `ÃƒÂ¼` | `Ã¼` | |
+| `Ã‚Â·` | `Â·` (middle dot) | Used as a separator |
+| `ÃƒÂ§` | `Ã§` | |
+| `Ã°Å¸"Ëœ` | ðŸ“˜ (emoji, book) | Emoji encoding issues |
+| `Ã°Å¸"Å“` | ðŸ“œ (emoji, scroll) | |
+| `Ã°Å¸â„¢` | ðŸ™ (emoji, prayer hands) | |
+| `ChÃƒÂ¶gyam` | `ChÃ¶gyam` | Specific to ChÃ¶gyam Trungpa Rinpoche |
 
 ### Dharma-Specific Terms to Watch For
 
@@ -763,27 +466,94 @@ The transcription software often mangles Buddhist/Sanskrit/Tibetan terms. Common
 | "nirvana" | "nirvana" (this is correct) |
 | Various garbled mantras | Cross-reference with prayer texts |
 
-### Common Name Transcription Errors
-
-The transcription software frequently mishears student names, especially ones it has no prior context for. These are confirmed recurring errors across multiple sessions:
-
-| Transcribed As | Correct Name | Notes |
-|----------------|--------------|-------|
-| "Adam" | **Anne** | Phonetically plausible; KK's own address of the same speaker (e.g. "Thanks, Anne") is the authoritative correction |
-| "Joanna" | **Adriana** | Very consistent error. KK sometimes appears to say "Hey Joanna" — that's also Adriana |
-| "Marianne" | **Mary Ann** | Software runs the two syllables together into a single name |
-| "Sumi" / "Sumy" | **Sumit** | The final -t is frequently dropped |
-
-**Rule:** Always verify student names by searching for KK's direct address of that speaker (e.g., "Thanks, Anne," "Yes, Sumit," "Thank you, Adriana"). KK's spoken name is authoritative and overrides anything Turboscribe outputs. A quick `grep "Thanks,\|Yes,\|Thank you," TTP_MMDDYY.txt` will surface most of these.
-
 ### Cleaning Process
 
 When processing transcripts:
 
-1. **First pass — Source text replacement:** Identify all prayer sections and Shantideva verse readings. Replace these wholesale with the exact published text from `../texts/prayers-for-meditation.json` and `../texts/shantideva.json`. Do not attempt to "fix" the transcription — just swap it out entirely. (MTB passages are left as-is from the transcript — see note above.)
-2. **Second pass — Encoding cleanup:** Search for known mangled patterns (`â€`, `Ã`, `Â`) in KK's teaching content and MTB readings, and replace with correct characters.
-3. **Third pass — Dharma terminology:** Read through for Dharma-specific terms in KK's commentary and correct mistranscriptions.
+1. **First pass â€” Source text replacement:** Identify all prayer sections and Shantideva verse readings. Replace these wholesale with the exact published text from `../texts/prayers-for-meditation.json` and `../texts/shantideva.json`. Do not attempt to "fix" the transcription â€” just swap it out entirely. (MTB passages are left as-is from the transcript â€” see note above.)
+2. **Second pass â€” Encoding cleanup:** Search for known mangled patterns (`Ã¢â‚¬`, `Ãƒ`, `Ã‚`) in KK's teaching content and MTB readings, and replace with correct characters.
+3. **Third pass â€” Dharma terminology:** Read through for Dharma-specific terms in KK's commentary and correct mistranscriptions.
 4. **Verification:** Spot-check that replaced prayer text matches the correct prayer sequence for that session (Session 1 = full practice, Session 2 = abbreviated).
+
+---
+
+## Transcript JSON Output Structure
+
+The transcript JSON has a **specific key structure** that the companion app depends on. Using wrong key names will break rendering — sections will appear blank or show the wrong content.
+
+### Fidelity Target
+
+The transcript should retain **95%+ of the class content** (excluding break chatter, paired discussion cross-talk, and post-class conversation). This is a transcript, not a summary — capture what was said near-verbatim, with only light cleanup (removing filler words, fixing grammar for readability, replacing source text with published versions).
+
+### Top-Level Keys
+
+```json
+{
+  "classId": "YYYY-MM-DD",
+  "date": "Month DD, YYYY",
+  "teacher": "Kadam Kyle",
+  "speakerMap": { "Speaker N": "Name", ... },
+  "notes": "Processing notes — speaker merges, disambiguation, attendance, etc.",
+  "session1": { ... },
+  "session2": { ... }
+}
+```
+
+### Session 1 Keys (in order)
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `classIntro` | array or null | KK's remarks *before* chanted prayers (if any). Not every class has this. |
+| `chantedPrayers` | `{text, time}` | Opening prayers — always carried forward from prior week's published text. |
+| `guidedMeditation` | array | KK's meditation instructions. Ends at "arise from our practice." |
+| `postMeditation` | array | KK's post-meditation transition — "welcome back," topic framing, daily-life observations. |
+| `shantidevaReading` | array | Shantideva verse reading (note: lowercase `d` — not `shantiDevaReading`). |
+| `postReading` | array or null | KK's brief transition after the reading before asking for practice reports. |
+| `practiceReports` | array | **Student practice reports and KK's responses.** This is what the app renders as "PRACTICE REPORTS." Do NOT use `dataShares` — that key is for the class file, not the transcript. |
+| `mainTeaching` | array | KK's prepared MTB-based teaching. Do NOT use `teaching` for Session 1 — that key is for Session 2. |
+| `announcements` | array or null | Upcoming events, course info, etc. |
+| `dedication` | array | Session 1 closing dedication. |
+
+### Session 2 Keys (in order)
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `chantedPrayers` | `{text, time}` | Abbreviated opening prayers. |
+| `teaching` | array | Session 2 teaching, including any student data shares/questions that arise during teaching. Session 2 uses `teaching`, not `mainTeaching`. |
+| `pairedDiscussion` | `{status, time, note}` | Always `"status": "removed"`. Include the pair assignments in the `note`. |
+| `practiceDiscussion` | array | End-of-class discussion about what to practice. |
+| `conclusion` | array | Final remarks and closing dedication. |
+
+### Entry Format
+
+Each entry in the arrays is an object:
+
+```json
+{
+  "speaker": "Kadam Kyle",
+  "time": "1:12:00",
+  "text": "Full text of what was said...",
+  "note": "Optional context note (mainly for teaching entries)"
+}
+```
+
+### Critical Key Name Rules
+
+- **`practiceReports`** — not `dataShares`. The app renders this key as "PRACTICE REPORTS." Using `dataShares` will leave this section blank.
+- **`mainTeaching`** — not `teaching` (for Session 1). Session 2 uses `teaching`.
+- **`shantidevaReading`** — lowercase `d`. Not `shantiDevaReading`.
+- **`postMeditation`** and **`postReading`** — separate sections, not merged into `guidedMeditation` or `shantidevaReading`.
+
+### Key Name Distinction: Transcript vs. Class File
+
+The transcript and class file are **separate files with different schemas**:
+
+| Concept | Transcript key | Class file key |
+|---------|---------------|----------------|
+| Student practice reports | `practiceReports` (array of speaker entries) | `dataShares` (array of summary strings) |
+| KK's MTB teaching | `mainTeaching` (Session 1) / `teaching` (Session 2) | `commentary` (array of teaching point objects) |
+
+Do not mix these up. The transcript captures near-verbatim dialogue; the class file captures curated summaries.
 
 ---
 
@@ -793,7 +563,7 @@ Before considering a transcript "clean" and ready for class file assembly:
 
 ### Speaker Identification
 
-- [ ] KK's speaker number(s) identified — all KK segments attributed correctly
+- [ ] KK's speaker number(s) identified â€” all KK segments attributed correctly
 - [ ] If KK was split across multiple speaker numbers, they've been merged
 - [ ] Prayer chanter identified and labeled
 - [ ] Student speakers identified by name where possible
@@ -802,16 +572,12 @@ Before considering a transcript "clean" and ready for class file assembly:
 
 - [ ] Both sessions accounted for (unless confirmed single-session class)
 - [ ] Session 1 and Session 2 boundaries clearly marked
-- [ ] **All section values are arrays of `{speaker, time, text}` segments** (except `chantedPrayers` which is an object) — wrong types silently break the entire transcript display
-- [ ] `classIntro` identified (if present — not every class has one)
-- [ ] `chantedPrayers` correctly identified and labeled for both sessions
-- [ ] `guidedMeditation` start/end marked
-- [ ] `postMeditation` identified (KK's attendance/reader-request transition)
-- [ ] `shantidevaReading` contains only the actual verse reading (not KK's transition talk)
-- [ ] `postReading` identified (KK thanks reader, sets up practice sharing)
-- [ ] `practiceReports` starts with first student share, not KK's prompt
-- [ ] `mainTeaching` segments identified
-- [ ] `conclusion` (practice discussion + dedication) identified in Session 2
+- [ ] Pre-prayers introduction identified (if present)
+- [ ] Prayers correctly identified and labeled for both sessions
+- [ ] Meditation start/end marked
+- [ ] Teaching segments identified
+- [ ] Data share / practice sharing segments identified
+- [ ] Practice discussion (final 10-15 min) identified
 
 ### Content Filtering
 
@@ -823,15 +589,13 @@ Before considering a transcript "clean" and ready for class file assembly:
 
 ### Chronological Ordering
 
-- [ ] Sections appear in the order they occurred — verified against timestamps
-- [ ] `classIntro` content correctly placed before prayers (check actual timestamps, not section labels)
-- [ ] `postMeditation` placed between meditation and reading (not lumped into either)
-- [ ] `postReading` placed between reading and practice reports (not lumped into either)
+- [ ] Sections appear in the order they occurred â€” verified against timestamps
+- [ ] "Class Introduction" content correctly placed (check actual timestamps, not section labels)
 - [ ] Timestamps increase monotonically within each session
 
 ### Encoding & Terminology
 
-- [ ] No mangled Unicode characters (`â€`, `Ã`, `Â`, `ðŸ` patterns)
+- [ ] No mangled Unicode characters (`Ã¢â‚¬`, `Ãƒ`, `Ã‚`, `Ã°Å¸` patterns)
 - [ ] Dharma terms spelled correctly (especially "bodhichitta")
 - [ ] **Prayer sections replaced verbatim** from `../texts/prayers-for-meditation.json` (not cleaned-up transcript versions)
 - [ ] **Shantideva verses replaced verbatim** from `../texts/shantideva.json`
@@ -847,7 +611,7 @@ Before considering a transcript "clean" and ready for class file assembly:
 # Find all unique speaker numbers in a transcript
 grep -o "\[Speaker [0-9]*\]" TTP_MMDDYY.txt | sort -u
 
-# Count appearances per speaker (helps identify KK — usually the most frequent)
+# Count appearances per speaker (helps identify KK â€” usually the most frequent)
 grep -o "\[Speaker [0-9]*\]" TTP_MMDDYY.txt | sort | uniq -c | sort -rn
 
 # Find where prayers begin (look for the distinctive opening)
@@ -857,7 +621,7 @@ grep -n "Shakyamuni Buddha\|treasury of compassion" TTP_MMDDYY.txt
 grep -n "gradually arise\|let's take a look\|take a break\|come back\|welcome back\|let's dedicate" TTP_MMDDYY.txt
 
 # Find encoding issues
-grep -n "â€\|Ã\|Â\|ðŸ" TTP_MMDDYY.txt
+grep -n "Ã¢â‚¬\|Ãƒ\|Ã‚\|Ã°Å¸" TTP_MMDDYY.txt
 
 # Find likely pre-class or break chatter (look for ... ellipsis patterns)
 grep -n "\.\.\." TTP_MMDDYY.txt
@@ -874,16 +638,15 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 
 ### Workflow Summary
 
-1. **Identify speakers** — Run the grep commands above to figure out who's who
-2. **Map the structure** — Find the prayer starts, meditation endings, dedications, and break to map out the two-session skeleton
-3. **Trim jibber-jabber** — Identify and mark pre-class, break, and post-class content for exclusion
-4. **Extract teaching content** — Pull out KK's teaching, text readings, and student shares
-5. **Replace source texts verbatim** — Swap all prayers and Shantideva verse readings with exact published text from `../texts/prayers-for-meditation.json` and `../texts/shantideva.json`
-6. **Clean encoding** — Fix mangled characters and Dharma term misspellings in KK's commentary and MTB readings
-7. **Verify chronology** — Make sure everything is in timestamp order
-8. **Validate JSON types** — Confirm all section values are arrays of `{speaker, time, text}` segments (except `chantedPrayers`). Load the JSON in Python and check: `isinstance(data['session1']['shantidevaReading'], list)` for each key. A single mistyped section will silently break the entire transcript display.
-9. **Quality control** — Run through the checklist above
-10. **Hand off to class file assembly** — The clean transcript is now ready for the next stage (see `../classes/CLASS_FILE_GUIDE.md`)
+1. **Identify speakers** â€” Run the grep commands above to figure out who's who
+2. **Map the structure** â€” Find the prayer starts, meditation endings, dedications, and break to map out the two-session skeleton
+3. **Trim jibber-jabber** â€” Identify and mark pre-class, break, and post-class content for exclusion
+4. **Extract teaching content** â€” Pull out KK's teaching, text readings, and student shares
+5. **Replace source texts verbatim** â€” Swap all prayers and Shantideva verse readings with exact published text from `../texts/prayers-for-meditation.json` and `../texts/shantideva.json`
+6. **Clean encoding** â€” Fix mangled characters and Dharma term misspellings in KK's commentary and MTB readings
+7. **Verify chronology** â€” Make sure everything is in timestamp order
+8. **Quality control** â€” Run through the checklist above
+9. **Hand off to class file assembly** â€” The clean transcript is now ready for the next stage (see `../classes/CLASS_FILE_GUIDE.md`)
 
 ---
 
@@ -901,10 +664,7 @@ grep -n "page [0-9]\|page Roman\|turn to page" TTP_MMDDYY.txt
 | 8 | January 11, 2026 | `TTP_011126.txt` |
 | 9 | January 18, 2026 | `TTP_011826.txt` |
 | 10 | February 1, 2026 | `TTP_020126.txt` |
-| 11 | February 8, 2026 | `TTP_020826.txt` |
-| 12 | February 15, 2026 | `TTP_021526.txt` |
-| 13 | February 22, 2026 | `TTP_022226.txt` |
 
 ---
 
-*Last updated: March 15, 2026*
+*Last updated: June 23, 2026*
