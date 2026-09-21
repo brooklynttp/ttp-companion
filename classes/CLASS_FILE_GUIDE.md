@@ -111,7 +111,7 @@ The full schema for a class entry (see also `class-TEMPLATE.json` (in this folde
 - **`commentary`** is an array of teaching point objects, each with a `title`, `content` (array of paragraphs), and optional `quote`. Written in KK's voice, not third-person about him. No student personal stories.
 - **`mtb`** references paragraphs by global ID range â€” the app fetches `../texts/mtb-sections.json` and pulls matching paragraphs at display time. Use `../texts/mtb-reference-guide.md` to look up paragraph IDs.
 - **`shantideva`** references verses by chapter and verse range â€” the app fetches `../texts/shantideva.json` and pulls matching verses. Set to `null` for classes that don't cover specific verses.
-- **`preview`** is the "Next Week's Reading" section â€” same paragraph-range system as `mtb`. Set to `null` if no preview is needed.
+- **`preview`** is the "Next Week's Reading" section â€” same paragraph-range system as `mtb`. **Always set** — never `null`. If KK doesn't assign specific reading, infer from the next paragraphs after `mtb.endParagraph`.
 - **`recording`** is a Google Drive share link. Set to `null` until the recording is uploaded.
 
 ---
@@ -171,7 +171,12 @@ The practice has two arrays of steps, which the app should render with a visual 
 If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `agreedSteps` from KK's fuller description of that practice during teaching. If there's no clear distinction (e.g., the group agreed to everything KK suggested), put everything in `agreedSteps` and leave `steps` empty.
 
 - **`title`** â€” A short, evocative name for the practice (2-6 words)
-- **`quote`** â€” Optional. Include when KK gives a specific, quotable emphasis about the practice. **Must be KK's exact words from the transcript.** Use brackets to simplify an excerpt (e.g., "If we [just subtract] all the discontented thoughts..."), but never put unbracketed text inside quotes if it's not what he actually said. If no single quote captures the practice well, omit it â€” a fabricated or loosely paraphrased "quote" is worse than none.
+- **`quote`** — Optional. **Must be KK’s exact words from the transcript — journalist-level fidelity.** Every unbracketed word must match what he said. Verify every quote against the raw transcript before including it in the class file.
+  - **Filler words** (`um`, `uh`, `like`) may be silently dropped.
+  - **Brackets** are encouraged for two purposes: (1) collapsing a digression or transitional phrasing with `[...]`, and (2) inserting context the listener had but the reader won’t, e.g. “I really, really want to [destroy this delusion]” when KK said “want to” with the object clear from context.
+  - **Do not** paraphrase, swap synonyms, combine non-adjacent sentences, or reword for flow. If a passage doesn’t read well as a verbatim quote, pick a different passage.
+  - **Do not** introduce vocabulary KK didn’t use. If KK says “a piece of metal”, the quote says “a piece of metal” — not “a piton.”
+  - If no single quote captures the point well, **omit it** — a fabricated or loosely paraphrased “quote” is worse than none.
 
 ---
 
@@ -201,7 +206,7 @@ If the group agreement was very brief ("yeah, let's do the mantra"), flesh out `
 
 - **`title`** â€” A short heading that captures the teaching theme
 - **`content`** â€” Array of paragraphs. Each paragraph should capture a distinct idea or argument.
-- **`quote`** â€” Optional. **Must be KK's exact words from the transcript.** Brackets may be used to simplify (e.g., collapsing a digression), but every unbracketed word must match what he said. Do not invent, paraphrase, or combine sentences into a "quote." Verify against the transcript before including.
+- **`quote`** — Optional. Same journalist-level fidelity rules as `practice.quote` above: every unbracketed word must match what KK said, brackets for digressions and context only, no paraphrasing or invented vocabulary, and verify against the raw transcript before including. If the passage doesn’t work as a verbatim quote, pick a different passage or omit.
 
 **Where to find it:** KK's teaching segments across both sessions. Each teaching point should capture a distinct theme or arc â€” not just "we discussed X" but the actual insight.
 
@@ -288,9 +293,9 @@ Set to `null` for classes that don't cover specific Shantideva verses.
 
 This is the "Next Week's Reading" section in the app â€” it shows the MTB paragraphs students should read before the next class. Same paragraph-range system as `mtb`.
 
-**Where to find it:** KK sometimes assigns reading toward the end of class. Look for phrases like "for next week, read pages..." or "try to get through the next section." If KK doesn't explicitly assign reading, you can infer it â€” the next class will likely pick up where the `mtb` range of this class left off.
+**Where to find it:** KK sometimes assigns reading toward the end of class. Look for phrases like "for next week, read pages..." or "try to get through the next section." If KK doesn't explicitly assign reading, **infer it** — the next class will pick up where the `mtb` range of this class left off. Use `mtb-reference-guide.md` to find the next section boundary and set a reasonable range (typically 1–2 sections ahead).
 
-Set to `null` if no preview is needed.
+**Always include a preview.** Every class file must have a non-null `preview` so students have something to read ahead. If the explicit assignment is unclear, default to the paragraphs immediately following `mtb.endParagraph` through the next natural section break.
 
 ---
 
@@ -362,14 +367,14 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 - [ ] `practice` has `title` and at least `agreedSteps` (explicitly agreed at end of class)
 - [ ] `practice.steps` has supplementary practice instructions from teaching (if any)
 - [ ] `practice.quote` included if KK gave a quotable line about the practice
-- [ ] All `quote` fields verified against transcript â€” every unbracketed word matches what KK actually said
+- [ ] All `quote` fields verified word-for-word against raw transcript â€” every unbracketed word matches what KK actually said
 - [ ] `commentary` array has 5-8 teaching point objects, each with `title` and `content`
 - [ ] Commentary is written in KK's voice (not third-person "KK said...")
 - [ ] Commentary captures insights, not just topic labels
 - [ ] No student personal stories or named community members in commentary
 - [ ] `mtb` paragraph range set (continuous from previous class)
 - [ ] `shantideva` chapter/verse range set, or `null`
-- [ ] `preview` paragraph range set for next week's reading, or `null`
+- [ ] `preview` paragraph range set for next week's reading (always required, never `null`)
 - [ ] `recording` Google Drive link set, or `null` as placeholder
 
 ### Continuity & Consistency
@@ -382,4 +387,4 @@ Before saving a new class file to `classes/` and adding its ID to `manifest.json
 
 ---
 
-*Last updated: February 9, 2026*
+*Last updated: September 21, 2026*
