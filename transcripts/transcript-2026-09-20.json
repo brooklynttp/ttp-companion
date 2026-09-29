@@ -1,0 +1,348 @@
+{
+  "classId": "2026-09-20",
+  "date": "September 20, 2026",
+  "teacher": "Kadam Kyle",
+  "speakerMap": {
+    "Whale": {
+      "Speaker 1": "Kadam Kyle",
+      "Speaker 2": "Prayer Chanter",
+      "Speaker 3": "Fran",
+      "Speaker 4": "Adriana",
+      "Speaker 6": "Ryan",
+      "Speaker 7": "David",
+      "Speaker 8": "Mimi",
+      "Speaker 9": "Anne",
+      "Speaker 10": "Sumit"
+    },
+    "Dolphin": {
+      "Speaker 1": "Kadam Kyle",
+      "Speaker 2": "Prayer Chanter",
+      "Speaker 3": "Fran",
+      "Speaker 4": "Pre-class chatter",
+      "Speaker 5": "Adriana",
+      "Speaker 6": "Mimi",
+      "Speaker 7": "Ryan",
+      "Speaker 8": "David",
+      "Speaker 9": "Anne",
+      "Speaker 10": "Alexis",
+      "Speaker 11": "Sumit",
+      "Speaker 12": "Byron"
+    }
+  },
+  "notes": "Whale usable for Session 1 only — Session 2 captured as all dots/silence. Dolphin is primary source for Session 2. Speaker numbering differs between the two (see speakerMap). Dolphin has pre-class chatter (lines 1-27) removed. Session 1 break chatter removed. Paired discussion segments (garbled cross-talk, ~2:40:48-2:53:47) removed. Post-class chatter removed. Attendance — In person: Fran, Adriana, David, Anne, Ryan, Sumit, Mimi, Alexis, Byron, Jose. KK references 'Lexis' and 'Adriana' as Shantideva readers.",
+  "session1": {
+    "chantedPrayers": {
+      "text": "<strong>Liberating Prayer</strong>\nO Blessed One, Shakyamuni Buddha, precious Treasury of Compassion, Bestower of Supreme Inner Peace. You who love all beings without exception are the source of happiness and goodness, and you guide us to the liberating path. Your body is a wish-fulfilling jewel, your speech is supreme, purifying nectar, and your mind is refuge for all living beings.\n\nWith folded palms I turn to you, Supreme unchanging Friend. I request from the depths of my heart, please give me the light of your wisdom to dispel the darkness of my mind and to heal my mental continuum. Please nourish me with your goodness, that I in turn may nourish all beings with an unceasing banquet of delight.\n\nThrough your compassionate intention, your blessings and virtuous deeds, and my strong wish to rely upon you, may all suffering quickly cease and all happiness and joy be fulfilled, and may holy Dharma flourish forevermore.\n\n<strong>Going for Refuge</strong>\nI and all sentient beings, until we achieve enlightenment, go for refuge to Buddha, Dharma, and Sangha.\nI and all sentient beings, until we achieve enlightenment, go for refuge to Buddha, Dharma, and Sangha.\nI and all sentient beings, until we achieve enlightenment, go for refuge to Buddha, Dharma, and Sangha.\n\n<strong>Generating Bodhichitta</strong>\nThrough the virtues I collect by giving and other perfections, may I become a Buddha for the benefit of all.\nThrough the virtues I collect by giving and other perfections, may I become a Buddha for the benefit of all.\nThrough the virtues I collect by giving and other perfections, may I become a Buddha for the benefit of all.\n\n<strong>Four Immeasurables</strong>\nMay everyone be happy,\nMay everyone be free from misery,\nMay no one ever be separated from their happiness,\nMay everyone have equanimity, free from hatred and attachment.\n\n<strong>Visualizing the Field for Accumulating Merit</strong>\nIn the space before me is the living Buddha Shakyamuni, surrounded by all the Buddhas and Bodhisattvas, like the full moon surrounded by stars.\n\n<strong>Prayer of Seven Limbs</strong>\nWith my body, speech, and mind, humbly I prostrate, and make offerings both set out and imagined. I confess my wrong deeds from all time and rejoice in the virtues of all. Please stay until samsara ceases and turn the Wheel of Dharma for us. I dedicate all virtues to great enlightenment.\n\n<strong>Offering the Mandala</strong>\nThe ground sprinkled with perfume and spread with flowers,\nThe Great Mountain, four lands, sun and moon,\nSeen as a Buddha Land and offered thus,\nMay all beings enjoy such Pure Lands.\n\nThe objects that give rise to my attachment, hatred, and confusion, my friends, enemies, and strangers, our bodies and enjoyments — please accept these and bless me to be released directly from the three poisons.\nIDAM GURU RATNA MANDALAKAM NIRYATAYAMI.\n\n<strong>Prayer of the Stages of the Path</strong>\nThe path begins with strong reliance\nOn my kind Teacher, source of all good;\nO Bless me with this understanding\nTo follow him with great devotion.\n\nThis human life with all its freedoms,\nExceedingly rare and most meaningful —\nO Bless me with this understanding\nAll day and night to seize its essence.\n\nMy body, like a water bubble,\nDecays and dies so very quickly;\nAfter death come results of karma,\nJust as the shadow of a body.\n\nWith this firm knowledge and remembrance\nBless me to be extremely cautious,\nAlways avoiding harmful actions\nAnd gathering abundant virtue.\n\nSamsara’s pleasures are deceptive,\nGive no contentment, only torment;\nSo please bless me to strive sincerely\nTo gain the bliss of perfect freedom.\n\nO Bless me so that from this pure thought\nCome great unfailing conscientiousness,\nTo keep as my essential practice\nThe Dharma’s root, the Pratimoksha.\n\nJust like myself, all my kind mothers\nAre drowning in samsara’s ocean;\nO So that I may soon release them,\nBless me to train in bodhichitta.\n\nBut I cannot become a Buddha\nBy this alone without three ethics;\nSo bless me with the strength to practise\nThe Bodhisattva’s ordination.\n\nBy pacifying my distractions\nAnd analyzing perfect meanings,\nBless me to quickly gain the union\nOf special insight and quiescence.\n\nWhen I become a pure container\nThrough the common path, bless me to enter\nThe essence practice of good fortune,\nThe supreme vehicle, the Tantra.\n\nThe two attainments both depend on\nMy sacred vows and my commitments;\nBless me to understand this clearly\nAnd keep them at the cost of my life.\n\nBy constant practice in four sessions,\nThe way explained by holy Teachers,\nO Bless me to gain both the stages\nWhich are the essence of the Tantras.\n\nMay those who guide me on the good path\nAnd my companions all have long lives;\nBless me to pacify completely\nAll obstacles, outer and inner.\n\nMay I always find perfect Teachers\nAnd take delight in holy Dharma,\nAccomplish all grounds and paths swiftly,\nAnd gain the state of Vajradhara.\n\n<strong>Receiving Blessings</strong>\nFrom the hearts of all the holy beings, streams of light and nectar flow down, granting blessings and purifying.",
+      "time": "4:18"
+    },
+    "guidedMeditation": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "16:16",
+        "text": "In this meditation, we'll be imagining and envisioning what it would be like to have attained a complete cessation of a specific delusion of our choice. This meditation will help us see where we are going on our path and how to move forward. It will give us some confidence that freedom from this delusion is possible.\n\nIt will function to bring the result into the path. We'll start to create this very freedom that we long for. To begin, we can identify the delusion we'd like to let go of, and we can remember the benefits of letting go of this delusion and the faults of maintaining it until a strong wish arises.\n\nI want to be completely free from this delusion. If we reach a strong wish to overcome this delusion, then we can imagine or envision what this would exactly look like in the state of overcoming this delusion. What are the positive and beneficial thoughts that would be present?\n\nWhat would it really look like in our mind to be in this state? What would that peace and freedom be like for us? And through contemplating in this way, we get a mental image of what this freedom from this delusion would look and feel like.\n\nWe can hold this single-pointedly without distraction. We just stay with this experience for the final minute of meditation. And in our own time, we can gradually arise from our practice."
+      }
+    ],
+    "shantidevaReading": {
+      "readBy": "Adriana",
+      "chapter": 3,
+      "startVerse": 23,
+      "endVerse": 34,
+      "time": "34:03",
+      "text": "[23–24] Just as all the previous Sugatas, the Buddhas, generated the mind of enlightenment, bodhichitta, and accomplished all the stages of the Bodhisattva’s training, so will I too, for the sake of all beings, generate the mind of enlightenment and accomplish all the stages of the Bodhisattva’s training.\n\n[25] The wise who have sincerely taken up the mind of enlightenment in this way, so as to maintain it and increase it should encourage themselves as follows.\n\n[26] Now my life has borne great fruit, my human life has attained great meaning; today I am born into the lineage of Buddha and have become a Bodhisattva.\n\n[27] All my actions from now on shall accord with this noble lineage; and upon this lineage, pure and faultless, I shall never bring disgrace.\n\n[28] Just as it is rare indeed for a blind person to find a jewel in a heap of rubbish, so too, by some very rare chance, I have generated bodhichitta.\n\n[29–30] It is the supreme nectar that overcomes the dominion of death over living beings, and an inexhaustible treasury that dispels all their poverty. It is the supreme medicine that relieves the sickness of living beings, and a shady tree that provides shelter for weary beings travelling samsara’s paths.\n\n[31–32] It is a universal bridge by which all living beings can be delivered from the lower realms, and a rising moon of a mind that relieves the torment of their delusions. It is a vast sun that completely dispels the fog of unknowing from living beings. It is the quintessential butter that arises when the milk of Dharma is churned.\n\n[33] For the honoured guests, the beings on samsara’s paths who wish to enjoy the delights of bliss, bodhichitta will satisfy them all by leading them to the supreme state of bliss.\n\n[34] Today, in the presence of all the Protectors, I invite all living beings to be my guests to enjoy these temporary and ultimate delights. May gods, demi-gods and everyone else be joyful!"
+    },
+    "dataShares": [
+      {
+        "speaker": "Fran",
+        "time": "37:41",
+        "text": "So I had an amazing week, and I say that because looking back, the way it played out amazes me. It was literally amazing. So my delusion was distraction, and I wrote it down so that I didn't go off on an hour of describing it all.\n\nMy practice was to dedicate all virtues to the destruction of my delusion of distraction. How it started at the beginning of the week was I started noticing opportunities to dedicate, sometimes things that I was doing already that I wasn't dedicating, and sometimes creating opportunities to dedicate more — like breaking things down into dedicating the intention and dedicating all these opportunities to dedicate, and also to reading about distraction so that I can understand exactly what I was trying to reduce.\n\nWhat actually happened was a domino effect of all these positive things going on. First I noticed how many times I was previously missing opportunities to dedicate. Like when I do my EPC work, I don't even think of it — every time I answer an email, I should be dedicating it. All these things are opportunities to dedicate because it's for the benefit of everybody else. So now I'm dedicating that to destroying my distraction.\n\nBut what also happened was that I started to set intentions way more than I was before, because the dedication doesn't work if you didn't set the intention first. So what's my intention for answering this email as EPC? It became a very different thing than just routinely having to answer this email.\n\nThrough the reading on distraction, I saw that there's inner distractions and outer distractions, and what I need to work on first is the outer distractions, which is really moral discipline. So I needed more merit, I needed to purify. That led into more reading on moral discipline. In all of these things, my distraction's being reduced just by virtue of doing these things.\n\nI started looking at my distracting activities — phone, TV, games on the computer. I started to want to reduce that and replace it with Dharma reading. I got a Kindle to add all my Dharma books to, and all of a sudden I was reading Dharma waiting for appointments, before bed, first thing in the morning instead of checking my email.\n\nAll these things are just automatically this domino effect of reducing distractions. It started spilling over into the rest of my life — the completion of tasks that I was putting off. The big thing was I started to think about the causes of the distractions. When I'm distracted, on some level it means that I don't really care about this. That's something I really need to look at — how much do I care? So what started off as this little activity to maybe meditate with a little more concentration just snowballed in a positive way. I'm amazed at the change that made in that short period of time."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "43:12",
+        "text": "Thanks, Fran. It's really nice. It's a supremely splendid sharing.\n\nThe point you made at the end is really the key point — when we really go for practice, it does snowball in this kind of virtuous way. It doesn't matter what that practice is particularly, but if we do really go for it, naturally it spreads out into everything else that we're doing. And then there are these systemic effects, chain reaction kind of effects that spread throughout the whole system of our mind.\n\nDistraction is a very, very good one to focus on, because it pretty much becomes a blocker for every other type of virtue, and is the highway to every delusion. Distraction is defined as a mind that wanders to an object of delusion. So every delusion is precipitated by distraction. If you oppose distraction, you are blocking the highway to every other delusion. So it makes sense that it would have this ripple effect."
+      },
+      {
+        "speaker": "David",
+        "time": "44:48",
+        "text": "So I'm also doing distraction, and I had a pretty good week. Started adding in some focused meditation, like placement meditation every day, several minutes. That's been very helpful.\n\nShout out to Ann, who's helped me with that. First half of the week definitely went better as far as reducing distractions during meditation break, remembering to dedicate. Second half of the week kind of waned a little bit. But probably overall the week was a lot better than the week before when I wasn't practicing at all, so I can rejoice in that.\n\nI did have a question. There was something that came up around this envisioning myself being free of the delusion, because I found that in some ways it was helpful to motivate me, but it also felt like at times it could become this thing that I was grasping at. Like it was part of my ordinary mind that's done this a lot throughout my life — like I'm supposed to be like this, and I want to be like this kind of person. And it's sort of like a painful reminder that I'm not that kind of person.\n\nI've been working on my distractions from one perspective since I ever started meditating. So thinking about what it would be like to be free of it also served as a reminder that I'm not there. I found that in a way it could be a little bit discouraging. I remember one time you gave a teaching about taking the person that you think you're supposed to be and just burning it and forgetting about that. So I wasn't sure how to navigate that skillfully."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "47:18",
+        "text": "Yeah. Here it's about what's the intention of doing it and what's the mindset that we're relating to when we're doing a practice like this.\n\nIf we're doing it with attachment, that's where we have to burn the image. Some expectation of who we're supposed to be today. If we're attached to that — being that inherently existent person who we are not — that's just going to be agitating. Because an inherently existent person is someone that we are inherently not. An inherently existent person is unrelated to us.\n\nSo if we're envisioning some idealized version of ourself, who we are inherently not, then that's going to feel like someone that we can never become and that we are definitely not related to. That's not going to be very peaceful. That's attachment to that image. Every object of attachment is necessarily an object that we're viewing as inherently existent. That's just having unrealistic expectations for ourself.\n\nThis practice is very different because we're thinking, this is who I'm going to become. And actually when we do it, we think, this is me. Like in Tantra, we're imputing I on that person. And so by doing that, we start to feel like that's kind of who we are and that's our potential. And then that feels very inspiring and uplifting.\n\nIn summary, if we have that feeling coming, notice — this is because I'm relating to this person as unrelated to me. I'm actually not relating to this person as related to me. I'm relating to them as inherently existent. If I'm not doing that, then this is a very encouraging and delightful practice."
+      },
+      {
+        "speaker": "Adriana",
+        "time": "49:54",
+        "text": "My main delusion is anger. This tends to happen to me when I try to work on something — in the first few days, it just gets really bad and worse. So that's good because I just stayed encouraged.\n\nSo I was doing terribly at conquering the delusion or addressing it. I was like, I've decided I'm going to annihilate anger, and then for three days in a row I've been totally angry and having really unusual arguments with my boyfriend. I usually never fight with him.\n\nThen what I realized is that there has to be a lot more time in the day where I'm not deluded, where anger is not there. So I started paying attention. Like I have this very visceral feeling of sorting the laundry and the dryer balls falling out — yeah, I'm not angry about that. Where's anger now, you big fat loser? Come and get me.\n\nSo it's like visualizing all the angry Maras being around — they're in the parking lot, they're in the walls — but they're not in me. Just creating this space, and it gave me a lot of inspiration and hope. They're not here. They're nowhere near a Dharma center, which means that I can get rid of them and they're not who I am."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "51:37",
+        "text": "Thanks, Adriana. That's a really good point. When we catch the moments that the delusion is not present, it's a proof that they're not inherently us. And that proof is an essential part — the equation that will eliminate the delusion.\n\nIt's really not until we internalize that idea that they're related, but not one with us, that we can then make progress. It's the salt in the water, the dirt in the water, the dirt in the gold nugget, the clouds in the sky — every version of that same analogy. But it's the feeling that delusion is not me.\n\nThat's an intellectual understanding at first, but there's a feeling to that — you almost feel like I can become liberated today, when you get the right feeling of that truth. It's not an intellectual thing. It's a spiritual experience to see I am not the delusion. That they are not me, 100% not me.\n\nThe experience of it is a spiritual experience, where we feel like I am going to become enlightened in this life, because the delusion is not me. We feel utterly different from them. So if we don't feel that way with that contemplation, we should encourage ourselves to work on it a little more.\n\nThe point is simple, but it's a great practice. Catch when it's not there, therefore it's not one with me. You just keep doing it over and over again, and the penny is going to drop at some point. It is not one with me. Therefore it can be completely eradicated. Therefore it's completely not who I am. Therefore I don't want to listen to it either."
+      },
+      {
+        "speaker": "Anne",
+        "time": "54:13",
+        "text": "Just a shout out to order of operations. I really like the idea that this week, just dedicate to the cessation of delusion, and imagine what it would be like to not have it. Part of it is just like, I want to do more. But I was just like, did you finish the job you were given?\n\nJust sticking with that one thing — imagining what it would be like to not have the delusion — revealed so many contradictions I had in my mind about what it meant. I would try to imagine this, and I'm like, that actually logically doesn't match up with the definition of the cessation.\n\nIt revealed logical impossibilities related to what it would be like to not have this delusion. And then I'm like, what would be possible? Oh, like this would actually be possible for me, or for anyone. And that gave me a real goal that was achievable, as opposed to before when I wasn't really sure what I was going for.\n\nIt was very clear what it would be like to be free of distractions in my meditation. That's easy. But what does that mean in everyday life? Am I supposed to be really into doing the dishes? That can't be it. So what is it? And I got really clear about that. I wish we could just stay on this for another week."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "56:14",
+        "text": "You're welcome to stay on it for infinite lifetimes, if you'd like. Thanks, Anne. It's a good point.\n\nThis is one of the intentions of the exercise — our generic image, our mental image of freedom from a delusion is often woefully inaccurate. And if you go through all 26 delusions contained in How to Understand the Mind, we'll probably find that our version 1 is cosmically wrong. Version 2, which is a refinement, is still massively off. Version 3, we're getting in the right direction, but it's still not the experience.\n\nThis is incredibly helpful, because we realize — my whole practice is about uprooting the delusions. But my image of what that looks like, I have a working image that isn't it. So is it ever going to go well until I refine my working image? Not exactly.\n\nHow many of us, when we work on attachment, try to abandon stuff, and our image of dealing with attachment is having less stuff? 100% wrong. It has nothing to do with no attachment. Or how many of us, when we think about abandoning anger, we think of that as passivity, like not responding to things? It has nothing to do with abandoning anger. Not responding is an outer action. We can, with anger, not respond. We can, with anger, respond. We can have no anger and not respond. We can have no anger and respond. So the response has nothing to do with being angry or not.\n\nI'm not saying this to discourage us. It actually encourages us, because we realize — if when we try to imagine freedom from a delusion, and we can't get a clear image, and we think, no surprise, I've been having some trouble dealing with this thing. I don't even know what I'm aiming for. Wow, this is actually a huge moment for me. I'm actually moving now, finally, in the right direction. And that's a very uplifting feeling."
+      },
+      {
+        "speaker": "Ryan",
+        "time": "59:48",
+        "text": "I have a question. This is not regarding the project, but regarding volunteering, assisting classes, and so on. I know why I'm doing it. The purpose is very clear — to make Dharma flourishing. It's important for Dharma to flourish, because that's the only medicine that will protect people in Brooklyn, in the world. It's very clear to me.\n\nBut it's still a task for me. And it's not fun. It's not necessarily joyful. It's like I have to do the laundry. It's very clear to me I have to do the laundry, otherwise I wouldn't have clean laundry tomorrow. But it's not necessarily fun. So my question is, how can I make it a fun day? How can I have more joy with this particular Dharma activity? Not just looking at it as a task."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:01:39",
+        "text": "Yeah, thanks, Ryan. A few thoughts here.\n\nThe first thing is when you're evaluating whether or not something is positive, you can't evaluate it in isolation. It's always a relative evaluation. It's an action versus the next thing that we're going to do instead. Those are what we're comparing. And that actually makes a lot of these quandaries much more clear.\n\nSo volunteering at the center — what's the range of experiences that will come from that? Yeah, there might be an aspect of being a little bit bored or not that into it. But part of the curve is like, I actually have a really meaningful experience, and I train my mind, and I really help someone. And part of it is like, I'm really working on becoming less miserly and attached to my own time and energy, and pushing against self-cherishing. That's not even including the karma that's created, the really good karma — that's guaranteed, 100%.\n\nThen we take that versus the other activity we're going to do. Scroll on our phone for an hour? What's the curve? Maybe there's a 5% chance it's a meaningful experience. And then what's happening in the rest of that? Danger. Maybe I get addicted to something that takes me seven years to break out of. Someone told me they got addicted to Candy Crush — a very experienced Buddhist practitioner. It took them three years to break it. That was just one little scroll.\n\nThe third point is actually getting to what you're really saying. When we do something virtuous, but we're not happy doing it, it's because mental factor laziness is occurring. That's a delusion — a secondary delusion. It's a mind that prevents us from delighting in virtue. So what we're trying to do is imagine, envision, what's it like to have freedom from mental factor laziness?\n\nWhat's it like to be free of the laziness of being attached to what's meaningless and non-virtuous? It's a contentment, a beautiful mind. What's it like to be free of the laziness of discouragement? It's a deeply encouraged state that's inspired and invigorated and believes that we can change and grow. Or the laziness of procrastination — what's it like to be free of that? It's basically a mind that understands the value of virtue so clearly that it would think, why would I wait to create causes of happiness for myself?\n\nSo you just take laziness, which is the mental factor that makes us not enjoy doing something virtuous. And then what would it be like to have no laziness? You can work on it, and you can report back on how that goes."
+      },
+      {
+        "speaker": "Sumit",
+        "time": "1:12:59",
+        "text": "My delusion was miserliness. That's the mental factor with attachment where we want to hold on to our object of attachment — hold it tightly and don't want to release it.\n\nI was thinking about this primarily in relationships with people. And I felt like I was a little bit in a catch-22. I want to build up admiring faith for this. I have these people who I want to be close to me. This idea of holding tightly was really evocative for me — out of love, I hold people tightly, and out of attachment, I hold people tightly.\n\nSo I was imagining dropping the attachment energy. And I feel like I used to have two forces holding them tightly, and now I have one force. So people won't be as close to me. And I'm like, that's not great. These are people who I, with my deluded mind, see as necessary for my happiness. So if I wasn't attached to them, I could be like, okay, that'd be cool if they were a little bit further from me. But the whole point is that I'm attached to them. So the idea of them being further apart from me at all doesn't seem great. That's kind of where I'm stuck."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:14:53",
+        "text": "Thanks, Sumit. So you're keying in on this phrase, hold tightly, with respect to miserliness. And the kind of objection comes up of like, I don't want to stop holding people closely and tightly. You're clearly mining this thing and really thinking about it, and that's the point of the exercise.\n\nOvercoming miserliness is not overcoming closeness at all. Cherishing love and affectionate love, they're basically defined as minds that feel very close to other people. Affectionate love is a mind that feels warm and close to other people. I don't want to abandon my feeling of closeness towards people at all. I do want to abandon that kind of tightness and neediness that comes from attachment, which is very agitating.\n\nIf we check, attachment actually prevents a feeling of closeness. That feeling of closeness is coming out of our love and respect for people. It's not coming out of the tightness of attachment. Attachment keeps people at a distance, ultimately, because it makes people feel completely separate from us — as an object to possess. We're relating to them as inherently separate whenever we're attached to someone. So even though we might feel I'm holding them really close, we're actually holding them at a distance.\n\nThe second thing here about closeness and tightness is that sometimes with these meditations on dealing with attachment, we need to imagine what our respective deaths are going to be like. A really good relationship that is healthy and positive — that kind of tightness can seem like what's the problem there. We have to make part of the equation one of us dying.\n\nWhen that person dies, if we're very attached, we feel like there's this absence in the world. Nothing really feels enjoyable anymore because they're gone. It feels like there's something missing. It's a very odd experience because no one else notices that absence. But we feel it. Everyone else doesn't notice it. But it feels so real and so substantial.\n\nWe're not saying no closeness. We are saying yes, definite closeness. Real closeness comes from love, and affectionate love especially. Attachment ultimately doesn't create full closeness — it creates separation. So if we really want to be close to people, we want to have it with pure love. And then attacking the attachment side, it's just really making sure we're thinking about what our death is going to be like."
+      },
+      {
+        "speaker": "Mimi",
+        "time": "1:21:39",
+        "text": "So I wrote mine down like Fran. My desire is attachment — wishing for a companion. This past week I watched my mind for desirous attachment, specifically my wish for a companion.\n\nSo whenever I noticed my mind starting to create a story around someone, I tried to recognize it and remember that happiness was coming from my own mind. And I also dedicated virtuous actions throughout the day towards eventually experiencing a cessation of this attachment. My weekly tally was 27 times."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:22:28",
+        "text": "It's a cubed number. It's very exciting. Three cubed."
+      },
+      {
+        "speaker": "Mimi",
+        "time": "1:22:32",
+        "text": "What I noticed is that I have quite a vivid imagination. Anytime I give my mind a little possibility, it can write an entire story. I noticed how easily I can take something that might happen and begin relating to it as if it was real.\n\nBut I also noticed something that really surprised me — that I'm already happy. My life is very full and it's not empty. As the week went on, I started dropping this fantasy and I didn't feel like I was missing anything. I was actually feeling more peaceful.\n\nHow I practiced was whenever I caught my attachment arising, I tried not to make a big deal out of it. I just noticed it and I laughed at it. Because I loved what Kadam said — this is my projection, this is my mind, this is me. Ha ha. And I also noticed attachment is really like a dumb mind. It's such a dumb mind.\n\nI was feeling that my happiness is coming from my mind and not from another person. I also started dedicating ordinary virtuous actions like my prayers, my meditation, anytime I was practicing patience or being kind or teaching the children, making breakfast. And I just kept thinking, one day I'm going to be free. Free from attachment."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:24:11",
+        "text": "That's fantastic, Mimi. Thank you also just for putting in the effort. Because I think you said at the beginning it was daunting and not clear and you didn't really want to do it. But then through putting in the effort, there was some real positive movement. Even just a week, which is so cool.\n\nGood. Thank you, everyone. Lots of juicy data everywhere. I know we did spend a lot of time on this, but I think it was useful. Because this is our life — overcoming delusions. So it doesn't seem like we could talk too much about it. Everyone had something really useful to share and to think about and to ponder on."
+      }
+    ],
+    "teaching": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:25:10",
+        "note": "MTB reading and teaching — page 133, paragraphs 498-499",
+        "text": "Okay, so now we're on page 133. I think we had two more paragraphs to go at the end there.\n\nAt present we are not able to give boundless help to all living beings, but by dedicating our virtues to the benefit of others, as suggested above, we'll plant the seeds to accomplish this altruistic goal in the future. If we dedicate our merit, praying to be a spiritual guide for those who lack such a guide, or praying to become a benefactor for the poor, in the future these wishes will definitely be fulfilled.\n\nAt this time we've been born human and therefore have the precious opportunity to think, consider, and train our mind. If we do nothing but engage in the usual self-cherishing thoughts, then we're not much different from animals. Even birds and insects go from here to there trying to search for happiness and relieve their suffering. If we're to make our humanity useful, we should try to elevate our view beyond such selfish concerns. Shantideva's teachings on mind training are a powerful method to gain such an elevated view."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:26:00",
+        "note": "Teaching on 'animal mind' label for delusions",
+        "text": "There is a helpful label here, which is animal mind. It's kind of to Mimi's point about Tantra being kind of stupid mind, dumb mind. All delusions are, because they all are pervaded by the delusion of ignorance, a mind that doesn't know.\n\nSo it's very useful to use this label on the delusions — animal mind. And the human minds are like the virtues and the spiritual values that we're cultivating. Real human life is a spiritual life. That's what it is. A human life is a spiritual life. That's a real human life. Otherwise we're living an animal life, in a human body.\n\nIt's like the Milarepa quote — you, to Gampo Dorje, the hunter, you have a human body, but an animal mind. You, human with animal mind, please listen to my song.\n\nSo this label is just useful. Animal mind. A lot of our attachment and need for security and validation, these are all just like tribal little animal minds. They're not elevated human minds, spiritual minds. And once we label them in that way, we realize they're not clever, erudite, scholarly thoughts. They're just these little base pack minds. We're just in a little wolf pack, wanting to be the little alpha wolf and be liked by all the other little wolves.\n\nIt just helps us not buy into these delusions so much. Delusions, you guys are a little bit dumb. I'm a human. I have a human potential. I have a spiritual life. Those are the minds I'm going to take care of."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:28:30",
+        "note": "MTB reading — Fully Accepting Bodhichitta, paragraphs 500-501",
+        "text": "Okay, Fully Accepting Bodhichitta. Very fab.\n\nIn the first chapter, the method of developing bodhichitta by means of the sevenfold cause and effect instruction was explained and also the eight precepts of the aspiring mind. When we have prepared and developed our minds sufficiently to be able to practice the six perfections leading to enlightenment, we're ready to take the actual bodhisattva vows.\n\nThe purpose of taking these vows is to accomplish the aim of a bodhisattva. What is this aim? To attain enlightenment for the benefit of all mother sentient beings. It is not sufficient just to wish to attain Buddhahood for the benefit of others. We must take the proper vows and engage in all the necessary practices."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:29:30",
+        "note": "Teaching — connecting delusion practice to benefiting others",
+        "text": "So we can think, with respect to our delusion that we're working on, how much of our wish to work on it was for the benefit of all beings. Was that part of the equation, like why we chose it? And when we imagined freedom from it, were we imagining the capability to help others? And what we would be able to do for others at that point?\n\nThat's part of the reason. That's why we're doing our spiritual practice — it is the benefit we can give other people. When we're imagining these positive changes, part of the thing that we're trying to envision is the benefit for others that they will receive. And the reason why we're trying to work on the delusion is to become more beneficial to others.\n\nWe always want to make sure that that's part of the reason. It's not just for some self-improvement, self-optimization, ultra-optimizing the self at KMC Brooklyn. The self you normally see is going to be super enlightened. That's not it. I want to benefit people. I'm just doing this to be more beneficial."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:32:00",
+        "note": "Teaching — why vows are necessary",
+        "text": "We can also ask ourselves, why is taking vows necessary to attain Buddhahood? Not suggested, or even quite a good idea — why are taking vows a necessary component? There's no Buddhahood outside of taking vows. None. Zero.\n\nMaybe it would be good for us to think about that over the break for 30 minutes. And also about the ceremony for taking the vows and why that's important. Why is the ceremony for taking the vows an important process? You have to take your initial bodhisattva vows in a ceremony.\n\nIt would be fun to hear if there's any person here who really thought about taking the bodhisattva vows and weighed whether you wanted to take them or not. Like if you were getting married or something — you would weigh it. But with the bodhisattva vows, do we weigh it? Do I really think I can commit to becoming a Buddha for the benefit of all? Do I really think I can promise that?\n\nIt's a huge commitment. It's a multi-life vow. I'm not just committed to a small aim. I'm aiming for something as big as you could possibly imagine — liberating every living being, including all those in the hells and the ghost realms and the gods and the formless realm beings. Each and every last living being, I'm promising that."
+      },
+      {
+        "speaker": "Ryan",
+        "time": "1:37:07",
+        "text": "I remember one of the empowerments last year — one of the people asked me after, what were you thinking about the empowerment? And I told them, the teacher said that in order to get the empowerment, you have to get the bodhisattva vow. And he explained the bodhisattva vow and I was like, I'm not sure if I'm ready for that. I wrote down notes about why I wasn't sure. It wasn't just some vow — there is some solid stuff in that vow."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:38:38",
+        "text": "You have to open your heart. Thank you. At first we do just take the vow at the level of an intention. So it's not like we're going to have to be perfect today. We take basically an intention to try.\n\nThe bodhisattva vows are like clay, so they can be molded and broken apart and put back together. They are very malleable, unlike the Pratimoksha vows, which are like glass — you break them and they're broken. Bodhisattva vows are like clay, so it's just like, a little funny there, let me throw that back in the kiln.\n\nFrom one point of view, we do kind of focus on just an intention, but it is a big commitment. It's the biggest commitment we've ever made. And so when we take it, we want to take it in a serious way.\n\nSo let's ponder, why are vows necessary to attain enlightenment in the break?"
+      }
+    ],
+    "dedication": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:41:30",
+        "text": "So we can think through the virtues we've collected, through practicing, meditating, discussing. May all living beings find lasting peace of mind and enlightenment. We can make any personal prayers or dedications. Okay, thank you. Thanks, everyone."
+      }
+    ],
+    "announcements": null
+  },
+  "session2": {
+    "chantedPrayers": {
+      "text": "<strong>Liberating Prayer</strong>\nO Blessed One, Shakyamuni Buddha, precious Treasury of Compassion, Bestower of Supreme Inner Peace. You who love all beings without exception are the source of happiness and goodness, and you guide us to the liberating path. Your body is a wish-fulfilling jewel, your speech is supreme, purifying nectar, and your mind is refuge for all living beings.\n\nWith folded palms I turn to you, Supreme unchanging Friend. I request from the depths of my heart, please give me the light of your wisdom to dispel the darkness of my mind and to heal my mental continuum. Please nourish me with your goodness, that I in turn may nourish all beings with an unceasing banquet of delight.\n\nThrough your compassionate intention, your blessings and virtuous deeds, and my strong wish to rely upon you, may all suffering quickly cease and all happiness and joy be fulfilled, and may holy Dharma flourish forevermore.",
+      "time": "1:43:48",
+      "source": "dolphin"
+    },
+    "teaching": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:47:28",
+        "source": "dolphin",
+        "text": "Okay, welcome back everyone. So does anyone have an answer to the question? Why do we need vows to attain enlightenment?"
+      },
+      {
+        "speaker": "Anne",
+        "time": "1:47:45",
+        "source": "dolphin",
+        "text": "My thinking was, if you make a vow, you're committing to doing it no matter what. In a sense you're saying, this is going to take precedence over everything. There's no way you can become a Buddha if it's like a side hustle. It has to be the primary thing in your life. Everything else has to take secondary consideration. That's what a vow does — it makes everything else sacrificed to that thing."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:48:22",
+        "source": "dolphin",
+        "text": "Yeah, that makes sense. It gives us a complete focus on a certain aim and an objective."
+      },
+      {
+        "speaker": "Adriana",
+        "time": "1:48:38",
+        "source": "dolphin",
+        "text": "I remember Kadam Matthew saying that we would never get enlightenment if we were just walking into a field one night and it's a beautiful night, and we look at the stars — it wouldn't happen like that. He was saying it's not just like going to yoga class or something where it's a hobby you're dropping in and it helps you. It's not something that's supplementing or boosting your life.\n\nWithout a vow structure, I think it would be very deceptive. I could feel very easily deceived that this was just a fun hobby versus what Anne said, which is that it's actually the whole purpose of your existence. Otherwise, it would too easily get confused and conflated with worldly pleasures or some samsaric business."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:49:48",
+        "source": "dolphin",
+        "text": "Yeah, it makes sense."
+      },
+      {
+        "speaker": "Byron",
+        "time": "1:49:53",
+        "source": "dolphin",
+        "text": "I was thinking in terms of it being a further protection of my mind — that if I've decided that I'm doing this, not only will my anxiety decrease and I'll be able to go deeper with my meditation, but it's like a shield on our mind. We place this shield over this and we are ensuring it takes away any doubts. We no longer have conflicting desires, and that gives me great anxiety. Like, what am I doing right now? What's the other thing I wanted to do right now? Those tussling desires give so much anxiety that would be taken away. It would be very clear."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:51:06",
+        "source": "dolphin",
+        "text": "Yeah, those are two points there. One about the protecting of the karma. There's a special karma created through taking the vow. Basically, we're constantly practicing moral discipline and the perfection of moral discipline if it's the bodhisattva vow. So we're constantly creating a cause to attain enlightenment as long as we have the vows on our continuum, which is a huge amount of merit and karma. You're not creating that otherwise.\n\nAnd then you also mentioned that sort of clarity of mind or the lack of conflict in the mind that comes. It's agitating to have that lack of clarity and conflict. But also, it's just so easy to then fall back into the delusion mess if we haven't committed to go in the other direction. If it's up for grabs, it's very easy to make a compromise. And the thing with the delusions is that once you compromise a little, you should compromise a lot and then — yep, we know how that goes."
+      },
+      {
+        "speaker": "David",
+        "time": "1:52:17",
+        "source": "dolphin",
+        "text": "This is pretty similar to what Byron said, but it seems like without the vow, there will come a time when you would drop the bodhichitta. There's going to come a time when the vow is the only thing between you and losing it. It reminds me of the different levels of knowledge — diluted doubt, non-diluted doubt, correct belief — and how correct belief isn't really enough because eventually you might lose it. Until we get to direct perception, we're in this wishy-washy territory, and the vow is kind of filling in that gap between where our wisdom is right now and where it needs to be before it would be incontrovertible."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:53:08",
+        "source": "dolphin",
+        "text": "Exactly. The vow is what kind of bootstraps the experience. There's like, I want to develop these nice dharma minds, and then I have developed them incontrovertibly. What makes us go from A to B? The vow is actually what does that — the promise.\n\nBecause in between, we don't have the sort of moral fiber and strength to just be at B, or else we'd be there today. There's a conflict in the mind. We don't totally want to do that. We have other delusions going in the other direction. So how do you actually bridge that gap? That's what a vow does — it bootstraps it.\n\nYou're just sort of like at some point somewhere in between, and you're like, I don't want to go the other direction. I'm going to promise that I'm not going to go that other direction and I'm going to go for it. Even if I'm not there yet experientially and I haven't gotten the realizations yet, I'm going to take that vow to protect me from going in that other direction.\n\nIt's like a climber climbing up a huge rock wall, like El Capitan. They put in a piton. This piton catches them if they fall and they don't fall the whole way down — they only fall a certain amount. But without the piton in, without the vow in, when they fall, they fall all the way down. So it's actually that protection that makes the climb possible in the first place."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "1:56:00",
+        "source": "dolphin",
+        "note": "MTB reading and teaching — paragraphs 501-508, ceremony for bodhisattva vows",
+        "text": "So if we understand the commitments involved in taking the bodhisattva vows and feel that we're able to keep them, the time has come to engage in the actual bodhisattva's way of life. This is what it means to accept fully the bodhichitta mind.\n\nThe ceremony for taking the actual bodhisattva vows can be outlined as follows. If these vows are to be received from our spiritual guide, we should first set up extensive and beautiful offerings and prepare the place where the vows will be given. When the spiritual guide arrives, we should make an offering of the prayer of seven limbs, outlining the seven preliminary practices given above, and then offer a mandala, presenting all the rare and precious things in the universe for our development of bodhichitta. After all these preparations have been made, we should request the spiritual guide to grant us the bodhisattva vows.\n\nWe should always make offerings before we request a teaching like this or get a teaching. This is the proper approach, especially if we're getting something very special like the bodhisattva vows.\n\nThen recite the following verses from Shantideva's guide: Just as the previous Sugatas, the Buddhas, generated the mind of enlightenment, bodhichitta, and accomplished all the stages of the bodhisattva's training, so will I too, for the sake of all beings, generate the mind of enlightenment and accomplish all the stages of the bodhisattva's training.\n\nThese are exquisite verses. These are Shantideva's exact words, and they're the ones that we use generally when we do the bodhisattva vows. There's an even more simplified version from the Tantras that we use, but this is the other one. So it's directly taken from Shantideva's guide.\n\nWhat would it look like to really take these vows and say these words where it really felt like I was making a promise, capital P? Where there's a weight to it, where there is a before and an after. There's the before — I didn't have that vow. There's an after — I'm a new person. I have these bodhisattva vows on my mind. Like when people swear an oath or take marriage vows. They feel like I'm a different person now. I'm in a different stage of life. There's a shift.\n\nSo when we say these words, we want to find a place where I feel like I'm a new person now, have this important promise on my mental continuum. I've promised. Just like if someone calls you and asks you to take them to the airport and you promise — what do you mean you're sleeping? You promised. So what's it like to have that? I promised to become a Buddha for the benefit of each and every living being. Is our promise to attain enlightenment really changing our behavior?"
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:05:00",
+        "source": "dolphin",
+        "note": "MTB reading — paragraph 506-508, meaning of the vow verses and qualifications",
+        "text": "What do these verses mean? All the previous Buddhas achieved their exalted state by following the practices of a bodhisattva, motivated by their desire to help all sentient beings. They gave birth to the precious bodhichitta, received the bodhisattva vows, and followed a progressive path of practice that included the six perfections and other beneficial deeds.\n\nBecause we too wish to become fully enlightened for the sake of others, we vow to follow these stages of practice in exactly the same way. These promises are made to our spiritual guide or to the visualized assembly of Buddhas and bodhisattvas.\n\nThe spiritual guide from whom we receive these vows must be fully qualified. He or she should have received the bodhisattva vows and be skilled in explaining each one of them individually — the 18 and 46 ones — and must be able to bestow the vows upon others and give a skillful explanation of all the practices involved in the six perfections.\n\nFrom our side, if we had previously developed the aspiring bodhichitta, upon receiving the bodhisattva vows, we would develop engaging bodhichitta. It then becomes necessary to refrain specifically from the 18 root and 46 secondary downfalls. In practice, however, there's no limit to the moral and ethical precepts the bodhisattva joyfully adopts and his or her selfless dedication to the welfare of others.\n\nOnce these 64 vows have been made in the presence of our teacher, we can frequently retake them on our own in the presence of visualized Buddhas and bodhisattvas. If we break any of our vows, it is possible to take them again in a similar ceremony. By engaging in these ceremonies and dedicating our mind to the practices of a bodhisattva, we'll be fully accepting the precious mind of bodhichitta."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:10:00",
+        "source": "dolphin",
+        "note": "Teaching — the 18 root and 46 secondary bodhisattva downfalls",
+        "text": "If we are rusty on the 18 and 46 bodhisattva vows, there's a book called The Bodhisattva Vow, conveniently named, and they're in here. We can learn them over time.\n\nThe first 46 map to the six perfections, and then there's moral discipline of benefiting others. The bodhisattva vow really is just the commitment to practice the six perfections, but then they're broken down into these different vows. The secondary vows contain an aspect of each of the six perfections. The vow is to not make the downfall happen.\n\nThen there's the 18 root downfalls. First one — praising ourself and scorning others. These are more serious than the secondary downfalls. Generally speaking, if you break the secondary ones, you just damage the vows. If you break one of the root downfalls, then you break them completely. You have to retake it and bring them back to life again.\n\nOne fun thing to do is to read over the vows and look at what doesn't make sense to us. The difference between what doesn't make sense to us is basically a difference between us and a bodhisattva. They're the ones where it's like they don't make sense or we don't understand why it's so important or we have a resistance to keeping it. That's the gap between me and the bodhisattva's way of life.\n\nWhat's also useful about learning these is that it can make our practice of the six perfections more dynamic. If we just say, practice giving today — what does that really look like? It's such a big topic. It's hard to practice that specifically. But once you know the vows related to giving, then we can have a more specific way to practice each day. So they make our practice of the six perfections more robust over time."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:18:00",
+        "source": "dolphin",
+        "note": "Teaching — vows as decision-making scaffolding",
+        "text": "As we go about our life, there's constant decisions we have to make. Option A, option B, option C. And life is fast. Someone's yelling at you. Okay, what do you do? You're a hundred feet from the train — if you run full speed and maybe nudge someone, you can make it. Do you run?\n\nLife is full of these split-second decisions that we have to make. When we get into those forks in life, how do we decide what to do? Where do we allocate our mental energy? If we try to figure that out in the moment, often there's not actually enough mental space. And if we're starting out from zero and trying to build up the case of what to do, by the time we've gotten somewhere, it's too late and we've got to act.\n\nWhat's fantastic about having the vows, which are all nested within each other — the refuge vows are the outermost nesting, then within that is the bodhisattva vows, and within that is the tantric vows — when we have these, our mind routes through the vows when we're making decisions. So we're never starting from scratch. The vows are like our jumping-off point for any decision.\n\nWe're already starting off from a very elevated wise place. If we don't have a clear answer, we just think — blindly follow the vow. If somebody yells at us, there's do not retaliate, which is one of the vows. We have a really enlightened starting-off point for our life. We're basically jumping off from these 64 different precepts.\n\nWith the maybe three or four minutes of mental energy we have, we're already starting off from the bodhisattva's perspective on the matter. We get to spend that energy figuring out the best way to massage it and make it happen, instead of spending it from ground zero.\n\nSo it's a scaffolding, a foundation, a structure to make decisions and navigate life with. It allows us to make quick decisions in a very wise way without making big mistakes. And we're going to save a lot of mental energy for other stuff — more creative things, more interesting things, more beneficial things.\n\nTo do that, it takes a little bit of memorizing of them and learning them. Over time we just start to figure them out. You can use my acronym for the first seven — OIDRIG. Eventually they just become the structure of our mind. It's like our mind is made of the 64 vows. That's how we process things and process our life from that place."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:26:00",
+        "source": "dolphin",
+        "note": "TTP commitments discussion — Tsog Puja",
+        "text": "Tsog Puja commitment is for everyone on TTP because everyone has a Highest Yoga Tantra empowerment. When you take a Highest Yoga Tantra empowerment, you're committing to do a Tsog Puja on the 10th and 25th of every month. We're not making it as hard as that. We're saying, do one a month.\n\nSo it's trying to help us in case we have forgotten about that commitment and that promise that we made. Our Highest Yoga Tantra practice is what's going to make us into a Buddha. We need to keep the vows of our Highest Yoga Tantra practice to make it work.\n\nIf you need to do it on your own because there's no class or Puja that you can get to, you can do it on your own. You can learn how to do a Tsog Puja at your house and you can even do it completely mentally if you need to. That's fully qualified."
+      },
+      {
+        "speaker": "Fran",
+        "time": "2:33:56",
+        "source": "dolphin",
+        "text": "Just a quick technical question. It says if we break any of our vows it is possible to take them again in a similar ceremony. The similar ceremony — is that referring to on our own in the presence of a visualized Buddha and bodhisattvas, or given again by our teacher?"
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:34:13",
+        "source": "dolphin",
+        "text": "Generally speaking, we like to take the first time in a ceremony with our teacher who's passing on a correct lineage and they explain what to do and how to do it. From then on, we can retake it with a visualized assembly of the Buddhas — even just doing the simple four-line prayer version: take refuge to the three jewels, confess individual negative actions, rejoice in the virtues of all beings, and promise to accomplish a Buddha's enlightenment. We can just do that three times and then you retake your vows.\n\nIf we've really made a mess of it, I might want to do a slightly better job. Even if I do it through reciting those words with a visualized assembly, I'm not just going to rattle off the words. I kind of want to take it seriously because just rattling off the words — are we really taking the vow? Not really. We probably haven't thought about the harm that's been done by breaking it. So it's not totally sincere. It's like doing purification without the power of regret.\n\nSo the point is we can take it totally again in the presence of the Buddhas and bodhisattvas. But if it's with the intention of clearing out the damage, we want to take it seriously. We want to do it right."
+      }
+    ],
+    "pairedDiscussion": {
+      "status": "removed",
+      "time": "2:36:27",
+      "note": "Paired discussion removed. Dolphin transcript captured garbled cross-talk from small group discussions (~2:40:48-2:53:47)."
+    },
+    "practiceDiscussion": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:54:23",
+        "source": "dolphin",
+        "text": "How do we want to practice this week?"
+      },
+      {
+        "speaker": "Alexis",
+        "time": "2:54:44",
+        "source": "dolphin",
+        "text": "What I would like to do with the bodhisattva vow — I'm so excited. I hope we do this. I think I've taken it like three times. No idea. So for this week, I want to look at it and start knowing what the bodhisattva vow is. And I really liked what you said about how it'll make decisions easier because you have that framework to work with. So I really want to get familiar with it and just see how I'm thinking about things — when I spaz out or when I'm worrying or anything like that. I'm very curious."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:55:54",
+        "source": "dolphin",
+        "text": "Thank you. So you're just going to try to figure out what the bodhisattva vow is."
+      },
+      {
+        "speaker": "Adriana",
+        "time": "2:56:26",
+        "source": "dolphin",
+        "text": "We were talking about wanting to conquer our delusions and how much we were enjoying that. And then we were talking about Lamrim, and then there was a moment of feeling overwhelmed. So then I suggested perhaps this week just adding this idea of 'I promise to do this.' Just as a nice little phrase to supercharge whatever we're doing. We're already doing so much. So just add a little bit of some kind of delight — maybe it's thinking that it's very serious, or maybe thinking it's really joyful, but that it's a promise, it's a vow that we made for this life and all lives to come."
+      },
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:57:14",
+        "source": "dolphin",
+        "text": "Yeah, I think that's a good idea. What we're looking at now is it's not separate from our practice of overcoming or conquering our delusions. Basically the way to do it is to become a bodhisattva and follow the bodhisattva's way of life.\n\nSo I think your point is just connecting those two — and just think, this is like my promise to become enlightened. Let me just remember I made that promise and let that motivate us dealing with the delusion itself.\n\nOkay, I'm happy enough. I think that's good. That's it for me."
+      }
+    ],
+    "conclusion": [
+      {
+        "speaker": "Kadam Kyle",
+        "time": "2:58:00",
+        "source": "dolphin",
+        "text": "We'll just do a little dedication now, and then Fran will briefly go through the goods. So you can think through the virtues you've collected — practicing, meditating, discussing. May all living beings find lasting peace of mind and enlightenment. Okay, thank you. Thanks everyone, see you later."
+      },
+      {
+        "speaker": "Fran",
+        "time": "2:59:01",
+        "source": "dolphin",
+        "note": "TTP housekeeping announcements",
+        "text": "Everybody, just hold on one minute. There's just a couple of things. The commitment forms need to be signed and returned. For people online, I'll put a link in the WhatsApp chat for you to print it out and sign it and scan it and send it back. I will also accept an email that affirms the statement at the bottom — send to EPC at BrooklynMeditation.org.\n\nThe only other thing is that if you're not able to attend class, please let Sumit know by email. Let's try to keep the chat to Dharma discussions. Everything else is pretty much self-explanatory. The Tsog Puja is on the 10th and the 25th. It can be done at home, at any center. It doesn't have to be through this center."
+      }
+    ]
+  }
+}
