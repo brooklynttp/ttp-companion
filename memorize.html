@@ -1,0 +1,755 @@
+<title>Practice Memorization</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f4f1ea;
+  --surface: #e9e4da;
+  --fg: #2c2a26;
+  --fg-dim: #807a70;
+  --accent: #b08930;
+  --accent-hover: #967528;
+  --accent-soft: rgba(176, 137, 48, 0.10);
+  --green: #3e7a50;
+  --green-soft: rgba(62, 122, 80, 0.10);
+  --red: #b84a3c;
+  --red-soft: rgba(184, 74, 60, 0.10);
+  --blank-bg: rgba(176, 137, 48, 0.13);
+  --mantra: 'Spectral', 'Georgia', serif;
+  --ui: 'Figtree', 'Segoe UI', system-ui, sans-serif;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151525;
+    --surface: #1e1e34;
+    --fg: #e4e0d6;
+    --fg-dim: #8a849a;
+    --accent: #d4aa44;
+    --accent-hover: #c09530;
+    --accent-soft: rgba(212, 170, 68, 0.12);
+    --green: #5cb87a;
+    --green-soft: rgba(92, 184, 122, 0.12);
+    --red: #e06050;
+    --red-soft: rgba(224, 96, 80, 0.12);
+    --blank-bg: rgba(212, 170, 68, 0.15);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151525;
+  --surface: #1e1e34;
+  --fg: #e4e0d6;
+  --fg-dim: #8a849a;
+  --accent: #d4aa44;
+  --accent-hover: #c09530;
+  --accent-soft: rgba(212, 170, 68, 0.12);
+  --green: #5cb87a;
+  --green-soft: rgba(92, 184, 122, 0.12);
+  --red: #e06050;
+  --red-soft: rgba(224, 96, 80, 0.12);
+  --blank-bg: rgba(212, 170, 68, 0.15);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--ui);
+  padding-inline: 16px;
+  padding-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap {
+  width: 100%;
+  max-width: 600px;
+  padding-block: 28px 48px;
+}
+
+/* --- Menu --- */
+#menu { text-align: center; }
+#menu h1 {
+  font-family: var(--mantra);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+#menu .subtitle {
+  font-size: 0.8rem;
+  color: var(--fg-dim);
+  margin-bottom: 32px;
+}
+.prayer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.prayer-btn {
+  display: block;
+  width: 100%;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--accent-soft);
+  border-radius: var(--r);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: var(--ui);
+}
+.prayer-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.prayer-btn .prayer-name {
+  font-family: var(--mantra);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.prayer-btn .prayer-info {
+  font-size: 0.78rem;
+  color: var(--fg-dim);
+}
+
+/* --- Practice Screen --- */
+#practice { display: none; }
+#practice h1 {
+  font-family: var(--mantra);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--accent);
+  margin: 0 0 4px;
+  letter-spacing: 0.03em;
+}
+.back-row { margin-bottom: 16px; }
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--fg-dim);
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--accent); }
+
+/* --- Fill Lines --- */
+.blanks-area {
+  font-family: var(--mantra);
+  font-size: 1rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+.blanks-stanza {
+  display: block;
+  margin-bottom: 14px;
+}
+.blanks-stanza .line { display: block; }
+.blanks-stanza-num {
+  font-family: var(--ui);
+  font-size: 0.68rem;
+  color: var(--fg-dim);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 1px;
+}
+.line-blank {
+  display: block;
+  background: var(--blank-bg);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  min-height: 1.85em;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  user-select: none;
+  margin-bottom: 2px;
+}
+.line-blank:hover { border-color: var(--accent); }
+.line-blank .line-text { display: none; }
+.line-blank .line-placeholder { color: var(--fg-dim); opacity: 0.35; font-family: var(--ui); font-size: 0.8rem; }
+.line-blank.show {
+  background: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+.line-blank.show .line-text { display: inline; }
+.line-blank.show .line-placeholder { display: none; }
+.line-blank.show:hover {
+  background: var(--red-soft);
+  border-color: var(--red);
+}
+
+/* --- Tree View --- */
+.tree-area {
+  font-family: var(--mantra);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.tree-node { margin-bottom: 2px; }
+.tree-children {
+  display: none;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent-soft);
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+.tree-node.open > .tree-children { display: block; }
+.tree-label {
+  display: block;
+  background: var(--blank-bg);
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  min-height: 1.85em;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  user-select: none;
+  margin-bottom: 3px;
+}
+.tree-label:hover { border-color: var(--accent); }
+.tree-label .tree-text { display: none; }
+.tree-label .tree-placeholder { color: var(--fg-dim); opacity: 0.35; font-family: var(--ui); font-size: 0.8rem; }
+.tree-label.show {
+  background: none;
+  border-color: transparent;
+}
+.tree-label.show .tree-text { display: inline; }
+.tree-label.show .tree-placeholder { display: none; }
+.tree-label.show:hover {
+  background: var(--red-soft);
+  border-color: var(--red);
+}
+.tree-num {
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  color: var(--fg-dim);
+  opacity: 0.6;
+  margin-right: 6px;
+}
+.tree-parts {
+  color: var(--fg-dim);
+  font-style: italic;
+  font-family: var(--ui);
+  font-size: 0.85em;
+}
+
+/* --- Shared UI --- */
+.blanks-score {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--fg-dim);
+}
+.btn-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: var(--ui);
+  font-weight: 500;
+  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: var(--r);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  background: var(--accent);
+  color: #fff;
+}
+.btn:hover { background: var(--accent-hover); }
+.btn-sm { padding: 6px 14px; font-size: 0.78rem; }
+.btn-outline {
+  background: none;
+  border: 1px solid var(--accent-soft);
+  color: var(--fg-dim);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--fg);
+  background: var(--accent-soft);
+}
+</style>
+
+<div class="wrap">
+  <!-- Menu -->
+  <div id="menu">
+    <h1>Practice Memorization</h1>
+    <div class="subtitle">Tap to reveal, tap to hide</div>
+    <div class="prayer-list" id="item-list"></div>
+  </div>
+
+  <!-- Practice view -->
+  <div id="practice">
+    <div class="back-row">
+      <button class="back-btn" id="back-btn">&larr; Back</button>
+    </div>
+    <h1 id="practice-title"></h1>
+
+    <!-- Fill Lines mode -->
+    <div id="lines-view" style="display:none; margin-top:16px">
+      <div class="blanks-area" id="lines-area"></div>
+      <div class="blanks-score" id="lines-score"></div>
+      <div class="btn-row" style="margin-top:14px">
+        <button class="btn btn-sm btn-outline" id="lines-reveal">Reveal All</button>
+        <button class="btn btn-sm btn-outline" id="lines-hide">Hide All</button>
+      </div>
+    </div>
+
+    <!-- Tree mode -->
+    <div id="tree-view" style="display:none; margin-top:16px">
+      <div class="tree-area" id="tree-area"></div>
+      <div class="blanks-score" id="tree-score"></div>
+      <div class="btn-row" style="margin-top:14px">
+        <button class="btn btn-sm btn-outline" id="tree-reveal">Reveal All</button>
+        <button class="btn btn-sm btn-outline" id="tree-collapse">Collapse All</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- Tree Data ---- */
+var MTB_TREE = {"t":"The commentary to Guide to the Bodhisattva’s Way of Life","c":[{"t":"The pre-eminent qualities of the author"},{"t":"An introduction to the text"},{"t":"The explanation of the actual text","c":[{"t":"The meaning of the title"},{"t":"The homage of the translators"},{"t":"The explanation of the meaning of the text","c":[{"t":"The preliminary explanation","c":[{"t":"The expression of worship"},{"t":"The promise of composition"},{"t":"The reason for composition"}]},{"t":"The actual explanation of the stages of the path to enlightenment","c":[{"t":"The exhortation to grasp the significance of this precious human life"},{"t":"The method for making this precious human life meaningful","c":[{"t":"Contemplating the benefits of bodhichitta","c":[{"t":"An explanation of the benefits of bodhichitta","c":[{"t":"The conquest of all great evils"},{"t":"The attainment of the most sublime happiness"},{"t":"Wish-fulfilment"},{"t":"Bodhichitta carries with it a special name and meaning"},{"t":"Transformation of the inferior into the supreme"},{"t":"The value of the precious bodhichitta, so difficult to find"},{"t":"The inexhaustible and increasing fruits of bodhichitta"},{"t":"The power of protection from great fear"},{"t":"The swift and easy destruction of great evil"},{"t":"Scriptural citations of the benefits of bodhichitta"}]},{"t":"Recognizing bodhichitta","c":[{"t":"The divisions of bodhichitta"},{"t":"The benefits of the aspiring mind of bodhichitta"},{"t":"The benefits of the engaging mind of bodhichitta"}]},{"t":"The reasons for the benefits of bodhichitta"},{"t":"Praise to the one who gives birth to bodhichitta"}]},{"t":"How to practise the six perfections once bodhichitta has been developed","c":[{"t":"Maintaining bodhichitta","c":[{"t":"How to destroy obstacles and purify evil","c":[{"t":"The preliminary limbs of practice","c":[{"t":"Offering","c":[{"t":"The necessity of making offerings, and recognizing the objects of offering"},{"t":"The actual offering","c":[{"t":"Unowned offerings"},{"t":"Offering our own body"},{"t":"Mentally transformed offerings","c":[{"t":"Ordinary offerings"},{"t":"Sublime offerings"}]}]}]},{"t":"Prostration"},{"t":"Going for refuge","c":[{"t":"The causes of going for refuge"},{"t":"The objects of refuge"},{"t":"The measurement of going for refuge perfectly"},{"t":"The commitments of going for refuge"},{"t":"The benefits of going for refuge"}]}]},{"t":"The confession of non-virtue","c":[{"t":"The power of regret"},{"t":"The power of reliance"},{"t":"The power of the opponent force"},{"t":"The power of promise"}]}]},{"t":"How to accept and hold on to the actual bodhichitta","c":[{"t":"The preparatory practices for accumulating merit","c":[{"t":"Rejoicing in virtue"},{"t":"Requesting the Buddhas to turn the Wheel of Dharma"},{"t":"Beseeching the Buddhas not to pass away"},{"t":"Dedicating merit","c":[{"t":"General dedication"},{"t":"Dedication for the sick"},{"t":"Dedication to relieve hunger and thirst"},{"t":"Dedication to fulfil the wishes of sentient beings"}]},{"t":"Training the mind in giving"}]},{"t":"Fully accepting bodhichitta"},{"t":"Concluding activities","c":[{"t":"Meditating on the happiness of fulfilling our own wishes"},{"t":"Meditating on the happiness of benefiting others and fulfilling their wishes","c":[{"t":"Relieving others of their suffering"},{"t":"Eliminating the two obstructions"},{"t":"Bestowing great benefit and happiness upon others"}]},{"t":"Exhorting others to meditate on happiness"}]}]}]},{"t":"How to practise the six perfections","c":[{"t":"Meditating on conscientiousness so that the bodhichitta practice and precepts do not degenerate","c":[{"t":"An introduction to conscientiousness"},{"t":"An extensive explanation of conscientiousness","c":[{"t":"Meditating on conscientiousness with respect to bodhichitta","c":[{"t":"The reasons why it is unwise to abandon bodhichitta"},{"t":"The faults of abandoning bodhichitta","c":[{"t":"We are led to the three lower realms"},{"t":"The benefit to others will decrease"},{"t":"We are far removed from the Bodhisattva grounds"}]}]},{"t":"Meditating on conscientiousness with respect to the precepts","c":[{"t":"Conscientiousness in abandoning non-virtue"},{"t":"Conscientiousness in meditating on virtue","c":[{"t":"Striving to abandon the infinite evils collected in previous lives"},{"t":"Merely experiencing the sufferings of lower realms will not lead to release"},{"t":"Not applying effort to the practice of virtue now that we have attained a precious human life is self-deception"},{"t":"If we do not practise virtue now we will experience suffering in this life"},{"t":"If we do not practise virtue now we will experience the sufferings of lower realms in future lives"},{"t":"Following from the above, it is appropriate to strive to abandon non-virtue and practise virtue"}]},{"t":"Conscientiousness in abandoning delusions","c":[{"t":"Contemplating the faults of delusions","c":[{"t":"Delusions give us no choice"},{"t":"Delusions bring infinite sufferings"},{"t":"Delusions harm us for a long time"},{"t":"Following delusions as if they were friends is unwise"},{"t":"Being patient with delusions is unwise"},{"t":"Developing encouragement to dispel delusions"}]},{"t":"The inappropriateness of grieving over the hardships to be endured while abandoning delusions"},{"t":"Contemplating the joy of being able to abandon delusions","c":[{"t":"Unlike ordinary enemies, delusions cannot return once they have been eradicated"},{"t":"As the cause of delusions is wrong views, with diligence they can be abandoned"},{"t":"For these reasons it is suitable to abandon delusions"}]}]}]}]},{"t":"Summary"}]},{"t":"How to train in moral discipline by practising mindfulness and alertness","c":[{"t":"The method of guarding the practice is to guard the mind"},{"t":"The method of guarding the mind is to practise mindfulness and alertness","c":[{"t":"A brief presentation of the two factors"},{"t":"Without mindfulness and alertness our virtue will have little power"},{"t":"Without mindfulness and alertness we will not develop pure wisdom"},{"t":"Without mindfulness and alertness we cannot practise pure moral discipline"},{"t":"Without mindfulness and alertness previously accumulated virtue will degenerate"},{"t":"Without mindfulness and alertness new virtue cannot be accumulated"}]},{"t":"How to practise moral discipline by means of mindfulness and alertness","c":[{"t":"Practising the moral discipline of restraint"},{"t":"Practising the moral discipline of gathering virtue","c":[{"t":"Abandoning attachment to the body"},{"t":"Practising virtue with skilful means","c":[{"t":"Following pure conduct of the body"},{"t":"Following skilful conduct when associating with others"},{"t":"Following skilful conduct of body, speech and mind"}]}]},{"t":"Practising the moral discipline of benefiting sentient beings"}]},{"t":"How to prevent our practice from degenerating"},{"t":"In conclusion, the necessity of following the meaning and not merely the words of the practice"}]},{"t":"Explanation of the four remaining perfections: patience, effort, concentration and wisdom","c":[{"t":"How to practise patience","c":[{"t":"The method of meditating on patience","c":[{"t":"The faults of anger"},{"t":"The benefits of patience"}]},{"t":"The method of practising patience","c":[{"t":"Preventing the cause of anger"},{"t":"Meditating on the patience of voluntarily enduring suffering"},{"t":"Meditating on the patience of definitely thinking about Dharma","c":[{"t":"Because the angry person and the anger are both dependent upon causes, there is no choice"},{"t":"Refuting the assertion that the cause of anger is independent","c":[{"t":"Refuting the Samkhya school’s assertion of an inherently existent general principle and self"},{"t":"Refuting the Vaisheshika school’s assertion of an inherently existent self"},{"t":"Recognizing all beings as illusions, and thus the inappropriateness of generating anger towards them"}]},{"t":"The necessity of abandoning anger"},{"t":"Summary"}]},{"t":"Meditating on the patience of not retaliating","c":[{"t":"Reflecting with attention on the methods for developing compassion"},{"t":"Overcoming the cause of anger"},{"t":"Contemplating our own faults when undesirable situations arise"}]},{"t":"An extensive explanation of the benefits of patience"}]}]},{"t":"How to practise effort","c":[{"t":"An exhortation to practise effort"},{"t":"Recognizing effort"},{"t":"Overcoming the opponent to effort","c":[{"t":"Recognizing the opponent, laziness"},{"t":"How to overcome laziness","c":[{"t":"Overcoming the laziness of indolence","c":[{"t":"Examining the cause of indolence"},{"t":"Contemplating the faults in this life of indolence"},{"t":"Contemplating the suffering in future lives caused by indolence"}]},{"t":"Overcoming the laziness of being attracted to what is meaningless or non-virtuous"},{"t":"Overcoming the laziness of discouragement"}]}]},{"t":"Increasing the force of effort","c":[{"t":"Recognizing the four powers that increase the force of effort"},{"t":"An extensive explanation of the four powers","c":[{"t":"The power of aspiration"},{"t":"The power of steadfastness"},{"t":"The power of joy"},{"t":"The power of rejection"}]},{"t":"Practising earnestly with mindfulness and alertness"},{"t":"Using suppleness of body and mind to engage in virtuous conduct"}]}]},{"t":"How to train in the concentration of tranquil abiding","c":[{"t":"Why we need to attain tranquil abiding"},{"t":"Exhortation to abandon the opponents to tranquil abiding"},{"t":"How to abandon the opponents to tranquil abiding","c":[{"t":"Recognizing the causes of our attachment to worldly life"},{"t":"Recognizing the opponent to our attachment"},{"t":"How to generate the opponent to attachment","c":[{"t":"Abandoning attachment to sentient beings"},{"t":"Abandoning attachment to inanimate things"}]},{"t":"The faults of worldly associations"},{"t":"The benefits of living in solitude"},{"t":"How to abandon disturbing conceptions"}]},{"t":"How to attain tranquil abiding","c":[{"t":"A general explanation of the stages of tranquil abiding meditation","c":[{"t":"The six necessary conditions for attaining tranquil abiding"},{"t":"The nine mental abidings"},{"t":"The five obstacles to attaining tranquil abiding"},{"t":"The eight opponents to the five obstacles"}]},{"t":"Explanation of the particular use to which tranquil abiding is to be put: meditating on equalizing and exchanging self with others","c":[{"t":"How to meditate on equalizing self and others","c":[{"t":"A brief explanation of the meditation"},{"t":"The meaning of equalizing self and others"},{"t":"The actual meditation on equalizing self and others"},{"t":"The benefits of meditating on equalizing self and others"},{"t":"How we are able to develop the mind in this meditation"}]},{"t":"How to exchange self with others","c":[{"t":"A brief explanation of the exchange"},{"t":"The way to exchange self with others","c":[{"t":"Gaining familiarity with cherishing others"},{"t":"Abandoning self-cherishing"},{"t":"Reflecting on the disadvantages of self-cherishing and the advantages of cherishing others"},{"t":"Summary"}]},{"t":"Completing the exchange by means of reflection","c":[{"t":"A brief explanation"},{"t":"Meditation on jealousy towards a superior"},{"t":"Meditation on competitiveness towards an equal"},{"t":"Meditation on pride towards an inferior"},{"t":"The results of this meditation"}]},{"t":"Completing the exchange by means of action"}]}]}]}]},{"t":"How to develop the wisdom of superior seeing","c":[{"t":"Showing why those who wish to attain liberation need to develop the wisdom realizing emptiness"},{"t":"The presentation of the two truths","c":[{"t":"The distinctions between the two truths"},{"t":"The definition of the two truths"},{"t":"The distinctions between the individuals who assert the two truths"},{"t":"The distinctions between their varying degrees of mental capacity"},{"t":"Refuting the argument that it is not necessary to realize emptiness in order to attain liberation","c":[{"t":"A refutation of the proponents of things in general"},{"t":"A refutation of the Chittamatrins in particular","c":[{"t":"Refuting self-cognizers by scriptural authority"},{"t":"Refuting self-cognizers by reasoning"},{"t":"Refuting the Chittamatrins’ proofs of the existence of self-cognizers"},{"t":"Refuting the assertion that all imputed existents must have as their basis something truly existent","c":[{"t":"The reason why a magician can have desire for the illusory woman he manifests"},{"t":"The reason why meditation on emptiness can abandon all delusions and their imprints"},{"t":"Showing that excellent results will come from abandoning grasping at true existence and its imprints"}]}]}]}]},{"t":"Showing the reasons why those who seek only personal liberation need to develop the wisdom realizing emptiness"},{"t":"An extensive explanation of the reasons that establish emptiness","c":[{"t":"An extensive explanation of the reasons that establish selflessness of persons","c":[{"t":"Refuting the conceived object of the innate self-grasping of persons"},{"t":"Refuting the conceived object of the intellectually-formed self-grasping of persons","c":[{"t":"Refuting the permanent self posited by the Samkhya school"},{"t":"Refuting the permanent self posited by the Vaisheshika and Naiyayika schools"}]},{"t":"Refuting arguments against these refutations"}]},{"t":"An extensive explanation of the reasons that establish selflessness of phenomena","c":[{"t":"Explaining selflessness of phenomena by means of the four close placements of mindfulness","c":[{"t":"Close placement of mindfulness of body","c":[{"t":"Establishing the non-true existence of a body as possessor of its parts"},{"t":"Establishing the non-true existence of the parts of the body"},{"t":"Therefore it is inappropriate to be attached to this dream-like non-truly existent body"},{"t":"Through this, establishing the non-true existence of the person"}]},{"t":"Close placement of mindfulness of feelings","c":[{"t":"Refuting the true existence of the nature of feeling","c":[{"t":"Refuting the true existence of painful feelings"},{"t":"Refuting the true existence of pleasant feelings"},{"t":"Explaining the yoga of meditating on the non-true existence of feelings"}]},{"t":"Refuting the true existence of the cause of feeling","c":[{"t":"Refuting a truly existent meeting between a sense power and an object"},{"t":"Refuting a truly existent meeting between an object and a consciousness"},{"t":"Thus establishing the non-true existence of the contact that arises from the meeting of an object, sense power and consciousness"}]},{"t":"Refuting the true existence of the object of feeling"},{"t":"Refuting the true existence of the subjective experiencer of feeling"}]},{"t":"Close placement of mindfulness of mind","c":[{"t":"Establishing the non-true existence of mental consciousness"},{"t":"Establishing the non-true existence of the five sense consciousnesses"}]},{"t":"Close placement of mindfulness of phenomena"}]},{"t":"Refuting arguments concerning the two truths"},{"t":"Explaining the reasoning that establishes selflessness","c":[{"t":"The reasoning of vajra fragments","c":[{"t":"Refuting production from no cause"},{"t":"Refuting production from a permanent cause that is other","c":[{"t":"Refuting what is meant by the god Ishvara"},{"t":"Refuting that Ishvara is the cause of everything with the reason he is permanent"},{"t":"Refuting permanent partless particles as the cause of everything"}]},{"t":"Refuting production from a permanent general principle","c":[{"t":"Refuting a general principle that is the cause of all manifestations"},{"t":"Refuting a permanent general principle"},{"t":"Refuting an effect existing at the same time as its cause"},{"t":"Refuting the claim that the Madhyamika school is at fault"}]},{"t":"A summary of the refutation of production from no cause"},{"t":"Refuting production from both self and other"}]},{"t":"The reasoning of dependent relationship"},{"t":"The reasoning that refutes inherent production of existents and non-existents","c":[{"t":"Refuting inherently existent production through this reasoning"},{"t":"Thereby refuting truly existent cessation"},{"t":"Thus establishing the equality of samsara and nirvana from the point of view of lacking true existence"}]}]}]}]},{"t":"Encouraging the practitioner to strive to develop this wisdom","c":[{"t":"Showing the meaning of sublime, precious emptiness"},{"t":"The need to strive to realize emptiness"},{"t":"Explaining great compassion by showing the faults of samsara"},{"t":"Sho…"}]}]}]},{"t":"Dedication and the practice of giving for the benefit of all beings"}]}]}]}]}]},{"t":"The meaning of the conclusion"}]}]};
+
+var NW = {2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine",10:"ten"};
+
+/* ---- Items ---- */
+var ITEMS = [
+  {
+    name: "Vajrasattva 100 Syllable Mantra",
+    info: "15 lines",
+    type: "lines",
+    showNums: false,
+    stanzas: [
+      [
+        "OM VAJRA SATTO SAMAYA",
+        "MANU PALAYA",
+        "VAJRA SATTO TENO PATITA",
+        "DRIDHO ME BHAWA",
+        "SUTO KAYO ME BHAWA",
+        "SUPO KAYO ME BHAWA",
+        "ANURAKTO ME BHAWA",
+        "SARWA SIDDHI ME PRAYATZA",
+        "SARWA KARMA SUTZA ME",
+        "TZITAM SHRIYAM KURU HUM",
+        "HA HA HA HA HO BHAGAWAN",
+        "SARWA TATHAGATA",
+        "VAJRA MA ME MUNTSA",
+        "VAJRA BHAWA",
+        "MAHA SAMAYA SATTO AH HUM PHAT"
+      ]
+    ]
+  },
+  {
+    name: "Request to the Lord of All Lineages",
+    info: "28 stanzas",
+    type: "lines",
+    showNums: true,
+    stanzas: [
+      [
+        "O Venerable Conqueror Losang Dragpa,",
+        "Who are the Glorious Lord of all lineages, Heruka,",
+        "In whose single body all Buddhas, their worlds and their retinues abide,",
+        "I request you please bestow your blessings."
+      ],
+      [
+        "My kind, precious root Guru,",
+        "Who are inseparably one with Heruka,",
+        "In whose great bliss all phenomena are gathered into one,",
+        "I request you please bestow your blessings."
+      ],
+      [
+        "Since the root of all spiritual attainments",
+        "Is relying purely upon the Spiritual Guide,",
+        "Please now bestow the profound blessings of your body, speech and mind",
+        "Upon my body, speech and mind."
+      ],
+      [
+        "Out of his great kindness Je Tsongkhapa introduced",
+        "All the Sutra and Tantra teachings of Buddha as practical instructions.",
+        "However, my great good fortune in having met holy Dharma, the doctrine of Buddha,",
+        "Might remain with me for just this one life."
+      ],
+      [
+        "Yet my breath is like mist about to vanish",
+        "And my life is like a candle flame about to die in the wind.",
+        "Since there is no guarantee I will not die today,",
+        "Now is the only time to take the real meaning of human life, the attainment of enlightenment."
+      ],
+      [
+        "In my countless former lives I accumulated various kinds of non-virtuous action",
+        "And as a result I will have to experience the unbearable suffering of lower rebirth for many aeons.",
+        "Since this is unbearable for me,",
+        "I sincerely seek refuge in Buddha, Dharma and Sangha from the depths of my heart."
+      ],
+      [
+        "I will sincerely apply effort",
+        "To receiving Buddha’s blessings,",
+        "Receiving help from Sangha, the pure spiritual practitioners,",
+        "And practising Dharma purely."
+      ],
+      [
+        "Through engaging in this practice continuously",
+        "I will accomplish the actual refuge in my mind –",
+        "The realizations of holy Dharma",
+        "That permanently liberate me from all suffering and problems."
+      ],
+      [
+        "The cause of suffering is non-virtuous actions",
+        "And the cause of happiness is virtuous actions.",
+        "Since this is completely true",
+        "I will definitely abandon the first and practise the second."
+      ],
+      [
+        "Like mistakenly believing",
+        "A poisonous drink to be nectar,",
+        "Attachment with grasping at objects of desire",
+        "Is the cause of great danger."
+      ],
+      [
+        "In the cycle of impure life, samsara,",
+        "There is no real protection from suffering.",
+        "Wherever I am born, either as a lower or higher being,",
+        "I will have to experience only suffering."
+      ],
+      [
+        "The flesh and bones of all the bodies I have previously taken if gathered together would be equal to Mount Meru,",
+        "And if the blood and bodily fluids were gathered they would be equal to the deepest ocean.",
+        "Although I have taken countless bodies as Brahma, Indra, chakravatin kings, gods and ordinary humans,",
+        "There has been no meaning from any of these, for still I continue to suffer."
+      ],
+      [
+        "If having been born in the hells drinking molten copper, as insects whose bodies turned into mud,",
+        "And as dogs, pigs and so forth who ate enough filth to cover the whole earth,",
+        "And if, as it is said, the tears I have shed from all this suffering are vaster than an ocean,",
+        "I still do not feel any sorrow or fear, do I have a mind made of iron?"
+      ],
+      [
+        "Understanding this, I will make continuous effort to cease samsaric rebirth",
+        "By striving to permanently abandon its root, self-grasping ignorance.",
+        "In dependence upon this renunciation I will open the door to the path to liberation",
+        "And strive to practise the three higher trainings, the synthesis of all paths."
+      ],
+      [
+        "With my mind like a fine horse heading for higher ground",
+        "Guided by the reins of the Dharma of the three higher trainings,",
+        "And urged onwards with the whip of strong effort,",
+        "Now I will swiftly travel the path to liberation."
+      ],
+      [
+        "All mother living beings who care for me with such kindness",
+        "Are drowning in the fearful ocean of samsara.",
+        "If I give no thought to their pitiful suffering",
+        "I am like a mean and heartless child."
+      ],
+      [
+        "Since throughout my beginningless lives until now, the root of all my suffering has been my self-cherishing mind,",
+        "I must expel it from my heart, cast it afar and cherish only other living beings.",
+        "Thus, I will complete my practice of exchanging self with others.",
+        "O my precious Guru, please bestow your blessings so that I may complete this profound practice."
+      ],
+      [
+        "To permanently liberate all mother living beings",
+        "From suffering and mistaken appearance,",
+        "I will attain the Union of the state of enlightenment",
+        "Through the practice of the six perfections."
+      ],
+      [
+        "Eliminating the distractions of my mind completely,",
+        "Observing and holding a single object of meditation with mindfulness,",
+        "And preventing the obstacles of mental sinking and mental excitement from arising,",
+        "In this way I will control my mind with clear and joyful meditation."
+      ],
+      [
+        "All my appearances in dreams teach me",
+        "That all my appearances when awake do not exist;",
+        "Thus for me all my dream appearances",
+        "Are the supreme instructions of my Guru."
+      ],
+      [
+        "The phenomena that I normally see or perceive",
+        "Are deceptive – created by mistaken minds.",
+        "If I search for the reality of what I see,",
+        "There is nothing there that exists – I perceive only empty like space."
+      ],
+      [
+        "When I search with my wisdom eye,",
+        "All the things that I normally see disappear",
+        "And only their mere name remains.",
+        "With this mere name I simply accept everything for the purpose of communicating with others."
+      ],
+      [
+        "The way phenomena exist is just this.",
+        "Guru Father Je Tsongkhapa clarified this following Nagarjuna’s intention.",
+        "Thus, the correct view of emptiness free from the two extremes",
+        "Is extremely profound."
+      ],
+      [
+        "With my having experience of the common paths,",
+        "The principal of Akanishta Pure Land, Vajradhara Heruka,",
+        "Now appears in this world as an emanation of Heruka",
+        "In the form of my root Guru",
+        "Who has led me inside the great mandala of the body of Heruka",
+        "And granted me the four empowerments to ripen my mental continuum.",
+        "Thus I have become a great fortunate one who has the opportunity to accomplish in this life",
+        "The Union of Heruka by accomplishing No More Learning, the state of enlightenment."
+      ],
+      [
+        "The kindness of Guru Heruka Father and Mother is inconceivable",
+        "And the kindness of my root Guru is inconceivable.",
+        "Because of this good fortune and through the power of my correct imagination",
+        "I now abide in the great mandala of Heruka, the nature of my purified gross body."
+      ],
+      [
+        "I am the enlightened Deity Heruka,",
+        "The nature of my purified white indestructible drop,",
+        "With my consort Vajravarahi,",
+        "The nature of my purified red indestructible drop.",
+        "I am surrounded by the Bodhisattva Deities, the Heroes and Heroines,",
+        "Who are the nature of my purified channels and drops.",
+        "Through enjoying great bliss and the emptiness of all phenomena I have pacified all ordinary appearances and conceptions,",
+        "And thus I have accomplished the real meaning of human life."
+      ],
+      [
+        "Having generated myself as Heruka with consort,",
+        "I meditate briefly on my body as hollow and empty like space.",
+        "Within this body is my central channel possessing four characteristics.",
+        "Inside my central channel in the centre of the eight petals of the heart channel wheel",
+        "Is the union of my white and red indestructible drop, the size of a small pea,",
+        "Which is very clear and radiates five-coloured lights.",
+        "Inside this is my indestructible wind in the aspect of a letter HUM,",
+        "Which is actual Glorious Heruka.",
+        "My mind enters into the HUM and mixes with it like water mixing with water.",
+        "I hold this HUM, which is my indestructible wind and Heruka, with mindfulness and meditate on it single-pointedly."
+      ],
+      [
+        "Through stabilizing this meditation the movement of my inner winds of conceptions will cease.",
+        "Thus, I will perceive a fully qualified clear light.",
+        "Through completing the practice of this clear light",
+        "I will attain the actual Union of Great Keajra, the state of enlightenment.",
+        "This is the great kindness of Guru Heruka;",
+        "May I become just like you."
+      ]
+    ]
+  },
+  {
+    name: "Meaningful to Behold Condensed Meaning",
+    info: "283 topics",
+    type: "tree",
+    tree: MTB_TREE
+  }
+];
+
+/* ---- State ---- */
+var currentItem = null;
+var linesTotal = 0;
+var treeTotal = 0;
+var treeRevealed = 0;
+
+/* ---- Build menu ---- */
+var list = document.getElementById("item-list");
+ITEMS.forEach(function(item, idx) {
+  var btn = document.createElement("button");
+  btn.className = "prayer-btn";
+  btn.innerHTML = '<div class="prayer-name">' + item.name + '</div><div class="prayer-info">' + item.info + '</div>';
+  btn.addEventListener("click", function() { openItem(idx); });
+  list.appendChild(btn);
+});
+
+/* ---- Open / Back ---- */
+function openItem(idx) {
+  currentItem = ITEMS[idx];
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("practice").style.display = "block";
+  document.getElementById("practice-title").textContent = currentItem.name;
+
+  if (currentItem.type === "lines") {
+    document.getElementById("lines-view").style.display = "block";
+    document.getElementById("tree-view").style.display = "none";
+    initLines();
+  } else {
+    document.getElementById("lines-view").style.display = "none";
+    document.getElementById("tree-view").style.display = "block";
+    initTree();
+  }
+}
+
+function goBack() {
+  document.getElementById("practice").style.display = "none";
+  document.getElementById("lines-view").style.display = "none";
+  document.getElementById("tree-view").style.display = "none";
+  document.getElementById("menu").style.display = "block";
+  currentItem = null;
+}
+document.getElementById("back-btn").addEventListener("click", goBack);
+
+/* ---- Fill Lines ---- */
+function initLines() {
+  var area = document.getElementById("lines-area");
+  var stanzas = currentItem.stanzas;
+  var showNums = currentItem.showNums;
+  linesTotal = 0;
+  stanzas.forEach(function(st) { linesTotal += st.length; });
+
+  area.innerHTML = stanzas.map(function(st, si) {
+    var linesHtml = st.map(function(line) {
+      return '<span class="line-blank" tabindex="0">' +
+        '<span class="line-text">' + line + '</span>' +
+        '<span class="line-placeholder">• • •</span>' +
+        '</span>';
+    }).join("");
+    var numHtml = showNums ? '<span class="blanks-stanza-num">' + (si + 1) + '</span>' : '';
+    return '<span class="blanks-stanza">' + numHtml + linesHtml + '</span>';
+  }).join("");
+
+  area.querySelectorAll(".line-blank").forEach(function(el) {
+    var toggle = function() {
+      if (el.classList.contains("show")) {
+        el.classList.remove("show");
+        linesTotal++;
+      } else {
+        el.classList.add("show");
+        linesTotal--;
+      }
+      updateLinesScore();
+    };
+    el.addEventListener("click", toggle);
+    el.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+  });
+  updateLinesScore();
+}
+
+function updateLinesScore() {
+  document.getElementById("lines-score").textContent = linesTotal > 0
+    ? linesTotal + " line" + (linesTotal !== 1 ? "s" : "") + " hidden"
+    : "All lines revealed!";
+}
+
+document.getElementById("lines-reveal").addEventListener("click", function() {
+  document.querySelectorAll("#lines-area .line-blank:not(.show)").forEach(function(el) {
+    el.classList.add("show");
+  });
+  linesTotal = 0;
+  updateLinesScore();
+});
+
+document.getElementById("lines-hide").addEventListener("click", function() {
+  var hidden = 0;
+  document.querySelectorAll("#lines-area .line-blank").forEach(function(el) {
+    el.classList.remove("show");
+    hidden++;
+  });
+  linesTotal = hidden;
+  updateLinesScore();
+});
+
+/* ---- Tree ---- */
+function countTreeNodes(node) {
+  var t = 1;
+  if (node.c) node.c.forEach(function(ch) { t += countTreeNodes(ch); });
+  return t;
+}
+
+function renderTree(node, num) {
+  var hasChildren = node.c && node.c.length > 0;
+  var text = node.t;
+  var partsHtml = '';
+  if (hasChildren) {
+    var nw = NW[node.c.length];
+    if (nw) partsHtml = ' <span class="tree-parts">has ' + nw + ' parts:</span>';
+  }
+  var numHtml = (num !== null) ? '<span class="tree-num">' + num + '</span>' : '';
+  var html = '<div class="tree-node">';
+  html += '<div class="tree-label" tabindex="0">';
+  html += numHtml;
+  html += '<span class="tree-text">' + text + partsHtml + '</span>';
+  html += '<span class="tree-placeholder">• • •</span>';
+  html += '</div>';
+  if (hasChildren) {
+    html += '<div class="tree-children">';
+    node.c.forEach(function(child, i) {
+      html += renderTree(child, i + 1);
+    });
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function initTree() {
+  var area = document.getElementById("tree-area");
+  area.innerHTML = renderTree(currentItem.tree, null);
+  treeTotal = countTreeNodes(currentItem.tree);
+  treeRevealed = 0;
+
+  area.addEventListener("click", function(e) {
+    var label = e.target.closest(".tree-label");
+    if (!label) return;
+    var node = label.parentElement;
+    if (label.classList.contains("show")) {
+      label.classList.remove("show");
+      node.classList.remove("open");
+      treeRevealed--;
+      node.querySelectorAll(".tree-children .tree-label.show").forEach(function(d) {
+        d.classList.remove("show");
+        d.parentElement.classList.remove("open");
+        treeRevealed--;
+      });
+    } else {
+      label.classList.add("show");
+      node.classList.add("open");
+      treeRevealed++;
+    }
+    updateTreeScore();
+  });
+
+  area.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.target.click();
+    }
+  });
+
+  updateTreeScore();
+}
+
+function updateTreeScore() {
+  var hidden = treeTotal - treeRevealed;
+  document.getElementById("tree-score").textContent = hidden > 0
+    ? hidden + " topic" + (hidden !== 1 ? "s" : "") + " hidden"
+    : "All topics revealed!";
+}
+
+document.getElementById("tree-reveal").addEventListener("click", function() {
+  document.querySelectorAll("#tree-area .tree-label:not(.show)").forEach(function(label) {
+    label.classList.add("show");
+    label.parentElement.classList.add("open");
+  });
+  treeRevealed = treeTotal;
+  updateTreeScore();
+});
+
+document.getElementById("tree-collapse").addEventListener("click", function() {
+  document.querySelectorAll("#tree-area .tree-label.show").forEach(function(label) {
+    label.classList.remove("show");
+    label.parentElement.classList.remove("open");
+  });
+  treeRevealed = 0;
+  updateTreeScore();
+});
+</script>
