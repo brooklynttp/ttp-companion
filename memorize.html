@@ -323,21 +323,29 @@ body {
 
     <!-- Fill Lines mode -->
     <div id="lines-view" style="display:none; margin-top:16px">
+      <div class="btn-row" style="margin-bottom:14px">
+        <button class="btn btn-sm btn-outline lines-reveal-btn">Reveal All</button>
+        <button class="btn btn-sm btn-outline lines-hide-btn">Hide All</button>
+      </div>
       <div class="blanks-area" id="lines-area"></div>
       <div class="blanks-score" id="lines-score"></div>
       <div class="btn-row" style="margin-top:14px">
-        <button class="btn btn-sm btn-outline" id="lines-reveal">Reveal All</button>
-        <button class="btn btn-sm btn-outline" id="lines-hide">Hide All</button>
+        <button class="btn btn-sm btn-outline lines-reveal-btn">Reveal All</button>
+        <button class="btn btn-sm btn-outline lines-hide-btn">Hide All</button>
       </div>
     </div>
 
     <!-- Tree mode -->
     <div id="tree-view" style="display:none; margin-top:16px">
+      <div class="btn-row" style="margin-bottom:14px">
+        <button class="btn btn-sm btn-outline tree-reveal-btn">Reveal All</button>
+        <button class="btn btn-sm btn-outline tree-collapse-btn">Collapse All</button>
+      </div>
       <div class="tree-area" id="tree-area"></div>
       <div class="blanks-score" id="tree-score"></div>
       <div class="btn-row" style="margin-top:14px">
-        <button class="btn btn-sm btn-outline" id="tree-reveal">Reveal All</button>
-        <button class="btn btn-sm btn-outline" id="tree-collapse">Collapse All</button>
+        <button class="btn btn-sm btn-outline tree-reveal-btn">Reveal All</button>
+        <button class="btn btn-sm btn-outline tree-collapse-btn">Collapse All</button>
       </div>
     </div>
   </div>
@@ -663,22 +671,26 @@ function updateLinesScore() {
     : "All lines revealed!";
 }
 
-document.getElementById("lines-reveal").addEventListener("click", function() {
-  document.querySelectorAll("#lines-area .line-blank:not(.show)").forEach(function(el) {
-    el.classList.add("show");
+document.querySelectorAll(".lines-reveal-btn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    document.querySelectorAll("#lines-area .line-blank:not(.show)").forEach(function(el) {
+      el.classList.add("show");
+    });
+    linesTotal = 0;
+    updateLinesScore();
   });
-  linesTotal = 0;
-  updateLinesScore();
 });
 
-document.getElementById("lines-hide").addEventListener("click", function() {
-  var hidden = 0;
-  document.querySelectorAll("#lines-area .line-blank").forEach(function(el) {
-    el.classList.remove("show");
-    hidden++;
+document.querySelectorAll(".lines-hide-btn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var hidden = 0;
+    document.querySelectorAll("#lines-area .line-blank").forEach(function(el) {
+      el.classList.remove("show");
+      hidden++;
+    });
+    linesTotal = hidden;
+    updateLinesScore();
   });
-  linesTotal = hidden;
-  updateLinesScore();
 });
 
 /* ---- Tree ---- */
@@ -758,22 +770,26 @@ function updateTreeScore() {
     : "All topics revealed!";
 }
 
-document.getElementById("tree-reveal").addEventListener("click", function() {
-  document.querySelectorAll("#tree-area .tree-label:not(.show)").forEach(function(label) {
-    label.classList.add("show");
-    label.parentElement.classList.add("open");
+document.querySelectorAll(".tree-reveal-btn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    document.querySelectorAll("#tree-area .tree-label:not(.show)").forEach(function(label) {
+      label.classList.add("show");
+      label.parentElement.classList.add("open");
+    });
+    treeRevealed = treeTotal;
+    updateTreeScore();
   });
-  treeRevealed = treeTotal;
-  updateTreeScore();
 });
 
-document.getElementById("tree-collapse").addEventListener("click", function() {
-  document.querySelectorAll("#tree-area .tree-label.show").forEach(function(label) {
-    label.classList.remove("show");
-    label.parentElement.classList.remove("open");
+document.querySelectorAll(".tree-collapse-btn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    document.querySelectorAll("#tree-area .tree-label.show").forEach(function(label) {
+      label.classList.remove("show");
+      label.parentElement.classList.remove("open");
+    });
+    treeRevealed = 0;
+    updateTreeScore();
   });
-  treeRevealed = 0;
-  updateTreeScore();
 });
 </script>
 </body>
