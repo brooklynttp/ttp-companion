@@ -731,8 +731,13 @@ function initTree() {
   area.innerHTML = renderTree(currentItem.tree, null);
   treeTotal = countTreeNodes(currentItem.tree);
   treeRevealed = 0;
+  updateTreeScore();
+}
 
-  area.addEventListener("click", function(e) {
+/* Tree click/key listeners — attached once, outside initTree */
+(function() {
+  var treeArea = document.getElementById("tree-area");
+  treeArea.addEventListener("click", function(e) {
     var label = e.target.closest(".tree-label");
     if (!label) return;
     var node = label.parentElement;
@@ -752,16 +757,13 @@ function initTree() {
     }
     updateTreeScore();
   });
-
-  area.addEventListener("keydown", function(e) {
+  treeArea.addEventListener("keydown", function(e) {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       e.target.click();
     }
   });
-
-  updateTreeScore();
-}
+})();
 
 function updateTreeScore() {
   var hidden = treeTotal - treeRevealed;
