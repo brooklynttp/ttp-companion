@@ -1188,7 +1188,8 @@ function initLines() {
       if (st.note) return '<div class="section-note' + (st.tight ? ' section-note-tight' : '') + '">' + st.note + '</div>';
       return '';
     }
-    stanzaNum++;
+    var isHum = st.length === 1 && st[0] === "HUM";
+    if (!isHum) stanzaNum++;
     var linesHtml = st.map(function(line) {
       return '<span class="line-blank" tabindex="0">' +
         '<span class="line-text">' + line + '</span>' +
@@ -1196,7 +1197,7 @@ function initLines() {
         '</span>';
     }).join("");
     var numbered = showNums || sectionNumbered;
-    var numHtml = numbered ? '<span class="blanks-stanza-num">' + stanzaNum + '</span>' : '';
+    var numHtml = (numbered && !isHum) ? '<span class="blanks-stanza-num">' + stanzaNum + '</span>' : '';
     return '<span class="blanks-stanza">' + numHtml + linesHtml + '</span>';
   }).join("");
 
