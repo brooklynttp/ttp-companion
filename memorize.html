@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,6 +196,31 @@ body {
   border-color: var(--red);
 }
 
+/* --- Section Headers & Notes (Fill Lines) --- */
+.section-header {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 22px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--accent-soft);
+}
+.section-header:first-child { margin-top: 0; }
+.section-note {
+  font-family: var(--ui);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--fg-dim);
+  margin-bottom: 10px;
+}
+.section-note-tight {
+  margin-top: -8px;
+}
+
 /* --- Tree View --- */
 .tree-area {
   font-family: var(--mantra);
@@ -204,7 +230,7 @@ body {
 .tree-node { margin-bottom: 2px; }
 .tree-children {
   display: none;
-  padding-left: 16px;
+  padding-left: 12px;
   border-left: 2px solid var(--accent-soft);
   margin-top: 2px;
   margin-bottom: 4px;
@@ -298,7 +324,7 @@ body {
   .line-blank { padding: 6px 12px; }
   .tree-area { font-size: 1rem; }
   .tree-label { padding: 8px 12px; }
-  .tree-children { padding-left: 12px; }
+  .tree-children { padding-left: 9px; }
   .btn { padding: 10px 20px; font-size: 0.85rem; }
   .btn-sm { padding: 8px 16px; font-size: 0.82rem; }
 }
@@ -581,6 +607,486 @@ var ITEMS = [
         "May I become just like you."
       ]
     ]
+  },
+  {
+    name: "Heart Sutra",
+    info: "15 paragraphs",
+    type: "lines",
+    showNums: true,
+    stanzas: [
+      [
+        "Homage to the Perfection of Wisdom, the Blessed Mother."
+      ],
+      [
+        "Thus I have heard.",
+        "At one time the Blessed One was dwelling in Rajagriha on Massed Vultures Mountain",
+        "together with a great assembly of monks and nuns, and a great assembly of Bodhisattvas.",
+        "At that time the Blessed One was absorbed in the concentration of the countless aspects of phenomena, called 'Profound Illumination'."
+      ],
+      [
+        "At that time also the Superior Avalokiteshvara, the Bodhisattva, the Great Being,",
+        "was looking perfectly at the practice of the profound perfection of wisdom,",
+        "looking perfectly also at the five aggregates being empty of inherent existence."
+      ],
+      [
+        "Then, through the power of Buddha, the Venerable Shariputra said to the Superior Avalokiteshvara, the Bodhisattva, the Great Being,",
+        "'How should a Son of the lineage train who wishes to engage in the practice of the profound perfection of wisdom?'"
+      ],
+      [
+        "Thus he spoke, and the Superior Avalokiteshvara, the Bodhisattva, the Great Being, replied to the Venerable Shariputra as follows:"
+      ],
+      [
+        "'Shariputra, whatever Son or Daughter of the lineage wishes to engage in the practice of the profound perfection of wisdom should look perfectly like this:",
+        "subsequently looking perfectly and correctly also at the five aggregates being empty of inherent existence."
+      ],
+      [
+        "'Form is empty; emptiness is form.",
+        "Emptiness is not other than form; form also is not other than emptiness.",
+        "Likewise, feeling, discrimination, compositional factors and consciousness are empty."
+      ],
+      [
+        "'Shariputra, like this all phenomena are emptiness, having no characteristics.",
+        "They are not produced and do not cease.",
+        "They have no defilement and no separation from defilement.",
+        "They have no decrease and no increase."
+      ],
+      [
+        "'Therefore, Shariputra, in emptiness there is no form, no feeling, no discrimination, no compositional factors, no consciousness.",
+        "There is no eye, no ear, no nose, no tongue, no body, no mentality;",
+        "no form, no sound, no smell, no taste, no tactile object, no phenomenon.",
+        "There is no eye element and so forth up to no mentality element and also up to no element of mental consciousness.",
+        "There is no ignorance and no exhaustion of ignorance and so forth up to no ageing and death and no exhaustion of ageing and death.",
+        "Likewise, there is no suffering, origin, cessation or path; no exalted awareness, no attainment, and also no non-attainment."
+      ],
+      [
+        "'Therefore, Shariputra, because there is no attainment, Bodhisattvas rely upon and abide in the perfection of wisdom;",
+        "their minds have no obstructions and no fear.",
+        "Passing utterly beyond perversity, they attain the final nirvana.",
+        "Also all the Buddhas who reside perfectly in the three times, having relied upon the perfection of wisdom,",
+        "became manifest and complete Buddhas in the state of unsurpassed, perfect and complete enlightenment."
+      ],
+      [
+        "'Therefore, the mantra of the perfection of wisdom, the mantra of great knowledge,",
+        "the unsurpassed mantra, the equal-to-the-unequalled mantra, the mantra that thoroughly pacifies all suffering,",
+        "since it is not false, should be known as the truth.",
+        "The mantra of the perfection of wisdom is proclaimed:"
+      ],
+      [
+        "TAYATHA OM GATE GATE PARAGATE PARASAMGATE BODHI SOHA"
+      ],
+      [
+        "'Shariputra, a Bodhisattva, a Great Being, should train in the profound perfection of wisdom like this.'"
+      ],
+      [
+        "Then the Blessed One arose from that concentration and said to the Superior Avalokiteshvara, the Bodhisattva, the Great Being, that he had spoken well:",
+        "'Good, good, O Son of the lineage. It is like that.",
+        "Since it is like that, just as you have revealed, in that way the profound perfection of wisdom should be practised,",
+        "and the Tathagatas will also rejoice.'"
+      ],
+      [
+        "When the Blessed One had said this, the Venerable Shariputra, the Superior Avalokiteshvara, the Bodhisattva, the Great Being,",
+        "and that entire circle of disciples as well as the worldly beings –",
+        "gods, humans, demi-gods and spirits –",
+        "were delighted and highly praised what had been spoken by the Blessed One."
+      ]
+    ]
+  },
+  {
+    name: "Heart Jewel",
+    info: "16 sections",
+    type: "lines",
+    showNums: false,
+    stanzas: [
+      {header: "Going for refuge"},
+      [
+        "I and all sentient beings, until we achieve enlightenment,",
+        "Go for refuge to Buddha, Dharma and Sangha."
+      ],
+      {note: "(3x)"},
+
+      {header: "Generating bodhichitta"},
+      [
+        "Through the virtues I collect by giving and other perfections,",
+        "May I become a Buddha for the benefit of all."
+      ],
+      {note: "(3x)"},
+
+      {header: "Inviting Je Tsongkhapa"},
+      [
+        "From the heart of the Protector of the hundreds of Deities of the Joyful Land,",
+        "To the peak of a cloud which is like a cluster of fresh, white curd,",
+        "All-knowing Losang Dragpa, King of the Dharma,",
+        "Please come to this place together with your Sons."
+      ],
+
+      {header: "Prayer of seven limbs", numbered: true},
+      [
+        "In the space before me on a lion throne, lotus and moon,",
+        "The venerable Gurus smile with delight.",
+        "O Supreme Field of Merit for my mind of faith,",
+        "Please remain for a hundred aeons to spread the doctrine."
+      ],
+      [
+        "Your mind of wisdom realizes the full extent of objects of knowledge,",
+        "Your eloquent speech is the ear-ornament of the fortunate,",
+        "Your beautiful body is ablaze with the glory of renown,",
+        "I prostrate to you, whom to see, to hear and to remember is so meaningful."
+      ],
+      [
+        "Pleasing water offerings, various flowers,",
+        "Sweet-smelling incense, lights, scented water and so forth,",
+        "A vast cloud of offerings both set out and imagined,",
+        "I offer to you, O Supreme Field of Merit."
+      ],
+      [
+        "Whatever non-virtues of body, speech and mind",
+        "I have accumulated since time without beginning,",
+        "Especially transgressions of my three vows,",
+        "With great remorse I confess each one from the depths of my heart."
+      ],
+      [
+        "In this degenerate age you strove for much learning and accomplishment.",
+        "Abandoning the eight worldly concerns, you made your freedom and endowment meaningful.",
+        "O Protector, from the very depths of my heart,",
+        "I rejoice in the great wave of your deeds."
+      ],
+      [
+        "From the billowing clouds of wisdom and compassion",
+        "In the space of your Truth Body, O Venerable and holy Gurus,",
+        "Please send down a rain of vast and profound Dharma",
+        "Appropriate to the disciples of this world."
+      ],
+      [
+        "Through the virtues I have accumulated here,",
+        "May the doctrine and all living beings receive every benefit.",
+        "Especially may the essence of the doctrine",
+        "Of Venerable Losang Dragpa shine forever."
+      ],
+
+      {header: "Offering the mandala"},
+      [
+        "The ground sprinkled with perfume and spread with flowers,",
+        "The Great Mountain, four lands, sun and moon,",
+        "Seen as a Buddha Land and offered thus,",
+        "May all beings enjoy such Pure Lands."
+      ],
+      ["IDAM GURU RATNA MANDALAKAM NIRYATAYAMI"],
+
+      {header: "The Migtsema prayer"},
+      [
+        "Tsongkhapa, crown ornament of the scholars of the Land of the Snows,",
+        "You are Avalokiteshvara, the treasury of unobservable compassion,",
+        "Manjushri, the supreme stainless wisdom,",
+        "And Vajrapani, the destroyer of the hosts of maras;",
+        "O Losang Dragpa I request you, please grant your blessings."
+      ],
+      {note: "(7x, 21x, 100x, etc.)"},
+
+      {header: "Prayer of the stages of the path", numbered: true},
+      [
+        "The path begins with strong reliance",
+        "On my kind Teacher, source of all good;",
+        "O Bless me with this understanding",
+        "To follow him with great devotion."
+      ],
+      [
+        "This human life with all its freedoms,",
+        "Extremely rare, with so much meaning;",
+        "O Bless me with this understanding",
+        "All day and night to seize its essence."
+      ],
+      [
+        "My body, like a water bubble,",
+        "Decays and dies so very quickly;",
+        "After death come results of karma,",
+        "Just like the shadow of a body."
+      ],
+      [
+        "With this firm knowledge and remembrance",
+        "Bless me to be extremely cautious,",
+        "Always avoiding harmful actions",
+        "And gathering abundant virtue."
+      ],
+      [
+        "Samsara’s pleasures are deceptive,",
+        "Give no contentment, only torment;",
+        "So please bless me to strive sincerely",
+        "To gain the bliss of perfect freedom."
+      ],
+      [
+        "O Bless me so that from this pure thought",
+        "Come mindfulness and greatest caution,",
+        "To keep as my essential practice",
+        "The doctrine’s root, the Pratimoksha."
+      ],
+      [
+        "Just like myself all my kind mothers",
+        "Are drowning in samsara’s ocean;",
+        "O So that I may soon release them,",
+        "Bless me to train in bodhichitta."
+      ],
+      [
+        "But I cannot become a Buddha",
+        "By this alone without three ethics;",
+        "So bless me with the strength to practise",
+        "The Bodhisattva’s ordination."
+      ],
+      [
+        "By pacifying my distractions",
+        "And analyzing perfect meanings,",
+        "Bless me to quickly gain the union",
+        "Of special insight and quiescence."
+      ],
+      [
+        "When I become a pure container",
+        "Through common paths, bless me to enter",
+        "The essence practice of good fortune,",
+        "The supreme vehicle, Vajrayana."
+      ],
+      [
+        "The two attainments both depend on",
+        "My sacred vows and my commitments;",
+        "Bless me to understand this clearly",
+        "And keep them at the cost of my life."
+      ],
+      [
+        "By constant practice in four sessions,",
+        "The way explained by holy Teachers,",
+        "O Bless me to gain both the stages,",
+        "Which are the essence of the Tantras."
+      ],
+      [
+        "May those who guide me on the good path,",
+        "And my companions all have long lives;",
+        "Bless me to pacify completely",
+        "All obstacles, outer and inner."
+      ],
+      [
+        "May I always find perfect Teachers,",
+        "And take delight in holy Dharma,",
+        "Accomplish all grounds and paths swiftly,",
+        "And gain the state of Vajradhara."
+      ],
+
+      {header: "Receiving blessings and purifying"},
+      ["From the hearts of all the holy beings, streams of light and nectar flow down, granting blessings and purifying."],
+
+      {header: "Requests to receive the Guru’s blessings", numbered: true},
+      [
+        "O Glorious and precious root Guru,",
+        "Please sit on the lotus and moon seat at my heart.",
+        "Please care for me with your great kindness,",
+        "And grant me the blessings of your body, speech and mind."
+      ],
+      [
+        "O Glorious and precious root Guru,",
+        "Please sit on the lotus and moon seat at my heart.",
+        "Please care for me with your great kindness,",
+        "And bestow the common and supreme attainments."
+      ],
+      [
+        "O Glorious and precious root Guru,",
+        "Please sit on the lotus and moon seat at my heart.",
+        "Please care for me with your great kindness,",
+        "And remain firm until I attain the essence of enlightenment."
+      ],
+
+      {header: "Dedication"},
+      [
+        "Through being cared for throughout all my lives",
+        "By Conqueror Tsongkhapa as my Mahayana Guru,",
+        "May I never turn away, even for an instant,",
+        "From this excellent path praised by the Conquerors."
+      ],
+
+      {header: "Inviting Dorje Shugden and his retinue", numbered: true},
+      {note: "HUM"},
+      [
+        "I have the clarity of the Yidam.",
+        "Before me in the centre of red and black fire and wind,",
+        "On a lotus and sun, trampling demons and obstructors,",
+        "Is a terrifying lion, which is powerful and alert.",
+        "Upon this sits the great king Dorje Shugden,",
+        "The supreme Heart Jewel of Dharma Protectors.",
+        "His body is clothed in the garments of a monk,",
+        "And on his head he wears a round, yellow hat.",
+        "His hands hold a sword and a heart of compassion.",
+        "To his followers he shows an expression of delight,",
+        "But to subdue demons and obstructors he displays a wrathful manner.",
+        "He is surrounded by a vast, assembled retinue,",
+        "Such as his attendant Khache Marpo and so forth."
+      ],
+      [
+        "Light rays from my heart instantly invite the wisdom beings from the sphere of nature,",
+        "and from all the different palaces where they abide.",
+        "They become inseparable from the commitment beings."
+      ],
+
+      {header: "Making offerings and requests", numbered: true},
+      {note: "HUM"},
+      [
+        "Respectfully I prostrate with body, speech and mind.",
+        "I offer a mass of inner and outer offerings, blissful tormas,",
+        "Alcohol, tea, cakes, milk and curd,",
+        "Both actually set out and mentally imagined, filling the whole of space."
+      ],
+      [
+        "Commitment, fulfilling, reliance and appropriate substances,",
+        "Outer, inner, secret, attractive and cleansing offerings, filling the whole of space,",
+        "I offer these to the entire assembly;",
+        "May I fulfil the heart commitment and restore my broken commitments."
+      ],
+      [
+        "All my harmful thoughts and actions",
+        "That have offended your mind, O Great Protector,",
+        "I confess from the depths of my heart.",
+        "Please purify them swiftly, and care for me with love, like a mother for her child."
+      ],
+      [
+        "I beseech you from the depths of my heart, O Supreme Deity,",
+        "Please cause the tradition of Je Tsongkhapa to flourish,",
+        "Extend the life and activities of the glorious Gurus,",
+        "And increase the study and practice of Dharma within the Dharma communities."
+      ],
+      [
+        "Please be with me always like the shadow of my body,",
+        "And grant me your unwavering care and protection.",
+        "Destroy all obstacles and adverse conditions,",
+        "Bestow favourable conditions, and fulfil all my wishes."
+      ],
+      [
+        "Now is the time to show clearly your versatile strength",
+        "Through your four actions, which are swift, incisive and unobstructed,",
+        "To fulfil quickly my special heartfelt desires",
+        "In accordance with my wishes;"
+      ],
+      [
+        "Now is the time to distinguish the truth and falsity of actions and effects;",
+        "Now is the time to dispel false accusations against the innocent;",
+        "Now is the time to protect the pitiful and protectorless;",
+        "Now is the time to protect Dharma practitioners as your children."
+      ],
+      [
+        "In short, from now until I attain the essence of enlightenment,",
+        "I shall honour you as the embodiment of my Guru, Deity and Protector.",
+        "Therefore please watch over me during the three periods of the day and the night",
+        "And never waver in your actions as my Protector."
+      ],
+
+      {header: "Requesting the fulfilment of wishes", numbered: true},
+      {note: "HUM"},
+      [
+        "Whenever your followers with commitments",
+        "Request any of the four actions,",
+        "Swiftly, incisively, and without delay, you show signs for all to see;",
+        "So please accomplish the actions that I now request of you."
+      ],
+      [
+        "The stainless sun of Je Tsongkhapa’s tradition",
+        "Shines throughout the sky of samsara and nirvana,",
+        "Eliminating the darkness of inferior and wrong paths;",
+        "Please cause its light to spread and bring good fortune to all living beings."
+      ],
+      [
+        "May the glorious Gurus who uphold this tradition",
+        "Have indestructible lives, as stable as the supreme victory banner;",
+        "May they send down a rain of deeds fulfilling the wishes of disciples,",
+        "So that Je Tsongkhapa’s doctrine will flourish."
+      ],
+      [
+        "Through increasing the study, practice, pure discipline and harmony",
+        "Of the communities who uphold the stainless doctrine of Buddha,",
+        "And who keep moral discipline with pure minds,",
+        "Please cause the Geden tradition to increase like a waxing moon."
+      ],
+      [
+        "Through your actions please fulfil the essential wishes",
+        "Of all practitioners who uphold the victory banner",
+        "Of practising single-pointedly the stages of the paths of Sutra and Tantra,",
+        "The essence of all the teachings they have heard."
+      ],
+      [
+        "Beings throughout this great earth are engaged in different actions",
+        "Of Dharma, non-Dharma, happiness, suffering, cause and effect;",
+        "Through your skilful deeds of preventing and nurturing,",
+        "Please lead all beings into the good path to ultimate happiness."
+      ],
+      [
+        "In particular, please destroy the obstacles and unfavourable conditions",
+        "Of myself and other practitioners.",
+        "Increase our lives, our merit and our resources,",
+        "And gather all things animate and inanimate to be freely enjoyed."
+      ],
+      [
+        "Please be with me always like the shadow of my body,",
+        "And care for me always like a friend,",
+        "By accomplishing swiftly whatever I wish for,",
+        "And whatever I ask of you."
+      ],
+      [
+        "Please perform immediately, without delaying for a year, or even for a month,",
+        "Appropriate actions to eliminate all obstacles",
+        "Caused by misguided beings with harmful minds who try to destroy Je Tsongkhapa’s doctrine,",
+        "And especially by those who try to harm practitioners."
+      ],
+      [
+        "Please remain in this place always, surrounded by most excellent enjoyments.",
+        "As my guest, partake continuously of tormas and offerings;",
+        "And since you are entrusted with the protection of human wealth and enjoyments,",
+        "Never waver as my guardian throughout the day and the night."
+      ],
+      [
+        "All the attainments I desire",
+        "Arise from merely remembering you.",
+        "O Wishfulfilling Jewel, Protector of the Dharma,",
+        "Please accomplish all my wishes."
+      ],
+      {note: "(3x)", tight: true},
+
+      {header: "Dedication"},
+      [
+        "By this virtue may I quickly",
+        "Attain the enlightened state of the Guru,",
+        "And then lead every living being",
+        "Without exception to that ground."
+      ],
+      [
+        "Through my virtues from practising with pure motivation,",
+        "May all living beings, throughout all their lives,",
+        "Never be parted from peaceful and wrathful Manjushri,",
+        "But always come under their care."
+      ],
+
+      {header: "Prayers for the Virtuous Tradition"},
+      [
+        "So that the tradition of Je Tsongkhapa,",
+        "The King of the Dharma, may flourish,",
+        "May all obstacles be pacified",
+        "And may all favourable conditions abound."
+      ],
+      [
+        "Through the two collections of myself and others",
+        "Gathered throughout the three times,",
+        "May the doctrine of Conqueror Losang Dragpa",
+        "Flourish for evermore."
+      ],
+
+      {header: "The nine-line Migtsema prayer"},
+      [
+        "Tsongkhapa, crown ornament of the scholars of the Land of the Snows,",
+        "You are Buddha Shakyamuni and Vajradhara, the source of all attainments,",
+        "Avalokiteshvara, the treasury of unobservable compassion,",
+        "Manjushri, the supreme stainless wisdom,",
+        "And Vajrapani, the destroyer of the hosts of maras."
+      ],
+      [
+        "O Venerable Guru-Buddha, synthesis of all Three Jewels,",
+        "With my body, speech and mind, respectfully I make requests:",
+        "Please grant your blessings to ripen and liberate myself and others,",
+        "And bestow the common and supreme attainments."
+      ],
+      {note: "(3x)"}
+    ]
   }
 ];
 
@@ -633,16 +1139,29 @@ function initLines() {
   var stanzas = currentItem.stanzas;
   var showNums = currentItem.showNums;
   linesTotal = 0;
-  stanzas.forEach(function(st) { linesTotal += st.length; });
+  var stanzaNum = 0;
+  var sectionNumbered = false;
+  stanzas.forEach(function(st) { if (Array.isArray(st)) linesTotal += st.length; });
 
-  area.innerHTML = stanzas.map(function(st, si) {
+  area.innerHTML = stanzas.map(function(st) {
+    if (!Array.isArray(st)) {
+      if (st.header) {
+        sectionNumbered = !!st.numbered;
+        stanzaNum = 0;
+        return '<div class="section-header">' + st.header + '</div>';
+      }
+      if (st.note) return '<div class="section-note' + (st.tight ? ' section-note-tight' : '') + '">' + st.note + '</div>';
+      return '';
+    }
+    stanzaNum++;
     var linesHtml = st.map(function(line) {
       return '<span class="line-blank" tabindex="0">' +
         '<span class="line-text">' + line + '</span>' +
         '<span class="line-placeholder">• • •</span>' +
         '</span>';
     }).join("");
-    var numHtml = showNums ? '<span class="blanks-stanza-num">' + (si + 1) + '</span>' : '';
+    var numbered = showNums || sectionNumbered;
+    var numHtml = numbered ? '<span class="blanks-stanza-num">' + stanzaNum + '</span>' : '';
     return '<span class="blanks-stanza">' + numHtml + linesHtml + '</span>';
   }).join("");
 
@@ -796,3 +1315,5 @@ document.querySelectorAll(".tree-collapse-btn").forEach(function(btn) {
 </script>
 </body>
 </html>
+
+</body></html>
