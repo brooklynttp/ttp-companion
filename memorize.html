@@ -1,10 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Practice Memorization</title>
+<title>Dharma Memorization</title>
+<meta property="og:title" content="Dharma Memorization">
+<meta property="og:description" content="Interactive memorization tool for Buddhist prayers and mantras">
+<meta property="og:image" content="https://brooklynttp.github.io/ttp-companion/knot.png">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Figtree:wght@400;500;600&display=swap">
 <style>
 :root {
@@ -359,7 +362,7 @@ body {
 <div class="wrap">
   <!-- Menu -->
   <div id="menu">
-    <h1>Practice Memorization</h1>
+    <h1>Dharma Memorization</h1>
     <div class="subtitle">Tap to reveal, tap to hide</div>
     <div class="prayer-list" id="item-list"></div>
   </div>
@@ -926,7 +929,7 @@ var ITEMS = [
       ],
 
       {header: "Inviting Dorje Shugden and his retinue", numbered: true},
-      {note: "HUM"},
+      ["HUM"],
       [
         "I have the clarity of the Yidam.",
         "Before me in the centre of red and black fire and wind,",
@@ -949,7 +952,7 @@ var ITEMS = [
       ],
 
       {header: "Making offerings and requests", numbered: true},
-      {note: "HUM"},
+      ["HUM"],
       [
         "Respectfully I prostrate with body, speech and mind.",
         "I offer a mass of inner and outer offerings, blissful tormas,",
@@ -1000,7 +1003,7 @@ var ITEMS = [
       ],
 
       {header: "Requesting the fulfilment of wishes", numbered: true},
-      {note: "HUM"},
+      ["HUM"],
       [
         "Whenever your followers with commitments",
         "Request any of the four actions,",
@@ -1346,5 +1349,3 @@ document.querySelectorAll(".tree-collapse-btn").forEach(function(btn) {
 </script>
 </body>
 </html>
-
-</body></html>
