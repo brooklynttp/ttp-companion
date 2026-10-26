@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -242,8 +241,9 @@ body {
   color: var(--fg-dim);
   cursor: pointer;
   text-decoration: none;
-  float: right;
-  margin-top: 2px;
+  display: block;
+  text-align: right;
+  margin-bottom: 8px;
   opacity: 0.7;
   transition: opacity 0.2s;
 }
@@ -1117,6 +1117,85 @@ var ITEMS = [
       ],
       {note: "(3x)"}
     ]
+  },
+  {
+    name: "Medicine Buddha Promises",
+    info: "44 promises",
+    type: "lines",
+    showNums: false,
+    stanzas: [
+      {header: "Glorious Renown of Excellent Signs"},
+      [
+        "Be freed from heavy illness and interference by spirits,",
+        "Not suffer from incomplete or defective physical or mental faculties,",
+        "Never experience the ripening of karma that cause rebirth in the lower realms,",
+        "Never experience poverty or lack of resources,",
+        "Be free from the dangers of assault, robbery or imprisonment,",
+        "Be free from the dangers of attack by wild animals and so forth,",
+        "Abide in peace, never experience war, and",
+        "Be free from any danger caused by water."
+      ],
+
+      {header: "King of Melodious Sound"},
+      [
+        "Find all the necessary conditions for practising Dharma,",
+        "Be free from difficulties and obstacles during childbirth,",
+        "Increase their virtuous actions and never be separated from bodhichitta,",
+        "Purify non-virtues and attain high status as a human or god,",
+        "Never experience untimely death, separation from friends, or loneliness,",
+        "Receive offerings, respect and assistance from others,",
+        "Develop and increase their powers of mindfulness and concentration, and",
+        "Be free from any danger caused by fire."
+      ],
+
+      {header: "Stainless Excellent Gold"},
+      [
+        "Enjoy a long life,",
+        "Live a peaceful life free from conflict,",
+        "Purify any broken commitments, and",
+        "Increase their bodhichitta."
+      ],
+
+      {header: "Supreme Glory Free from Sorrow"},
+      [
+        "Be able to pacify their delusions,",
+        "Be able to give happiness to hell beings,",
+        "Obtain a beautiful body in the future, and",
+        "Be liked by many people."
+      ],
+
+      {header: "Melodious Ocean of Dharma Proclaimed"},
+      [
+        "Always maintain faith and correct views,",
+        "Receive Dharma teachings in all future lives,",
+        "Abandon all non-virtues, and",
+        "Always maintain loving kindness and contentment."
+      ],
+
+      {header: "King of Clear Knowing"},
+      [
+        "Be able to pacify distractions and harmful thoughts,",
+        "Accumulate all ten virtuous actions,",
+        "Be free from control and domination by others, and",
+        "Always meet with auspicious conditions."
+      ],
+
+      {header: "Medicine Guru"},
+      [
+        "Obtain a Buddha’s Form Body in the future,",
+        "Be able to eradicate the darkness of ignorance from their mind,",
+        "Be endowed with inexhaustible wealth,",
+        "Be able to lead many beings into the Mahayana path,",
+        "Be able to restore others’ broken moral discipline,",
+        "Take rebirth in whatever form they wished,",
+        "Pacify all wrong views and maras,",
+        "Be able to release others from captivity,",
+        "Be able to lead evil people into the spiritual path,",
+        "Have the power to bestow coolness on beings in the hot hells, and warmth on those in the cold hells,",
+        "Be able to fulfill others’ wishes, and release them from mental and physical sickness, and",
+        "Be born in a Pure Land in the future."
+      ]
+    ]
   }
 ];
 
@@ -1183,7 +1262,7 @@ function initLines() {
         stanzaNum = 0;
         var hid = toId(st.header);
         var backLink = (jumpTo && st.header === jumpTo.target) ? '<a class="section-back-top" href="#" onclick="document.getElementById(\'lines-top\').scrollIntoView({behavior:\'smooth\'});return false">↑ Back to top</a>' : '';
-        return '<div class="section-header" id="' + hid + '">' + st.header + backLink + '</div>';
+        return '<div class="section-header" id="' + hid + '">' + st.header + '</div>' + backLink;
       }
       if (st.note) return '<div class="section-note' + (st.tight ? ' section-note-tight' : '') + '">' + st.note + '</div>';
       return '';
@@ -1351,5 +1430,3 @@ document.querySelectorAll(".tree-collapse-btn").forEach(function(btn) {
 </script>
 </body>
 </html>
-
-</body></html>
