@@ -1228,6 +1228,28 @@
             `;
         }
         
+        // Render structured Shantideva reading (object format with reader, chapter, verses, text)
+        function renderShantidevaReading(reading) {
+            if (!reading) return '';
+            const reader = reading.reader || reading.readBy || 'Reader';
+            const chapter = reading.chapter ? `Chapter ${reading.chapter}` : '';
+            const verses = reading.startVerse && reading.endVerse ? `, Verses ${reading.startVerse}–${reading.endVerse}` : '';
+            const label = `Shantideva Reading — ${reader}${chapter ? ' · ' + chapter + verses : ''}`;
+            const timeLabel = reading.time ? ` [${reading.time}]` : '';
+            const textContent = reading.text ? reading.text.replace(/\n/g, '<br>') : '';
+            return `
+                <div class="transcript-subsection">
+                    <div class="transcript-subsection-title" onclick="toggleTranscriptSubsection(this)">
+                        <span>${label}${timeLabel}</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="transcript-subsection-content collapsed">
+                        <div class="transcript-text">${textContent}</div>
+                    </div>
+                </div>
+            `;
+        }
+
         // Render a collapsible transcript subsection
         function renderCollapsibleSubsection(title, segments, startCollapsed = true) {
             if (!segments || segments.length === 0) return '';
@@ -1300,7 +1322,12 @@
                 html += renderCollapsibleSubsection('Post-Meditation', transcript.session1.postMeditation);
                 
                 // Shantideva reading (collapsible) - comes before practice reports
-                html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                // Handle both formats: array of segments (old) and structured object (new)
+                if (transcript.session1.shantidevaReading && !Array.isArray(transcript.session1.shantidevaReading)) {
+                    html += renderShantidevaReading(transcript.session1.shantidevaReading);
+                } else {
+                    html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                }
                 
                 // Post-reading / Class overview (collapsible) - roll call, recap, intro to sharing
                 html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
