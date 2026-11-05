@@ -60,6 +60,30 @@
             opacity: 0.8;
             margin-top: 0.25rem;
         }
+
+        .header-links {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .header-tool-link {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.65rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--gold);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .header-tool-link:hover {
+            background: #c49a40;
+            transform: translateY(-1px);
+        }
         
         /* CLASS SELECTOR - Horizontal scroll on mobile */
         .class-selector {
@@ -676,6 +700,9 @@
     <header class="header">
         <h1>Teacher Training Program</h1>
         <div class="header-subtitle">KMC Brooklyn · Meaningful to Behold</div>
+        <div class="header-links">
+            <a href="memorize.html" class="header-tool-link">✦ Memorization Tool</a>
+        </div>
     </header>
     
     <nav class="class-selector">
