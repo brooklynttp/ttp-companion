@@ -60,6 +60,30 @@
             opacity: 0.8;
             margin-top: 0.25rem;
         }
+
+        .header-links {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .header-tool-link {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.65rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--gold);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .header-tool-link:hover {
+            background: #c49a40;
+            transform: translateY(-1px);
+        }
         
         /* CLASS SELECTOR - Horizontal scroll on mobile */
         .class-selector {
@@ -676,6 +700,9 @@
     <header class="header">
         <h1>Teacher Training Program</h1>
         <div class="header-subtitle">KMC Brooklyn · Meaningful to Behold</div>
+        <div class="header-links">
+            <a href="memorize.html" class="header-tool-link">✦ Memorization Tool</a>
+        </div>
     </header>
     
     <nav class="class-selector">
@@ -1228,6 +1255,28 @@
             `;
         }
         
+        // Render structured Shantideva reading (object format with reader, chapter, verses, text)
+        function renderShantidevaReading(reading) {
+            if (!reading) return '';
+            const reader = reading.reader || reading.readBy || 'Reader';
+            const chapter = reading.chapter ? `Chapter ${reading.chapter}` : '';
+            const verses = reading.startVerse && reading.endVerse ? `, Verses ${reading.startVerse}–${reading.endVerse}` : '';
+            const label = `Shantideva Reading — ${reader}${chapter ? ' · ' + chapter + verses : ''}`;
+            const timeLabel = reading.time ? ` [${reading.time}]` : '';
+            const textContent = reading.text ? reading.text.replace(/\n/g, '<br>') : '';
+            return `
+                <div class="transcript-subsection">
+                    <div class="transcript-subsection-title" onclick="toggleTranscriptSubsection(this)">
+                        <span>${label}${timeLabel}</span>
+                        <span class="toggle">+</span>
+                    </div>
+                    <div class="transcript-subsection-content collapsed">
+                        <div class="transcript-text">${textContent}</div>
+                    </div>
+                </div>
+            `;
+        }
+
         // Render a collapsible transcript subsection
         function renderCollapsibleSubsection(title, segments, startCollapsed = true) {
             if (!segments || segments.length === 0) return '';
@@ -1300,7 +1349,12 @@
                 html += renderCollapsibleSubsection('Post-Meditation', transcript.session1.postMeditation);
                 
                 // Shantideva reading (collapsible) - comes before practice reports
-                html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                // Handle both formats: array of segments (old) and structured object (new)
+                if (transcript.session1.shantidevaReading && !Array.isArray(transcript.session1.shantidevaReading)) {
+                    html += renderShantidevaReading(transcript.session1.shantidevaReading);
+                } else {
+                    html += renderCollapsibleSubsection('Shantideva Reading', transcript.session1.shantidevaReading);
+                }
                 
                 // Post-reading / Class overview (collapsible) - roll call, recap, intro to sharing
                 html += renderCollapsibleSubsection('Class Overview', transcript.session1.postReading);
