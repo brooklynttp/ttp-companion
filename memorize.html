@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,13 @@
 <meta property="og:title" content="Dharma Memorization">
 <meta property="og:description" content="Interactive memorization tool for Kadampa prayers, sutras and commentaries">
 <meta property="og:image" content="https://brooklynttp.github.io/ttp-companion/knot.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:url" content="https://brooklynttp.github.io/ttp-companion/memorize.html">
+<meta property="og:site_name" content="Brooklyn TTP">
 <meta property="og:type" content="website">
+<meta name="description" content="Interactive memorization tool for Kadampa prayers, sutras and commentaries">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Figtree:wght@400;500;600&display=swap">
 <style>
 :root {
@@ -214,6 +219,15 @@ body {
   border-bottom: 1px solid var(--accent-soft);
 }
 .section-header:first-child { margin-top: 0; }
+.section-header.section-toggle {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: border-color 0.2s;
+}
+@media (hover: hover) {
+  .section-header.section-toggle:hover { border-bottom-color: var(--accent); }
+}
 .section-note {
   font-family: var(--ui);
   font-style: italic;
@@ -1354,6 +1368,7 @@ function initLines() {
   linesTotal = 0;
   var stanzaNum = 0;
   var sectionNumbered = false;
+  var secIdx = -1;
   stanzas.forEach(function(st) { if (Array.isArray(st)) linesTotal += st.length; });
 
   var jumpTo = currentItem.jumpTo;
@@ -1364,17 +1379,19 @@ function initLines() {
       if (st.header) {
         sectionNumbered = !!st.numbered;
         stanzaNum = 0;
+        secIdx++;
         var hid = toId(st.header);
         var backLink = (jumpTo && st.header === jumpTo.target) ? '<a class="section-back-top" href="#" onclick="document.getElementById(\'lines-top\').scrollIntoView({behavior:\'smooth\'});return false">↑ Back to top</a>' : '';
-        return '<div class="section-header" id="' + hid + '">' + st.header + '</div>' + backLink;
+        return '<div class="section-header" id="' + hid + '" data-sec="' + secIdx + '">' + st.header + '</div>' + backLink;
       }
       if (st.note) return '<div class="section-note' + (st.tight ? ' section-note-tight' : '') + '">' + st.note + '</div>';
       return '';
     }
     var isHum = st.length === 1 && st[0] === "HUM";
     if (!isHum) stanzaNum++;
+    var secAttr = secIdx >= 0 ? ' data-sec="' + secIdx + '"' : '';
     var linesHtml = st.map(function(line) {
-      return '<span class="line-blank" tabindex="0">' +
+      return '<span class="line-blank" tabindex="0"' + secAttr + '>' +
         '<span class="line-text">' + line + '</span>' +
         '<span class="line-placeholder">• • •</span>' +
         '</span>';
@@ -1398,6 +1415,26 @@ function initLines() {
     el.addEventListener("click", toggle);
     el.addEventListener("keydown", function(e) {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Tapping a section header reveals every line in that section,
+  // or hides them all if they're already all showing.
+  area.querySelectorAll(".section-header[data-sec]").forEach(function(h) {
+    var lines = area.querySelectorAll('.line-blank[data-sec="' + h.getAttribute("data-sec") + '"]');
+    if (!lines.length) return;
+    h.classList.add("section-toggle");
+    h.setAttribute("tabindex", "0");
+    h.setAttribute("role", "button");
+    var toggleSection = function() {
+      var anyHidden = Array.prototype.some.call(lines, function(el) { return !el.classList.contains("show"); });
+      lines.forEach(function(el) { el.classList.toggle("show", anyHidden); });
+      linesTotal = area.querySelectorAll(".line-blank:not(.show)").length;
+      updateLinesScore();
+    };
+    h.addEventListener("click", toggleSection);
+    h.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSection(); }
     });
   });
   updateLinesScore();
@@ -1534,5 +1571,3 @@ document.querySelectorAll(".tree-collapse-btn").forEach(function(btn) {
 </script>
 </body>
 </html>
-
-</body></html>
